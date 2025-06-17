@@ -1,20 +1,16 @@
+from typing import Optional
 import pandas as pd
-import requests
-import feedparser
-import time
+import requests, feedparser, time, re
 from tqdm import tqdm
-import re
 
-# 세션 재사용 + 헤더 설정
 session = requests.Session()
 session.headers.update({"User-Agent": "Mozilla/5.0 (compatible; FetchArxiv/2.0)"})
 
-def extract_arxiv_id_from_url(url):
-    """Extract arXiv ID (without version) from PDF URL."""
-    match = re.search(r'pdf/(\d{4}\.\d{5})v?\d*', url)
-    return match.group(1) if match else None
+def extract_arxiv_id_from_url(url: str):
+    m = re.search(r'pdf/(\d{4}\.\d{5})v?\d*', str(url))
+    return m.group(1) if m else None
 
-def fetch_arxiv_summary(arxiv_id, max_attempts=5):
+def fetch_arxiv_summary(arxiv_id: str, max_attempts: int = 5):
     url = f"http://export.arxiv.org/api/query?id_list={arxiv_id}"
     for attempt in range(1, max_attempts + 1):
         try:
@@ -22,30 +18,38 @@ def fetch_arxiv_summary(arxiv_id, max_attempts=5):
             resp.raise_for_status()
             feed = feedparser.parse(resp.text)
             if feed.entries:
-                return feed.entries[0].summary.strip().replace('\n', ' ')
+                return feed.entries[0].summary.strip().replace("\n", " ")
             return None
         except requests.exceptions.RequestException as e:
-            print(f"[{arxiv_id}] Attempt {attempt}/{max_attempts} failed: {e}")
+            print(f"[{arxiv_id}] {attempt}/{max_attempts} failed: {e}")
             time.sleep(2 ** attempt)
-    print(f"[{arxiv_id}] ❌ Failed after {max_attempts} attempts.")
+    print(f"[{arxiv_id}] ❌ gave up after {max_attempts} attempts")
     return None
 
-# 📄 데이터 불러오기
-df = pd.read_excel("../dataset/arxiv_2023_after.xlsx")
+def run_scrape(max_rows: Optional[int] = 100):
+    """max_rows=None이면 전체 데이터(14 889개)를 모두 처리."""
+    df = pd.read_excel("../dataset/arxiv_2023_after.xlsx")
+    df["arxiv_id"] = df["Paper"].apply(extract_arxiv_id_from_url)
 
-# 🆔 arxiv_id 추출 (v 제거)
-df["arxiv_id"] = df["Paper"].apply(extract_arxiv_id_from_url)
+    # ▶ 샘플링
+    if max_rows is not None:
+        df = df.sample(n=max_rows, random_state=42).reset_index(drop=True)
 
-# 요약 수집
-summaries = []
-for arxiv_id in tqdm(df["arxiv_id"]):
-    if pd.isna(arxiv_id):
-        summaries.append(None)
-        continue
-    summary = fetch_arxiv_summary(arxiv_id)
-    summaries.append(summary)
-    time.sleep(3)  # arXiv 권장 요청 간격
+    summaries = []
+    for arxiv_id in tqdm(df["arxiv_id"]):
+        if pd.isna(arxiv_id):
+            summaries.append(None)
+            continue
+        summaries.append(fetch_arxiv_summary(arxiv_id))
+        time.sleep(3)  # arXiv API 권장 대기
 
-# 결과 저장
-df["Summary"] = summaries
-df.to_excel("arxiv_2023_after_with_summary.xlsx", index=False)
+    df["Summary"] = summaries
+    out_name = (
+        f"arxiv_sample_{max_rows}.xlsx"
+        if max_rows is not None else "arxiv_2023_after_with_summary.xlsx"
+    )
+    df.to_excel(out_name, index=False)
+    print(f"✅ Saved → {out_name}")
+
+if __name__ == "__main__":
+    run_scrape(max_rows=None)   # ← 먼저 100개만 테스트

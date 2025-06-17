@@ -1,38 +1,39 @@
 # src/db/builder.py
-
-import json
-import faiss
-import numpy as np
+import json, faiss, numpy as np, sys
 from tqdm import tqdm
-from embedder import embed
-import sys
 sys.path.append("..")
 from utils.file_io import load_json, save_json
+from embedder import embed
 
-DATA_PATH = "/home/cvlab/Desktop/AgentAI/dataset/New_AI_Model.json"
-INDEX_PATH = "../data/model_qa_index.faiss"
-CLEANED_PATH = "../data/model_qa_data.json"
+DATA_PATH   = "/home/cvlab/Desktop/AgentAI/dataset/arxiv_sample_100.json"
+INDEX_PATH  = "../data/model_arxiv_100_index.faiss"
+CLEANED_PATH = "../data/model_arxiv_100_data.json"
 
 def build_vector_db():
     data = load_json(DATA_PATH)
 
-    embeddings = []
-    valid_docs = []
+    vecs, valid_docs = [], []
 
-    for entry in tqdm(data):
-        summary = entry.get("Summary", "").strip()
-        if summary:
-            vec = embed(summary)
-            embeddings.append(vec)
-            valid_docs.append(entry)
+    for e in tqdm(data):
+        title   = e.get("Model Unique Name", "").strip()
+        summary = e.get("Summary", "").strip()
 
-    embeddings = np.vstack(embeddings).astype("float32")
-    index = faiss.IndexFlatL2(embeddings.shape[1])
-    index.add(embeddings)
+        if not summary:      # 요약 없으면 건너뜀
+            continue
+
+        text = f"{title} {summary}"   # ← 제목 + 요약
+        vec  = embed([text])[0]       # embed는 리스트 입력 → (1,D) 반환
+
+        vecs.append(vec)
+        valid_docs.append(e)
+
+    vecs = np.vstack(vecs).astype("float32")
+    index = faiss.IndexFlatL2(vecs.shape[1])
+    index.add(vecs)
 
     faiss.write_index(index, INDEX_PATH)
     save_json(valid_docs, CLEANED_PATH)
-    print(f"✅ Indexed {len(valid_docs)} documents → saved to {INDEX_PATH}")
+    print(f"✅ Indexed {len(valid_docs)} docs → {INDEX_PATH}")
 
 if __name__ == "__main__":
     build_vector_db()
