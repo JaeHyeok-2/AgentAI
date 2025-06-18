@@ -3,14 +3,14 @@ import torch
 from typing import List
 
 device = "cuda"
-model_id = "intfloat/e5-mistral-7b-instruct"
+MODEL_ID = "BAAI/bge-m3"
 
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModel.from_pretrained(model_id, device_map="auto", torch_dtype=torch.float16)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, trust_remote_code=True)
+model     = AutoModel.from_pretrained(MODEL_ID, torch_dtype=torch.float16, trust_remote_code=True).to(device)
 
 def embed(texts: List[str]):
     inputs = tokenizer(texts, padding=True, truncation=True, return_tensors="pt").to(device)
     with torch.no_grad():
         outputs = model(**inputs)
-        embeddings = outputs.last_hidden_state[:, 0]  # [CLS] embedding
-    return torch.nn.functional.normalize(embeddings, dim=1).cpu().numpy()
+        emb = outputs.last_hidden_state[:, 0]
+    return torch.nn.functional.normalize(emb, dim=1).cpu().numpy()

@@ -1,48 +1,50 @@
 # src/db/vectordb.py
-"""
-통합 VectorDB
-─────────────
-index_dict = {
-    "models": { "index": faiss.Index, "docs": list, "boost": -0.05 },
-    "arxiv" : { "index": faiss.Index, "docs": list, "boost":  0.0  }
-}
-search() 한 번 호출로 두 인덱스를 모두 검색 → 거리 + boost
-"""
 
 import faiss, json, numpy as np
 from pathlib import Path
+from db.embedder import MODEL_ID  # 현재 사용 중인 임베딩 모델 ID
 
+# 🔧 임베딩 모델명에 따라 해당 하위 디렉토리에서 불러오기
+MODEL_NAME = MODEL_ID.split("/")[-1]
 BASE = Path(__file__).resolve().parent.parent  # src/
-data_dir = BASE / "data"
+DATA_DIR = BASE / "data" / MODEL_NAME         # e.g., data/e5-large-v2/
 
-def load_index_and_docs(index_name, json_name):
-    idx = faiss.read_index(str(data_dir / index_name))
-    docs = json.load(open(data_dir / json_name, encoding="utf-8"))
-    return idx, docs
+def load_index_and_docs(index_path, json_path):
+    index = faiss.read_index(str(index_path))
+    docs  = json.load(open(json_path, encoding="utf-8"))
+    return index, docs
 
-# ── 인덱스 불러오기 ─────────────────
+# ── 인덱스 불러오기 ─────────────────────
 index_dict = {
     "models": {
-        "index": load_index_and_docs("model_qa_index.faiss",
-                                     "model_qa_data.json")[0],
-        "docs" : load_index_and_docs("model_qa_index.faiss",
-                                     "model_qa_data.json")[1],
-        "boost": -0.1        # 우선 순위 ↑
+        "index": load_index_and_docs(
+            DATA_DIR / "New_AI_model_no_query.faiss",
+            DATA_DIR / "New_AI_model_no_query.json"
+        )[0],
+        "docs": load_index_and_docs(
+            DATA_DIR / "New_AI_model_no_query.faiss",
+            DATA_DIR / "New_AI_model_no_query.json"
+        )[1],
+        "boost": 0.0
     },
     "arxiv": {
-        "index": load_index_and_docs("model_arxiv_100_index.faiss",
-                                     "model_arxiv_100_data.json")[0],
-        "docs" : load_index_and_docs("model_arxiv_100_index.faiss",
-                                     "model_arxiv_100_data.json")[1],
-        "boost": 0.0          # 그대로
+        "index": load_index_and_docs(
+            DATA_DIR / "arxiv_index.faiss",
+            DATA_DIR / "arxiv_data.json"
+        )[0],
+        "docs": load_index_and_docs(
+            DATA_DIR / "arxiv_index.faiss",
+            DATA_DIR / "arxiv_data.json"
+        )[1],
+        "boost": 0.0
     }
 }
 
-# ── 검색 함수 ───────────────────────
+# ── 검색 함수 ──────────────────────────
 def search(query_vec: np.ndarray, k_each: int = 5, k_final: int = 5):
     """
-    • 두 인덱스를 모두 검색하고 boost 반영 후 상위 k_final 문서 반환
-    • 연도 필터 없음 (데이터셋이 이미 2023–2025)
+    두 인덱스(models + arxiv)를 모두 검색하고,
+    거리 + boost 기준으로 상위 k_final 문서 반환
     """
     hits = []
 

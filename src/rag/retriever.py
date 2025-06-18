@@ -33,38 +33,50 @@ def _vec_search(query_vec: np.ndarray,
     hits.sort(key=lambda x: x[0])
     return [doc for _, doc in hits]
 
+# 🔁 함수에 use_rerank 옵션 추가
 def retrieve_relevant_docs(query: str,
                            k_models: int = 15,
                            k_arxiv:  int = 15,
-                           k_final:  int = 5):
+                           k_final:  int = 5,
+                           use_rerank: bool = True):
     """
-    1) 벡터 검색으로 후보 30개 확보
-    2) Cross-Encoder(BGE-large)로 재정렬
-    3) 상위 k_final 반환
+    use_rerank=False인 경우 Cross-Encoder 없이 FAISS 거리 기준으로 반환
     """
     q_vec = embed([f"query: {query}"])[0]        # (D,)
     rough_docs = _vec_search(q_vec,
                              k_models=k_models,
                              k_arxiv=k_arxiv)
-    print([d['Model Unique Name'] for d in rough_docs[:10]])
-    # 쌍 만들어 점수 예측
-    pairs  = [[query, f"{d['Model Unique Name']} . {d['Summary']}"]
-              for d in rough_docs]
+
+    print("\n🔍 후보 문서:")
+    for d in rough_docs[:min(10, len(rough_docs))]:
+        print("→", d["Model Unique Name"])
+
+    if not use_rerank:
+        return rough_docs[:k_final]  # Cross-Encoder 사용 안 함
+
+    print("\n🚀 Cross-Encoder reranking 시작...")
+    pairs = [[query, f"{d['Model Unique Name']} . {d['Summary']}"]
+             for d in rough_docs]
     scores = reranker.predict(pairs, batch_size=8)
 
-    # 점수 높은 순 → k_final
     reranked = [
         d for _, d in sorted(
-            zip(scores, rough_docs),            # (score, doc) 튜플
-            key=lambda x: x[0],                 # ← score만 기준
+            zip(scores, rough_docs),
+            key=lambda x: x[0],
             reverse=True
         )
     ][:k_final]
-    return reranked[:k_final]
+    return reranked
 
-# ── 간단 데모 ───────────────────────
 if __name__ == "__main__":
-    q = ("I watched just a few videos on YouTube, and suddenly it’s recommending ones I actually love. How does it know?.")
-    docs = retrieve_relevant_docs(q, k_final=5)   # top-2 확인
-    for d in docs:
-        print(d["Model Unique Name"], "→", d["Paper"])
+    q = ("I watched just a few videos on YouTube, and suddenly it’s recommending ones I actually love. How does it know?")
+
+    print("\n📌 [1] Rerank OFF (순수 FAISS)")
+    docs_faiss = retrieve_relevant_docs(q, k_final=5, use_rerank=False)
+    for d in docs_faiss:
+        print("FAISS →", d["Model Unique Name"])
+
+    print("\n📌 [2] Rerank ON (Cross-Encoder)")
+    docs_rerank = retrieve_relevant_docs(q, k_final=5, use_rerank=True)
+    for d in docs_rerank:
+        print("Rerank →", d["Model Unique Name"])
