@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I expected an 8× enlargement to look fake, but the image stayed sharp and natural. What helps AI keep things looking real even at extreme zoom?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-EDSR
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: FeatSharp: Your Vision Model Features, Sharper
+Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+Summary: The feature maps of vision encoders are fundamental to myriad modern AI tasks, ranging from core perception algorithms (e.g. semantic segmentation, object detection, depth perception, etc.) to modern multimodal understanding in vision-language models (VLMs). Currently, in computer vision, the frontier of general purpose vision backbones are Vision Transformers (ViT), typically trained using contrastive loss (e.g. CLIP). A key problem with most off-the-shelf ViTs, particularly CLIP, is that these models are inflexibly low resolution. Most run at 224x224px, while the "high resolution" versions are around 378-448px, but still inflexible. We introduce a novel method to coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution. We demonstrate the effectiveness of this approach on core perception tasks as well as within agglomerative model (RADIO) training as a way of providing richer targets for distillation.
+
+Model: ImageNet-Hard: The Hardest Images Remaining from a Study of the Power of Zoom and Spatial Biases in Image Classification
+Paper: http://arxiv.org/pdf/2304.05538v4.pdf
+Summary: Image classifiers are information-discarding machines, by design. Yet, how these models discard information remains mysterious. We hypothesize that one way for image classifiers to reach high accuracy is to first zoom to the most discriminative region in the image and then extract features from there to predict image labels, discarding the rest of the image. Studying six popular networks ranging from AlexNet to CLIP, we find that proper framing of the input image can lead to the correct classification of 98.91% of ImageNet images. Furthermore, we uncover positional biases in various datasets, especially a strong center bias in two popular datasets: ImageNet-A and ObjectNet. Finally, leveraging our insights into the potential of zooming, we propose a test-time augmentation (TTA) technique that improves classification accuracy by forcing models to explicitly perform zoom-in operations before making predictions. Our method is more interpretable, accurate, and faster than MEMO, a state-of-the-art (SOTA) TTA method. We introduce ImageNet-Hard, a new benchmark that challenges SOTA classifiers including large vision-language models even when optimal zooming is allowed.
+
+Model: REAL: Realism Evaluation of Text-to-Image Generation Models for Effective Data Augmentation
+Paper: http://arxiv.org/pdf/2502.10663v1.pdf
+Summary: Recent advancements in text-to-image (T2I) generation models have transformed the field. However, challenges persist in generating images that reflect demanding textual descriptions, especially for fine-grained details and unusual relationships. Existing evaluation metrics focus on text-image alignment but overlook the realism of the generated image, which can be crucial for downstream applications like data augmentation in machine learning. To address this gap, we propose REAL, an automatic evaluation framework that assesses realism of T2I outputs along three dimensions: fine-grained visual attributes, unusual visual relationships, and visual styles. REAL achieves a Spearman's rho score of up to 0.62 in alignment with human judgement and demonstrates utility in ranking and filtering augmented data for tasks like image captioning, classification, and visual relationship detection. Empirical results show that high-scoring images evaluated by our metrics improve F1 scores of image classification by up to 11.3%, while low-scoring ones degrade that by up to 4.95%. We benchmark four major T2I models across the realism dimensions, providing insights for future improvements in T2I output realism.
+
+
+Answer:

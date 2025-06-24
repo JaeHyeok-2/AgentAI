@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Half of my landscape photo was missing, but the AI restored the trees, clouds, and color gradients realistically. How does it understand what belongs in such a large empty space?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-RDN
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: Lacunarity Pooling Layers for Plant Image Classification using Texture Analysis
+Paper: http://arxiv.org/pdf/2404.16268v2.pdf
+GitHub: https://github.com/advanced-vision-and-learning-lab/2024_v4a_lacunarity_pooling_layer
+Summary: Pooling layers (e.g., max and average) may overlook important information encoded in the spatial arrangement of pixel intensity and/or feature values. We propose a novel lacunarity pooling layer that aims to capture the spatial heterogeneity of the feature maps by evaluating the variability within local windows. The layer operates at multiple scales, allowing the network to adaptively learn hierarchical features. The lacunarity pooling layer can be seamlessly integrated into any artificial neural network architecture. Experimental results demonstrate the layer's effectiveness in capturing intricate spatial patterns, leading to improved feature extraction capabilities. The proposed approach holds promise in various domains, especially in agricultural image analysis tasks. This work contributes to the evolving landscape of artificial neural network architectures by introducing a novel pooling layer that enriches the representation of spatial features. Our code is publicly available.
+
+Model: LoCUS: Learning Multiscale 3D-consistent Features from Posed Images
+Paper: http://arxiv.org/pdf/2310.01095v1.pdf
+Summary: An important challenge for autonomous agents such as robots is to maintain a spatially and temporally consistent model of the world. It must be maintained through occlusions, previously-unseen views, and long time horizons (e.g., loop closure and re-identification). It is still an open question how to train such a versatile neural representation without supervision. We start from the idea that the training objective can be framed as a patch retrieval problem: given an image patch in one view of a scene, we would like to retrieve (with high precision and recall) all patches in other views that map to the same real-world location. One drawback is that this objective does not promote reusability of features: by being unique to a scene (achieving perfect precision/recall), a representation will not be useful in the context of other scenes. We find that it is possible to balance retrieval and reusability by constructing the retrieval set carefully, leaving out patches that map to far-away locations. Similarly, we can easily regulate the scale of the learned features (e.g., points, objects, or rooms) by adjusting the spatial tolerance for considering a retrieval to be positive. We optimize for (smooth) Average Precision (AP), in a single unified ranking-based objective. This objective also doubles as a criterion for choosing landmarks or keypoints, as patches with high AP. We show results creating sparse, multi-scale, semantic spatial maps composed of highly identifiable landmarks, with applications in landmark retrieval, localization, semantic segmentation and instance segmentation.
+
+Model: SIDAR: Synthetic Image Dataset for Alignment & Restoration
+Paper: http://arxiv.org/pdf/2305.12036v1.pdf
+GitHub: https://github.com/niika/SIDAR
+Summary: Image alignment and image restoration are classical computer vision tasks. However, there is still a lack of datasets that provide enough data to train and evaluate end-to-end deep learning models. Obtaining ground-truth data for image alignment requires sophisticated structure-from-motion methods or optical flow systems that often do not provide enough data variance, i.e., typically providing a high number of image correspondences, while only introducing few changes of scenery within the underlying image sequences. Alternative approaches utilize random perspective distortions on existing image data. However, this only provides trivial distortions, lacking the complexity and variance of real-world scenarios. Instead, our proposed data augmentation helps to overcome the issue of data scarcity by using 3D rendering: images are added as textures onto a plane, then varying lighting conditions, shadows, and occlusions are added to the scene. The scene is rendered from multiple viewpoints, generating perspective distortions more consistent with real-world scenarios, with homographies closely resembling those of camera projections rather than randomized homographies. For each scene, we provide a sequence of distorted images with corresponding occlusion masks, homographies, and ground-truth labels. The resulting dataset can serve as a training and evaluation set for a multitude of tasks involving image alignment and artifact removal, such as deep homography estimation, dense image matching, 2D bundle adjustment, inpainting, shadow removal, denoising, content retrieval, and background subtraction. Our data generation pipeline is customizable and can be applied to any existing dataset, serving as a data augmentation to further improve the feature learning of any existing method.
+
+
+Answer:

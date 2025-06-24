@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I enlarged a small and noisy image by 8x, and the result looked impressively natural. How does AI manage to generate such clean results from very limited input?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-RDN
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: Between Generating Noise and Generating Images: Noise in the Correct Frequency Improves the Quality of Synthetic Histopathology Images for Digital Pathology
+Paper: http://arxiv.org/pdf/2302.06549v1.pdf
+Summary: Artificial intelligence and machine learning techniques have the promise to revolutionize the field of digital pathology. However, these models demand considerable amounts of data, while the availability of unbiased training data is limited. Synthetic images can augment existing datasets, to improve and validate AI algorithms. Yet, controlling the exact distribution of cellular features within them is still challenging. One of the solutions is harnessing conditional generative adversarial networks that take a semantic mask as an input rather than a random noise. Unlike other domains, outlining the exact cellular structure of tissues is hard, and most of the input masks depict regions of cell types. However, using polygon-based masks introduce inherent artifacts within the synthetic images - due to the mismatch between the polygon size and the single-cell size. In this work, we show that introducing random single-pixel noise with the appropriate spatial frequency into a polygon semantic mask can dramatically improve the quality of the synthetic images. We used our platform to generate synthetic images of immunohistochemistry-treated lung biopsies. We test the quality of the images using a three-fold validation procedure. First, we show that adding the appropriate noise frequency yields 87% of the similarity metrics improvement that is obtained by adding the actual single-cell features. Second, we show that the synthetic images pass the Turing test. Finally, we show that adding these synthetic images to the train set improves AI performance in terms of PD-L1 semantic segmentation performances. Our work suggests a simple and powerful approach for generating synthetic data on demand to unbias limited datasets to improve the algorithms' accuracy and validate their robustness.
+
+Model: SI-FID: Only One Objective Indicator for Evaluating Stitched Images
+Paper: http://arxiv.org/pdf/2404.13905v1.pdf
+Summary: Image quality evaluation accurately is vital in developing image stitching algorithms as it directly reflects the algorithms progress. However, commonly used objective indicators always produce inconsistent and even conflicting results with subjective indicators. To enhance the consistency between objective and subjective evaluations, this paper introduces a novel indicator the Frechet Distance for Stitched Images (SI-FID). To be specific, our training network employs the contrastive learning architecture overall. We employ data augmentation approaches that serve as noise to distort images in the training set. Both the initial and distorted training sets are then input into the pre-training model for fine-tuning. We then evaluate the altered FID after introducing interference to the test set and examine if the noise can improve the consistency between objective and subjective evaluation results. The rank correlation coefficient is utilized to measure the consistency. SI-FID is an altered FID that generates the highest rank correlation coefficient under the effect of a certain noise. The experimental results demonstrate that the rank correlation coefficient obtained by SI-FID is at least 25% higher than other objective indicators, which means achieving evaluation results closer to human subjective evaluation.
+
+Model: Auto Cherry-Picker: Learning from High-quality Generative Data Driven by Language
+Paper: http://arxiv.org/pdf/2406.20085v2.pdf
+Summary: Diffusion models can generate realistic and diverse images, potentially facilitating data availability for data-intensive perception tasks. However, leveraging these models to boost performance on downstream tasks with synthetic data poses several challenges, including aligning with real data distribution, scaling synthetic sample volumes, and ensuring their quality. To bridge these gaps, we present \textbf{A}uto \textbf{C}herry-\textbf{P}icker (ACP), a novel framework that generates high-quality cross-modality training samples at scale to augment perception and multi-modal training. ACP first uses LLMs to sample descriptions and layouts based on object combinations from real data priors, eliminating the need for ground truth image captions or annotations. Next, we use an off-the-shelf controllable diffusion model to generate multiple images. Then, the generated data are refined using a comprehensively designed metric, Composite Layout and Image Score (CLIS), to ensure quality. Our customized synthetic high-quality samples boost performance in various scenarios, especially in addressing challenges associated with long-tailed distribution and imbalanced datasets. Experiment results on downstream tasks demonstrate that ACP can significantly improve the performance of existing models. In addition, we find a positive correlation between CLIS and performance gains in downstream tasks. This finding shows the potential for evaluation metrics as the role for various visual perception and MLLM tasks.
+
+
+Answer:

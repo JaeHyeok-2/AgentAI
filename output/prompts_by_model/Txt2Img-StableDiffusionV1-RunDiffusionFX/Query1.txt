@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I generated a studio-style car shot where the reflections and highlights looked showroom-ready. What extra cues does AI calculate to make metal and lighting feel so real?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-PirsusEpicRealism
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: A-BDD: Leveraging Data Augmentations for Safe Autonomous Driving in Adverse Weather and Lighting
+Paper: http://arxiv.org/pdf/2408.06071v2.pdf
+Summary: High-autonomy vehicle functions rely on machine learning (ML) algorithms to understand the environment. Despite displaying remarkable performance in fair weather scenarios, perception algorithms are heavily affected by adverse weather and lighting conditions. To overcome these difficulties, ML engineers mainly rely on comprehensive real-world datasets. However, the difficulties in real-world data collection for critical areas of the operational design domain (ODD) often means synthetic data is required for perception training and safety validation. Thus, we present A-BDD, a large set of over 60,000 synthetically augmented images based on BDD100K that are equipped with semantic segmentation and bounding box annotations (inherited from the BDD100K dataset). The dataset contains augmented data for rain, fog, overcast and sunglare/shadow with varying intensity levels. We further introduce novel strategies utilizing feature-based image quality metrics like FID and CMMD, which help identify useful augmented and real-world data for ML training and testing. By conducting experiments on A-BDD, we provide evidence that data augmentations can play a pivotal role in closing performance gaps in adverse weather and lighting conditions.
+
+Model: Synth It Like KITTI: Synthetic Data Generation for Object Detection in Driving Scenarios
+Paper: http://arxiv.org/pdf/2502.15076v1.pdf
+Summary: An important factor in advancing autonomous driving systems is simulation. Yet, there is rather small progress for transferability between the virtual and real world. We revisit this problem for 3D object detection on LiDAR point clouds and propose a dataset generation pipeline based on the CARLA simulator. Utilizing domain randomization strategies and careful modeling, we are able to train an object detector on the synthetic data and demonstrate strong generalization capabilities to the KITTI dataset. Furthermore, we compare different virtual sensor variants to gather insights, which sensor attributes can be responsible for the prevalent domain gap. Finally, fine-tuning with a small portion of real data almost matches the baseline and with the full training set slightly surpasses it.
+
+Model: ISETHDR: A Physics-based Synthetic Radiance Dataset for High Dynamic Range Driving Scenes
+Paper: http://arxiv.org/pdf/2408.12048v1.pdf
+GitHub: https://github.com/iset/isethdrsensor
+Summary: This paper describes a physics-based end-to-end software simulation for image systems. We use the software to explore sensors designed to enhance performance in high dynamic range (HDR) environments, such as driving through daytime tunnels and under nighttime conditions. We synthesize physically realistic HDR spectral radiance images and use them as the input to digital twins that model the optics and sensors of different systems. This paper makes three main contributions: (a) We create a labeled (instance segmentation and depth), synthetic radiance dataset of HDR driving scenes. (b) We describe the development and validation of the end-to-end simulation framework. (c) We present a comparative analysis of two single-shot sensors designed for HDR. We open-source both the dataset and the software.
+
+
+Answer:

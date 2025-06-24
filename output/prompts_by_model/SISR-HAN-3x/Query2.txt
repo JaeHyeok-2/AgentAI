@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even at 3× enlargement, compressed photos came out looking smooth and balanced. How does AI know what to restore when the original image is so degraded?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Restoration-SwinIR-Jpeg20
+Paper: https://arxiv.org/pdf/2108.10257
+GitHub: https://github.com/JingyunLiang/SwinIR
+
+### Related Papers:
+Model: Varformer: Adapting VAR's Generative Prior for Image Restoration
+Paper: http://arxiv.org/pdf/2412.21063v1.pdf
+GitHub: https://github.com/siywang541/Varformer
+Summary: Generative models trained on extensive high-quality datasets effectively capture the structural and statistical properties of clean images, rendering them powerful priors for transforming degraded features into clean ones in image restoration. VAR, a novel image generative paradigm, surpasses diffusion models in generation quality by applying a next-scale prediction approach. It progressively captures both global structures and fine-grained details through the autoregressive process, consistent with the multi-scale restoration principle widely acknowledged in the restoration community. Furthermore, we observe that during the image reconstruction process utilizing VAR, scale predictions automatically modulate the input, facilitating the alignment of representations at subsequent scales with the distribution of clean images. To harness VAR's adaptive distribution alignment capability in image restoration tasks, we formulate the multi-scale latent representations within VAR as the restoration prior, thus advancing our delicately designed VarFormer framework. The strategic application of these priors enables our VarFormer to achieve remarkable generalization on unseen tasks while also reducing training computational costs. Extensive experiments underscores that our VarFormer outperforms existing multi-task image restoration methods across various restoration tasks.
+
+Model: Understanding the Effect of the Long Tail on Neural Network Compression
+Paper: http://arxiv.org/pdf/2306.06238v3.pdf
+Summary: Network compression is now a mature sub-field of neural network research: over the last decade, significant progress has been made towards reducing the size of models and speeding up inference, while maintaining the classification accuracy. However, many works have observed that focusing on just the overall accuracy can be misguided. E.g., it has been shown that mismatches between the full and compressed models can be biased towards under-represented classes. This raises the important research question, can we achieve network compression while maintaining "semantic equivalence" with the original network? In this work, we study this question in the context of the "long tail" phenomenon in computer vision datasets observed by Feldman, et al. They argue that memorization of certain inputs (appropriately defined) is essential to achieving good generalization. As compression limits the capacity of a network (and hence also its ability to memorize), we study the question: are mismatches between the full and compressed models correlated with the memorized training data? We present positive evidence in this direction for image classification tasks, by considering different base architectures and compression schemes.
+
+Model: Deep Selector-JPEG: Adaptive JPEG Image Compression for Computer Vision in Image classification with Human Vision Criteria
+Paper: http://arxiv.org/pdf/2302.09560v1.pdf
+Summary: With limited storage/bandwidth resources, input images to Computer Vision (CV) applications that use Deep Neural Networks (DNNs) are often encoded with JPEG that is tailored to Human Vision (HV). This paper presents Deep Selector-JPEG, an adaptive JPEG compression method that targets image classification while satisfying HV criteria. For each image, Deep Selector-JPEG selects adaptively a Quality Factor (QF) to compress the image so that a good trade-off between the Compression Ratio (CR) and DNN classifier Accuracy (Rate-Accuracy performance) can be achieved over a set of images for a variety of DNN classifiers while the MS-SSIM of such compressed image is greater than a threshold value predetermined by HV with a high probability. Deep Selector-JPEG is designed via light-weighted or heavy-weighted selector architectures. Experimental results show that in comparison with JPEG at the same CR, Deep Selector-JPEG achieves better Rate-Accuracy performance over the ImageNet validation set for all tested DNN classifiers with gains in classification accuracy between 0.2% and 1% at the same CRs while satisfying HV constraints. Deep Selector-JPEG can also roughly provide the original classification accuracy at higher CRs.
+
+
+Answer:

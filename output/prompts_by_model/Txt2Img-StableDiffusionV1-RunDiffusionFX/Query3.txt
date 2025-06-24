@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"What internal calculations or rendering strategies does AI employ to create realistic reflections and glossy surfaces effectively?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Inpainting-LatentDiffusion
+Paper: https://arxiv.org/pdf/2112.10752
+GitHub: https://github.com/CompVis/latent-diffusion
+
+### Related Papers:
+Model: INPC: Implicit Neural Point Clouds for Radiance Field Rendering
+Paper: http://arxiv.org/pdf/2403.16862v1.pdf
+Summary: We introduce a new approach for reconstruction and novel view synthesis of unbounded real-world scenes. In contrast to previous methods using either volumetric fields, grid-based models, or discrete point cloud proxies, we propose a hybrid scene representation, which implicitly encodes the geometry in a continuous octree-based probability field and view-dependent appearance in a multi-resolution hash grid. This allows for extraction of arbitrary explicit point clouds, which can be rendered using rasterization. In doing so, we combine the benefits of both worlds and retain favorable behavior during optimization: Our novel implicit point cloud representation and differentiable bilinear rasterizer enable fast rendering while preserving the fine geometric detail captured by volumetric neural fields. Furthermore, this representation does not depend on priors like structure-from-motion point clouds. Our method achieves state-of-the-art image quality on common benchmarks. Furthermore, we achieve fast inference at interactive frame rates, and can convert our trained model into a large, explicit point cloud to further enhance performance.
+
+Model: Removing Reflections from RAW Photos
+Paper: http://arxiv.org/pdf/2404.14414v2.pdf
+Summary: We describe a system to remove real-world reflections from images for consumer photography. Our system operates on linear (RAW) photos, and accepts an optional contextual photo looking in the opposite direction (e.g., the "selfie" camera on a mobile device). This optional photo disambiguates what should be considered the reflection. The system is trained solely on synthetic mixtures of real RAW photos, which we combine using a reflection simulation that is photometrically and geometrically accurate. Our system comprises a base model that accepts the captured photo and optional context photo as input, and runs at 256p, followed by an up-sampling model that transforms 256p images to full resolution. The system produces preview images at 1K in 4.5-6.5s on a MacBook or iPhone 14 Pro. We show SOTA results on RAW photos that were captured in the field to embody typical consumer photos, and show that training on RAW simulation data improves performance more than the architectural variations among prior works.
+
+Model: Learning Naturally Aggregated Appearance for Efficient 3D Editing
+Paper: http://arxiv.org/pdf/2312.06657v2.pdf
+GitHub: https://github.com/felixcheng97/agap
+Summary: Neural radiance fields, which represent a 3D scene as a color field and a density field, have demonstrated great progress in novel view synthesis yet are unfavorable for editing due to the implicitness. This work studies the task of efficient 3D editing, where we focus on editing speed and user interactivity. To this end, we propose to learn the color field as an explicit 2D appearance aggregation, also called canonical image, with which users can easily customize their 3D editing via 2D image processing. We complement the canonical image with a projection field that maps 3D points onto 2D pixels for texture query. This field is initialized with a pseudo canonical camera model and optimized with offset regularity to ensure the naturalness of the canonical image. Extensive experiments on different datasets suggest that our representation, dubbed AGAP, well supports various ways of 3D editing (e.g., stylization, instance segmentation, and interactive drawing). Our approach demonstrates remarkable efficiency by being at least 20 times faster per edit compared to existing NeRF-based editing methods. Project page is available at https://felixcheng97.github.io/AGAP/.
+
+
+Answer:

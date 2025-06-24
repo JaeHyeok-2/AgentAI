@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I upscaled a low-resolution logo or UI element by 4×, and even the edges looked clean and sharp. How does AI rebuild such fine structure when the original image had almost no detail?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-EDSR
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: On the Effect of Image Resolution on Semantic Segmentation
+Paper: http://arxiv.org/pdf/2402.05398v1.pdf
+Summary: High-resolution semantic segmentation requires substantial computational resources. Traditional approaches in the field typically downscale the input images before processing and then upscale the low-resolution outputs back to their original dimensions. While this strategy effectively identifies broad regions, it often misses finer details. In this study, we demonstrate that a streamlined model capable of directly producing high-resolution segmentations can match the performance of more complex systems that generate lower-resolution results. By simplifying the network architecture, we enable the processing of images at their native resolution. Our approach leverages a bottom-up information propagation technique across various scales, which we have empirically shown to enhance segmentation accuracy. We have rigorously tested our method using leading-edge semantic segmentation datasets. Specifically, for the Cityscapes dataset, we further boost accuracy by applying the Noisy Student Training technique.
+
+Model: FeatSharp: Your Vision Model Features, Sharper
+Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+Summary: The feature maps of vision encoders are fundamental to myriad modern AI tasks, ranging from core perception algorithms (e.g. semantic segmentation, object detection, depth perception, etc.) to modern multimodal understanding in vision-language models (VLMs). Currently, in computer vision, the frontier of general purpose vision backbones are Vision Transformers (ViT), typically trained using contrastive loss (e.g. CLIP). A key problem with most off-the-shelf ViTs, particularly CLIP, is that these models are inflexibly low resolution. Most run at 224x224px, while the "high resolution" versions are around 378-448px, but still inflexible. We introduce a novel method to coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution. We demonstrate the effectiveness of this approach on core perception tasks as well as within agglomerative model (RADIO) training as a way of providing richer targets for distillation.
+
+Model: ResBuilder: Automated Learning of Depth with Residual Structures
+Paper: http://arxiv.org/pdf/2308.08504v1.pdf
+Summary: In this work, we develop a neural architecture search algorithm, termed Resbuilder, that develops ResNet architectures from scratch that achieve high accuracy at moderate computational cost. It can also be used to modify existing architectures and has the capability to remove and insert ResNet blocks, in this way searching for suitable architectures in the space of ResNet architectures. In our experiments on different image classification datasets, Resbuilder achieves close to state-of-the-art performance while saving computational cost compared to off-the-shelf ResNets. Noteworthy, we once tune the parameters on CIFAR10 which yields a suitable default choice for all other datasets. We demonstrate that this property generalizes even to industrial applications by applying our method with default parameters on a proprietary fraud detection dataset.
+
+
+Answer:

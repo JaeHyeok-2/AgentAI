@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I upscaled a small image from the web by 3× and was amazed how sharp the text and icons turned out. How does a lightweight model like this handle such clear restoration at that scale?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-DreamShaper
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: Varformer: Adapting VAR's Generative Prior for Image Restoration
+Paper: http://arxiv.org/pdf/2412.21063v1.pdf
+GitHub: https://github.com/siywang541/Varformer
+Summary: Generative models trained on extensive high-quality datasets effectively capture the structural and statistical properties of clean images, rendering them powerful priors for transforming degraded features into clean ones in image restoration. VAR, a novel image generative paradigm, surpasses diffusion models in generation quality by applying a next-scale prediction approach. It progressively captures both global structures and fine-grained details through the autoregressive process, consistent with the multi-scale restoration principle widely acknowledged in the restoration community. Furthermore, we observe that during the image reconstruction process utilizing VAR, scale predictions automatically modulate the input, facilitating the alignment of representations at subsequent scales with the distribution of clean images. To harness VAR's adaptive distribution alignment capability in image restoration tasks, we formulate the multi-scale latent representations within VAR as the restoration prior, thus advancing our delicately designed VarFormer framework. The strategic application of these priors enables our VarFormer to achieve remarkable generalization on unseen tasks while also reducing training computational costs. Extensive experiments underscores that our VarFormer outperforms existing multi-task image restoration methods across various restoration tasks.
+
+Model: Adaptive Multi Scale Document Binarisation Using Vision Mamba
+Paper: http://arxiv.org/pdf/2410.22811v1.pdf
+Summary: Enhancing and preserving the readability of document images, particularly historical ones, is crucial for effective document image analysis. Numerous models have been proposed for this task, including convolutional-based, transformer-based, and hybrid convolutional-transformer architectures. While hybrid models address the limitations of purely convolutional or transformer-based methods, they often suffer from issues like quadratic time complexity. In this work, we propose a Mamba-based architecture for document binarisation, which efficiently handles long sequences by scaling linearly and optimizing memory usage. Additionally, we introduce novel modifications to the skip connections by incorporating Difference of Gaussians (DoG) features, inspired by conventional signal processing techniques. These multiscale high-frequency features enable the model to produce high-quality, detailed outputs.
+
+Model: FeatSharp: Your Vision Model Features, Sharper
+Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+Summary: The feature maps of vision encoders are fundamental to myriad modern AI tasks, ranging from core perception algorithms (e.g. semantic segmentation, object detection, depth perception, etc.) to modern multimodal understanding in vision-language models (VLMs). Currently, in computer vision, the frontier of general purpose vision backbones are Vision Transformers (ViT), typically trained using contrastive loss (e.g. CLIP). A key problem with most off-the-shelf ViTs, particularly CLIP, is that these models are inflexibly low resolution. Most run at 224x224px, while the "high resolution" versions are around 378-448px, but still inflexible. We introduce a novel method to coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution. We demonstrate the effectiveness of this approach on core perception tasks as well as within agglomerative model (RADIO) training as a way of providing richer targets for distillation.
+
+
+Answer:

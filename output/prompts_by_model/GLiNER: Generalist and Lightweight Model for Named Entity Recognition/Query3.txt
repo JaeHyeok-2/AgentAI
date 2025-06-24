@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Tried it on different topics—from medical notes to social media posts—and it adapted instantly. How does a single model handle so many domains?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-QGO-PromptingReal
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: Modular Domain Adaptation for Conformer-Based Streaming ASR
+Paper: http://arxiv.org/pdf/2305.13408v1.pdf
+Summary: Speech data from different domains has distinct acoustic and linguistic characteristics. It is common to train a single multidomain model such as a Conformer transducer for speech recognition on a mixture of data from all domains. However, changing data in one domain or adding a new domain would require the multidomain model to be retrained. To this end, we propose a framework called modular domain adaptation (MDA) that enables a single model to process multidomain data while keeping all parameters domain-specific, i.e., each parameter is only trained by data from one domain. On a streaming Conformer transducer trained only on video caption data, experimental results show that an MDA-based model can reach similar performance as the multidomain model on other domains such as voice search and dictation by adding per-domain adapters and per-domain feed-forward networks in the Conformer encoder.
+
+Model: Adapt Anything: Tailor Any Image Classifiers across Domains And Categories Using Text-to-Image Diffusion Models
+Paper: http://arxiv.org/pdf/2310.16573v1.pdf
+Summary: We do not pursue a novel method in this paper, but aim to study if a modern text-to-image diffusion model can tailor any task-adaptive image classifier across domains and categories. Existing domain adaptive image classification works exploit both source and target data for domain alignment so as to transfer the knowledge learned from the labeled source data to the unlabeled target data. However, as the development of the text-to-image diffusion model, we wonder if the high-fidelity synthetic data from the text-to-image generator can serve as a surrogate of the source data in real world. In this way, we do not need to collect and annotate the source data for each domain adaptation task in a one-for-one manner. Instead, we utilize only one off-the-shelf text-to-image model to synthesize images with category labels derived from the corresponding text prompts, and then leverage the surrogate data as a bridge to transfer the knowledge embedded in the task-agnostic text-to-image generator to the task-oriented image classifier via domain adaptation. Such a one-for-all adaptation paradigm allows us to adapt anything in the world using only one text-to-image generator as well as the corresponding unlabeled target data. Extensive experiments validate the feasibility of the proposed idea, which even surpasses the state-of-the-art domain adaptation works using the source data collected and annotated in real world.
+
+Model: Domain Specific Data Distillation and Multi-modal Embedding Generation
+Paper: http://arxiv.org/pdf/2410.20325v1.pdf
+Summary: The challenge of creating domain-centric embeddings arises from the abundance of unstructured data and the scarcity of domain-specific structured data. Conventional embedding techniques often rely on either modality, limiting their applicability and efficacy. This paper introduces a novel modeling approach that leverages structured data to filter noise from unstructured data, resulting in embeddings with high precision and recall for domain-specific attribute prediction. The proposed model operates within a Hybrid Collaborative Filtering (HCF) framework, where generic entity representations are fine-tuned through relevant item prediction tasks. Our experiments, focusing on the cloud computing domain, demonstrate that HCF-based embeddings outperform AutoEncoder-based embeddings (using purely unstructured data), achieving a 28% lift in precision and an 11% lift in recall for domain-specific attribute prediction.
+
+
+Answer:

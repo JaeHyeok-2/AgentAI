@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I tested it with detailed prompts, and it produced high-res 3D objects ready for games or AR. What kind of model handles both shape and texture that well?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Structured 3D Latents for Scalable and Versatile 3D Generation∗
+Paper: https://arxiv.org/pdf/2412.01506
+GitHub: https://github.com/Microsoft/TRELLIS
+
+### Related Papers:
+Model: Pushing the Limits of 3D Shape Generation at Scale
+Paper: http://arxiv.org/pdf/2306.11510v2.pdf
+Summary: We present a significant breakthrough in 3D shape generation by scaling it to unprecedented dimensions. Through the adaptation of the Auto-Regressive model and the utilization of large language models, we have developed a remarkable model with an astounding 3.6 billion trainable parameters, establishing it as the largest 3D shape generation model to date, named Argus-3D. Our approach addresses the limitations of existing methods by enhancing the quality and diversity of generated 3D shapes. To tackle the challenges of high-resolution 3D shape generation, our model incorporates tri-plane features as latent representations, effectively reducing computational complexity. Additionally, we introduce a discrete codebook for efficient quantization of these representations. Leveraging the power of transformers, we enable multi-modal conditional generation, facilitating the production of diverse and visually impressive 3D shapes. To train our expansive model, we leverage an ensemble of publicly-available 3D datasets, consisting of a comprehensive collection of approximately 900,000 objects from renowned repositories such as ModelNet40, ShapeNet, Pix3D, 3D-Future, and Objaverse. This diverse dataset empowers our model to learn from a wide range of object variations, bolstering its ability to generate high-quality and diverse 3D shapes. Extensive experimentation demonstrate the remarkable efficacy of our approach in significantly improving the visual quality of generated 3D shapes. By pushing the boundaries of 3D generation, introducing novel methods for latent representation learning, and harnessing the power of transformers for multi-modal conditional generation, our contributions pave the way for substantial advancements in the field. Our work unlocks new possibilities for applications in gaming, virtual reality, product design, and other domains that demand high-quality and diverse 3D objects.
+
+Model: 3D VR Sketch Guided 3D Shape Prototyping and Exploration
+Paper: http://arxiv.org/pdf/2306.10830v6.pdf
+GitHub: https://github.com/rowl1ng/3dsketch2shape
+Summary: 3D shape modeling is labor-intensive, time-consuming, and requires years of expertise. To facilitate 3D shape modeling, we propose a 3D shape generation network that takes a 3D VR sketch as a condition. We assume that sketches are created by novices without art training and aim to reconstruct geometrically realistic 3D shapes of a given category. To handle potential sketch ambiguity, our method creates multiple 3D shapes that align with the original sketch's structure. We carefully design our method, training the model step-by-step and leveraging multi-modal 3D shape representation to support training with limited training data. To guarantee the realism of generated 3D shapes we leverage the normalizing flow that models the distribution of the latent space of 3D shapes. To encourage the fidelity of the generated 3D shapes to an input sketch, we propose a dedicated loss that we deploy at different stages of the training process. The code is available at https://github.com/Rowl1ng/3Dsketch2shape.
+
+Model: 3DShape2VecSet: A 3D Shape Representation for Neural Fields and Generative Diffusion Models
+Paper: http://arxiv.org/pdf/2301.11445v3.pdf
+Summary: We introduce 3DShape2VecSet, a novel shape representation for neural fields designed for generative diffusion models. Our shape representation can encode 3D shapes given as surface models or point clouds, and represents them as neural fields. The concept of neural fields has previously been combined with a global latent vector, a regular grid of latent vectors, or an irregular grid of latent vectors. Our new representation encodes neural fields on top of a set of vectors. We draw from multiple concepts, such as the radial basis function representation and the cross attention and self-attention function, to design a learnable representation that is especially suitable for processing with transformers. Our results show improved performance in 3D shape encoding and 3D shape generative modeling tasks. We demonstrate a wide variety of generative applications: unconditioned generation, category-conditioned generation, text-conditioned generation, point-cloud completion, and image-conditioned generation.
+
+
+Answer:

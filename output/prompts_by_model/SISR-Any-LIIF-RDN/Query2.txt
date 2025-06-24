@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I scaled up a small sketch to poster size, and the thin lines didn’t blur at all. How does AI preserve such sharp edges when the original resolution is so low?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Deblur-MSSNet-RealBlurR
+Paper: https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf
+GitHub: https://github.com/kky7/MSSNet
+
+### Related Papers:
+Model: FeatSharp: Your Vision Model Features, Sharper
+Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+Summary: The feature maps of vision encoders are fundamental to myriad modern AI tasks, ranging from core perception algorithms (e.g. semantic segmentation, object detection, depth perception, etc.) to modern multimodal understanding in vision-language models (VLMs). Currently, in computer vision, the frontier of general purpose vision backbones are Vision Transformers (ViT), typically trained using contrastive loss (e.g. CLIP). A key problem with most off-the-shelf ViTs, particularly CLIP, is that these models are inflexibly low resolution. Most run at 224x224px, while the "high resolution" versions are around 378-448px, but still inflexible. We introduce a novel method to coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution. We demonstrate the effectiveness of this approach on core perception tasks as well as within agglomerative model (RADIO) training as a way of providing richer targets for distillation.
+
+Model: Fine-Tuned but Zero-Shot 3D Shape Sketch View Similarity and Retrieval
+Paper: http://arxiv.org/pdf/2306.08541v2.pdf
+Summary: Recently, encoders like ViT (vision transformer) and ResNet have been trained on vast datasets and utilized as perceptual metrics for comparing sketches and images, as well as multi-domain encoders in a zero-shot setting. However, there has been limited effort to quantify the granularity of these encoders. Our work addresses this gap by focusing on multi-modal 2D projections of individual 3D instances. This task holds crucial implications for retrieval and sketch-based modeling. We show that in a zero-shot setting, the more abstract the sketch, the higher the likelihood of incorrect image matches. Even within the same sketch domain, sketches of the same object drawn in different styles, for example by distinct individuals, might not be accurately matched. One of the key findings of our research is that meticulous fine-tuning on one class of 3D shapes can lead to improved performance on other shape classes, reaching or surpassing the accuracy of supervised methods. We compare and discuss several fine-tuning strategies. Additionally, we delve deeply into how the scale of an object in a sketch influences the similarity of features at different network layers, helping us identify which network layers provide the most accurate matching. Significantly, we discover that ViT and ResNet perform best when dealing with similar object scales. We believe that our work will have a significant impact on research in the sketch domain, providing insights and guidance on how to adopt large pretrained models as perceptual losses.
+
+Model: LinFusion: 1 GPU, 1 Minute, 16K Image
+Paper: http://arxiv.org/pdf/2409.02097v3.pdf
+GitHub: https://github.com/huage001/linfusion
+Summary: Modern diffusion models, particularly those utilizing a Transformer-based UNet for denoising, rely heavily on self-attention operations to manage complex spatial relationships, thus achieving impressive generation performance. However, this existing paradigm faces significant challenges in generating high-resolution visual content due to its quadratic time and memory complexity with respect to the number of spatial tokens. To address this limitation, we aim at a novel linear attention mechanism as an alternative in this paper. Specifically, we begin our exploration from recently introduced models with linear complexity, e.g., Mamba2, RWKV6, Gated Linear Attention, etc, and identify two key features--attention normalization and non-causal inference--that enhance high-resolution visual generation performance. Building on these insights, we introduce a generalized linear attention paradigm, which serves as a low-rank approximation of a wide spectrum of popular linear token mixers. To save the training cost and better leverage pre-trained models, we initialize our models and distill the knowledge from pre-trained StableDiffusion (SD). We find that the distilled model, termed LinFusion, achieves performance on par with or superior to the original SD after only modest training, while significantly reducing time and memory complexity. Extensive experiments on SD-v1.5, SD-v2.1, and SD-XL demonstrate that LinFusion enables satisfactory and efficient zero-shot cross-resolution generation, accommodating ultra-resolution images like 16K on a single GPU. Moreover, it is highly compatible with pre-trained SD components and pipelines, such as ControlNet, IP-Adapter, DemoFusion, DistriFusion, etc, requiring no adaptation efforts. Codes are available at https://github.com/Huage001/LinFusion.
+
+
+Answer:

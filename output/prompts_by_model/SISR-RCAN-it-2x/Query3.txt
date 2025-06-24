@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"AI can easily categorize similar fashion items. What makes it effective at noticing small differences?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: ObjDet-HuggingFace-valentinafeve-yolos-fashionpedia
+Paper: None
+GitHub: https://github.com/valentinafeve/fine_tunning_YOLOS_for_fashion
+
+### Related Papers:
+Model: Fashion Recommendation: Outfit Compatibility using GNN
+Paper: http://arxiv.org/pdf/2404.18040v1.pdf
+GitHub: https://github.com/outfit-net/outfit-commpatibility
+Summary: Numerous industries have benefited from the use of machine learning and fashion in industry is no exception. By gaining a better understanding of what makes a good outfit, companies can provide useful product recommendations to their users. In this project, we follow two existing approaches that employ graphs to represent outfits and use modified versions of the Graph neural network (GNN) frameworks. Both Node-wise Graph Neural Network (NGNN) and Hypergraph Neural Network aim to score a set of items according to the outfit compatibility of items. The data used is the Polyvore Dataset which consists of curated outfits with product images and text descriptions for each product in an outfit. We recreate the analysis on a subset of this data and compare the two existing models on their performance on two tasks Fill in the blank (FITB): finding an item that completes an outfit, and Compatibility prediction: estimating compatibility of different items grouped as an outfit. We can replicate the results directionally and find that HGNN does have a slightly better performance on both tasks. On top of replicating the results of the two papers we also tried to use embeddings generated from a vision transformer and witness enhanced prediction accuracy across the board
+
+Model: LRVS-Fashion: Extending Visual Search with Referring Instructions
+Paper: http://arxiv.org/pdf/2306.02928v3.pdf
+GitHub: https://github.com/simon-lepage/condvit-lrvsf
+Summary: This paper introduces a new challenge for image similarity search in the context of fashion, addressing the inherent ambiguity in this domain stemming from complex images. We present Referred Visual Search (RVS), a task allowing users to define more precisely the desired similarity, following recent interest in the industry. We release a new large public dataset, LRVS-Fashion, consisting of 272k fashion products with 842k images extracted from fashion catalogs, designed explicitly for this task. However, unlike traditional visual search methods in the industry, we demonstrate that superior performance can be achieved by bypassing explicit object detection and adopting weakly-supervised conditional contrastive learning on image tuples. Our method is lightweight and demonstrates robustness, reaching Recall at one superior to strong detection-based baselines against 2M distractors. The dataset is available at https://huggingface.co/datasets/Slep/LAION-RVS-Fashion .
+
+Model: Contrastive Learning and the Emergence of Attributes Associations
+Paper: http://arxiv.org/pdf/2302.10763v5.pdf
+Summary: In response to an object presentation, supervised learning schemes generally respond with a parsimonious label. Upon a similar presentation we humans respond again with a label, but are flooded, in addition, by a myriad of associations. A significant portion of these consist of the presented object attributes. Contrastive learning is a semi-supervised learning scheme based on the application of identity preserving transformations on the object input representations. It is conjectured in this work that these same applied transformations preserve, in addition to the identity of the presented object, also the identity of its semantically meaningful attributes. The corollary of this is that the output representations of such a contrastive learning scheme contain valuable information not only for the classification of the presented object, but also for the presence or absence decision of any attribute of interest. Simulation results which demonstrate this idea and the feasibility of this conjecture are presented.
+
+
+Answer:

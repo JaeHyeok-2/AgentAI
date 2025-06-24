@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"After masking out part of a face, the AI filled in the cheek area with the right skin tone and contour. How do the texture and structure branches work together to restore missing facial regions?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Segmentation-HuggingFace-facebook-maskformer-swin-base-coco
+Paper: https://arxiv.org/pdf/2107.06278
+
+### Related Papers:
+Model: FaceCom: Towards High-fidelity 3D Facial Shape Completion via Optimization and Inpainting Guidance
+Paper: http://arxiv.org/pdf/2406.02074v1.pdf
+GitHub: https://github.com/dragonylee/facecom
+Summary: We propose FaceCom, a method for 3D facial shape completion, which delivers high-fidelity results for incomplete facial inputs of arbitrary forms. Unlike end-to-end shape completion methods based on point clouds or voxels, our approach relies on a mesh-based generative network that is easy to optimize, enabling it to handle shape completion for irregular facial scans. We first train a shape generator on a mixed 3D facial dataset containing 2405 identities. Based on the incomplete facial input, we fit complete faces using an optimization approach under image inpainting guidance. The completion results are refined through a post-processing step. FaceCom demonstrates the ability to effectively and naturally complete facial scan data with varying missing regions and degrees of missing areas. Our method can be used in medical prosthetic fabrication and the registration of deficient scanning data. Our experimental results demonstrate that FaceCom achieves exceptional performance in fitting and shape completion tasks. The code is available at https://github.com/dragonylee/FaceCom.git.
+
+Model: SDFD: Building a Versatile Synthetic Face Image Dataset with Diverse Attributes
+Paper: http://arxiv.org/pdf/2404.17255v2.pdf
+Summary: AI systems rely on extensive training on large datasets to address various tasks. However, image-based systems, particularly those used for demographic attribute prediction, face significant challenges. Many current face image datasets primarily focus on demographic factors such as age, gender, and skin tone, overlooking other crucial facial attributes like hairstyle and accessories. This narrow focus limits the diversity of the data and consequently the robustness of AI systems trained on them. This work aims to address this limitation by proposing a methodology for generating synthetic face image datasets that capture a broader spectrum of facial diversity. Specifically, our approach integrates a systematic prompt formulation strategy, encompassing not only demographics and biometrics but also non-permanent traits like make-up, hairstyle, and accessories. These prompts guide a state-of-the-art text-to-image model in generating a comprehensive dataset of high-quality realistic images and can be used as an evaluation set in face analysis systems. Compared to existing datasets, our proposed dataset proves equally or more challenging in image classification tasks while being much smaller in size.
+
+Model: From Transparent to Opaque: Rethinking Neural Implicit Surfaces with $α$-NeuS
+Paper: http://arxiv.org/pdf/2411.05362v2.pdf
+GitHub: https://github.com/728388808/alpha-neus
+Summary: Traditional 3D shape reconstruction techniques from multi-view images, such as structure from motion and multi-view stereo, face challenges in reconstructing transparent objects. Recent advances in neural radiance fields and its variants primarily address opaque or transparent objects, encountering difficulties to reconstruct both transparent and opaque objects simultaneously. This paper introduces $\alpha$-Neus -- an extension of NeuS -- that proves NeuS is unbiased for materials from fully transparent to fully opaque. We find that transparent and opaque surfaces align with the non-negative local minima and the zero iso-surface, respectively, in the learned distance field of NeuS. Traditional iso-surfacing extraction algorithms, such as marching cubes, which rely on fixed iso-values, are ill-suited for such data. We develop a method to extract the transparent and opaque surface simultaneously based on DCUDF. To validate our approach, we construct a benchmark that includes both real-world and synthetic scenes, demonstrating its practical utility and effectiveness. Our data and code are publicly available at https://github.com/728388808/alpha-NeuS.
+
+
+Answer:

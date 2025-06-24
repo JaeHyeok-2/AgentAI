@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"What enables AI to restore clarity and remove grain from blurry video frames when upscaled by 4x?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Deblur-MIMO-UNet-RealBlur
+Paper: https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf
+GitHub: https://github.com/chosj95/MIMO-UNet
+
+### Related Papers:
+Model: DeblurGS: Gaussian Splatting for Camera Motion Blur
+Paper: http://arxiv.org/pdf/2404.11358v2.pdf
+Summary: Although significant progress has been made in reconstructing sharp 3D scenes from motion-blurred images, a transition to real-world applications remains challenging. The primary obstacle stems from the severe blur which leads to inaccuracies in the acquisition of initial camera poses through Structure-from-Motion, a critical aspect often overlooked by previous approaches. To address this challenge, we propose DeblurGS, a method to optimize sharp 3D Gaussian Splatting from motion-blurred images, even with the noisy camera pose initialization. We restore a fine-grained sharp scene by leveraging the remarkable reconstruction capability of 3D Gaussian Splatting. Our approach estimates the 6-Degree-of-Freedom camera motion for each blurry observation and synthesizes corresponding blurry renderings for the optimization process. Furthermore, we propose Gaussian Densification Annealing strategy to prevent the generation of inaccurate Gaussians at erroneous locations during the early training stages when camera motion is still imprecise. Comprehensive experiments demonstrate that our DeblurGS achieves state-of-the-art performance in deblurring and novel view synthesis for real-world and synthetic benchmark datasets, as well as field-captured blurry smartphone videos.
+
+Model: FeatSharp: Your Vision Model Features, Sharper
+Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+Summary: The feature maps of vision encoders are fundamental to myriad modern AI tasks, ranging from core perception algorithms (e.g. semantic segmentation, object detection, depth perception, etc.) to modern multimodal understanding in vision-language models (VLMs). Currently, in computer vision, the frontier of general purpose vision backbones are Vision Transformers (ViT), typically trained using contrastive loss (e.g. CLIP). A key problem with most off-the-shelf ViTs, particularly CLIP, is that these models are inflexibly low resolution. Most run at 224x224px, while the "high resolution" versions are around 378-448px, but still inflexible. We introduce a novel method to coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution. We demonstrate the effectiveness of this approach on core perception tasks as well as within agglomerative model (RADIO) training as a way of providing richer targets for distillation.
+
+Model: EVQAScore: A Fine-grained Metric for Video Question Answering Data Quality Evaluation
+Paper: http://arxiv.org/pdf/2411.06908v3.pdf
+Summary: Video question-answering (QA) is a core task in video understanding. Evaluating the quality of video QA and video caption data quality for training video large language models (VideoLLMs) is an essential challenge. Although various methods have been proposed for assessing video caption quality, there remains a lack of dedicated evaluation methods for Video QA. To address this gap, we introduce EVQAScore, a reference-free method that leverages keyword extraction to assess both video caption and video QA data quality. Additionally, we incorporate frame sampling and rescaling techniques to enhance the efficiency and robustness of our evaluation, this enables our score to evaluate the quality of extremely long videos. Our approach achieves state-of-the-art (SOTA) performance (32.8 for Kendall correlation and 42.3 for Spearman correlation, 4.7 and 5.9 higher than the previous method PAC-S++) on the VATEX-EVAL benchmark for video caption evaluation. Furthermore, by using EVQAScore for data selection, we achieved SOTA results with only 12.5\% of the original data volume, outperforming the previous SOTA method PAC-S and 100\% of data.
+
+
+Answer:

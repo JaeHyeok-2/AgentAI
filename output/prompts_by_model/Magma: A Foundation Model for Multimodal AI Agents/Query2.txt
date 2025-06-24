@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I showed it a screenshot of a software interface and just said “move this to the right,” and it actually did it. How can it understand both the image and my instruction like that?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: ImgTxt2Img-HuggingFace-alaa-lab-InstructCV
+Paper: https://arxiv.org/pdf/2310.00390
+GitHub: https://github.com/AlaaLab/InstructCV
+
+### Related Papers:
+Model: Goal Representations for Instruction Following: A Semi-Supervised Language Interface to Control
+Paper: http://arxiv.org/pdf/2307.00117v2.pdf
+Summary: Our goal is for robots to follow natural language instructions like "put the towel next to the microwave." But getting large amounts of labeled data, i.e. data that contains demonstrations of tasks labeled with the language instruction, is prohibitive. In contrast, obtaining policies that respond to image goals is much easier, because any autonomous trial or demonstration can be labeled in hindsight with its final state as the goal. In this work, we contribute a method that taps into joint image- and goal- conditioned policies with language using only a small amount of language data. Prior work has made progress on this using vision-language models or by jointly training language-goal-conditioned policies, but so far neither method has scaled effectively to real-world robot tasks without significant human annotation. Our method achieves robust performance in the real world by learning an embedding from the labeled data that aligns language not to the goal image, but rather to the desired change between the start and goal images that the instruction corresponds to. We then train a policy on this embedding: the policy benefits from all the unlabeled data, but the aligned embedding provides an interface for language to steer the policy. We show instruction following across a variety of manipulation tasks in different scenes, with generalization to language instructions outside of the labeled data. Videos and code for our approach can be found on our website: https://rail-berkeley.github.io/grif/ .
+
+Model: LLaVAR: Enhanced Visual Instruction Tuning for Text-Rich Image Understanding
+Paper: http://arxiv.org/pdf/2306.17107v2.pdf
+GitHub: https://github.com/SALT-NLP/LLaVAR
+Summary: Instruction tuning unlocks the superior capability of Large Language Models (LLM) to interact with humans. Furthermore, recent instruction-following datasets include images as visual inputs, collecting responses for image-based instructions. However, visual instruction-tuned models cannot comprehend textual details within images well. This work enhances the current visual instruction tuning pipeline with text-rich images (e.g., movie posters, book covers, etc.). Specifically, we first use publicly available OCR tools to collect results on 422K text-rich images from the LAION dataset. Moreover, we prompt text-only GPT-4 with recognized texts and image captions to generate 16K conversations, each containing question-answer pairs for text-rich images. By combining our collected data with previous multi-modal instruction-following data, our model, LLaVAR, substantially improves the LLaVA model's capability on text-based VQA datasets (up to 20% accuracy improvement) while achieving an accuracy of 91.42% on ScienceQA. The GPT-4-based instruction-following evaluation also demonstrates the improvement of our model on both natural images and text-rich images. Through qualitative analysis, LLaVAR shows promising interaction (e.g., reasoning, writing, and elaboration) skills with humans based on the latest real-world online content that combines text and images. We make our code/data/models publicly available at https://llavar.github.io/.
+
+Model: Allowing humans to interactively guide machines where to look does not always improve human-AI team's classification accuracy
+Paper: http://arxiv.org/pdf/2404.05238v3.pdf
+GitHub: https://github.com/anguyen8/chm-corr-interactive
+Summary: Via thousands of papers in Explainable AI (XAI), attention maps \cite{vaswani2017attention} and feature importance maps \cite{bansal2020sam} have been established as a common means for finding how important each input feature is to an AI's decisions. It is an interesting, unexplored question whether allowing users to edit the feature importance at test time would improve a human-AI team's accuracy on downstream tasks. In this paper, we address this question by leveraging CHM-Corr, a state-of-the-art, ante-hoc explainable classifier \cite{taesiri2022visual} that first predicts patch-wise correspondences between the input and training-set images, and then bases on them to make classification decisions. We build CHM-Corr++, an interactive interface for CHM-Corr, enabling users to edit the feature importance map provided by CHM-Corr and observe updated model decisions. Via CHM-Corr++, users can gain insights into if, when, and how the model changes its outputs, improving their understanding beyond static explanations. However, our study with 18 expert users who performed 1,400 decisions finds no statistical significance that our interactive approach improves user accuracy on CUB-200 bird image classification over static explanations. This challenges the hypothesis that interactivity can boost human-AI team accuracy and raises needs for future research. We open-source CHM-Corr++, an interactive tool for editing image classifier attention (see an interactive demo here: http://137.184.82.109:7080/). We release code and data on github: https://github.com/anguyen8/chm-corr-interactive.
+
+
+Answer:

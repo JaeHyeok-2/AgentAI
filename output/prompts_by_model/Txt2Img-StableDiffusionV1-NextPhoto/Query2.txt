@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"The portrait looked like a snap from my travel album—natural skin, soft focus. How does AI decide what daylight looks like just from a few words?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-QGO-PromptingReal
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: SDFD: Building a Versatile Synthetic Face Image Dataset with Diverse Attributes
+Paper: http://arxiv.org/pdf/2404.17255v2.pdf
+Summary: AI systems rely on extensive training on large datasets to address various tasks. However, image-based systems, particularly those used for demographic attribute prediction, face significant challenges. Many current face image datasets primarily focus on demographic factors such as age, gender, and skin tone, overlooking other crucial facial attributes like hairstyle and accessories. This narrow focus limits the diversity of the data and consequently the robustness of AI systems trained on them. This work aims to address this limitation by proposing a methodology for generating synthetic face image datasets that capture a broader spectrum of facial diversity. Specifically, our approach integrates a systematic prompt formulation strategy, encompassing not only demographics and biometrics but also non-permanent traits like make-up, hairstyle, and accessories. These prompts guide a state-of-the-art text-to-image model in generating a comprehensive dataset of high-quality realistic images and can be used as an evaluation set in face analysis systems. Compared to existing datasets, our proposed dataset proves equally or more challenging in image classification tasks while being much smaller in size.
+
+Model: PhotoBot: Reference-Guided Interactive Photography via Natural Language
+Paper: http://arxiv.org/pdf/2401.11061v4.pdf
+Summary: We introduce PhotoBot, a framework for fully automated photo acquisition based on an interplay between high-level human language guidance and a robot photographer. We propose to communicate photography suggestions to the user via reference images that are selected from a curated gallery. We leverage a visual language model (VLM) and an object detector to characterize the reference images via textual descriptions and then use a large language model (LLM) to retrieve relevant reference images based on a user's language query through text-based reasoning. To correspond the reference image and the observed scene, we exploit pre-trained features from a vision transformer capable of capturing semantic similarity across marked appearance variations. Using these features, we compute suggested pose adjustments for an RGB-D camera by solving a perspective-n-point (PnP) problem. We demonstrate our approach using a manipulator equipped with a wrist camera. Our user studies show that photos taken by PhotoBot are often more aesthetically pleasing than those taken by users themselves, as measured by human feedback. We also show that PhotoBot can generalize to other reference sources such as paintings.
+
+Model: Zero-shot Translation of Attention Patterns in VQA Models to Natural Language
+Paper: http://arxiv.org/pdf/2311.05043v1.pdf
+GitHub: https://github.com/explainableml/zs-a2t
+Summary: Converting a model's internals to text can yield human-understandable insights about the model. Inspired by the recent success of training-free approaches for image captioning, we propose ZS-A2T, a zero-shot framework that translates the transformer attention of a given model into natural language without requiring any training. We consider this in the context of Visual Question Answering (VQA). ZS-A2T builds on a pre-trained large language model (LLM), which receives a task prompt, question, and predicted answer, as inputs. The LLM is guided to select tokens which describe the regions in the input image that the VQA model attended to. Crucially, we determine this similarity by exploiting the text-image matching capabilities of the underlying VQA model. Our framework does not require any training and allows the drop-in replacement of different guiding sources (e.g. attribution instead of attention maps), or language models. We evaluate this novel task on textual explanation datasets for VQA, giving state-of-the-art performances for the zero-shot setting on GQA-REX and VQA-X. Our code is available at: https://github.com/ExplainableML/ZS-A2T.
+
+
+Answer:

@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even the skin had tiny pores, and nothing looked over-sharpened. What kind of training lets AI get realistic detail without adding noise?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-QGO-PromptingReal
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: The Skin Game: Revolutionizing Standards for AI Dermatology Model Comparison
+Paper: http://arxiv.org/pdf/2502.02500v1.pdf
+GitHub: https://github.com/lmietkiewicz/the-skin-game-research-paper
+Summary: Deep Learning approaches in dermatological image classification have shown promising results, yet the field faces significant methodological challenges that impede proper evaluation. This paper presents a dual contribution: first, a systematic analysis of current methodological practices in skin disease classification research, revealing substantial inconsistencies in data preparation, augmentation strategies, and performance reporting; second, a comprehensive training and evaluation framework demonstrated through experiments with the DINOv2-Large vision transformer across three benchmark datasets (HAM10000, DermNet, ISIC Atlas). The analysis identifies concerning patterns, including pre-split data augmentation and validation-based reporting, potentially leading to overestimated metrics, while highlighting the lack of unified methodology standards. The experimental results demonstrate DINOv2's performance in skin disease classification, achieving macro-averaged F1-scores of 0.85 (HAM10000), 0.71 (DermNet), and 0.84 (ISIC Atlas). Attention map analysis reveals critical patterns in the model's decision-making, showing sophisticated feature recognition in typical presentations but significant vulnerabilities with atypical cases and composite images. Our findings highlight the need for standardized evaluation protocols and careful implementation strategies in clinical settings. We propose comprehensive methodological recommendations for model development, evaluation, and clinical deployment, emphasizing rigorous data preparation, systematic error analysis, and specialized protocols for different image types. To promote reproducibility, we provide our implementation code through GitHub. This work establishes a foundation for rigorous evaluation standards in dermatological image classification and provides insights for responsible AI implementation in clinical dermatology.
+
+Model: Between Generating Noise and Generating Images: Noise in the Correct Frequency Improves the Quality of Synthetic Histopathology Images for Digital Pathology
+Paper: http://arxiv.org/pdf/2302.06549v1.pdf
+Summary: Artificial intelligence and machine learning techniques have the promise to revolutionize the field of digital pathology. However, these models demand considerable amounts of data, while the availability of unbiased training data is limited. Synthetic images can augment existing datasets, to improve and validate AI algorithms. Yet, controlling the exact distribution of cellular features within them is still challenging. One of the solutions is harnessing conditional generative adversarial networks that take a semantic mask as an input rather than a random noise. Unlike other domains, outlining the exact cellular structure of tissues is hard, and most of the input masks depict regions of cell types. However, using polygon-based masks introduce inherent artifacts within the synthetic images - due to the mismatch between the polygon size and the single-cell size. In this work, we show that introducing random single-pixel noise with the appropriate spatial frequency into a polygon semantic mask can dramatically improve the quality of the synthetic images. We used our platform to generate synthetic images of immunohistochemistry-treated lung biopsies. We test the quality of the images using a three-fold validation procedure. First, we show that adding the appropriate noise frequency yields 87% of the similarity metrics improvement that is obtained by adding the actual single-cell features. Second, we show that the synthetic images pass the Turing test. Finally, we show that adding these synthetic images to the train set improves AI performance in terms of PD-L1 semantic segmentation performances. Our work suggests a simple and powerful approach for generating synthetic data on demand to unbias limited datasets to improve the algorithms' accuracy and validate their robustness.
+
+Model: Impact of imperfect annotations on CNN training and performance for instance segmentation and classification in digital pathology
+Paper: http://arxiv.org/pdf/2410.14365v1.pdf
+Summary: Segmentation and classification of large numbers of instances, such as cell nuclei, are crucial tasks in digital pathology for accurate diagnosis. However, the availability of high-quality datasets for deep learning methods is often limited due to the complexity of the annotation process. In this work, we investigate the impact of noisy annotations on the training and performance of a state-of-the-art CNN model for the combined task of detecting, segmenting and classifying nuclei in histopathology images. In this context, we investigate the conditions for determining an appropriate number of training epochs to prevent overfitting to annotation noise during training. Our results indicate that the utilisation of a small, correctly annotated validation set is instrumental in avoiding overfitting and maintaining model performance to a large extent. Additionally, our findings underscore the beneficial role of pre-training.
+
+
+Answer:

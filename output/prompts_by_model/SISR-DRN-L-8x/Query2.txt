@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I've seen AI detect moving objects quickly and accurately in real-time camera feeds. How do lightweight AI models achieve this?I tested the AI with some pixelated icons and was shocked that it could restore smooth curves and edges. What techniques help the model invent such realistic details at 8x magnification?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-QGO-PromptingReal
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: RepAct: The Re-parameterizable Adaptive Activation Function
+Paper: http://arxiv.org/pdf/2407.00131v1.pdf
+GitHub: https://github.com/2771096196/RepAct
+Summary: Addressing the imperative need for efficient artificial intelligence in IoT and edge computing, this study presents RepAct, a re-parameterizable adaptive activation function tailored for optimizing lightweight neural networks within the computational limitations of edge devices. By employing a multi-branch structure with learnable adaptive weights, RepAct enriches feature processing and enhances cross-layer interpretability. When evaluated on tasks such as image classification and object detection, RepAct notably surpassed conventional activation functions in lightweight networks, delivering up to a 7.92% accuracy boost on MobileNetV3-Small for the ImageNet100 dataset, while maintaining computational complexity on par with HardSwish. This innovative approach not only maximizes model parameter efficiency but also significantly improves the performance and understanding capabilities of lightweight neural networks, demonstrating its potential for real-time edge computing applications.
+
+Model: EffiPerception: an Efficient Framework for Various Perception Tasks
+Paper: http://arxiv.org/pdf/2403.12317v1.pdf
+Summary: The accuracy-speed-memory trade-off is always the priority to consider for several computer vision perception tasks.   Previous methods mainly focus on a single or small couple of these tasks, such as creating effective data augmentation, feature extractor, learning strategies, etc. These approaches, however, could be inherently task-specific: their proposed model's performance may depend on a specific perception task or a dataset.   Targeting to explore common learning patterns and increasing the module robustness, we propose the EffiPerception framework.   It could achieve great accuracy-speed performance with relatively low memory cost under several perception tasks: 2D Object Detection, 3D Object Detection, 2D Instance Segmentation, and 3D Point Cloud Segmentation.   Overall, the framework consists of three parts:   (1) Efficient Feature Extractors, which extract the input features for each modality. (2) Efficient Layers, plug-in plug-out layers that further process the feature representation, aggregating core learned information while pruning noisy proposals. (3) The EffiOptim, an 8-bit optimizer to further cut down the computational cost and facilitate performance stability.   Extensive experiments on the KITTI, semantic-KITTI, and COCO datasets revealed that EffiPerception could show great accuracy-speed-memory overall performance increase within the four detection and segmentation tasks, in comparison to earlier, well-respected methods.
+
+Model: AdaSfM: From Coarse Global to Fine Incremental Adaptive Structure from Motion
+Paper: http://arxiv.org/pdf/2301.12135v1.pdf
+Summary: Despite the impressive results achieved by many existing Structure from Motion (SfM) approaches, there is still a need to improve the robustness, accuracy, and efficiency on large-scale scenes with many outlier matches and sparse view graphs. In this paper, we propose AdaSfM: a coarse-to-fine adaptive SfM approach that is scalable to large-scale and challenging datasets. Our approach first does a coarse global SfM which improves the reliability of the view graph by leveraging measurements from low-cost sensors such as Inertial Measurement Units (IMUs) and wheel encoders. Subsequently, the view graph is divided into sub-scenes that are refined in parallel by a fine local incremental SfM regularised by the result from the coarse global SfM to improve the camera registration accuracy and alleviate scene drifts. Finally, our approach uses a threshold-adaptive strategy to align all local reconstructions to the coordinate frame of global SfM. Extensive experiments on large-scale benchmark datasets show that our approach achieves state-of-the-art accuracy and efficiency.
+
+
+Answer:

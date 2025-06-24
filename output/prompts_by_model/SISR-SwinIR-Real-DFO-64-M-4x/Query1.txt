@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"A noisy evening photo was upscaled 4× and even the shadows were smooth. What model traits keep super-resolution reliable in low-light scenes?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-majicMix-sombre
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: Enhancing the Reliability of LiDAR Point Cloud Sampling: A Colorization and Super-Resolution Approach Based on LiDAR-Generated Images
+Paper: http://arxiv.org/pdf/2409.11532v1.pdf
+Summary: Modern lidar systems can produce not only dense point clouds but also 360 degrees low-resolution images. This advancement facilitates the application of deep learning (DL) techniques initially developed for conventional RGB cameras and simplifies fusion of point cloud data and images without complex processes like lidar-camera calibration. Compared to RGB images from traditional cameras, lidar-generated images show greater robustness under low-light and harsh conditions, such as foggy weather. However, these images typically have lower resolution and often appear overly dark. While various studies have explored DL-based computer vision tasks such as object detection, segmentation, and keypoint detection on lidar imagery, other potentially valuable techniques remain underexplored. This paper provides a comprehensive review and qualitative analysis of DL-based colorization and super-resolution methods applied to lidar imagery. Additionally, we assess the computational performance of these approaches, offering insights into their suitability for downstream robotic and autonomous system applications like odometry and 3D reconstruction.
+
+Model: LoLiSRFlow: Joint Single Image Low-light Enhancement and Super-resolution via Cross-scale Transformer-based Conditional Flow
+Paper: http://arxiv.org/pdf/2402.18871v1.pdf
+Summary: The visibility of real-world images is often limited by both low-light and low-resolution, however, these issues are only addressed in the literature through Low-Light Enhancement (LLE) and Super- Resolution (SR) methods. Admittedly, a simple cascade of these approaches cannot work harmoniously to cope well with the highly ill-posed problem for simultaneously enhancing visibility and resolution. In this paper, we propose a normalizing flow network, dubbed LoLiSRFLow, specifically designed to consider the degradation mechanism inherent in joint LLE and SR. To break the bonds of the one-to-many mapping for low-light low-resolution images to normal-light high-resolution images, LoLiSRFLow directly learns the conditional probability distribution over a variety of feasible solutions for high-resolution well-exposed images. Specifically, a multi-resolution parallel transformer acts as a conditional encoder that extracts the Retinex-induced resolution-and-illumination invariant map as the previous one. And the invertible network maps the distribution of usually exposed high-resolution images to a latent distribution. The backward inference is equivalent to introducing an additional constrained loss for the normal training route, thus enabling the manifold of the natural exposure of the high-resolution image to be immaculately depicted. We also propose a synthetic dataset modeling the realistic low-light low-resolution degradation, named DFSR-LLE, containing 7100 low-resolution dark-light/high-resolution normal sharp pairs. Quantitative and qualitative experimental results demonstrate the effectiveness of our method on both the proposed synthetic and real datasets.
+
+Model: Efficient Denoising Method to Improve The Resolution of Satellite Images
+Paper: http://arxiv.org/pdf/2411.10476v1.pdf
+Summary: Satellites are widely used to estimate and monitor ground cover, providing critical information to address the challenges posed by climate change. High-resolution satellite images help to identify smaller features on the ground and classification of ground cover types. Small satellites have become very popular recently due to their cost-effectiveness. However, smaller satellites have weaker spatial resolution, and preprocessing using recent generative models made it possible to enhance the resolution of these satellite images. The objective of this paper is to propose computationally efficient guided or image-conditioned denoising diffusion models (DDMs) to perform super-resolution on low-quality images. Denoising based on stochastic ordinary differential equations (ODEs) typically takes hundreds of iterations and it can be reduced using deterministic ODEs. I propose Consistency Models (CM) that utilize deterministic ODEs for efficient denoising and perform super resolution on satellite images. The DOTA v2.0 image dataset that is used to develop object detectors needed for urban planning and ground cover estimation, is used in this project. The Stable Diffusion model is used as the base model, and the DDM in Stable Diffusion is converted into a Consistency Model (CM) using Teacher-Student Distillation to apply deterministic denoising. Stable diffusion with modified CM has successfully improved the resolution of satellite images by a factor of 16, and the computational time was reduced by a factor of 20 compared to stochastic denoising methods. The FID score of low-resolution images improved from 10.0 to 1.9 after increasing the image resolution using my algorithm for consistency models.
+
+
+Answer:

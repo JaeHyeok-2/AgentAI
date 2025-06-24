@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"The artwork felt like it was printed and scanned, not just digital. How does AI stack and blend styles to get that mixed-media look?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: NST-fast-neural-style-mosaic
+Paper: None
+GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+
+### Related Papers:
+Model: Artificial Intelligence and Aesthetic Judgment
+Paper: http://arxiv.org/pdf/2309.12338v1.pdf
+Summary: Generative AIs produce creative outputs in the style of human expression. We argue that encounters with the outputs of modern generative AI models are mediated by the same kinds of aesthetic judgments that organize our interactions with artwork. The interpretation procedure we use on art we find in museums is not an innate human faculty, but one developed over history by disciplines such as art history and art criticism to fulfill certain social functions. This gives us pause when considering our reactions to generative AI, how we should approach this new medium, and why generative AI seems to incite so much fear about the future. We naturally inherit a conundrum of causal inference from the history of art: a work can be read as a symptom of the cultural conditions that influenced its creation while simultaneously being framed as a timeless, seemingly acausal distillation of an eternal human condition. In this essay, we focus on an unresolved tension when we bring this dilemma to bear in the context of generative AI: are we looking for proof that generated media reflects something about the conditions that created it or some eternal human essence? Are current modes of interpretation sufficient for this task? Historically, new forms of art have changed how art is interpreted, with such influence used as evidence that a work of art has touched some essential human truth. As generative AI influences contemporary aesthetic judgment we outline some of the pitfalls and traps in attempting to scrutinize what AI generated media means.
+
+Model: FedStyle: Style-Based Federated Learning Crowdsourcing Framework for Art Commissions
+Paper: http://arxiv.org/pdf/2404.16336v1.pdf
+Summary: The unique artistic style is crucial to artists' occupational competitiveness, yet prevailing Art Commission Platforms rarely support style-based retrieval. Meanwhile, the fast-growing generative AI techniques aggravate artists' concerns about releasing personal artworks to public platforms. To achieve artistic style-based retrieval without exposing personal artworks, we propose FedStyle, a style-based federated learning crowdsourcing framework. It allows artists to train local style models and share model parameters rather than artworks for collaboration. However, most artists possess a unique artistic style, resulting in severe model drift among them. FedStyle addresses such extreme data heterogeneity by having artists learn their abstract style representations and align with the server, rather than merely aggregating model parameters lacking semantics. Besides, we introduce contrastive learning to meticulously construct the style representation space, pulling artworks with similar styles closer and keeping different ones apart in the embedding space. Extensive experiments on the proposed datasets demonstrate the superiority of FedStyle.
+
+Model: Iteratively Prompting Multimodal LLMs to Reproduce Natural and AI-Generated Images
+Paper: http://arxiv.org/pdf/2404.13784v1.pdf
+Summary: With the digital imagery landscape rapidly evolving, image stocks and AI-generated image marketplaces have become central to visual media. Traditional stock images now exist alongside innovative platforms that trade in prompts for AI-generated visuals, driven by sophisticated APIs like DALL-E 3 and Midjourney. This paper studies the possibility of employing multi-modal models with enhanced visual understanding to mimic the outputs of these platforms, introducing an original attack strategy. Our method leverages fine-tuned CLIP models, a multi-label classifier, and the descriptive capabilities of GPT-4V to create prompts that generate images similar to those available in marketplaces and from premium stock image providers, yet at a markedly lower expense. In presenting this strategy, we aim to spotlight a new class of economic and security considerations within the realm of digital imagery. Our findings, supported by both automated metrics and human assessment, reveal that comparable visual content can be produced for a fraction of the prevailing market prices ($0.23 - $0.27 per image), emphasizing the need for awareness and strategic discussions about the integrity of digital media in an increasingly AI-integrated landscape. Our work also contributes to the field by assembling a dataset consisting of approximately 19 million prompt-image pairs generated by the popular Midjourney platform, which we plan to release publicly.
+
+
+Answer:

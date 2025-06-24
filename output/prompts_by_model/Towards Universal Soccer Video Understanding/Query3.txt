@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I tried it during a live match, and it picked up key events almost in real time. How can it process complex team play and make sense of it so quickly?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Towards Universal Soccer Video Understanding
+Paper: https://arxiv.org/pdf/2412.01820
+GitHub: https://github.com/jyrao/UniSoccer
+
+### Related Papers:
+Model: FootBots: A Transformer-based Architecture for Motion Prediction in Soccer
+Paper: http://arxiv.org/pdf/2406.19852v1.pdf
+Summary: Motion prediction in soccer involves capturing complex dynamics from player and ball interactions. We present FootBots, an encoder-decoder transformer-based architecture addressing motion prediction and conditioned motion prediction through equivariance properties. FootBots captures temporal and social dynamics using set attention blocks and multi-attention block decoder. Our evaluation utilizes two datasets: a real soccer dataset and a tailored synthetic one. Insights from the synthetic dataset highlight the effectiveness of FootBots' social attention mechanism and the significance of conditioned motion prediction. Empirical results on real soccer data demonstrate that FootBots outperforms baselines in motion prediction and excels in conditioned tasks, such as predicting the players based on the ball position, predicting the offensive (defensive) team based on the ball and the defensive (offensive) team, and predicting the ball position based on all players. Our evaluation connects quantitative and qualitative findings. https://youtu.be/9kaEkfzG3L8
+
+Model: Towards Real-Time Analysis of Broadcast Badminton Videos
+Paper: http://arxiv.org/pdf/2308.12199v1.pdf
+GitHub: https://gitlab.com/nitin.nilesh/badminton-analysis-star
+Summary: Analysis of player movements is a crucial subset of sports analysis. Existing player movement analysis methods use recorded videos after the match is over. In this work, we propose an end-to-end framework for player movement analysis for badminton matches on live broadcast match videos. We only use the visual inputs from the match and, unlike other approaches which use multi-modal sensor data, our approach uses only visual cues. We propose a method to calculate the on-court distance covered by both the players from the video feed of a live broadcast badminton match. To perform this analysis, we focus on the gameplay by removing replays and other redundant parts of the broadcast match. We then perform player tracking to identify and track the movements of both players in each frame. Finally, we calculate the distance covered by each player and the average speed with which they move on the court. We further show a heatmap of the areas covered by the player on the court which is useful for analyzing the gameplay of the player. Our proposed framework was successfully used to analyze live broadcast matches in real-time during the Premier Badminton League 2019 (PBL 2019), with commentators and broadcasters appreciating the utility.
+
+Model: SoccerNet 2024 Challenges Results
+Paper: http://arxiv.org/pdf/2409.10587v1.pdf
+GitHub: https://github.com/csjihwanh/soccernet-mlv
+Summary: The SoccerNet 2024 challenges represent the fourth annual video understanding challenges organized by the SoccerNet team. These challenges aim to advance research across multiple themes in football, including broadcast video understanding, field understanding, and player understanding. This year, the challenges encompass four vision-based tasks. (1) Ball Action Spotting, focusing on precisely localizing when and which soccer actions related to the ball occur, (2) Dense Video Captioning, focusing on describing the broadcast with natural language and anchored timestamps, (3) Multi-View Foul Recognition, a novel task focusing on analyzing multiple viewpoints of a potential foul incident to classify whether a foul occurred and assess its severity, (4) Game State Reconstruction, another novel task focusing on reconstructing the game state from broadcast videos onto a 2D top-view map of the field. Detailed information about the tasks, challenges, and leaderboards can be found at https://www.soccer-net.org, with baselines and development kits available at https://github.com/SoccerNet.
+
+
+Answer:

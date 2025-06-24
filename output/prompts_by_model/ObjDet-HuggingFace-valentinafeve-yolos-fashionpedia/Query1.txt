@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I uploaded a runway photo to an AI model, and it correctly detected coats, belts, and shoes separately. How do transformer-based models like YOLOS-Fashionpedia distinguish such fine-grained fashion items in a single pass?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: ObjDet-HuggingFace-valentinafeve-yolos-fashionpedia
+Paper: None
+GitHub: https://github.com/valentinafeve/fine_tunning_YOLOS_for_fashion
+
+### Related Papers:
+Model: Personalised Outfit Recommendation via History-aware Transformers
+Paper: http://arxiv.org/pdf/2407.00289v2.pdf
+Summary: We present the history-aware transformer (HAT), a transformer-based model that uses shoppers' purchase history to personalise outfit predictions. The aim of this work is to recommend outfits that are internally coherent while matching an individual shopper's style and taste. To achieve this, we stack two transformer models, one that produces outfit representations and another one that processes the history of purchased outfits for a given shopper. We use these models to score an outfit's compatibility in the context of a shopper's preferences as inferred from their previous purchases. During training, the model learns to discriminate between purchased and random outfits using 3 losses: the focal loss for outfit compatibility typically used in the literature, a contrastive loss to bring closer learned outfit embeddings from a shopper's history, and an adaptive margin loss to facilitate learning from weak negatives. Together, these losses enable the model to make personalised recommendations based on a shopper's purchase history.   Our experiments on the IQON3000 and Polyvore datasets show that HAT outperforms strong baselines on the outfit Compatibility Prediction (CP) and the Fill In The Blank (FITB) tasks. The model improves AUC for the CP hard task by 15.7% (IQON3000) and 19.4% (Polyvore) compared to previous SOTA results. It further improves accuracy on the FITB hard task by 6.5% and 9.7%, respectively. We provide ablation studies on the personalisation, constrastive loss, and adaptive margin loss that highlight the importance of these modelling choices.
+
+Model: Transformer-based Graph Neural Networks for Outfit Generation
+Paper: http://arxiv.org/pdf/2304.08098v1.pdf
+Summary: Suggesting complementary clothing items to compose an outfit is a process of emerging interest, yet it involves a fine understanding of fashion trends and visual aesthetics. Previous works have mainly focused on recommendation by scoring visual appeal and representing garments as ordered sequences or as collections of pairwise-compatible items. This limits the full usage of relations among clothes. We attempt to bridge the gap between outfit recommendation and generation by leveraging a graph-based representation of items in a collection. The work carried out in this paper, tries to build a bridge between outfit recommendation and generation, by discovering new appealing outfits starting from a collection of pre-existing ones. We propose a transformer-based architecture, named TGNN, which exploits multi-headed self attention to capture relations between clothing items in a graph as a message passing step in Convolutional Graph Neural Networks. Specifically, starting from a seed, i.e.~one or more garments, outfit generation is performed by iteratively choosing the garment that is most compatible with the previously chosen ones. Extensive experimentations are conducted with two different datasets, demonstrating the capability of the model to perform seeded outfit generation as well as obtaining state of the art results on compatibility estimation tasks.
+
+Model: Fashion Recommendation: Outfit Compatibility using GNN
+Paper: http://arxiv.org/pdf/2404.18040v1.pdf
+GitHub: https://github.com/outfit-net/outfit-commpatibility
+Summary: Numerous industries have benefited from the use of machine learning and fashion in industry is no exception. By gaining a better understanding of what makes a good outfit, companies can provide useful product recommendations to their users. In this project, we follow two existing approaches that employ graphs to represent outfits and use modified versions of the Graph neural network (GNN) frameworks. Both Node-wise Graph Neural Network (NGNN) and Hypergraph Neural Network aim to score a set of items according to the outfit compatibility of items. The data used is the Polyvore Dataset which consists of curated outfits with product images and text descriptions for each product in an outfit. We recreate the analysis on a subset of this data and compare the two existing models on their performance on two tasks Fill in the blank (FITB): finding an item that completes an outfit, and Compatibility prediction: estimating compatibility of different items grouped as an outfit. We can replicate the results directionally and find that HGNN does have a slightly better performance on both tasks. On top of replicating the results of the two papers we also tried to use embeddings generated from a vision transformer and witness enhanced prediction accuracy across the board
+
+
+Answer:

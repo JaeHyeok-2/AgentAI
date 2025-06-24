@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even in low lighting and heavy occlusion, the tracker held on without drifting. What kind of model keeps tracking so reliably under tough conditions?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: MITracker: Multi-View Integration for Visual Object Tracking
+Paper: https://arxiv.org/pdf/2502.20111
+GitHub: https://github.com/XuM007/MITracker
+
+### Related Papers:
+Model: BackTrack: Robust template update via Backward Tracking of candidate template
+Paper: http://arxiv.org/pdf/2308.10604v1.pdf
+Summary: Variations of target appearance such as deformations, illumination variance, occlusion, etc., are the major challenges of visual object tracking that negatively impact the performance of a tracker. An effective method to tackle these challenges is template update, which updates the template to reflect the change of appearance in the target object during tracking. However, with template updates, inadequate quality of new templates or inappropriate timing of updates may induce a model drift problem, which severely degrades the tracking performance. Here, we propose BackTrack, a robust and reliable method to quantify the confidence of the candidate template by backward tracking it on the past frames. Based on the confidence score of candidates from BackTrack, we can update the template with a reliable candidate at the right time while rejecting unreliable candidates. BackTrack is a generic template update scheme and is applicable to any template-based trackers. Extensive experiments on various tracking benchmarks verify the effectiveness of BackTrack over existing template update algorithms, as it achieves SOTA performance on various tracking benchmarks.
+
+Model: S.T.A.R.-Track: Latent Motion Models for End-to-End 3D Object Tracking with Adaptive Spatio-Temporal Appearance Representations
+Paper: http://arxiv.org/pdf/2306.17602v3.pdf
+Summary: Following the tracking-by-attention paradigm, this paper introduces an object-centric, transformer-based framework for tracking in 3D. Traditional model-based tracking approaches incorporate the geometric effect of object- and ego motion between frames with a geometric motion model. Inspired by this, we propose S.T.A.R.-Track, which uses a novel latent motion model (LMM) to additionally adjust object queries to account for changes in viewing direction and lighting conditions directly in the latent space, while still modeling the geometric motion explicitly. Combined with a novel learnable track embedding that aids in modeling the existence probability of tracks, this results in a generic tracking framework that can be integrated with any query-based detector. Extensive experiments on the nuScenes benchmark demonstrate the benefits of our approach, showing state-of-the-art performance for DETR3D-based trackers while drastically reducing the number of identity switches of tracks at the same time.
+
+Model: BASE: Probably a Better Approach to Multi-Object Tracking
+Paper: http://arxiv.org/pdf/2309.12035v1.pdf
+Summary: The field of visual object tracking is dominated by methods that combine simple tracking algorithms and ad hoc schemes. Probabilistic tracking algorithms, which are leading in other fields, are surprisingly absent from the leaderboards. We found that accounting for distance in target kinematics, exploiting detector confidence and modelling non-uniform clutter characteristics is critical for a probabilistic tracker to work in visual tracking. Previous probabilistic methods fail to address most or all these aspects, which we believe is why they fall so far behind current state-of-the-art (SOTA) methods (there are no probabilistic trackers in the MOT17 top 100). To rekindle progress among probabilistic approaches, we propose a set of pragmatic models addressing these challenges, and demonstrate how they can be incorporated into a probabilistic framework. We present BASE (Bayesian Approximation Single-hypothesis Estimator), a simple, performant and easily extendible visual tracker, achieving state-of-the-art (SOTA) on MOT17 and MOT20, without using Re-Id. Code will be made available at https://github.com/ffi-no
+
+
+Answer:

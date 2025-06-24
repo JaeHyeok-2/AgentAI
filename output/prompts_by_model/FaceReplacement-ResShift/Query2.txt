@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I swapped faces in a group photo and the lighting and expression looked perfectly natural. How does AI figure out how to match everything so seamlessly?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: ImgTxt2Img-HuggingFace-timbrooks-instruct-pix2pix
+Paper: https://arxiv.org/pdf/2211.09800
+GitHub: https://github.com/timothybrooks/instruct-pix2pix
+
+### Related Papers:
+Model: Enhancing Image Matting in Real-World Scenes with Mask-Guided Iterative Refinement
+Paper: http://arxiv.org/pdf/2502.17093v1.pdf
+Summary: Real-world image matting is essential for applications in content creation and augmented reality. However, it remains challenging due to the complex nature of scenes and the scarcity of high-quality datasets. To address these limitations, we introduce Mask2Alpha, an iterative refinement framework designed to enhance semantic comprehension, instance awareness, and fine-detail recovery in image matting. Our framework leverages self-supervised Vision Transformer features as semantic priors, strengthening contextual understanding in complex scenarios. To further improve instance differentiation, we implement a mask-guided feature selection module, enabling precise targeting of objects in multi-instance settings. Additionally, a sparse convolution-based optimization scheme allows Mask2Alpha to recover high-resolution details through progressive refinement,from low-resolution semantic passes to high-resolution sparse reconstructions. Benchmarking across various real-world datasets, Mask2Alpha consistently achieves state-of-the-art results, showcasing its effectiveness in accurate and efficient image matting.
+
+Model: SDFD: Building a Versatile Synthetic Face Image Dataset with Diverse Attributes
+Paper: http://arxiv.org/pdf/2404.17255v2.pdf
+Summary: AI systems rely on extensive training on large datasets to address various tasks. However, image-based systems, particularly those used for demographic attribute prediction, face significant challenges. Many current face image datasets primarily focus on demographic factors such as age, gender, and skin tone, overlooking other crucial facial attributes like hairstyle and accessories. This narrow focus limits the diversity of the data and consequently the robustness of AI systems trained on them. This work aims to address this limitation by proposing a methodology for generating synthetic face image datasets that capture a broader spectrum of facial diversity. Specifically, our approach integrates a systematic prompt formulation strategy, encompassing not only demographics and biometrics but also non-permanent traits like make-up, hairstyle, and accessories. These prompts guide a state-of-the-art text-to-image model in generating a comprehensive dataset of high-quality realistic images and can be used as an evaluation set in face analysis systems. Compared to existing datasets, our proposed dataset proves equally or more challenging in image classification tasks while being much smaller in size.
+
+Model: Learning Naturally Aggregated Appearance for Efficient 3D Editing
+Paper: http://arxiv.org/pdf/2312.06657v2.pdf
+GitHub: https://github.com/felixcheng97/agap
+Summary: Neural radiance fields, which represent a 3D scene as a color field and a density field, have demonstrated great progress in novel view synthesis yet are unfavorable for editing due to the implicitness. This work studies the task of efficient 3D editing, where we focus on editing speed and user interactivity. To this end, we propose to learn the color field as an explicit 2D appearance aggregation, also called canonical image, with which users can easily customize their 3D editing via 2D image processing. We complement the canonical image with a projection field that maps 3D points onto 2D pixels for texture query. This field is initialized with a pseudo canonical camera model and optimized with offset regularity to ensure the naturalness of the canonical image. Extensive experiments on different datasets suggest that our representation, dubbed AGAP, well supports various ways of 3D editing (e.g., stylization, instance segmentation, and interactive drawing). Our approach demonstrates remarkable efficiency by being at least 20 times faster per edit compared to existing NeRF-based editing methods. Project page is available at https://felixcheng97.github.io/AGAP/.
+
+
+Answer:

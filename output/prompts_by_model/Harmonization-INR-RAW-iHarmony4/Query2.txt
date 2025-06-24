@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I added a person into a forest scene, and somehow the greens and shadows wrapped around them just right. It’s impressive how well the subject blends with the environment."
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-PirsusEpicRealism
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild
+Paper: http://arxiv.org/pdf/2406.01595v1.pdf
+Summary: We present MultiPly, a novel framework to reconstruct multiple people in 3D from monocular in-the-wild videos. Reconstructing multiple individuals moving and interacting naturally from monocular in-the-wild videos poses a challenging task. Addressing it necessitates precise pixel-level disentanglement of individuals without any prior knowledge about the subjects. Moreover, it requires recovering intricate and complete 3D human shapes from short video sequences, intensifying the level of difficulty. To tackle these challenges, we first define a layered neural representation for the entire scene, composited by individual human and background models. We learn the layered neural representation from videos via our layer-wise differentiable volume rendering. This learning process is further enhanced by our hybrid instance segmentation approach which combines the self-supervised 3D segmentation and the promptable 2D segmentation module, yielding reliable instance segmentation supervision even under close human interaction. A confidence-guided optimization formulation is introduced to optimize the human poses and shape/appearance alternately. We incorporate effective objectives to refine human poses via photometric information and impose physically plausible constraints on human dynamics, leading to temporally consistent 3D reconstructions with high fidelity. The evaluation of our method shows the superiority over prior art on publicly available datasets and in-the-wild videos.
+
+Model: FinnWoodlands Dataset
+Paper: http://arxiv.org/pdf/2304.00793v1.pdf
+GitHub: https://github.com/juanb09111/finnforest
+Summary: While the availability of large and diverse datasets has contributed to significant breakthroughs in autonomous driving and indoor applications, forestry applications are still lagging behind and new forest datasets would most certainly contribute to achieving significant progress in the development of data-driven methods for forest-like scenarios. This paper introduces a forest dataset called \textit{FinnWoodlands}, which consists of RGB stereo images, point clouds, and sparse depth maps, as well as ground truth manual annotations for semantic, instance, and panoptic segmentation. \textit{FinnWoodlands} comprises a total of 4226 objects manually annotated, out of which 2562 objects (60.6\%) correspond to tree trunks classified into three different instance categories, namely "Spruce Tree", "Birch Tree", and "Pine Tree". Besides tree trunks, we also annotated "Obstacles" objects as instances as well as the semantic stuff classes "Lake", "Ground", and "Track". Our dataset can be used in forestry applications where a holistic representation of the environment is relevant. We provide an initial benchmark using three models for instance segmentation, panoptic segmentation, and depth completion, and illustrate the challenges that such unstructured scenarios introduce.
+
+Model: Learning Naturally Aggregated Appearance for Efficient 3D Editing
+Paper: http://arxiv.org/pdf/2312.06657v2.pdf
+GitHub: https://github.com/felixcheng97/agap
+Summary: Neural radiance fields, which represent a 3D scene as a color field and a density field, have demonstrated great progress in novel view synthesis yet are unfavorable for editing due to the implicitness. This work studies the task of efficient 3D editing, where we focus on editing speed and user interactivity. To this end, we propose to learn the color field as an explicit 2D appearance aggregation, also called canonical image, with which users can easily customize their 3D editing via 2D image processing. We complement the canonical image with a projection field that maps 3D points onto 2D pixels for texture query. This field is initialized with a pseudo canonical camera model and optimized with offset regularity to ensure the naturalness of the canonical image. Extensive experiments on different datasets suggest that our representation, dubbed AGAP, well supports various ways of 3D editing (e.g., stylization, instance segmentation, and interactive drawing). Our approach demonstrates remarkable efficiency by being at least 20 times faster per edit compared to existing NeRF-based editing methods. Project page is available at https://felixcheng97.github.io/AGAP/.
+
+
+Answer:

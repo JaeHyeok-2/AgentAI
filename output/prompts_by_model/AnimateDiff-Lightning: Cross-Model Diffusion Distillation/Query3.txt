@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I gave it a sketch of my character, and it started moving like in a cartoon—how does it animate static drawings like that?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SemanticDraw: Towards Real-Time Interactive Content Creation from Image Diffusion Models
+Paper: https://arxiv.org/pdf/2403.09055
+GitHub: https://github.com/ironjr/semantic-draw
+
+### Related Papers:
+Model: InsActor: Instruction-driven Physics-based Characters
+Paper: http://arxiv.org/pdf/2312.17135v1.pdf
+Summary: Generating animation of physics-based characters with intuitive control has long been a desirable task with numerous applications. However, generating physically simulated animations that reflect high-level human instructions remains a difficult problem due to the complexity of physical environments and the richness of human language. In this paper, we present InsActor, a principled generative framework that leverages recent advancements in diffusion-based human motion models to produce instruction-driven animations of physics-based characters. Our framework empowers InsActor to capture complex relationships between high-level human instructions and character motions by employing diffusion policies for flexibly conditioned motion planning. To overcome invalid states and infeasible state transitions in planned motions, InsActor discovers low-level skills and maps plans to latent skill sequences in a compact latent space. Extensive experiments demonstrate that InsActor achieves state-of-the-art results on various tasks, including instruction-driven motion generation and instruction-driven waypoint heading. Notably, the ability of InsActor to generate physically simulated animations using high-level human instructions makes it a valuable tool, particularly in executing long-horizon tasks with a rich set of instructions.
+
+Model: Sketch-MoMa: Teleoperation for Mobile Manipulator via Interpretation of Hand-Drawn Sketches
+Paper: http://arxiv.org/pdf/2412.19153v3.pdf
+Summary: To use assistive robots in everyday life, a remote control system with common devices, such as 2D devices, is helpful to control the robots anytime and anywhere as intended. Hand-drawn sketches are one of the intuitive ways to control robots with 2D devices. However, since similar sketches have different intentions from scene to scene, existing work needs additional modalities to set the sketches' semantics. This requires complex operations for users and leads to decreasing usability. In this paper, we propose Sketch-MoMa, a teleoperation system using the user-given hand-drawn sketches as instructions to control a robot. We use Vision-Language Models (VLMs) to understand the user-given sketches superimposed on an observation image and infer drawn shapes and low-level tasks of the robot. We utilize the sketches and the generated shapes for recognition and motion planning of the generated low-level tasks for precise and intuitive operations. We validate our approach using state-of-the-art VLMs with 7 tasks and 5 sketch shapes. We also demonstrate that our approach effectively specifies the detailed motions, such as how to grasp and how much to rotate. Moreover, we show the competitive usability of our approach compared with the existing 2D interface through a user experiment with 14 participants.
+
+Model: Toon3D: Seeing Cartoons from New Perspectives
+Paper: http://arxiv.org/pdf/2405.10320v3.pdf
+Summary: We recover the underlying 3D structure from images of cartoons and anime depicting the same scene. This is an interesting problem domain because images in creative media are often depicted without explicit geometric consistency for storytelling and creative expression-they are only 3D in a qualitative sense. While humans can easily perceive the underlying 3D scene from these images, existing Structure-from-Motion (SfM) methods that assume 3D consistency fail catastrophically. We present Toon3D for reconstructing geometrically inconsistent images. Our key insight is to deform the input images while recovering camera poses and scene geometry, effectively explaining away geometrical inconsistencies to achieve consistency. This process is guided by the structure inferred from monocular depth predictions. We curate a dataset with multi-view imagery from cartoons and anime that we annotate with reliable sparse correspondences using our user-friendly annotation tool. Our recovered point clouds can be plugged into novel-view synthesis methods to experience cartoons from viewpoints never drawn before. We evaluate against classical and recent learning-based SfM methods, where Toon3D is able to obtain more reliable camera poses and scene geometry.
+
+
+Answer:

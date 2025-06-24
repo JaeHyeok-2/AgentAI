@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I tested a 3× upscale on a low-res UI image, and even curved icons looked smooth. What design strategies help these compact models recreate crisp edges so reliably?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-ESRT-3x
+Paper: None
+GitHub: https://github.com/luissen/ESRT
+
+### Related Papers:
+Model: SepicNet: Sharp Edges Recovery by Parametric Inference of Curves in 3D Shapes
+Paper: http://arxiv.org/pdf/2304.06531v1.pdf
+Summary: 3D scanning as a technique to digitize objects in reality and create their 3D models, is used in many fields and areas. Though the quality of 3D scans depends on the technical characteristics of the 3D scanner, the common drawback is the smoothing of fine details, or the edges of an object. We introduce SepicNet, a novel deep network for the detection and parametrization of sharp edges in 3D shapes as primitive curves. To make the network end-to-end trainable, we formulate the curve fitting in a differentiable manner. We develop an adaptive point cloud sampling technique that captures the sharp features better than uniform sampling. The experiments were conducted on a newly introduced large-scale dataset of 50k 3D scans, where the sharp edge annotations were extracted from their parametric CAD models, and demonstrate significant improvement over state-of-the-art methods.
+
+Model: FeatSharp: Your Vision Model Features, Sharper
+Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+Summary: The feature maps of vision encoders are fundamental to myriad modern AI tasks, ranging from core perception algorithms (e.g. semantic segmentation, object detection, depth perception, etc.) to modern multimodal understanding in vision-language models (VLMs). Currently, in computer vision, the frontier of general purpose vision backbones are Vision Transformers (ViT), typically trained using contrastive loss (e.g. CLIP). A key problem with most off-the-shelf ViTs, particularly CLIP, is that these models are inflexibly low resolution. Most run at 224x224px, while the "high resolution" versions are around 378-448px, but still inflexible. We introduce a novel method to coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution. We demonstrate the effectiveness of this approach on core perception tasks as well as within agglomerative model (RADIO) training as a way of providing richer targets for distillation.
+
+Model: Enhancing Surface Neural Implicits with Curvature-Guided Sampling and Uncertainty-Augmented Representations
+Paper: http://arxiv.org/pdf/2306.02099v4.pdf
+GitHub: https://github.com/Sangluisme/curverture-sample-uncertainty-aware-sdf
+Summary: Neural implicit representations have become a popular choice for modeling surfaces due to their adaptability in resolution and support for complex topology. While previous works have achieved impressive reconstruction quality by training on ground truth point clouds or meshes, they often do not discuss the data acquisition and ignore the effect of input quality and sampling methods during reconstruction. In this paper, we introduce a method that directly digests depth images for the task of high-fidelity 3D reconstruction. To this end, a simple sampling strategy is proposed to generate highly effective training data, by incorporating differentiable geometric features computed directly based on the input depth images with only marginal computational cost. Due to its simplicity, our sampling strategy can be easily incorporated into diverse popular methods, allowing their training process to be more stable and efficient. Despite its simplicity, our method outperforms a range of both classical and learning-based baselines and demonstrates state-of-the-art results in both synthetic and real-world datasets.
+
+
+Answer:

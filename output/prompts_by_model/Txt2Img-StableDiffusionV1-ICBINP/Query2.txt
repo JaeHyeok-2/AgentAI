@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I made a fake product shot and even the light reflections on metal looked like they were captured with a DSLR. How does AI pull off that kind of photorealism without ever seeing the real object?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-CyberRealistic
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: Online Overexposed Pixels Hallucination in Videos with Adaptive Reference Frame Selection
+Paper: http://arxiv.org/pdf/2308.15462v1.pdf
+Summary: Low dynamic range (LDR) cameras cannot deal with wide dynamic range inputs, frequently leading to local overexposure issues. We present a learning-based system to reduce these artifacts without resorting to complex acquisition mechanisms like alternating exposures or costly processing that are typical of high dynamic range (HDR) imaging. We propose a transformer-based deep neural network (DNN) to infer the missing HDR details. In an ablation study, we show the importance of using a multiscale DNN and train it with the proper cost function to achieve state-of-the-art quality. To aid the reconstruction of the overexposed areas, our DNN takes a reference frame from the past as an additional input. This leverages the commonly occurring temporal instabilities of autoexposure to our advantage: since well-exposed details in the current frame may be overexposed in the future, we use reinforcement learning to train a reference frame selection DNN that decides whether to adopt the current frame as a future reference. Without resorting to alternating exposures, we obtain therefore a causal, HDR hallucination algorithm with potential application in common video acquisition settings. Our demo video can be found at https://drive.google.com/file/d/1-r12BKImLOYCLUoPzdebnMyNjJ4Rk360/view
+
+Model: Removing Reflections from RAW Photos
+Paper: http://arxiv.org/pdf/2404.14414v2.pdf
+Summary: We describe a system to remove real-world reflections from images for consumer photography. Our system operates on linear (RAW) photos, and accepts an optional contextual photo looking in the opposite direction (e.g., the "selfie" camera on a mobile device). This optional photo disambiguates what should be considered the reflection. The system is trained solely on synthetic mixtures of real RAW photos, which we combine using a reflection simulation that is photometrically and geometrically accurate. Our system comprises a base model that accepts the captured photo and optional context photo as input, and runs at 256p, followed by an up-sampling model that transforms 256p images to full resolution. The system produces preview images at 1K in 4.5-6.5s on a MacBook or iPhone 14 Pro. We show SOTA results on RAW photos that were captured in the field to embody typical consumer photos, and show that training on RAW simulation data improves performance more than the architectural variations among prior works.
+
+Model: Data-Link: High Fidelity Manufacturing Datasets for Model2Real Transfer under Industrial Settings
+Paper: http://arxiv.org/pdf/2306.05766v1.pdf
+Summary: High-fidelity datasets play a pivotal role in imbuing simulators with realism, enabling the benchmarking of various state-of-the-art deep inference models. These models are particularly instrumental in tasks such as semantic segmentation, classification, and localization. This study showcases the efficacy of a customized manufacturing dataset comprising 60 classes in the creation of a high-fidelity digital twin of a robotic manipulation environment. By leveraging the concept of transfer learning, different 6D pose estimation models are trained within the simulated environment using domain randomization and subsequently tested on real-world objects to assess domain adaptation. To ascertain the effectiveness and realism of the created data-set, pose accuracy and mean absolute error (MAE) metrics are reported to quantify the model2real gap.
+
+
+Answer:

@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I erased a large building and the AI filled in hills and sky without mismatches. How do the model’s two filtering branches communicate to balance object outlines and background textures?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Inpainting-MISF-CelebA
+Paper: https://arxiv.org/pdf/2203.06304
+GitHub: https://github.com/tsingqguo/misf
+
+### Related Papers:
+Model: Enhancing Image Matting in Real-World Scenes with Mask-Guided Iterative Refinement
+Paper: http://arxiv.org/pdf/2502.17093v1.pdf
+Summary: Real-world image matting is essential for applications in content creation and augmented reality. However, it remains challenging due to the complex nature of scenes and the scarcity of high-quality datasets. To address these limitations, we introduce Mask2Alpha, an iterative refinement framework designed to enhance semantic comprehension, instance awareness, and fine-detail recovery in image matting. Our framework leverages self-supervised Vision Transformer features as semantic priors, strengthening contextual understanding in complex scenarios. To further improve instance differentiation, we implement a mask-guided feature selection module, enabling precise targeting of objects in multi-instance settings. Additionally, a sparse convolution-based optimization scheme allows Mask2Alpha to recover high-resolution details through progressive refinement,from low-resolution semantic passes to high-resolution sparse reconstructions. Benchmarking across various real-world datasets, Mask2Alpha consistently achieves state-of-the-art results, showcasing its effectiveness in accurate and efficient image matting.
+
+Model: When Semantic Segmentation Meets Frequency Aliasing
+Paper: http://arxiv.org/pdf/2403.09065v3.pdf
+GitHub: https://github.com/linwei-chen/seg-aliasing
+Summary: Despite recent advancements in semantic segmentation, where and what pixels are hard to segment remains largely unexplored. Existing research only separates an image into easy and hard regions and empirically observes the latter are associated with object boundaries. In this paper, we conduct a comprehensive analysis of hard pixel errors, categorizing them into three types: false responses, merging mistakes, and displacements. Our findings reveal a quantitative association between hard pixels and aliasing, which is distortion caused by the overlapping of frequency components in the Fourier domain during downsampling. To identify the frequencies responsible for aliasing, we propose using the equivalent sampling rate to calculate the Nyquist frequency, which marks the threshold for aliasing. Then, we introduce the aliasing score as a metric to quantify the extent of aliasing. While positively correlated with the proposed aliasing score, three types of hard pixels exhibit different patterns. Here, we propose two novel de-aliasing filter (DAF) and frequency mixing (FreqMix) modules to alleviate aliasing degradation by accurately removing or adjusting frequencies higher than the Nyquist frequency. The DAF precisely removes the frequencies responsible for aliasing before downsampling, while the FreqMix dynamically selects high-frequency components within the encoder block. Experimental results demonstrate consistent improvements in semantic segmentation and low-light instance segmentation tasks. The code is available at: https://github.com/Linwei-Chen/Seg-Aliasing.
+
+Model: SurfaceAug: Closing the Gap in Multimodal Ground Truth Sampling
+Paper: http://arxiv.org/pdf/2312.03808v1.pdf
+Summary: Despite recent advances in both model architectures and data augmentation, multimodal object detectors still barely outperform their LiDAR-only counterparts. This shortcoming has been attributed to a lack of sufficiently powerful multimodal data augmentation. To address this, we present SurfaceAug, a novel ground truth sampling algorithm. SurfaceAug pastes objects by resampling both images and point clouds, enabling object-level transformations in both modalities. We evaluate our algorithm by training a multimodal detector on KITTI and compare its performance to previous works. We show experimentally that SurfaceAug outperforms existing methods on car detection tasks and establishes a new state of the art for multimodal ground truth sampling.
+
+
+Answer:

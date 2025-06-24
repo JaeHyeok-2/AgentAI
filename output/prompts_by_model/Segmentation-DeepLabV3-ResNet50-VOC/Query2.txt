@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even in low-light or blurry images, the segmentation still worked. What helps these models stay accurate under tough conditions?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Segmentation-DeepLabV3-MobileNet-VOC
+Paper: None
+GitHub: https://github.com/VainF/DeepLabV3Plus-Pytorch
+
+### Related Papers:
+Model: Data Quality Aware Approaches for Addressing Model Drift of Semantic Segmentation Models
+Paper: http://arxiv.org/pdf/2402.07258v1.pdf
+Summary: In the midst of the rapid integration of artificial intelligence (AI) into real world applications, one pressing challenge we confront is the phenomenon of model drift, wherein the performance of AI models gradually degrades over time, compromising their effectiveness in real-world, dynamic environments. Once identified, we need techniques for handling this drift to preserve the model performance and prevent further degradation. This study investigates two prominent quality aware strategies to combat model drift: data quality assessment and data conditioning based on prior model knowledge. The former leverages image quality assessment metrics to meticulously select high-quality training data, improving the model robustness, while the latter makes use of learned feature vectors from existing models to guide the selection of future data, aligning it with the model's prior knowledge. Through comprehensive experimentation, this research aims to shed light on the efficacy of these approaches in enhancing the performance and reliability of semantic segmentation models, thereby contributing to the advancement of computer vision capabilities in real-world scenarios.
+
+Model: Surgical fine-tuning for Grape Bunch Segmentation under Visual Domain Shifts
+Paper: http://arxiv.org/pdf/2307.00837v1.pdf
+GitHub: https://github.com/airlab-polimi/sft_grape_segmentation
+Summary: Mobile robots will play a crucial role in the transition towards sustainable agriculture. To autonomously and effectively monitor the state of plants, robots ought to be equipped with visual perception capabilities that are robust to the rapid changes that characterise agricultural settings. In this paper, we focus on the challenging task of segmenting grape bunches from images collected by mobile robots in vineyards. In this context, we present the first study that applies surgical fine-tuning to instance segmentation tasks. We show how selectively tuning only specific model layers can support the adaptation of pre-trained Deep Learning models to newly-collected grape images that introduce visual domain shifts, while also substantially reducing the number of tuned parameters.
+
+Model: Technical Report for CVPR 2024 WeatherProof Dataset Challenge: Semantic Segmentation on Paired Real Data
+Paper: http://arxiv.org/pdf/2407.01579v1.pdf
+Summary: This technical report presents the implementation details of 2nd winning for CVPR'24 UG2 WeatherProof Dataset Challenge. This challenge aims at semantic segmentation of images degraded by various degrees of weather from all around the world. We addressed this problem by introducing a pre-trained large-scale vision foundation model: InternImage, and trained it using images with different levels of noise. Besides, we did not use additional datasets in the training procedure and utilized dense-CRF as post-processing in the final testing procedure. As a result, we achieved 2nd place in the challenge with 45.1 mIOU and fewer submissions than the other winners.
+
+
+Answer:

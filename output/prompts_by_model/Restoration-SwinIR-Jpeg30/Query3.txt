@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"The results looked better than I thought possible for an 8x enlargement. What lets AI rebuild so much from such little info?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-EDSR
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: ResBuilder: Automated Learning of Depth with Residual Structures
+Paper: http://arxiv.org/pdf/2308.08504v1.pdf
+Summary: In this work, we develop a neural architecture search algorithm, termed Resbuilder, that develops ResNet architectures from scratch that achieve high accuracy at moderate computational cost. It can also be used to modify existing architectures and has the capability to remove and insert ResNet blocks, in this way searching for suitable architectures in the space of ResNet architectures. In our experiments on different image classification datasets, Resbuilder achieves close to state-of-the-art performance while saving computational cost compared to off-the-shelf ResNets. Noteworthy, we once tune the parameters on CIFAR10 which yields a suitable default choice for all other datasets. We demonstrate that this property generalizes even to industrial applications by applying our method with default parameters on a proprietary fraud detection dataset.
+
+Model: O1 Embedder: Let Retrievers Think Before Action
+Paper: http://arxiv.org/pdf/2502.07555v2.pdf
+Summary: The growing power of large language models (LLMs) has revolutionized how people access and utilize information. Notably, the LLMs excel at performing fine-grained data representation, which facilitates precise retrieval of information. They also generate high-quality answers based on external references, enabling the production of useful knowledge. The recent introduction of reasoning models, like OpenAI O1 and DeepSeek R1, marks another leap forward, highlighting LLMs' ability to think progressively before delivering final answers. This breakthrough significantly improves the ability to address complex tasks, e.g., coding and math proofs.   Inspired by this progress, we aim to develop similar capabilities for retrieval models, which hold great promise for tackling critical challenges in the field, including multi-task retrieval, zero-shot retrieval, and tasks requiring intensive reasoning of complex relationships. With this motivation, we propose a novel approach called O1 Embedder, which generates useful thoughts for the input query before making retrieval for the target documents. To realize this objective, we conquer two technical difficulties. First, we design a data synthesis workflow, creating training signals for O1 Embedder by generating initial thoughts from an LLM-expert and subsequently refining them using a retrieval committee. Second, we optimize the training process, enabling a pre-trained model to be jointly fine-tuned to generate retrieval thoughts via behavior cloning and perform dense retrieval through contrastive learning. Our approach is evaluated by comprehensive experiments, where substantial improvements are achieved across 12 popular datasets, spanning both in-domain and out-of-domain scenarios. These results highlight O1 Embedder's remarkable accuracy and generalizability, paving the way for the development of next-generation IR foundation models.
+
+Model: Human-Guided Image Generation for Expanding Small-Scale Training Image Datasets
+Paper: http://arxiv.org/pdf/2412.16839v2.pdf
+GitHub: https://github.com/hnu-vis/datacrafter
+Summary: The performance of computer vision models in certain real-world applications (e.g., rare wildlife observation) is limited by the small number of available images. Expanding datasets using pre-trained generative models is an effective way to address this limitation. However, since the automatic generation process is uncontrollable, the generated images are usually limited in diversity, and some of them are undesired. In this paper, we propose a human-guided image generation method for more controllable dataset expansion. We develop a multi-modal projection method with theoretical guarantees to facilitate the exploration of both the original and generated images. Based on the exploration, users refine the prompts and re-generate images for better performance. Since directly refining the prompts is challenging for novice users, we develop a sample-level prompt refinement method to make it easier. With this method, users only need to provide sample-level feedback (e.g., which samples are undesired) to obtain better prompts. The effectiveness of our method is demonstrated through the quantitative evaluation of the multi-modal projection method, improved model performance in the case study for both classification and object detection tasks, and positive feedback from the experts.
+
+
+Answer:

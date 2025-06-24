@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I combined two high-res photos and the merged result looked smooth even at the borders. It was like they were taken under the same light."
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-henmixReal
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: Spectral Image Data Fusion for Multisource Data Augmentation
+Paper: http://arxiv.org/pdf/2405.14883v1.pdf
+Summary: Multispectral and hyperspectral images are increasingly popular in different research fields, such as remote sensing, astronomical imaging, or precision agriculture. However, the amount of free data available to perform machine learning tasks is relatively small. Moreover, artificial intelligence models developed in the area of spectral imaging require input images with a fixed spectral signature, expecting the data to have the same number of spectral bands or the same spectral resolution. This requirement significantly reduces the number of usable sources that can be used for a given model. The scope of this study is to introduce a methodology for spectral image data fusion, in order to allow machine learning models to be trained and/or used on data from a larger number of sources, thus providing better generalization. For this purpose, we propose different interpolation techniques, in order to make multisource spectral data compatible with each other. The interpolation outcomes are evaluated through various approaches. This includes direct assessments using surface plots and metrics such as a Custom Mean Squared Error (CMSE) and the Normalized Difference Vegetation Index (NDVI). Additionally, indirect evaluation is done by estimating their impact on machine learning model training, particularly for semantic segmentation.
+
+Model: Removing Reflections from RAW Photos
+Paper: http://arxiv.org/pdf/2404.14414v2.pdf
+Summary: We describe a system to remove real-world reflections from images for consumer photography. Our system operates on linear (RAW) photos, and accepts an optional contextual photo looking in the opposite direction (e.g., the "selfie" camera on a mobile device). This optional photo disambiguates what should be considered the reflection. The system is trained solely on synthetic mixtures of real RAW photos, which we combine using a reflection simulation that is photometrically and geometrically accurate. Our system comprises a base model that accepts the captured photo and optional context photo as input, and runs at 256p, followed by an up-sampling model that transforms 256p images to full resolution. The system produces preview images at 1K in 4.5-6.5s on a MacBook or iPhone 14 Pro. We show SOTA results on RAW photos that were captured in the field to embody typical consumer photos, and show that training on RAW simulation data improves performance more than the architectural variations among prior works.
+
+Model: CrossScore: Towards Multi-View Image Evaluation and Scoring
+Paper: http://arxiv.org/pdf/2404.14409v4.pdf
+Summary: We introduce a novel cross-reference image quality assessment method that effectively fills the gap in the image assessment landscape, complementing the array of established evaluation schemes -- ranging from full-reference metrics like SSIM, no-reference metrics such as NIQE, to general-reference metrics including FID, and Multi-modal-reference metrics, e.g., CLIPScore. Utilising a neural network with the cross-attention mechanism and a unique data collection pipeline from NVS optimisation, our method enables accurate image quality assessment without requiring ground truth references. By comparing a query image against multiple views of the same scene, our method addresses the limitations of existing metrics in novel view synthesis (NVS) and similar tasks where direct reference images are unavailable. Experimental results show that our method is closely correlated to the full-reference metric SSIM, while not requiring ground truth references.
+
+
+Answer:

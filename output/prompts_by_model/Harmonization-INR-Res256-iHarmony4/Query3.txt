@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I threw together a small thumbnail image and was surprised how naturally the inserted object blended into the background. It didn’t feel low quality at all."
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: NST-fast-neural-style-mosaic
+Paper: None
+GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+
+### Related Papers:
+Model: GenMM: Geometrically and Temporally Consistent Multimodal Data Generation for Video and LiDAR
+Paper: http://arxiv.org/pdf/2406.10722v1.pdf
+Summary: Multimodal synthetic data generation is crucial in domains such as autonomous driving, robotics, augmented/virtual reality, and retail. We propose a novel approach, GenMM, for jointly editing RGB videos and LiDAR scans by inserting temporally and geometrically consistent 3D objects. Our method uses a reference image and 3D bounding boxes to seamlessly insert and blend new objects into target videos. We inpaint the 2D Regions of Interest (consistent with 3D boxes) using a diffusion-based video inpainting model. We then compute semantic boundaries of the object and estimate it's surface depth using state-of-the-art semantic segmentation and monocular depth estimation techniques. Subsequently, we employ a geometry-based optimization algorithm to recover the 3D shape of the object's surface, ensuring it fits precisely within the 3D bounding box. Finally, LiDAR rays intersecting with the new object surface are updated to reflect consistent depths with its geometry. Our experiments demonstrate the effectiveness of GenMM in inserting various 3D objects across video and LiDAR modalities.
+
+Model: DreamColour: Controllable Video Colour Editing without Training
+Paper: http://arxiv.org/pdf/2412.05180v1.pdf
+Summary: Video colour editing is a crucial task for content creation, yet existing solutions either require painstaking frame-by-frame manipulation or produce unrealistic results with temporal artefacts. We present a practical, training-free framework that makes precise video colour editing accessible through an intuitive interface while maintaining professional-quality output. Our key insight is that by decoupling spatial and temporal aspects of colour editing, we can better align with users' natural workflow -- allowing them to focus on precise colour selection in key frames before automatically propagating changes across time. We achieve this through a novel technical framework that combines: (i) a simple point-and-click interface merging grid-based colour selection with automatic instance segmentation for precise spatial control, (ii) bidirectional colour propagation that leverages inherent video motion patterns, and (iii) motion-aware blending that ensures smooth transitions even with complex object movements. Through extensive evaluation on diverse scenarios, we demonstrate that our approach matches or exceeds state-of-the-art methods while eliminating the need for training or specialized hardware, making professional-quality video colour editing accessible to everyone.
+
+Model: ColMix -- A Simple Data Augmentation Framework to Improve Object Detector Performance and Robustness in Aerial Images
+Paper: http://arxiv.org/pdf/2305.13509v1.pdf
+Summary: In the last decade, Convolutional Neural Network (CNN) and transformer based object detectors have achieved high performance on a large variety of datasets. Though the majority of detection literature has developed this capability on datasets such as MS COCO, these detectors have still proven effective for remote sensing applications. Challenges in this particular domain, such as small numbers of annotated objects and low object density, hinder overall performance. In this work, we present a novel augmentation method, called collage pasting, for increasing the object density without a need for segmentation masks, thereby improving the detector performance. We demonstrate that collage pasting improves precision and recall beyond related methods, such as mosaic augmentation, and enables greater control of object density. However, we find that collage pasting is vulnerable to certain out-of-distribution shifts, such as image corruptions. To address this, we introduce two simple approaches for combining collage pasting with PixMix augmentation method, and refer to our combined techniques as ColMix. Through extensive experiments, we show that employing ColMix results in detectors with superior performance on aerial imagery datasets and robust to various corruptions.
+
+
+Answer:

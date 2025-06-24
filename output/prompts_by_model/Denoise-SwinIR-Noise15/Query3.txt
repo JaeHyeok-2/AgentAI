@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"AI restoration turned heavily degraded photos into clear, detailed images. What techniques allow modern AI models to restore images with extreme noise or degradation? Which specific architectures are currently leading in this domain?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Denoise-SwinIR-Noise15
+Paper: https://openaccess.thecvf.com/content/ICCV2021W/AIM/papers/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.pdf
+GitHub: https://github.com/JingyunLiang/SwinIR
+
+### Related Papers:
+Model: HAIR: Hypernetworks-based All-in-One Image Restoration
+Paper: http://arxiv.org/pdf/2408.08091v4.pdf
+GitHub: https://github.com/toummHus/HAIR
+Summary: Image restoration aims to recover a high-quality clean image from its degraded version. Recent progress in image restoration has demonstrated the effectiveness of All-in-One image restoration models in addressing various unknown degradations simultaneously. However, these existing methods typically utilize the same parameters to tackle images with different types of degradation, forcing the model to balance the performance between different tasks and limiting its performance on each task. To alleviate this issue, we propose HAIR, a Hypernetworks-based All-in-One Image Restoration plug-and-play method that generates parameters based on the input image and thus makes the model to adapt to specific degradation dynamically. Specifically, HAIR consists of two main components, i.e., Classifier and Hyper Selecting Net (HSN). The Classifier is a simple image classification network used to generate a Global Information Vector (GIV) that contains the degradation information of the input image, and the HSN is a simple fully-connected neural network that receives the GIV and outputs parameters for the corresponding modules. Extensive experiments demonstrate that HAIR can significantly improve the performance of existing image restoration models in a plug-and-play manner, both in single-task and All-in-One settings. Notably, our proposed model Res-HAIR, which integrates HAIR into the well-known Restormer, can obtain superior or comparable performance compared with current state-of-the-art methods. Moreover, we theoretically demonstrate that to achieve a given small enough error, our proposed HAIR requires fewer parameters in contrast to mainstream embedding-based All-in-One methods. The code is available at https://github.com/toummHus/HAIR.
+
+Model: Learning Dual Transformers for All-In-One Image Restoration from a Frequency Perspective
+Paper: http://arxiv.org/pdf/2407.01636v2.pdf
+Summary: This work aims to tackle the all-in-one image restoration task, which seeks to handle multiple types of degradation with a single model. The primary challenge is to extract degradation representations from the input degraded images and use them to guide the model's adaptation to specific degradation types. Building on the insight that various degradations affect image content differently across frequency bands, we propose a new dual-transformer approach comprising two components: a frequency-aware Degradation estimation transformer (Dformer) and a degradation-adaptive Restoration transformer (Rformer). The Dformer captures the essential characteristics of various degradations by decomposing the input into different frequency components. By understanding how degradations affect these frequency components, the Dformer learns robust priors that effectively guide the restoration process. The Rformer then employs a degradation-adaptive self-attention module to selectively focus on the most affected frequency components, guided by the learned degradation representations. Extensive experimental results demonstrate that our approach outperforms existing methods in five representative restoration tasks, including denoising, deraining, dehazing, deblurring, and low-light enhancement. Additionally, our method offers benefits for handling, real-world degradations, spatially variant degradations, and unseen degradation levels.
+
+Model: DreamClear: High-Capacity Real-World Image Restoration with Privacy-Safe Dataset Curation
+Paper: http://arxiv.org/pdf/2410.18666v2.pdf
+GitHub: https://github.com/shallowdream204/dreamclear
+Summary: Image restoration (IR) in real-world scenarios presents significant challenges due to the lack of high-capacity models and comprehensive datasets. To tackle these issues, we present a dual strategy: GenIR, an innovative data curation pipeline, and DreamClear, a cutting-edge Diffusion Transformer (DiT)-based image restoration model. GenIR, our pioneering contribution, is a dual-prompt learning pipeline that overcomes the limitations of existing datasets, which typically comprise only a few thousand images and thus offer limited generalizability for larger models. GenIR streamlines the process into three stages: image-text pair construction, dual-prompt based fine-tuning, and data generation & filtering. This approach circumvents the laborious data crawling process, ensuring copyright compliance and providing a cost-effective, privacy-safe solution for IR dataset construction. The result is a large-scale dataset of one million high-quality images. Our second contribution, DreamClear, is a DiT-based image restoration model. It utilizes the generative priors of text-to-image (T2I) diffusion models and the robust perceptual capabilities of multi-modal large language models (MLLMs) to achieve photorealistic restoration. To boost the model's adaptability to diverse real-world degradations, we introduce the Mixture of Adaptive Modulator (MoAM). It employs token-wise degradation priors to dynamically integrate various restoration experts, thereby expanding the range of degradations the model can address. Our exhaustive experiments confirm DreamClear's superior performance, underlining the efficacy of our dual strategy for real-world image restoration. Code and pre-trained models are available at: https://github.com/shallowdream204/DreamClear.
+
+
+Answer:

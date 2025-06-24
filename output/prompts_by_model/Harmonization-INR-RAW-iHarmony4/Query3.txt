@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I placed a new object into a beach photo, and even the sunlight direction looked correct. It felt like the object had always been there."
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-NextPhoto
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: An Adaptive Method for Camera Attribution under Complex Radial Distortion Corrections
+Paper: http://arxiv.org/pdf/2302.14409v1.pdf
+GitHub: https://github.com/AMontiB/AdaptivePRNUCameraAttribution
+Summary: Radial correction distortion, applied by in-camera or out-camera software/firmware alters the supporting grid of the image so as to hamper PRNU-based camera attribution. Existing solutions to deal with this problem try to invert/estimate the correction using radial transformations parameterized with few variables in order to restrain the computational load; however, with ever more prevalent complex distortion corrections their performance is unsatisfactory. In this paper we propose an adaptive algorithm that by dividing the image into concentric annuli is able to deal with sophisticated corrections like those applied out-camera by third party software like Adobe Lightroom, Photoshop, Gimp and PT-Lens. We also introduce a statistic called cumulative peak of correlation energy (CPCE) that allows for an efficient early stopping strategy. Experiments on a large dataset of in-camera and out-camera radially corrected images show that our solution improves the state of the art in terms of both accuracy and computational cost.
+
+Model: Physically-Based Photometric Bundle Adjustment in Non-Lambertian Environments
+Paper: http://arxiv.org/pdf/2409.11854v1.pdf
+Summary: Photometric bundle adjustment (PBA) is widely used in estimating the camera pose and 3D geometry by assuming a Lambertian world. However, the assumption of photometric consistency is often violated since the non-diffuse reflection is common in real-world environments. The photometric inconsistency significantly affects the reliability of existing PBA methods. To solve this problem, we propose a novel physically-based PBA method. Specifically, we introduce the physically-based weights regarding material, illumination, and light path. These weights distinguish the pixel pairs with different levels of photometric inconsistency. We also design corresponding models for material estimation based on sequential images and illumination estimation based on point clouds. In addition, we establish the first SLAM-related dataset of non-Lambertian scenes with complete ground truth of illumination and material. Extensive experiments demonstrated that our PBA method outperforms existing approaches in accuracy.
+
+Model: Transferring facade labels between point clouds with semantic octrees while considering change detection
+Paper: http://arxiv.org/pdf/2402.06531v1.pdf
+GitHub: https://github.com/schwarzsophia/transferring_urban_labels_between_pointclouds
+Summary: Point clouds and high-resolution 3D data have become increasingly important in various fields, including surveying, construction, and virtual reality. However, simply having this data is not enough; to extract useful information, semantic labeling is crucial. In this context, we propose a method to transfer annotations from a labeled to an unlabeled point cloud using an octree structure. The structure also analyses changes between the point clouds. Our experiments confirm that our method effectively transfers annotations while addressing changes. The primary contribution of this project is the development of the method for automatic label transfer between two different point clouds that represent the same real-world object. The proposed method can be of great importance for data-driven deep learning algorithms as it can also allow circumventing stochastic transfer learning by deterministic label transfer between datasets depicting the same objects.
+
+
+Answer:

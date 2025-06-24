@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I typed “studio portrait with soft light,” and it came out looking like a photo from a fashion magazine—pore details, eye reflections, everything. How does AI learn to generate such subtle realism?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-CyberRealistic
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: REAL: Realism Evaluation of Text-to-Image Generation Models for Effective Data Augmentation
+Paper: http://arxiv.org/pdf/2502.10663v1.pdf
+Summary: Recent advancements in text-to-image (T2I) generation models have transformed the field. However, challenges persist in generating images that reflect demanding textual descriptions, especially for fine-grained details and unusual relationships. Existing evaluation metrics focus on text-image alignment but overlook the realism of the generated image, which can be crucial for downstream applications like data augmentation in machine learning. To address this gap, we propose REAL, an automatic evaluation framework that assesses realism of T2I outputs along three dimensions: fine-grained visual attributes, unusual visual relationships, and visual styles. REAL achieves a Spearman's rho score of up to 0.62 in alignment with human judgement and demonstrates utility in ranking and filtering augmented data for tasks like image captioning, classification, and visual relationship detection. Empirical results show that high-scoring images evaluated by our metrics improve F1 scores of image classification by up to 11.3%, while low-scoring ones degrade that by up to 4.95%. We benchmark four major T2I models across the realism dimensions, providing insights for future improvements in T2I output realism.
+
+Model: Learning Naturally Aggregated Appearance for Efficient 3D Editing
+Paper: http://arxiv.org/pdf/2312.06657v2.pdf
+GitHub: https://github.com/felixcheng97/agap
+Summary: Neural radiance fields, which represent a 3D scene as a color field and a density field, have demonstrated great progress in novel view synthesis yet are unfavorable for editing due to the implicitness. This work studies the task of efficient 3D editing, where we focus on editing speed and user interactivity. To this end, we propose to learn the color field as an explicit 2D appearance aggregation, also called canonical image, with which users can easily customize their 3D editing via 2D image processing. We complement the canonical image with a projection field that maps 3D points onto 2D pixels for texture query. This field is initialized with a pseudo canonical camera model and optimized with offset regularity to ensure the naturalness of the canonical image. Extensive experiments on different datasets suggest that our representation, dubbed AGAP, well supports various ways of 3D editing (e.g., stylization, instance segmentation, and interactive drawing). Our approach demonstrates remarkable efficiency by being at least 20 times faster per edit compared to existing NeRF-based editing methods. Project page is available at https://felixcheng97.github.io/AGAP/.
+
+Model: Internet Explorer: Targeted Representation Learning on the Open Web
+Paper: http://arxiv.org/pdf/2302.14051v2.pdf
+GitHub: https://github.com/internet-explorer-ssl/internet-explorer
+Summary: Modern vision models typically rely on fine-tuning general-purpose models pre-trained on large, static datasets. These general-purpose models only capture the knowledge within their pre-training datasets, which are tiny, out-of-date snapshots of the Internet -- where billions of images are uploaded each day. We suggest an alternate approach: rather than hoping our static datasets transfer to our desired tasks after large-scale pre-training, we propose dynamically utilizing the Internet to quickly train a small-scale model that does extremely well on the task at hand. Our approach, called Internet Explorer, explores the web in a self-supervised manner to progressively find relevant examples that improve performance on a desired target dataset. It cycles between searching for images on the Internet with text queries, self-supervised training on downloaded images, determining which images were useful, and prioritizing what to search for next. We evaluate Internet Explorer across several datasets and show that it outperforms or matches CLIP oracle performance by using just a single GPU desktop to actively query the Internet for 30--40 hours. Results, visualizations, and videos at https://internet-explorer-ssl.github.io/
+
+
+Answer:

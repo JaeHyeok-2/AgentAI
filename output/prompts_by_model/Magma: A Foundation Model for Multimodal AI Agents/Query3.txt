@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I tried giving it a goal like “make coffee,” and it broke it down into steps by watching what I was doing. What kind of model can act like a helpful visual assistant?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: ImgTxt2Img-HuggingFace-alaa-lab-InstructCV
+Paper: https://arxiv.org/pdf/2310.00390
+GitHub: https://github.com/AlaaLab/InstructCV
+
+### Related Papers:
+Model: Pretrained Language Models as Visual Planners for Human Assistance
+Paper: http://arxiv.org/pdf/2304.09179v3.pdf
+GitHub: https://github.com/facebookresearch/vlamp
+Summary: In our pursuit of advancing multi-modal AI assistants capable of guiding users to achieve complex multi-step goals, we propose the task of "Visual Planning for Assistance (VPA)". Given a succinct natural language goal, e.g., "make a shelf", and a video of the user's progress so far, the aim of VPA is to devise a plan, i.e., a sequence of actions such as "sand shelf", "paint shelf", etc. to realize the specified goal. This requires assessing the user's progress from the (untrimmed) video, and relating it to the requirements of natural language goal, i.e., which actions to select and in what order? Consequently, this requires handling long video history and arbitrarily complex action dependencies. To address these challenges, we decompose VPA into video action segmentation and forecasting. Importantly, we experiment by formulating the forecasting step as a multi-modal sequence modeling problem, allowing us to leverage the strength of pre-trained LMs (as the sequence model). This novel approach, which we call Visual Language Model based Planner (VLaMP), outperforms baselines across a suite of metrics that gauge the quality of the generated plans. Furthermore, through comprehensive ablations, we also isolate the value of each component--language pre-training, visual observations, and goal information. We have open-sourced all the data, model checkpoints, and training code.
+
+Model: AssistGPT: A General Multi-modal Assistant that can Plan, Execute, Inspect, and Learn
+Paper: http://arxiv.org/pdf/2306.08640v2.pdf
+Summary: Recent research on Large Language Models (LLMs) has led to remarkable advancements in general NLP AI assistants. Some studies have further explored the use of LLMs for planning and invoking models or APIs to address more general multi-modal user queries. Despite this progress, complex visual-based tasks still remain challenging due to the diverse nature of visual tasks. This diversity is reflected in two aspects: 1) Reasoning paths. For many real-life applications, it is hard to accurately decompose a query simply by examining the query itself. Planning based on the specific visual content and the results of each step is usually required. 2) Flexible inputs and intermediate results. Input forms could be flexible for in-the-wild cases, and involves not only a single image or video but a mixture of videos and images, e.g., a user-view image with some reference videos. Besides, a complex reasoning process will also generate diverse multimodal intermediate results, e.g., video narrations, segmented video clips, etc. To address such general cases, we propose a multi-modal AI assistant, AssistGPT, with an interleaved code and language reasoning approach called Plan, Execute, Inspect, and Learn (PEIL) to integrate LLMs with various tools. Specifically, the Planner is capable of using natural language to plan which tool in Executor should do next based on the current reasoning progress. Inspector is an efficient memory manager to assist the Planner to feed proper visual information into a specific tool. Finally, since the entire reasoning process is complex and flexible, a Learner is designed to enable the model to autonomously explore and discover the optimal solution. We conducted experiments on A-OKVQA and NExT-QA benchmarks, achieving state-of-the-art results. Moreover, showcases demonstrate the ability of our system to handle questions far more complex than those found in the benchmarks.
+
+Model: Goal Representations for Instruction Following: A Semi-Supervised Language Interface to Control
+Paper: http://arxiv.org/pdf/2307.00117v2.pdf
+Summary: Our goal is for robots to follow natural language instructions like "put the towel next to the microwave." But getting large amounts of labeled data, i.e. data that contains demonstrations of tasks labeled with the language instruction, is prohibitive. In contrast, obtaining policies that respond to image goals is much easier, because any autonomous trial or demonstration can be labeled in hindsight with its final state as the goal. In this work, we contribute a method that taps into joint image- and goal- conditioned policies with language using only a small amount of language data. Prior work has made progress on this using vision-language models or by jointly training language-goal-conditioned policies, but so far neither method has scaled effectively to real-world robot tasks without significant human annotation. Our method achieves robust performance in the real world by learning an embedding from the labeled data that aligns language not to the goal image, but rather to the desired change between the start and goal images that the instruction corresponds to. We then train a policy on this embedding: the policy benefits from all the unlabeled data, but the aligned embedding provides an interface for language to steer the policy. We show instruction following across a variety of manipulation tasks in different scenes, with generalization to language instructions outside of the labeled data. Videos and code for our approach can be found on our website: https://rail-berkeley.github.io/grif/ .
+
+
+Answer:

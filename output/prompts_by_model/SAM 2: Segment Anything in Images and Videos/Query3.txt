@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even with transparent or overlapping objects, it still nailed the boundaries. What kind of model sees through complex visual scenes that well?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Interpreting Object-level Foundation Models via Visual Precision Search
+Paper: https://arxiv.org/pdf/2411.16198
+GitHub: https://github.com/RuoyuChen10/VPS
+
+### Related Papers:
+Model: Neural World Models for Computer Vision
+Paper: http://arxiv.org/pdf/2306.09179v1.pdf
+Summary: Humans navigate in their environment by learning a mental model of the world through passive observation and active interaction. Their world model allows them to anticipate what might happen next and act accordingly with respect to an underlying objective. Such world models hold strong promises for planning in complex environments like in autonomous driving. A human driver, or a self-driving system, perceives their surroundings with their eyes or their cameras. They infer an internal representation of the world which should: (i) have spatial memory (e.g. occlusions), (ii) fill partially observable or noisy inputs (e.g. when blinded by sunlight), and (iii) be able to reason about unobservable events probabilistically (e.g. predict different possible futures). They are embodied intelligent agents that can predict, plan, and act in the physical world through their world model. In this thesis we present a general framework to train a world model and a policy, parameterised by deep neural networks, from camera observations and expert demonstrations. We leverage important computer vision concepts such as geometry, semantics, and motion to scale world models to complex urban driving scenes.   First, we propose a model that predicts important quantities in computer vision: depth, semantic segmentation, and optical flow. We then use 3D geometry as an inductive bias to operate in the bird's-eye view space. We present for the first time a model that can predict probabilistic future trajectories of dynamic agents in bird's-eye view from 360{\deg} surround monocular cameras only. Finally, we demonstrate the benefits of learning a world model in closed-loop driving. Our model can jointly predict static scene, dynamic scene, and ego-behaviour in an urban driving environment.
+
+Model: HIPer: A Human-Inspired Scene Perception Model for Multifunctional Mobile Robots
+Paper: http://arxiv.org/pdf/2404.17791v1.pdf
+Summary: Taking over arbitrary tasks like humans do with a mobile service robot in open-world settings requires a holistic scene perception for decision-making and high-level control. This paper presents a human-inspired scene perception model to minimize the gap between human and robotic capabilities. The approach takes over fundamental neuroscience concepts, such as a triplet perception split into recognition, knowledge representation, and knowledge interpretation. A recognition system splits the background and foreground to integrate exchangeable image-based object detectors and SLAM, a multi-layer knowledge base represents scene information in a hierarchical structure and offers interfaces for high-level control, and knowledge interpretation methods deploy spatio-temporal scene analysis and perceptual learning for self-adjustment. A single-setting ablation study is used to evaluate the impact of each component on the overall performance for a fetch-and-carry scenario in two simulated and one real-world environment.
+
+Model: The All-Seeing Project V2: Towards General Relation Comprehension of the Open World
+Paper: http://arxiv.org/pdf/2402.19474v4.pdf
+GitHub: https://github.com/opengvlab/all-seeing
+Summary: We present the All-Seeing Project V2: a new model and dataset designed for understanding object relations in images. Specifically, we propose the All-Seeing Model V2 (ASMv2) that integrates the formulation of text generation, object localization, and relation comprehension into a relation conversation (ReC) task. Leveraging this unified task, our model excels not only in perceiving and recognizing all objects within the image but also in grasping the intricate relation graph between them, diminishing the relation hallucination often encountered by Multi-modal Large Language Models (MLLMs). To facilitate training and evaluation of MLLMs in relation understanding, we created the first high-quality ReC dataset ({AS-V2) which is aligned with the format of standard instruction tuning data. In addition, we design a new benchmark, termed Circular-based Relation Probing Evaluation (CRPE) for comprehensively evaluating the relation comprehension capabilities of MLLMs. Notably, our ASMv2 achieves an overall accuracy of 52.04 on this relation-aware benchmark, surpassing the 43.14 of LLaVA-1.5 by a large margin. We hope that our work can inspire more future research and contribute to the evolution towards artificial general intelligence. Our project is released at https://github.com/OpenGVLab/all-seeing.
+
+
+Answer:

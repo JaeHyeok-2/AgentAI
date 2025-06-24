@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even the shadow gradation on the skin felt like it was from a real lens. What image processing steps help AI achieve this kind of photo-grade sharpness?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Interpreting Object-level Foundation Models via Visual Precision Search
+Paper: https://arxiv.org/pdf/2411.16198
+GitHub: https://github.com/RuoyuChen10/VPS
+
+### Related Papers:
+Model: The Skin Game: Revolutionizing Standards for AI Dermatology Model Comparison
+Paper: http://arxiv.org/pdf/2502.02500v1.pdf
+GitHub: https://github.com/lmietkiewicz/the-skin-game-research-paper
+Summary: Deep Learning approaches in dermatological image classification have shown promising results, yet the field faces significant methodological challenges that impede proper evaluation. This paper presents a dual contribution: first, a systematic analysis of current methodological practices in skin disease classification research, revealing substantial inconsistencies in data preparation, augmentation strategies, and performance reporting; second, a comprehensive training and evaluation framework demonstrated through experiments with the DINOv2-Large vision transformer across three benchmark datasets (HAM10000, DermNet, ISIC Atlas). The analysis identifies concerning patterns, including pre-split data augmentation and validation-based reporting, potentially leading to overestimated metrics, while highlighting the lack of unified methodology standards. The experimental results demonstrate DINOv2's performance in skin disease classification, achieving macro-averaged F1-scores of 0.85 (HAM10000), 0.71 (DermNet), and 0.84 (ISIC Atlas). Attention map analysis reveals critical patterns in the model's decision-making, showing sophisticated feature recognition in typical presentations but significant vulnerabilities with atypical cases and composite images. Our findings highlight the need for standardized evaluation protocols and careful implementation strategies in clinical settings. We propose comprehensive methodological recommendations for model development, evaluation, and clinical deployment, emphasizing rigorous data preparation, systematic error analysis, and specialized protocols for different image types. To promote reproducibility, we provide our implementation code through GitHub. This work establishes a foundation for rigorous evaluation standards in dermatological image classification and provides insights for responsible AI implementation in clinical dermatology.
+
+Model: Sharp Eyes: A Salient Object Detector Working The Same Way as Human Visual Characteristics
+Paper: http://arxiv.org/pdf/2301.07431v1.pdf
+GitHub: https://github.com/lesonly/senet
+Summary: Current methods aggregate multi-level features or introduce edge and skeleton to get more refined saliency maps. However, little attention is paid to how to obtain the complete salient object in cluttered background, where the targets are usually similar in color and texture to the background. To handle this complex scene, we propose a sharp eyes network (SENet) that first seperates the object from scene, and then finely segments it, which is in line with human visual characteristics, i.e., to look first and then focus. Different from previous methods which directly integrate edge or skeleton to supplement the defects of objects, the proposed method aims to utilize the expanded objects to guide the network obtain complete prediction. Specifically, SENet mainly consists of target separation (TS) brach and object segmentation (OS) branch trained by minimizing a new hierarchical difference aware (HDA) loss. In the TS branch, we construct a fractal structure to produce saliency features with expanded boundary via the supervision of expanded ground truth, which can enlarge the detail difference between foreground and background. In the OS branch, we first aggregate multi-level features to adaptively select complementary components, and then feed the saliency features with expanded boundary into aggregated features to guide the network obtain complete prediction. Moreover, we propose the HDA loss to further improve the structural integrity and local details of the salient objects, which assigns weight to each pixel according to its distance from the boundary hierarchically. Hard pixels with similar appearance in border region will be given more attention hierarchically to emphasize their importance in completeness prediction. Comprehensive experimental results on five datasets demonstrate that the proposed approach outperforms the state-of-the-art methods both quantitatively and qualitatively.
+
+Model: ODSmoothGrad: Generating Saliency Maps for Object Detectors
+Paper: http://arxiv.org/pdf/2304.07609v1.pdf
+Summary: Techniques for generating saliency maps continue to be used for explainability of deep learning models, with efforts primarily applied to the image classification task. Such techniques, however, can also be applied to object detectors, not only with the classification scores, but also for the bounding box parameters, which are regressed values for which the relevant pixels contributing to these parameters can be identified. In this paper, we present ODSmoothGrad, a tool for generating saliency maps for the classification and the bounding box parameters in object detectors. Given the noisiness of saliency maps, we also apply the SmoothGrad algorithm to visually enhance the pixels of interest. We demonstrate these capabilities on one-stage and two-stage object detectors, with comparisons using classifier-based techniques.
+
+
+Answer:

@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I uploaded a photo with overlapping animals, and the AI still identified each clearly. How do models separate such similar shapes accurately?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Deblur-MIMO-UNet-Plus
+Paper: https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf
+GitHub: https://github.com/chosj95/MIMO-UNet
+
+### Related Papers:
+Model: Human and AI Perceptual Differences in Image Classification Errors
+Paper: http://arxiv.org/pdf/2304.08733v2.pdf
+Summary: Artificial intelligence (AI) models for computer vision trained with supervised machine learning are assumed to solve classification tasks by imitating human behavior learned from training labels. Most efforts in recent vision research focus on measuring the model task performance using standardized benchmarks such as accuracy. However, limited work has sought to understand the perceptual difference between humans and machines. To fill this gap, this study first analyzes the statistical distributions of mistakes from the two sources and then explores how task difficulty level affects these distributions. We find that even when AI learns an excellent model from the training data, one that outperforms humans in overall accuracy, these AI models have significant and consistent differences from human perception. We demonstrate the importance of studying these differences with a simple human-AI teaming algorithm that outperforms humans alone, AI alone, or AI-AI teaming.
+
+Model: Doppelgangers: Learning to Disambiguate Images of Similar Structures
+Paper: http://arxiv.org/pdf/2309.02420v1.pdf
+GitHub: https://github.com/RuojinCai/Doppelgangers
+Summary: We consider the visual disambiguation task of determining whether a pair of visually similar images depict the same or distinct 3D surfaces (e.g., the same or opposite sides of a symmetric building). Illusory image matches, where two images observe distinct but visually similar 3D surfaces, can be challenging for humans to differentiate, and can also lead 3D reconstruction algorithms to produce erroneous results. We propose a learning-based approach to visual disambiguation, formulating it as a binary classification task on image pairs. To that end, we introduce a new dataset for this problem, Doppelgangers, which includes image pairs of similar structures with ground truth labels. We also design a network architecture that takes the spatial distribution of local keypoints and matches as input, allowing for better reasoning about both local and global cues. Our evaluation shows that our method can distinguish illusory matches in difficult cases, and can be integrated into SfM pipelines to produce correct, disambiguated 3D reconstructions. See our project page for our code, datasets, and more results: http://doppelgangers-3d.github.io/.
+
+Model: Feature-based Image Matching for Identifying Individual Kākā
+Paper: http://arxiv.org/pdf/2301.06678v2.pdf
+Summary: This report investigates an unsupervised, feature-based image matching pipeline for the novel application of identifying individual k\=ak\=a. Applied with a similarity network for clustering, this addresses a weakness of current supervised approaches to identifying individual birds which struggle to handle the introduction of new individuals to the population. Our approach uses object localisation to locate k\=ak\=a within images and then extracts local features that are invariant to rotation and scale. These features are matched between images with nearest neighbour matching techniques and mismatch removal to produce a similarity score for image match comparison. The results show that matches obtained via the image matching pipeline achieve high accuracy of true matches. We conclude that feature-based image matching could be used with a similarity network to provide a viable alternative to existing supervised approaches.
+
+
+Answer:

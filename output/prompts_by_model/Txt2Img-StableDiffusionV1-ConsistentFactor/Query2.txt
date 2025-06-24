@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I drew the same character in five different outfits, and the face never changed—it was always exactly the same. How does AI remember identity so consistently even with scene or pose changes?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-ConsistentFactor
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: Identity-Aware Semi-Supervised Learning for Comic Character Re-Identification
+Paper: http://arxiv.org/pdf/2308.09096v1.pdf
+Summary: Character re-identification, recognizing characters consistently across different panels in comics, presents significant challenges due to limited annotated data and complex variations in character appearances. To tackle this issue, we introduce a robust semi-supervised framework that combines metric learning with a novel 'Identity-Aware' self-supervision method by contrastive learning of face and body pairs of characters. Our approach involves processing both facial and bodily features within a unified network architecture, facilitating the extraction of identity-aligned character embeddings that capture individual identities while preserving the effectiveness of face and body features. This integrated character representation enhances feature extraction and improves character re-identification compared to re-identification by face or body independently, offering a parameter-efficient solution. By extensively validating our method using in-series and inter-series evaluation metrics, we demonstrate its effectiveness in consistently re-identifying comic characters. Compared to existing methods, our approach not only addresses the challenge of character re-identification but also serves as a foundation for downstream tasks since it can produce character embeddings without restrictions of face and body availability, enriching the comprehension of comic books. In our experiments, we leverage two newly curated datasets: the 'Comic Character Instances Dataset', comprising over a million character instances and the 'Comic Sequence Identity Dataset', containing annotations of identities within more than 3000 sets of four consecutive comic panels that we collected.
+
+Model: LoCUS: Learning Multiscale 3D-consistent Features from Posed Images
+Paper: http://arxiv.org/pdf/2310.01095v1.pdf
+Summary: An important challenge for autonomous agents such as robots is to maintain a spatially and temporally consistent model of the world. It must be maintained through occlusions, previously-unseen views, and long time horizons (e.g., loop closure and re-identification). It is still an open question how to train such a versatile neural representation without supervision. We start from the idea that the training objective can be framed as a patch retrieval problem: given an image patch in one view of a scene, we would like to retrieve (with high precision and recall) all patches in other views that map to the same real-world location. One drawback is that this objective does not promote reusability of features: by being unique to a scene (achieving perfect precision/recall), a representation will not be useful in the context of other scenes. We find that it is possible to balance retrieval and reusability by constructing the retrieval set carefully, leaving out patches that map to far-away locations. Similarly, we can easily regulate the scale of the learned features (e.g., points, objects, or rooms) by adjusting the spatial tolerance for considering a retrieval to be positive. We optimize for (smooth) Average Precision (AP), in a single unified ranking-based objective. This objective also doubles as a criterion for choosing landmarks or keypoints, as patches with high AP. We show results creating sparse, multi-scale, semantic spatial maps composed of highly identifiable landmarks, with applications in landmark retrieval, localization, semantic segmentation and instance segmentation.
+
+Model: FPGA: Flexible Portrait Generation Approach
+Paper: http://arxiv.org/pdf/2408.09248v3.pdf
+Summary: Portrait Fidelity Generation is a prominent research area in generative models.Current methods face challenges in generating full-body images with low-resolution faces, especially in multi-ID photo phenomenon.To tackle these issues, we propose a comprehensive system called FPGA and construct a million-level multi-modal dataset IDZoom for training.FPGA consists of Multi-Mode Fusion training strategy (MMF) and DDIM Inversion based ID Restoration inference framework (DIIR). The MMF aims to activate the specified ID in the specified facial region. The DIIR aims to address the issue of face artifacts while keeping the background.Furthermore, DIIR is plug-and-play and can be applied to any diffusion-based portrait generation method to enhance their performance. DIIR is also capable of performing face-swapping tasks and is applicable to stylized faces as well.To validate the effectiveness of FPGA, we conducted extensive comparative and ablation experiments. The experimental results demonstrate that FPGA has significant advantages in both subjective and objective metrics, and achieves controllable generation in multi-ID scenarios. In addition, we accelerate the inference speed to within 2.5 seconds on a single L20 graphics card mainly based on our well designed reparameterization method, RepControlNet.
+
+
+Answer:

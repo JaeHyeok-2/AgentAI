@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Each side had its own color palette, but the face still felt unified. How does AI balance conflicting elements—like brightness and darkness—in split-composition images?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-IDSM
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: SDFD: Building a Versatile Synthetic Face Image Dataset with Diverse Attributes
+Paper: http://arxiv.org/pdf/2404.17255v2.pdf
+Summary: AI systems rely on extensive training on large datasets to address various tasks. However, image-based systems, particularly those used for demographic attribute prediction, face significant challenges. Many current face image datasets primarily focus on demographic factors such as age, gender, and skin tone, overlooking other crucial facial attributes like hairstyle and accessories. This narrow focus limits the diversity of the data and consequently the robustness of AI systems trained on them. This work aims to address this limitation by proposing a methodology for generating synthetic face image datasets that capture a broader spectrum of facial diversity. Specifically, our approach integrates a systematic prompt formulation strategy, encompassing not only demographics and biometrics but also non-permanent traits like make-up, hairstyle, and accessories. These prompts guide a state-of-the-art text-to-image model in generating a comprehensive dataset of high-quality realistic images and can be used as an evaluation set in face analysis systems. Compared to existing datasets, our proposed dataset proves equally or more challenging in image classification tasks while being much smaller in size.
+
+Model: Progressive Compositionality In Text-to-Image Generative Models
+Paper: http://arxiv.org/pdf/2410.16719v1.pdf
+GitHub: https://github.com/evansh666/evogen
+Summary: Despite the impressive text-to-image (T2I) synthesis capabilities of diffusion models, they often struggle to understand compositional relationships between objects and attributes, especially in complex settings. Existing solutions have tackled these challenges by optimizing the cross-attention mechanism or learning from the caption pairs with minimal semantic changes. However, can we generate high-quality complex contrastive images that diffusion models can directly discriminate based on visual representations? In this work, we leverage large-language models (LLMs) to compose realistic, complex scenarios and harness Visual-Question Answering (VQA) systems alongside diffusion models to automatically curate a contrastive dataset, ConPair, consisting of 15k pairs of high-quality contrastive images. These pairs feature minimal visual discrepancies and cover a wide range of attribute categories, especially complex and natural scenarios. To learn effectively from these error cases, i.e., hard negative images, we propose EvoGen, a new multi-stage curriculum for contrastive learning of diffusion models. Through extensive experiments across a wide range of compositional scenarios, we showcase the effectiveness of our proposed framework on compositional T2I benchmarks.
+
+Model: SSPFusion: A Semantic Structure-Preserving Approach for Infrared and Visible Image Fusion
+Paper: http://arxiv.org/pdf/2309.14745v2.pdf
+Summary: Most existing learning-based infrared and visible image fusion (IVIF) methods exhibit massive redundant information in the fusion images, i.e., yielding edge-blurring effect or unrecognizable for object detectors. To alleviate these issues, we propose a semantic structure-preserving approach for IVIF, namely SSPFusion. At first, we design a Structural Feature Extractor (SFE) to extract the structural features of infrared and visible images. Then, we introduce a multi-scale Structure-Preserving Fusion (SPF) module to fuse the structural features of infrared and visible images, while maintaining the consistency of semantic structures between the fusion and source images. Owing to these two effective modules, our method is able to generate high-quality fusion images from pairs of infrared and visible images, which can boost the performance of downstream computer-vision tasks. Experimental results on three benchmarks demonstrate that our method outperforms eight state-of-the-art image fusion methods in terms of both qualitative and quantitative evaluations. The code for our method, along with additional comparison results, will be made available at: https://github.com/QiaoYang-CV/SSPFUSION.
+
+
+Answer:

@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I typed a weird sentence, and it showed me a bunch of pictures that actually matched the vibe. How does it know what kind of image fits that kind of text?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Img2Txt-HuggingFace-Salesforce-blip-image-captioning-large
+Paper: https://arxiv.org/pdf/2201.12086
+GitHub: https://github.com/salesforce/BLIP
+
+### Related Papers:
+Model: Automatic Creative Selection with Cross-Modal Matching
+Paper: http://arxiv.org/pdf/2405.00029v1.pdf
+Summary: Application developers advertise their Apps by creating product pages with App images, and bidding on search terms. It is then crucial for App images to be highly relevant with the search terms. Solutions to this problem require an image-text matching model to predict the quality of the match between the chosen image and the search terms. In this work, we present a novel approach to matching an App image to search terms based on fine-tuning a pre-trained LXMERT model. We show that compared to the CLIP model and a baseline using a Transformer model for search terms, and a ResNet model for images, we significantly improve the matching accuracy. We evaluate our approach using two sets of labels: advertiser associated (image, search term) pairs for a given application, and human ratings for the relevance between (image, search term) pairs. Our approach achieves 0.96 AUC score for advertiser associated ground truth, outperforming the transformer+ResNet baseline and the fine-tuned CLIP model by 8% and 14%. For human labeled ground truth, our approach achieves 0.95 AUC score, outperforming the transformer+ResNet baseline and the fine-tuned CLIP model by 16% and 17%.
+
+Model: Enhancing Textbooks with Visuals from the Web for Improved Learning
+Paper: http://arxiv.org/pdf/2304.08931v2.pdf
+GitHub: https://github.com/eth-nlped/textbook-enrichment
+Summary: Textbooks are one of the main mediums for delivering high-quality education to students. In particular, explanatory and illustrative visuals play a key role in retention, comprehension and general transfer of knowledge. However, many textbooks lack these interesting visuals to support student learning. In this paper, we investigate the effectiveness of vision-language models to automatically enhance textbooks with images from the web. We collect a dataset of e-textbooks in the math, science, social science and business domains. We then set up a text-image matching task that involves retrieving and appropriately assigning web images to textbooks, which we frame as a matching optimization problem. Through a crowd-sourced evaluation, we verify that (1) while the original textbook images are rated higher, automatically assigned ones are not far behind, and (2) the precise formulation of the optimization problem matters. We release the dataset of textbooks with an associated image bank to inspire further research in this intersectional area of computer vision and NLP for education.
+
+Model: LLaVAR: Enhanced Visual Instruction Tuning for Text-Rich Image Understanding
+Paper: http://arxiv.org/pdf/2306.17107v2.pdf
+GitHub: https://github.com/SALT-NLP/LLaVAR
+Summary: Instruction tuning unlocks the superior capability of Large Language Models (LLM) to interact with humans. Furthermore, recent instruction-following datasets include images as visual inputs, collecting responses for image-based instructions. However, visual instruction-tuned models cannot comprehend textual details within images well. This work enhances the current visual instruction tuning pipeline with text-rich images (e.g., movie posters, book covers, etc.). Specifically, we first use publicly available OCR tools to collect results on 422K text-rich images from the LAION dataset. Moreover, we prompt text-only GPT-4 with recognized texts and image captions to generate 16K conversations, each containing question-answer pairs for text-rich images. By combining our collected data with previous multi-modal instruction-following data, our model, LLaVAR, substantially improves the LLaVA model's capability on text-based VQA datasets (up to 20% accuracy improvement) while achieving an accuracy of 91.42% on ScienceQA. The GPT-4-based instruction-following evaluation also demonstrates the improvement of our model on both natural images and text-rich images. Through qualitative analysis, LLaVAR shows promising interaction (e.g., reasoning, writing, and elaboration) skills with humans based on the latest real-world online content that combines text and images. We make our code/data/models publicly available at https://llavar.github.io/.
+
+
+Answer:

@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I edited a street photo and was amazed that the AI could separate roads, people, and signs precisely. How does it distinguish such detailed scene elements?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Segmentation-DeepLabV3-MobileNet-VOC
+Paper: None
+GitHub: https://github.com/VainF/DeepLabV3Plus-Pytorch
+
+### Related Papers:
+Model: Neighborhood Attention Makes the Encoder of ResUNet Stronger for Accurate Road Extraction
+Paper: http://arxiv.org/pdf/2306.04947v1.pdf
+GitHub: https://github.com/aj1365/resunetformer
+Summary: In the domain of remote sensing image interpretation, road extraction from high-resolution aerial imagery has already been a hot research topic. Although deep CNNs have presented excellent results for semantic segmentation, the efficiency and capabilities of vision transformers are yet to be fully researched. As such, for accurate road extraction, a deep semantic segmentation neural network that utilizes the abilities of residual learning, HetConvs, UNet, and vision transformers, which is called \texttt{ResUNetFormer}, is proposed in this letter. The developed \texttt{ResUNetFormer} is evaluated on various cutting-edge deep learning-based road extraction techniques on the public Massachusetts road dataset. Statistical and visual results demonstrate the superiority of the \texttt{ResUNetFormer} over the state-of-the-art CNNs and vision transformers for segmentation. The code will be made available publicly at \url{https://github.com/aj1365/ResUNetFormer}.
+
+Model: RSUD20K: A Dataset for Road Scene Understanding In Autonomous Driving
+Paper: http://arxiv.org/pdf/2401.07322v2.pdf
+GitHub: https://github.com/hasibzunair/rsud20k
+Summary: Road scene understanding is crucial in autonomous driving, enabling machines to perceive the visual environment. However, recent object detectors tailored for learning on datasets collected from certain geographical locations struggle to generalize across different locations. In this paper, we present RSUD20K, a new dataset for road scene understanding, comprised of over 20K high-resolution images from the driving perspective on Bangladesh roads, and includes 130K bounding box annotations for 13 objects. This challenging dataset encompasses diverse road scenes, narrow streets and highways, featuring objects from different viewpoints and scenes from crowded environments with densely cluttered objects and various weather conditions. Our work significantly improves upon previous efforts, providing detailed annotations and increased object complexity. We thoroughly examine the dataset, benchmarking various state-of-the-art object detectors and exploring large vision models as image annotators.
+
+Model: Advancements in Road Lane Mapping: Comparative Fine-Tuning Analysis of Deep Learning-based Semantic Segmentation Methods Using Aerial Imagery
+Paper: http://arxiv.org/pdf/2410.05717v2.pdf
+Summary: This research addresses the need for high-definition (HD) maps for autonomous vehicles (AVs), focusing on road lane information derived from aerial imagery. While Earth observation data offers valuable resources for map creation, specialized models for road lane extraction are still underdeveloped in remote sensing. In this study, we perform an extensive comparison of twelve foundational deep learning-based semantic segmentation models for road lane marking extraction from high-definition remote sensing images, assessing their performance under transfer learning with partially labeled datasets. These models were fine-tuned on the partially labeled Waterloo Urban Scene dataset, and pre-trained on the SkyScapes dataset, simulating a likely scenario of real-life model deployment under partial labeling. We observed and assessed the fine-tuning performance and overall performance. Models showed significant performance improvements after fine-tuning, with mean IoU scores ranging from 33.56% to 76.11%, and recall ranging from 66.0% to 98.96%. Transformer-based models outperformed convolutional neural networks, emphasizing the importance of model pre-training and fine-tuning in enhancing HD map development for AV navigation.
+
+
+Answer:

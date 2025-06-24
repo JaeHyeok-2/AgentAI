@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I typed “natural-light portrait,” and every hair strand was crisp with perfectly balanced colors. How does AI keep lighting and color so well controlled—what reference points does it tweak?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: NST-fast-neural-style-rain-princess
+Paper: None
+GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+
+### Related Papers:
+Model: HAAR: Text-Conditioned Generative Model of 3D Strand-based Human Hairstyles
+Paper: http://arxiv.org/pdf/2312.11666v1.pdf
+GitHub: https://github.com/Vanessik/HAAR
+Summary: We present HAAR, a new strand-based generative model for 3D human hairstyles. Specifically, based on textual inputs, HAAR produces 3D hairstyles that could be used as production-level assets in modern computer graphics engines. Current AI-based generative models take advantage of powerful 2D priors to reconstruct 3D content in the form of point clouds, meshes, or volumetric functions. However, by using the 2D priors, they are intrinsically limited to only recovering the visual parts. Highly occluded hair structures can not be reconstructed with those methods, and they only model the ''outer shell'', which is not ready to be used in physics-based rendering or simulation pipelines. In contrast, we propose a first text-guided generative method that uses 3D hair strands as an underlying representation. Leveraging 2D visual question-answering (VQA) systems, we automatically annotate synthetic hair models that are generated from a small set of artist-created hairstyles. This allows us to train a latent diffusion model that operates in a common hairstyle UV space. In qualitative and quantitative studies, we demonstrate the capabilities of the proposed model and compare it to existing hairstyle generation approaches.
+
+Model: PhotoBot: Reference-Guided Interactive Photography via Natural Language
+Paper: http://arxiv.org/pdf/2401.11061v4.pdf
+Summary: We introduce PhotoBot, a framework for fully automated photo acquisition based on an interplay between high-level human language guidance and a robot photographer. We propose to communicate photography suggestions to the user via reference images that are selected from a curated gallery. We leverage a visual language model (VLM) and an object detector to characterize the reference images via textual descriptions and then use a large language model (LLM) to retrieve relevant reference images based on a user's language query through text-based reasoning. To correspond the reference image and the observed scene, we exploit pre-trained features from a vision transformer capable of capturing semantic similarity across marked appearance variations. Using these features, we compute suggested pose adjustments for an RGB-D camera by solving a perspective-n-point (PnP) problem. We demonstrate our approach using a manipulator equipped with a wrist camera. Our user studies show that photos taken by PhotoBot are often more aesthetically pleasing than those taken by users themselves, as measured by human feedback. We also show that PhotoBot can generalize to other reference sources such as paintings.
+
+Model: Learning Naturally Aggregated Appearance for Efficient 3D Editing
+Paper: http://arxiv.org/pdf/2312.06657v2.pdf
+GitHub: https://github.com/felixcheng97/agap
+Summary: Neural radiance fields, which represent a 3D scene as a color field and a density field, have demonstrated great progress in novel view synthesis yet are unfavorable for editing due to the implicitness. This work studies the task of efficient 3D editing, where we focus on editing speed and user interactivity. To this end, we propose to learn the color field as an explicit 2D appearance aggregation, also called canonical image, with which users can easily customize their 3D editing via 2D image processing. We complement the canonical image with a projection field that maps 3D points onto 2D pixels for texture query. This field is initialized with a pseudo canonical camera model and optimized with offset regularity to ensure the naturalness of the canonical image. Extensive experiments on different datasets suggest that our representation, dubbed AGAP, well supports various ways of 3D editing (e.g., stylization, instance segmentation, and interactive drawing). Our approach demonstrates remarkable efficiency by being at least 20 times faster per edit compared to existing NeRF-based editing methods. Project page is available at https://felixcheng97.github.io/AGAP/.
+
+
+Answer:

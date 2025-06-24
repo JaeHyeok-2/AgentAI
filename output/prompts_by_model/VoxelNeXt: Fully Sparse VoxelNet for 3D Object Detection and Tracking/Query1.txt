@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I tested it on LiDAR data from a moving car, and it tracked all the vehicles and pedestrians in real time. How does it detect and follow 3D objects so fast and accurately?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: VoxelNeXt: Fully Sparse VoxelNet for 3D Object Detection and Tracking
+Paper: https://arxiv.org/pdf/2303.11301
+GitHub: https://github.com/dvlab-research/VoxelNeXt?tab=readme-ov-file
+
+### Related Papers:
+Model: Multi-Object Tracking with Camera-LiDAR Fusion for Autonomous Driving
+Paper: http://arxiv.org/pdf/2403.04112v2.pdf
+Summary: This paper presents a novel multi-modal Multi-Object Tracking (MOT) algorithm for self-driving cars that combines camera and LiDAR data. Camera frames are processed with a state-of-the-art 3D object detector, whereas classical clustering techniques are used to process LiDAR observations. The proposed MOT algorithm comprises a three-step association process, an Extended Kalman filter for estimating the motion of each detected dynamic obstacle, and a track management phase. The EKF motion model requires the current measured relative position and orientation of the observed object and the longitudinal and angular velocities of the ego vehicle as inputs. Unlike most state-of-the-art multi-modal MOT approaches, the proposed algorithm does not rely on maps or knowledge of the ego global pose. Moreover, it uses a 3D detector exclusively for cameras and is agnostic to the type of LiDAR sensor used. The algorithm is validated both in simulation and with real-world data, with satisfactory results.
+
+Model: CRN: Camera Radar Net for Accurate, Robust, Efficient 3D Perception
+Paper: http://arxiv.org/pdf/2304.00670v3.pdf
+GitHub: https://github.com/youngskkim/CRN
+Summary: Autonomous driving requires an accurate and fast 3D perception system that includes 3D object detection, tracking, and segmentation. Although recent low-cost camera-based approaches have shown promising results, they are susceptible to poor illumination or bad weather conditions and have a large localization error. Hence, fusing camera with low-cost radar, which provides precise long-range measurement and operates reliably in all environments, is promising but has not yet been thoroughly investigated. In this paper, we propose Camera Radar Net (CRN), a novel camera-radar fusion framework that generates a semantically rich and spatially accurate bird's-eye-view (BEV) feature map for various tasks. To overcome the lack of spatial information in an image, we transform perspective view image features to BEV with the help of sparse but accurate radar points. We further aggregate image and radar feature maps in BEV using multi-modal deformable attention designed to tackle the spatial misalignment between inputs. CRN with real-time setting operates at 20 FPS while achieving comparable performance to LiDAR detectors on nuScenes, and even outperforms at a far distance on 100m setting. Moreover, CRN with offline setting yields 62.4% NDS, 57.5% mAP on nuScenes test set and ranks first among all camera and camera-radar 3D object detectors.
+
+Model: Detection Is Tracking: Point Cloud Multi-Sweep Deep Learning Models Revisited
+Paper: http://arxiv.org/pdf/2402.15756v3.pdf
+Summary: Conventional tracking paradigm takes in instantaneous measurements such as range and bearing, and produces object tracks across time. In applications such as autonomous driving, lidar measurements in the form of point clouds are usually passed through a "virtual sensor" realized by a deep learning model, to produce "measurements" such as bounding boxes, which are in turn ingested by a tracking module to produce object tracks. Very often multiple lidar sweeps are accumulated in a buffer to merge and become the input to the virtual sensor. We argue in this paper that such an input already contains temporal information, and therefore the virtual sensor output should also contain temporal information, not just instantaneous values for the time corresponding to the end of the buffer. In particular, we present the deep learning model called MULti-Sweep PAired Detector (MULSPAD) that produces, for each detected object, a pair of bounding boxes at both the end time and the beginning time of the input buffer. This is achieved with fairly straightforward changes in commonly used lidar detection models, and with only marginal extra processing, but the resulting symmetry is satisfying. Such paired detections make it possible not only to construct rudimentary trackers fairly easily, but also to construct more sophisticated trackers that can exploit the extra information conveyed by the pair and be robust to choices of motion models and object birth/death models. We have conducted preliminary training and experimentation using Waymo Open Dataset, which shows the efficacy of our proposed method.
+
+
+Answer:

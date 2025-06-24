@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even with different camera types and no calibration, it still produced solid 3D structure. What makes this model so flexible across devices?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: UniK3D: Universal Camera Monocular 3D Estimation
+Paper: https://arxiv.org/pdf/2503.16591
+GitHub: https://github.com/lpiccinelli-eth/UniK3D
+
+### Related Papers:
+Model: Fisheye-Calib-Adapter: An Easy Tool for Fisheye Camera Model Conversion
+Paper: http://arxiv.org/pdf/2407.12405v3.pdf
+GitHub: https://github.com/eowjd0512/fisheye-calib-adapter
+Summary: The increasing necessity for fisheye cameras in fields such as robotics and autonomous driving has led to the proposal of various fisheye camera models. While the evolution of camera models has facilitated the development of diverse systems in the field, the lack of adaptation between different fisheye camera models means that recalibration is always necessary, which is cumbersome. This paper introduces a conversion tool for various previously proposed fisheye camera models. It is user-friendly, simple, yet extremely fast and accurate, offering conversion capabilities for a broader range of models compared to existing tools. We have verified that models converted using our system perform correctly in applications such as SLAM. By utilizing our system, researchers can obtain output parameters directly from input parameters without the need for an image set and any recalibration processes, thus serving as a bridge across different fisheye camera models in various research fields. We provide our system as an open source tool available at: https://github.com/eowjd0512/fisheye-calib-adapter
+
+Model: 3D reconstruction using Structure for Motion
+Paper: http://arxiv.org/pdf/2306.06360v1.pdf
+GitHub: https://github.com/kshitijkarnawat/structure-from-motion
+Summary: We are working towards 3D reconstruction of indoor spaces using a pair of HDR cameras in a stereo vision configuration mounted on an indoor mobile floor robot that captures various textures and spatial features as 2D images and this data is simultaneously utilized as a feed to our algorithm which will allow us to visualize the depth map.
+
+Model: Toon3D: Seeing Cartoons from New Perspectives
+Paper: http://arxiv.org/pdf/2405.10320v3.pdf
+Summary: We recover the underlying 3D structure from images of cartoons and anime depicting the same scene. This is an interesting problem domain because images in creative media are often depicted without explicit geometric consistency for storytelling and creative expression-they are only 3D in a qualitative sense. While humans can easily perceive the underlying 3D scene from these images, existing Structure-from-Motion (SfM) methods that assume 3D consistency fail catastrophically. We present Toon3D for reconstructing geometrically inconsistent images. Our key insight is to deform the input images while recovering camera poses and scene geometry, effectively explaining away geometrical inconsistencies to achieve consistency. This process is guided by the structure inferred from monocular depth predictions. We curate a dataset with multi-view imagery from cartoons and anime that we annotate with reliable sparse correspondences using our user-friendly annotation tool. Our recovered point clouds can be plugged into novel-view synthesis methods to experience cartoons from viewpoints never drawn before. We evaluate against classical and recent learning-based SfM methods, where Toon3D is able to obtain more reliable camera poses and scene geometry.
+
+
+Answer:

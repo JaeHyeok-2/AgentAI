@@ -1,0 +1,36 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even photos with heavy static from low-light or digital zoom came out clear after AI denoising. How do models know what parts are noise and what parts are actual image?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: WeatherRemoval-CLAIO-DeHaze
+Paper: None
+GitHub: https://github.com/xiaojihh/cl_all-in-one
+
+### Related Papers:
+Model: Assessing The Impact of CNN Auto Encoder-Based Image Denoising on Image Classification Tasks
+Paper: http://arxiv.org/pdf/2404.10664v2.pdf
+GitHub: https://github.com/MHmi1/Image_Denoising_Classification
+Summary: Images captured from the real world are often affected by different types of noise, which can significantly impact the performance of Computer Vision systems and the quality of visual data. This study presents a novel approach for defect detection in casting product noisy images, specifically focusing on submersible pump impellers. The methodology involves utilizing deep learning models such as VGG16, InceptionV3, and other models in both the spatial and frequency domains to identify noise types and defect status. The research process begins with preprocessing images, followed by applying denoising techniques tailored to specific noise categories. The goal is to enhance the accuracy and robustness of defect detection by integrating noise detection and denoising into the classification pipeline. The study achieved remarkable results using VGG16 for noise type classification in the frequency domain, achieving an accuracy of over 99%. Removal of salt and pepper noise resulted in an average SSIM of 87.9, while Gaussian noise removal had an average SSIM of 64.0, and periodic noise removal yielded an average SSIM of 81.6. This comprehensive approach showcases the effectiveness of the deep AutoEncoder model and median filter, for denoising strategies in real-world industrial applications. Finally, our study reports significant improvements in binary classification accuracy for defect detection compared to previous methods. For the VGG16 classifier, accuracy increased from 94.6% to 97.0%, demonstrating the effectiveness of the proposed noise detection and denoising approach. Similarly, for the InceptionV3 classifier, accuracy improved from 84.7% to 90.0%, further validating the benefits of integrating noise analysis into the classification pipeline.
+
+Model: Denoising as Adaptation: Noise-Space Domain Adaptation for Image Restoration
+Paper: http://arxiv.org/pdf/2406.18516v3.pdf
+GitHub: https://github.com/kangliao929/noise-da
+Summary: Although learning-based image restoration methods have made significant progress, they still struggle with limited generalization to real-world scenarios due to the substantial domain gap caused by training on synthetic data. Existing methods address this issue by improving data synthesis pipelines, estimating degradation kernels, employing deep internal learning, and performing domain adaptation and regularization. Previous domain adaptation methods have sought to bridge the domain gap by learning domain-invariant knowledge in either feature or pixel space. However, these techniques often struggle to extend to low-level vision tasks within a stable and compact framework. In this paper, we show that it is possible to perform domain adaptation via the noise space using diffusion models. In particular, by leveraging the unique property of how auxiliary conditional inputs influence the multi-step denoising process, we derive a meaningful diffusion loss that guides the restoration model in progressively aligning both restored synthetic and real-world outputs with a target clean distribution. We refer to this method as denoising as adaptation. To prevent shortcuts during joint training, we present crucial strategies such as channel-shuffling layer and residual-swapping contrastive learning in the diffusion model. They implicitly blur the boundaries between conditioned synthetic and real data and prevent the reliance of the model on easily distinguishable features. Experimental results on three classical image restoration tasks, namely denoising, deblurring, and deraining, demonstrate the effectiveness of the proposed method.
+
+Model: DenoiseRep: Denoising Model for Representation Learning
+Paper: http://arxiv.org/pdf/2406.08773v4.pdf
+GitHub: https://github.com/wangguanan/denoiserep
+Summary: The denoising model has been proven a powerful generative model but has little exploration of discriminative tasks. Representation learning is important in discriminative tasks, which is defined as "learning representations (or features) of the data that make it easier to extract useful information when building classifiers or other predictors". In this paper, we propose a novel Denoising Model for Representation Learning (DenoiseRep) to improve feature discrimination with joint feature extraction and denoising. DenoiseRep views each embedding layer in a backbone as a denoising layer, processing the cascaded embedding layers as if we are recursively denoise features step-by-step. This unifies the frameworks of feature extraction and denoising, where the former progressively embeds features from low-level to high-level, and the latter recursively denoises features step-by-step. After that, DenoiseRep fuses the parameters of feature extraction and denoising layers, and theoretically demonstrates its equivalence before and after the fusion, thus making feature denoising computation-free. DenoiseRep is a label-free algorithm that incrementally improves features but also complementary to the label if available. Experimental results on various discriminative vision tasks, including re-identification (Market-1501, DukeMTMC-reID, MSMT17, CUHK-03, vehicleID), image classification (ImageNet, UB200, Oxford-Pet, Flowers), object detection (COCO), image segmentation (ADE20K) show stability and impressive improvements. We also validate its effectiveness on the CNN (ResNet) and Transformer (ViT, Swin, Vmamda) architectures.
+
+
+Answer:

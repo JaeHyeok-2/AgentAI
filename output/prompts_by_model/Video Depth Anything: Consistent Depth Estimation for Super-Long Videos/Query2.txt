@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even with fast camera motion and moving objects, the depth didn’t flicker or break. What makes it so robust for dynamic video?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos
+Paper: https://arxiv.org/pdf/2409.02095
+GitHub: https://github.com/Tencent/DepthCrafter
+
+### Related Papers:
+Model: MegaSaM: Accurate, Fast, and Robust Structure and Motion from Casual Dynamic Videos
+Paper: http://arxiv.org/pdf/2412.04463v2.pdf
+Summary: We present a system that allows for accurate, fast, and robust estimation of camera parameters and depth maps from casual monocular videos of dynamic scenes. Most conventional structure from motion and monocular SLAM techniques assume input videos that feature predominantly static scenes with large amounts of parallax. Such methods tend to produce erroneous estimates in the absence of these conditions. Recent neural network-based approaches attempt to overcome these challenges; however, such methods are either computationally expensive or brittle when run on dynamic videos with uncontrolled camera motion or unknown field of view. We demonstrate the surprising effectiveness of a deep visual SLAM framework: with careful modifications to its training and inference schemes, this system can scale to real-world videos of complex dynamic scenes with unconstrained camera paths, including videos with little camera parallax. Extensive experiments on both synthetic and real videos demonstrate that our system is significantly more accurate and robust at camera pose and depth estimation when compared with prior and concurrent work, with faster or comparable running times. See interactive results on our project page: https://mega-sam.github.io/
+
+Model: Make-It-4D: Synthesizing a Consistent Long-Term Dynamic Scene Video from a Single Image
+Paper: http://arxiv.org/pdf/2308.10257v1.pdf
+Summary: We study the problem of synthesizing a long-term dynamic video from only a single image. This is challenging since it requires consistent visual content movements given large camera motions. Existing methods either hallucinate inconsistent perpetual views or struggle with long camera trajectories. To address these issues, it is essential to estimate the underlying 4D (including 3D geometry and scene motion) and fill in the occluded regions. To this end, we present Make-It-4D, a novel method that can generate a consistent long-term dynamic video from a single image. On the one hand, we utilize layered depth images (LDIs) to represent a scene, and they are then unprojected to form a feature point cloud. To animate the visual content, the feature point cloud is displaced based on the scene flow derived from motion estimation and the corresponding camera pose. Such 4D representation enables our method to maintain the global consistency of the generated dynamic video. On the other hand, we fill in the occluded regions by using a pretrained diffusion model to inpaint and outpaint the input image. This enables our method to work under large camera motions. Benefiting from our design, our method can be training-free which saves a significant amount of training time. Experimental results demonstrate the effectiveness of our approach, which showcases compelling rendering results.
+
+Model: Edge-aware Consistent Stereo Video Depth Estimation
+Paper: http://arxiv.org/pdf/2305.02645v1.pdf
+Summary: Video depth estimation is crucial in various applications, such as scene reconstruction and augmented reality. In contrast to the naive method of estimating depths from images, a more sophisticated approach uses temporal information, thereby eliminating flickering and geometrical inconsistencies. We propose a consistent method for dense video depth estimation; however, unlike the existing monocular methods, ours relates to stereo videos. This technique overcomes the limitations arising from the monocular input. As a benefit of using stereo inputs, a left-right consistency loss is introduced to improve the performance. Besides, we use SLAM-based camera pose estimation in the process. To address the problem of depth blurriness during test-time training (TTT), we present an edge-preserving loss function that improves the visibility of fine details while preserving geometrical consistency. We show that our edge-aware stereo video model can accurately estimate the dense depth maps.
+
+
+Answer:

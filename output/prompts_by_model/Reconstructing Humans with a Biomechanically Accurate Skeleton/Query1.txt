@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Recorded a short video of someone walking, and it built a full 3D skeleton that even captured subtle joint movement. How does it reconstruct the body so precisely from just video?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Reconstructing Humans with a Biomechanically Accurate Skeleton
+Paper: https://arxiv.org/pdf/2503.21751
+GitHub: https://github.com/IsshikiHugh/HSMR
+
+### Related Papers:
+Model: WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion
+Paper: http://arxiv.org/pdf/2312.07531v2.pdf
+Summary: The estimation of 3D human motion from video has progressed rapidly but current methods still have several key limitations. First, most methods estimate the human in camera coordinates. Second, prior work on estimating humans in global coordinates often assumes a flat ground plane and produces foot sliding. Third, the most accurate methods rely on computationally expensive optimization pipelines, limiting their use to offline applications. Finally, existing video-based methods are surprisingly less accurate than single-frame methods. We address these limitations with WHAM (World-grounded Humans with Accurate Motion), which accurately and efficiently reconstructs 3D human motion in a global coordinate system from video. WHAM learns to lift 2D keypoint sequences to 3D using motion capture data and fuses this with video features, integrating motion context and visual information. WHAM exploits camera angular velocity estimated from a SLAM method together with human motion to estimate the body's global trajectory. We combine this with a contact-aware trajectory refinement method that lets WHAM capture human motion in diverse conditions, such as climbing stairs. WHAM outperforms all existing 3D human motion recovery methods across multiple in-the-wild benchmarks. Code will be available for research purposes at http://wham.is.tue.mpg.de/
+
+Model: Pose Modulated Avatars from Video
+Paper: http://arxiv.org/pdf/2308.11951v3.pdf
+Summary: It is now possible to reconstruct dynamic human motion and shape from a sparse set of cameras using Neural Radiance Fields (NeRF) driven by an underlying skeleton. However, a challenge remains to model the deformation of cloth and skin in relation to skeleton pose. Unlike existing avatar models that are learned implicitly or rely on a proxy surface, our approach is motivated by the observation that different poses necessitate unique frequency assignments. Neglecting this distinction yields noisy artifacts in smooth areas or blurs fine-grained texture and shape details in sharp regions. We develop a two-branch neural network that is adaptive and explicit in the frequency domain. The first branch is a graph neural network that models correlations among body parts locally, taking skeleton pose as input. The second branch combines these correlation features to a set of global frequencies and then modulates the feature encoding. Our experiments demonstrate that our network outperforms state-of-the-art methods in terms of preserving details and generalization capabilities.
+
+Model: 3D reconstruction using Structure for Motion
+Paper: http://arxiv.org/pdf/2306.06360v1.pdf
+GitHub: https://github.com/kshitijkarnawat/structure-from-motion
+Summary: We are working towards 3D reconstruction of indoor spaces using a pair of HDR cameras in a stereo vision configuration mounted on an indoor mobile floor robot that captures various textures and spatial features as 2D images and this data is simultaneously utilized as a feed to our algorithm which will allow us to visualize the depth map.
+
+
+Answer:

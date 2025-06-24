@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I downloaded an old image file from the internet, and it was really degraded with heavy noise. But after running it through AI, it looked almost like a new photo. How is it possible for AI to recover images with that much noise? What kind of data do these systems train on, and which models are especially strong in this area these days?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Inpainting-ResShift-ImageNet
+Paper: https://proceedings.neurips.cc/paper_files/paper/2023/file/2ac2eac5098dba08208807b65c5851cc-Paper-Conference.pdf
+GitHub: https://github.com/zsyOAOA/ResShift
+
+### Related Papers:
+Model: Denoising as Adaptation: Noise-Space Domain Adaptation for Image Restoration
+Paper: http://arxiv.org/pdf/2406.18516v3.pdf
+GitHub: https://github.com/kangliao929/noise-da
+Summary: Although learning-based image restoration methods have made significant progress, they still struggle with limited generalization to real-world scenarios due to the substantial domain gap caused by training on synthetic data. Existing methods address this issue by improving data synthesis pipelines, estimating degradation kernels, employing deep internal learning, and performing domain adaptation and regularization. Previous domain adaptation methods have sought to bridge the domain gap by learning domain-invariant knowledge in either feature or pixel space. However, these techniques often struggle to extend to low-level vision tasks within a stable and compact framework. In this paper, we show that it is possible to perform domain adaptation via the noise space using diffusion models. In particular, by leveraging the unique property of how auxiliary conditional inputs influence the multi-step denoising process, we derive a meaningful diffusion loss that guides the restoration model in progressively aligning both restored synthetic and real-world outputs with a target clean distribution. We refer to this method as denoising as adaptation. To prevent shortcuts during joint training, we present crucial strategies such as channel-shuffling layer and residual-swapping contrastive learning in the diffusion model. They implicitly blur the boundaries between conditioned synthetic and real data and prevent the reliance of the model on easily distinguishable features. Experimental results on three classical image restoration tasks, namely denoising, deblurring, and deraining, demonstrate the effectiveness of the proposed method.
+
+Model: Assessing The Impact of CNN Auto Encoder-Based Image Denoising on Image Classification Tasks
+Paper: http://arxiv.org/pdf/2404.10664v2.pdf
+GitHub: https://github.com/MHmi1/Image_Denoising_Classification
+Summary: Images captured from the real world are often affected by different types of noise, which can significantly impact the performance of Computer Vision systems and the quality of visual data. This study presents a novel approach for defect detection in casting product noisy images, specifically focusing on submersible pump impellers. The methodology involves utilizing deep learning models such as VGG16, InceptionV3, and other models in both the spatial and frequency domains to identify noise types and defect status. The research process begins with preprocessing images, followed by applying denoising techniques tailored to specific noise categories. The goal is to enhance the accuracy and robustness of defect detection by integrating noise detection and denoising into the classification pipeline. The study achieved remarkable results using VGG16 for noise type classification in the frequency domain, achieving an accuracy of over 99%. Removal of salt and pepper noise resulted in an average SSIM of 87.9, while Gaussian noise removal had an average SSIM of 64.0, and periodic noise removal yielded an average SSIM of 81.6. This comprehensive approach showcases the effectiveness of the deep AutoEncoder model and median filter, for denoising strategies in real-world industrial applications. Finally, our study reports significant improvements in binary classification accuracy for defect detection compared to previous methods. For the VGG16 classifier, accuracy increased from 94.6% to 97.0%, demonstrating the effectiveness of the proposed noise detection and denoising approach. Similarly, for the InceptionV3 classifier, accuracy improved from 84.7% to 90.0%, further validating the benefits of integrating noise analysis into the classification pipeline.
+
+Model: Predicting the Reliability of an Image Classifier under Image Distortion
+Paper: http://arxiv.org/pdf/2412.16881v1.pdf
+Summary: In image classification tasks, deep learning models are vulnerable to image distortions i.e. their accuracy significantly drops if the input images are distorted. An image-classifier is considered "reliable" if its accuracy on distorted images is above a user-specified threshold. For a quality control purpose, it is important to predict if the image-classifier is unreliable/reliable under a distortion level. In other words, we want to predict whether a distortion level makes the image-classifier "non-reliable" or "reliable". Our solution is to construct a training set consisting of distortion levels along with their "non-reliable" or "reliable" labels, and train a machine learning predictive model (called distortion-classifier) to classify unseen distortion levels. However, learning an effective distortion-classifier is a challenging problem as the training set is highly imbalanced. To address this problem, we propose two Gaussian process based methods to rebalance the training set. We conduct extensive experiments to show that our method significantly outperforms several baselines on six popular image datasets.
+
+
+Answer:

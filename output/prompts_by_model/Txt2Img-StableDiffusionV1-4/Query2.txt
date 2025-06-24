@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I asked for a night cityscape and it got even tiny windows and signs right. How does AI handle such busy scenes so accurately?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: NST-fast-neural-style-mosaic
+Paper: None
+GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+
+### Related Papers:
+Model: Neural World Models for Computer Vision
+Paper: http://arxiv.org/pdf/2306.09179v1.pdf
+Summary: Humans navigate in their environment by learning a mental model of the world through passive observation and active interaction. Their world model allows them to anticipate what might happen next and act accordingly with respect to an underlying objective. Such world models hold strong promises for planning in complex environments like in autonomous driving. A human driver, or a self-driving system, perceives their surroundings with their eyes or their cameras. They infer an internal representation of the world which should: (i) have spatial memory (e.g. occlusions), (ii) fill partially observable or noisy inputs (e.g. when blinded by sunlight), and (iii) be able to reason about unobservable events probabilistically (e.g. predict different possible futures). They are embodied intelligent agents that can predict, plan, and act in the physical world through their world model. In this thesis we present a general framework to train a world model and a policy, parameterised by deep neural networks, from camera observations and expert demonstrations. We leverage important computer vision concepts such as geometry, semantics, and motion to scale world models to complex urban driving scenes.   First, we propose a model that predicts important quantities in computer vision: depth, semantic segmentation, and optical flow. We then use 3D geometry as an inductive bias to operate in the bird's-eye view space. We present for the first time a model that can predict probabilistic future trajectories of dynamic agents in bird's-eye view from 360{\deg} surround monocular cameras only. Finally, we demonstrate the benefits of learning a world model in closed-loop driving. Our model can jointly predict static scene, dynamic scene, and ego-behaviour in an urban driving environment.
+
+Model: NPSim: Nighttime Photorealistic Simulation From Daytime Images With Monocular Inverse Rendering and Ray Tracing
+Paper: http://arxiv.org/pdf/2502.10720v1.pdf
+Summary: Semantic segmentation is an important task for autonomous driving. A powerful autonomous driving system should be capable of handling images under all conditions, including nighttime. Generating accurate and diverse nighttime semantic segmentation datasets is crucial for enhancing the performance of computer vision algorithms in low-light conditions. In this thesis, we introduce a novel approach named NPSim, which enables the simulation of realistic nighttime images from real daytime counterparts with monocular inverse rendering and ray tracing. NPSim comprises two key components: mesh reconstruction and relighting. The mesh reconstruction component generates an accurate representation of the scene structure by combining geometric information extracted from the input RGB image and semantic information from its corresponding semantic labels. The relighting component integrates real-world nighttime light sources and material characteristics to simulate the complex interplay of light and object surfaces under low-light conditions. The scope of this thesis mainly focuses on the implementation and evaluation of the mesh reconstruction component. Through experiments, we demonstrate the effectiveness of the mesh reconstruction component in producing high-quality scene meshes and their generality across different autonomous driving datasets. We also propose a detailed experiment plan for evaluating the entire pipeline, including both quantitative metrics in training state-of-the-art supervised and unsupervised semantic segmentation approaches and human perceptual studies, aiming to indicate the capability of our approach to generate realistic nighttime images and the value of our dataset in steering future progress in the field.
+
+Model: The 8th AI City Challenge
+Paper: http://arxiv.org/pdf/2404.09432v1.pdf
+Summary: The eighth AI City Challenge highlighted the convergence of computer vision and artificial intelligence in areas like retail, warehouse settings, and Intelligent Traffic Systems (ITS), presenting significant research opportunities. The 2024 edition featured five tracks, attracting unprecedented interest from 726 teams in 47 countries and regions. Track 1 dealt with multi-target multi-camera (MTMC) people tracking, highlighting significant enhancements in camera count, character number, 3D annotation, and camera matrices, alongside new rules for 3D tracking and online tracking algorithm encouragement. Track 2 introduced dense video captioning for traffic safety, focusing on pedestrian accidents using multi-camera feeds to improve insights for insurance and prevention. Track 3 required teams to classify driver actions in a naturalistic driving analysis. Track 4 explored fish-eye camera analytics using the FishEye8K dataset. Track 5 focused on motorcycle helmet rule violation detection. The challenge utilized two leaderboards to showcase methods, with participants setting new benchmarks, some surpassing existing state-of-the-art achievements.
+
+
+Answer:

@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I turned a night scene into HDR and even the dark alley lit up without noise. I didn’t expect the shadows to look so clean and sharp all at once—how is that possible with just one step?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: HDR-FHDR-I1
+Paper: https://arxiv.org/pdf/1912.11463
+GitHub: https://github.com/mukulkhanna/FHDR
+
+### Related Papers:
+Model: Lighting Every Darkness with 3DGS: Fast Training and Real-Time Rendering for HDR View Synthesis
+Paper: http://arxiv.org/pdf/2406.06216v1.pdf
+GitHub: https://github.com/srameo/le3d
+Summary: Volumetric rendering based methods, like NeRF, excel in HDR view synthesis from RAWimages, especially for nighttime scenes. While, they suffer from long training times and cannot perform real-time rendering due to dense sampling requirements. The advent of 3D Gaussian Splatting (3DGS) enables real-time rendering and faster training. However, implementing RAW image-based view synthesis directly using 3DGS is challenging due to its inherent drawbacks: 1) in nighttime scenes, extremely low SNR leads to poor structure-from-motion (SfM) estimation in distant views; 2) the limited representation capacity of spherical harmonics (SH) function is unsuitable for RAW linear color space; and 3) inaccurate scene structure hampers downstream tasks such as refocusing. To address these issues, we propose LE3D (Lighting Every darkness with 3DGS). Our method proposes Cone Scatter Initialization to enrich the estimation of SfM, and replaces SH with a Color MLP to represent the RAW linear color space. Additionally, we introduce depth distortion and near-far regularizations to improve the accuracy of scene structure for downstream tasks. These designs enable LE3D to perform real-time novel view synthesis, HDR rendering, refocusing, and tone-mapping changes. Compared to previous volumetric rendering based methods, LE3D reduces training time to 1% and improves rendering speed by up to 4,000 times for 2K resolution images in terms of FPS. Code and viewer can be found in https://github.com/Srameo/LE3D .
+
+Model: Online Overexposed Pixels Hallucination in Videos with Adaptive Reference Frame Selection
+Paper: http://arxiv.org/pdf/2308.15462v1.pdf
+Summary: Low dynamic range (LDR) cameras cannot deal with wide dynamic range inputs, frequently leading to local overexposure issues. We present a learning-based system to reduce these artifacts without resorting to complex acquisition mechanisms like alternating exposures or costly processing that are typical of high dynamic range (HDR) imaging. We propose a transformer-based deep neural network (DNN) to infer the missing HDR details. In an ablation study, we show the importance of using a multiscale DNN and train it with the proper cost function to achieve state-of-the-art quality. To aid the reconstruction of the overexposed areas, our DNN takes a reference frame from the past as an additional input. This leverages the commonly occurring temporal instabilities of autoexposure to our advantage: since well-exposed details in the current frame may be overexposed in the future, we use reinforcement learning to train a reference frame selection DNN that decides whether to adopt the current frame as a future reference. Without resorting to alternating exposures, we obtain therefore a causal, HDR hallucination algorithm with potential application in common video acquisition settings. Our demo video can be found at https://drive.google.com/file/d/1-r12BKImLOYCLUoPzdebnMyNjJ4Rk360/view
+
+Model: ISETHDR: A Physics-based Synthetic Radiance Dataset for High Dynamic Range Driving Scenes
+Paper: http://arxiv.org/pdf/2408.12048v1.pdf
+GitHub: https://github.com/iset/isethdrsensor
+Summary: This paper describes a physics-based end-to-end software simulation for image systems. We use the software to explore sensors designed to enhance performance in high dynamic range (HDR) environments, such as driving through daytime tunnels and under nighttime conditions. We synthesize physically realistic HDR spectral radiance images and use them as the input to digital twins that model the optics and sensors of different systems. This paper makes three main contributions: (a) We create a labeled (instance segmentation and depth), synthetic radiance dataset of HDR driving scenes. (b) We describe the development and validation of the end-to-end simulation framework. (c) We present a comparative analysis of two single-shot sensors designed for HDR. We open-source both the dataset and the software.
+
+
+Answer:

@@ -1,31 +1,32 @@
 # src/db/vectordb.py
 
-import faiss, json, numpy as np
+import faiss
+import json
+import numpy as np
 from pathlib import Path
-from db.embedder import MODEL_ID  # 현재 사용 중인 임베딩 모델 ID
+from db.embedder import MODEL_ID
 
-# 🔧 임베딩 모델명에 따라 해당 하위 디렉토리에서 불러오기
+# 🔧 임베딩 모델 디렉토리
 MODEL_NAME = MODEL_ID.split("/")[-1]
-BASE = Path(__file__).resolve().parent.parent  # src/
-DATA_DIR = BASE / "data" / MODEL_NAME         # e.g., data/e5-large-v2/
+BASE = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE / "data" / "merged_data" / MODEL_NAME
 
 def load_index_and_docs(index_path, json_path):
     index = faiss.read_index(str(index_path))
-    docs  = json.load(open(json_path, encoding="utf-8"))
+    docs = json.load(open(json_path, encoding="utf-8"))
     return index, docs
 
-# ── 인덱스 불러오기 ─────────────────────
+# ── 인덱스 분리 불러오기 ─────────────────────────────
 index_dict = {
     "models": {
         "index": load_index_and_docs(
-            DATA_DIR / "New_AI_model_no_query.faiss",
-            DATA_DIR / "New_AI_model_no_query.json"
+            DATA_DIR / "merged_data.faiss",
+            DATA_DIR / "merged_data.json"
         )[0],
         "docs": load_index_and_docs(
-            DATA_DIR / "New_AI_model_no_query.faiss",
-            DATA_DIR / "New_AI_model_no_query.json"
+            DATA_DIR / "merged_data.faiss",
+            DATA_DIR / "merged_data.json"
         )[1],
-        "boost": 0.0
     },
     "arxiv": {
         "index": load_index_and_docs(
@@ -36,25 +37,20 @@ index_dict = {
             DATA_DIR / "arxiv_index.faiss",
             DATA_DIR / "arxiv_data.json"
         )[1],
-        "boost": 0.0
     }
 }
 
-# ── 검색 함수 ──────────────────────────
-def search(query_vec: np.ndarray, k_each: int = 5, k_final: int = 5):
+# ── 분리 검색 함수 추가 ─────────────────────────────
+def search_split(query_vec: np.ndarray, k_models: int = 5, k_arxiv: int = 5):
     """
-    두 인덱스(models + arxiv)를 모두 검색하고,
-    거리 + boost 기준으로 상위 k_final 문서 반환
+    FAISS 인덱스를 모델/논문 각각 분리하여 검색.
+    반환: (models_docs[], arxiv_docs[])
     """
-    hits = []
+    results = {}
 
-    for cfg in index_dict.values():
-        D, I = cfg["index"].search(
-            np.array([query_vec], dtype="float32"), k_each
-        )
-        for dist, idx in zip(D[0], I[0]):
-            doc = cfg["docs"][idx]
-            hits.append((dist + cfg["boost"], doc))
+    for key, k in [("models", k_models), ("arxiv", k_arxiv)]:
+        cfg = index_dict[key]
+        D, I = cfg["index"].search(np.array([query_vec], dtype="float32"), k)
+        results[key] = [cfg["docs"][i] for i in I[0]]
 
-    hits.sort(key=lambda x: x[0])
-    return [doc for _, doc in hits[:k_final]]
+    return results["models"], results["arxiv"]

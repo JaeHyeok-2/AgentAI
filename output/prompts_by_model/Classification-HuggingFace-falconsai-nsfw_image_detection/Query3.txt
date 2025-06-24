@@ -1,0 +1,36 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Some of my medical or artistic photos get flagged too. How well can AI tell the difference between explicit and non-explicit content?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-QGO-PromptingReal
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: AI-generated Image Quality Assessment in Visual Communication
+Paper: http://arxiv.org/pdf/2412.15677v1.pdf
+GitHub: https://github.com/ytian73/aigi-vc
+Summary: Assessing the quality of artificial intelligence-generated images (AIGIs) plays a crucial role in their application in real-world scenarios. However, traditional image quality assessment (IQA) algorithms primarily focus on low-level visual perception, while existing IQA works on AIGIs overemphasize the generated content itself, neglecting its effectiveness in real-world applications. To bridge this gap, we propose AIGI-VC, a quality assessment database for AI-Generated Images in Visual Communication, which studies the communicability of AIGIs in the advertising field from the perspectives of information clarity and emotional interaction. The dataset consists of 2,500 images spanning 14 advertisement topics and 8 emotion types. It provides coarse-grained human preference annotations and fine-grained preference descriptions, benchmarking the abilities of IQA methods in preference prediction, interpretation, and reasoning. We conduct an empirical study of existing representative IQA methods and large multi-modal models on the AIGI-VC dataset, uncovering their strengths and weaknesses.
+
+Model: State-of-the-Art in Nudity Classification: A Comparative Analysis
+Paper: http://arxiv.org/pdf/2312.16338v1.pdf
+GitHub: https://github.com/fcakyon/content-moderation-deep-learning
+Summary: This paper presents a comparative analysis of existing nudity classification techniques for classifying images based on the presence of nudity, with a focus on their application in content moderation. The evaluation focuses on CNN-based models, vision transformer, and popular open-source safety checkers from Stable Diffusion and Large-scale Artificial Intelligence Open Network (LAION). The study identifies the limitations of current evaluation datasets and highlights the need for more diverse and challenging datasets. The paper discusses the potential implications of these findings for developing more accurate and effective image classification systems on online platforms. Overall, the study emphasizes the importance of continually improving image classification models to ensure the safety and well-being of platform users. The project page, including the demonstrations and results is publicly available at https://github.com/fcakyon/content-moderation-deep-learning.
+
+Model: Annotating Ambiguous Images: General Annotation Strategy for High-Quality Data with Real-World Biomedical Validation
+Paper: http://arxiv.org/pdf/2306.12189v2.pdf
+GitHub: https://github.com/emprime/dcic
+Summary: In the field of image classification, existing methods often struggle with biased or ambiguous data, a prevalent issue in real-world scenarios. Current strategies, including semi-supervised learning and class blending, offer partial solutions but lack a definitive resolution. Addressing this gap, our paper introduces a novel strategy for generating high-quality labels in challenging datasets. Central to our approach is a clearly designed flowchart, based on a broad literature review, which enables the creation of reliable labels. We validate our methodology through a rigorous real-world test case in the biomedical field, specifically in deducing height reduction from vertebral imaging. Our empirical study, leveraging over 250,000 annotations, demonstrates the effectiveness of our strategies decisions compared to their alternatives.
+
+
+Answer:

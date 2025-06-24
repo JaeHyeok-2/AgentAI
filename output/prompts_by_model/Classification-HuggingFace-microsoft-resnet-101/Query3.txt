@@ -1,0 +1,36 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"For huge datasets like satellite or medical images, I wonder—
+How do deep models like ResNet-101 manage complexity without slowing down?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Segmentation-DeepLabV3-ResNet101-VOC
+Paper: None
+GitHub: https://github.com/VainF/DeepLabV3Plus-Pytorch
+
+### Related Papers:
+Model: Which Backbone to Use: A Resource-efficient Domain Specific Comparison for Computer Vision
+Paper: http://arxiv.org/pdf/2406.05612v2.pdf
+GitHub: https://github.com/pranavphoenix/Backbones
+Summary: In contemporary computer vision applications, particularly image classification, architectural backbones pre-trained on large datasets like ImageNet are commonly employed as feature extractors. Despite the widespread use of these pre-trained convolutional neural networks (CNNs), there remains a gap in understanding the performance of various resource-efficient backbones across diverse domains and dataset sizes. Our study systematically evaluates multiple lightweight, pre-trained CNN backbones under consistent training settings across a variety of datasets, including natural images, medical images, galaxy images, and remote sensing images. This comprehensive analysis aims to aid machine learning practitioners in selecting the most suitable backbone for their specific problem, especially in scenarios involving small datasets where fine-tuning a pre-trained network is crucial. Even though attention-based architectures are gaining popularity, we observed that they tend to perform poorly under low data finetuning tasks compared to CNNs. We also observed that some CNN architectures such as ConvNeXt, RegNet and EfficientNet performs well compared to others on a diverse set of domains consistently. Our findings provide actionable insights into the performance trade-offs and effectiveness of different backbones, facilitating informed decision-making in model selection for a broad spectrum of computer vision domains. Our code is available here: https://github.com/pranavphoenix/Backbones
+
+Model: Exploring Data Redundancy in Real-world Image Classification through Data Selection
+Paper: http://arxiv.org/pdf/2306.14113v1.pdf
+GitHub: https://github.com/zhenyutang2023/data_selection
+Summary: Deep learning models often require large amounts of data for training, leading to increased costs. It is particularly challenging in medical imaging, i.e., gathering distributed data for centralized training, and meanwhile, obtaining quality labels remains a tedious job. Many methods have been proposed to address this issue in various training paradigms, e.g., continual learning, active learning, and federated learning, which indeed demonstrate certain forms of the data valuation process. However, existing methods are either overly intuitive or limited to common clean/toy datasets in the experiments. In this work, we present two data valuation metrics based on Synaptic Intelligence and gradient norms, respectively, to study the redundancy in real-world image data. Novel online and offline data selection algorithms are then proposed via clustering and grouping based on the examined data values. Our online approach effectively evaluates data utilizing layerwise model parameter updates and gradients in each epoch and can accelerate model training with fewer epochs and a subset (e.g., 19%-59%) of data while maintaining equivalent levels of accuracy in a variety of datasets. It also extends to the offline coreset construction, producing subsets of only 18%-30% of the original. The codes for the proposed adaptive data selection and coreset computation are available (https://github.com/ZhenyuTANG2023/data_selection).
+
+Model: ResBuilder: Automated Learning of Depth with Residual Structures
+Paper: http://arxiv.org/pdf/2308.08504v1.pdf
+Summary: In this work, we develop a neural architecture search algorithm, termed Resbuilder, that develops ResNet architectures from scratch that achieve high accuracy at moderate computational cost. It can also be used to modify existing architectures and has the capability to remove and insert ResNet blocks, in this way searching for suitable architectures in the space of ResNet architectures. In our experiments on different image classification datasets, Resbuilder achieves close to state-of-the-art performance while saving computational cost compared to off-the-shelf ResNets. Noteworthy, we once tune the parameters on CIFAR10 which yields a suitable default choice for all other datasets. We demonstrate that this property generalizes even to industrial applications by applying our method with default parameters on a proprietary fraud detection dataset.
+
+
+Answer:

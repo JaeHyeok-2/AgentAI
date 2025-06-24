@@ -1,0 +1,29 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"While designing a game map, I used this tool to quickly block out areas, and it filled in realistic textures and objects live. How can it generate full images while I’m still editing?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SemanticDraw: Towards Real-Time Interactive Content Creation from Image Diffusion Models
+Paper: https://arxiv.org/pdf/2403.09055
+GitHub: https://github.com/ironjr/semantic-draw
+
+### Related Papers:
+Model: HyperDreamer: Hyper-Realistic 3D Content Generation and Editing from a Single Image
+Paper: http://arxiv.org/pdf/2312.04543v1.pdf
+Summary: 3D content creation from a single image is a long-standing yet highly desirable task. Recent advances introduce 2D diffusion priors, yielding reasonable results. However, existing methods are not hyper-realistic enough for post-generation usage, as users cannot view, render and edit the resulting 3D content from a full range. To address these challenges, we introduce HyperDreamer with several key designs and appealing properties: 1) Viewable: 360 degree mesh modeling with high-resolution textures enables the creation of visually compelling 3D models from a full range of observation points. 2) Renderable: Fine-grained semantic segmentation and data-driven priors are incorporated as guidance to learn reasonable albedo, roughness, and specular properties of the materials, enabling semantic-aware arbitrary material estimation. 3) Editable: For a generated model or their own data, users can interactively select any region via a few clicks and efficiently edit the texture with text-based guidance. Extensive experiments demonstrate the effectiveness of HyperDreamer in modeling region-aware materials with high-resolution textures and enabling user-friendly editing. We believe that HyperDreamer holds promise for advancing 3D content creation and finding applications in various domains.
+
+Model: DreamDrone: Text-to-Image Diffusion Models are Zero-shot Perpetual View Generators
+Paper: http://arxiv.org/pdf/2312.08746v3.pdf
+Summary: We introduce DreamDrone, a novel zero-shot and training-free pipeline for generating unbounded flythrough scenes from textual prompts. Different from other methods that focus on warping images frame by frame, we advocate explicitly warping the intermediate latent code of the pre-trained text-to-image diffusion model for high-quality image generation and generalization ability. To further enhance the fidelity of the generated images, we also propose a feature-correspondence-guidance diffusion process and a high-pass filtering strategy to promote geometric consistency and high-frequency detail consistency, respectively. Extensive experiments reveal that DreamDrone significantly surpasses existing methods, delivering highly authentic scene generation with exceptional visual quality, without training or fine-tuning on datasets or reconstructing 3D point clouds in advance.
+
+
+Answer:

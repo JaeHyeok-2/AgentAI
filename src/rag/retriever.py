@@ -1,9 +1,11 @@
 # src/rag/retriever.py
-
+import json
+import os 
 import sys
 import numpy as np
 sys.path.append("..")
 
+from prompt import build_prompt
 from db.embedder import embed
 from db.vectordb import search_split
 from sentence_transformers import CrossEncoder
@@ -22,7 +24,7 @@ def retrieve_models_and_papers(query: str,
         return _dedup(models)[:k_models], _dedup(papers)[:k_arxiv]
 
     def rerank_group(group):
-        pairs = [[query, f"{d['Model Unique Name']}. {d['Summary'][:512]}"] for d in group]
+        pairs = [[query, f"{d['Model Unique Name']}. {d['Summary'][:]}"] for d in group]
         scores = reranker.predict(pairs, batch_size=8)
         scored = [(s, d) for s, d in zip(scores, group)]
 
@@ -56,15 +58,35 @@ def _dedup(docs):
 
 # ── CLI 테스트 ─────────────────────────────
 if __name__ == "__main__":
-    q = "I never told the shopping app what I like, but it shows me exactly what I’d pick."
 
-    print("\n📦 모델 & 논문 추천 테스트")
-    models, papers = retrieve_models_and_papers(q, use_rerank=True)
+    # 🔹 쿼리 로딩
+    with open("/home/cvlab/Desktop/AgentAI/dataset/merged_query.json", encoding="utf-8") as f:
+        model_queries = json.load(f)
 
-    print("\n🛠 추천된 모델:")
-    for m in models:
-        print("-", m["Model Unique Name"])
+    # 🔹 결과 저장 경로
+    base_output_dir = "/home/cvlab/Desktop/AgentAI/output/prompts_by_model"
+    os.makedirs(base_output_dir, exist_ok=True)
 
-    print("\n📖 추천된 논문:")
-    for p in papers:
-        print("-", p["Model Unique Name"])
+    # 🔹 전체 처리
+    for model in model_queries:
+        model_name = model.get("Model Unique Name", "Unknown_Model").replace("/", "_")
+        model_dir = os.path.join(base_output_dir, model_name)
+        os.makedirs(model_dir, exist_ok=True)
+
+        for i in range(1, 4):
+            query = model.get(f"Query{i}", "").strip()
+            if not query:
+                continue  # 빈 쿼리 건너뛰기
+
+            try:
+                models, papers = retrieve_models_and_papers(query, k_models=1, k_arxiv=3, use_rerank=True)
+                prompt = build_prompt(query, papers, models)
+
+                query_path = os.path.join(model_dir, f"Query{i}.txt")
+                with open(query_path, "w", encoding="utf-8") as f:
+                    f.write(prompt)
+
+                print(f"✅ Saved: {query_path}")
+
+            except Exception as e:
+                print(f"❌ Error on {model_name} Query{i}: {e}")

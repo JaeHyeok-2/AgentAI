@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I typed “golden-hour cinematic still,” and the shot came back with perfect rim light and movie-level depth. What extra cues does AI calculate to recreate dramatic lighting and dimensionality?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-PirsusEpicRealism
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: Matching Free Depth Recovery from Structured Light
+Paper: http://arxiv.org/pdf/2501.07113v1.pdf
+Summary: We present a novel approach for depth estimation from images captured by structured light systems. Unlike many previous methods that rely on image matching process, our approach uses a density voxel grid to represent scene geometry, which is trained via self-supervised differentiable volume rendering. Our method leverages color fields derived from projected patterns in structured light systems during the rendering process, enabling the isolated optimization of the geometry field. This contributes to faster convergence and high-quality output. Additionally, we incorporate normalized device coordinates (NDC), a distortion loss, and a novel surface-based color loss to enhance geometric fidelity. Experimental results demonstrate that our method outperforms existing matching-based techniques in geometric performance for few-shot scenarios, achieving approximately a 60% reduction in average estimated depth errors on synthetic scenes and about 30% on real-world captured scenes. Furthermore, our approach delivers fast training, with a speed roughly three times faster than previous matching-free methods that employ implicit representations.
+
+Model: EvLight++: Low-Light Video Enhancement with an Event Camera: A Large-Scale Real-World Dataset, Novel Method, and More
+Paper: http://arxiv.org/pdf/2408.16254v1.pdf
+Summary: Event cameras offer significant advantages for low-light video enhancement, primarily due to their high dynamic range. Current research, however, is severely limited by the absence of large-scale, real-world, and spatio-temporally aligned event-video datasets. To address this, we introduce a large-scale dataset with over 30,000 pairs of frames and events captured under varying illumination. This dataset was curated using a robotic arm that traces a consistent non-linear trajectory, achieving spatial alignment precision under 0.03mm and temporal alignment with errors under 0.01s for 90% of the dataset. Based on the dataset, we propose \textbf{EvLight++}, a novel event-guided low-light video enhancement approach designed for robust performance in real-world scenarios. Firstly, we design a multi-scale holistic fusion branch to integrate structural and textural information from both images and events. To counteract variations in regional illumination and noise, we introduce Signal-to-Noise Ratio (SNR)-guided regional feature selection, enhancing features from high SNR regions and augmenting those from low SNR regions by extracting structural information from events. To incorporate temporal information and ensure temporal coherence, we further introduce a recurrent module and temporal loss in the whole pipeline. Extensive experiments on our and the synthetic SDSD dataset demonstrate that EvLight++ significantly outperforms both single image- and video-based methods by 1.37 dB and 3.71 dB, respectively. To further explore its potential in downstream tasks like semantic segmentation and monocular depth estimation, we extend our datasets by adding pseudo segmentation and depth labels via meticulous annotation efforts with foundation models. Experiments under diverse low-light scenes show that the enhanced results achieve a 15.97% improvement in mIoU for semantic segmentation.
+
+Model: SCRREAM : SCan, Register, REnder And Map:A Framework for Annotating Accurate and Dense 3D Indoor Scenes with a Benchmark
+Paper: http://arxiv.org/pdf/2410.22715v2.pdf
+GitHub: https://github.com/Junggy/SCRREAM
+Summary: Traditionally, 3d indoor datasets have generally prioritized scale over ground-truth accuracy in order to obtain improved generalization. However, using these datasets to evaluate dense geometry tasks, such as depth rendering, can be problematic as the meshes of the dataset are often incomplete and may produce wrong ground truth to evaluate the details. In this paper, we propose SCRREAM, a dataset annotation framework that allows annotation of fully dense meshes of objects in the scene and registers camera poses on the real image sequence, which can produce accurate ground truth for both sparse 3D as well as dense 3D tasks. We show the details of the dataset annotation pipeline and showcase four possible variants of datasets that can be obtained from our framework with example scenes, such as indoor reconstruction and SLAM, scene editing & object removal, human reconstruction and 6d pose estimation. Recent pipelines for indoor reconstruction and SLAM serve as new benchmarks. In contrast to previous indoor dataset, our design allows to evaluate dense geometry tasks on eleven sample scenes against accurately rendered ground truth depth maps.
+
+
+Answer:

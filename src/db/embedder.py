@@ -3,7 +3,7 @@ import torch
 from typing import List
 
 device = "cuda"
-MODEL_ID = "BAAI/bge-m3"
+MODEL_ID = "jinaai/jina-embeddings-v3"
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, trust_remote_code=True)
 model     = AutoModel.from_pretrained(MODEL_ID, torch_dtype=torch.float16, trust_remote_code=True).to(device)

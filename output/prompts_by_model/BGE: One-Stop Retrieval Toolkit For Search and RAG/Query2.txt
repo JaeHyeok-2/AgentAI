@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even when the wording was vague, it still understood what I meant and found spot-on answers. What helps it go beyond exact keyword matches?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: BGE: One-Stop Retrieval Toolkit For Search and RAG
+Paper: https://arxiv.org/pdf/2412.14475
+GitHub: https://github.com/FlagOpen/FlagEmbedding/tree/master?tab=readme-ov-file
+
+### Related Papers:
+Model: Compressing Search with Language Models
+Paper: http://arxiv.org/pdf/2407.00085v1.pdf
+Summary: Millions of people turn to Google Search each day for information on things as diverse as new cars or flu symptoms. The terms that they enter contain valuable information on their daily intent and activities, but the information in these search terms has been difficult to fully leverage. User-defined categorical filters have been the most common way to shrink the dimensionality of search data to a tractable size for analysis and modeling. In this paper we present a new approach to reducing the dimensionality of search data while retaining much of the information in the individual terms without user-defined rules. Our contributions are two-fold: 1) we introduce SLaM Compression, a way to quantify search terms using pre-trained language models and create a representation of search data that has low dimensionality, is memory efficient, and effectively acts as a summary of search, and 2) we present CoSMo, a Constrained Search Model for estimating real world events using only search data. We demonstrate the efficacy of our contributions by estimating with high accuracy U.S. automobile sales and U.S. flu rates using only Google Search data.
+
+Model: Multi-Turn Multi-Modal Question Clarification for Enhanced Conversational Understanding
+Paper: http://arxiv.org/pdf/2502.11442v1.pdf
+Summary: Conversational query clarification enables users to refine their search queries through interactive dialogue, improving search effectiveness. Traditional approaches rely on text-based clarifying questions, which often fail to capture complex user preferences, particularly those involving visual attributes. While recent work has explored single-turn multi-modal clarification with images alongside text, such methods do not fully support the progressive nature of user intent refinement over multiple turns. Motivated by this, we introduce the Multi-turn Multi-modal Clarifying Questions (MMCQ) task, which combines text and visual modalities to refine user queries in a multi-turn conversation. To facilitate this task, we create a large-scale dataset named ClariMM comprising over 13k multi-turn interactions and 33k question-answer pairs containing multi-modal clarifying questions. We propose Mario, a retrieval framework that employs a two-phase ranking strategy: initial retrieval with BM25, followed by a multi-modal generative re-ranking model that integrates textual and visual information from conversational history. Our experiments show that multi-turn multi-modal clarification outperforms uni-modal and single-turn approaches, improving MRR by 12.88%. The gains are most significant in longer interactions, demonstrating the value of progressive refinement for complex queries.
+
+Model: Learning Interpretable Queries for Explainable Image Classification with Information Pursuit
+Paper: http://arxiv.org/pdf/2312.11548v1.pdf
+Summary: Information Pursuit (IP) is an explainable prediction algorithm that greedily selects a sequence of interpretable queries about the data in order of information gain, updating its posterior at each step based on observed query-answer pairs. The standard paradigm uses hand-crafted dictionaries of potential data queries curated by a domain expert or a large language model after a human prompt. However, in practice, hand-crafted dictionaries are limited by the expertise of the curator and the heuristics of prompt engineering. This paper introduces a novel approach: learning a dictionary of interpretable queries directly from the dataset. Our query dictionary learning problem is formulated as an optimization problem by augmenting IP's variational formulation with learnable dictionary parameters. To formulate learnable and interpretable queries, we leverage the latent space of large vision and language models like CLIP. To solve the optimization problem, we propose a new query dictionary learning algorithm inspired by classical sparse dictionary learning. Our experiments demonstrate that learned dictionaries significantly outperform hand-crafted dictionaries generated with large language models.
+
+
+Answer:

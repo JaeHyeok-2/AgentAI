@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even with challenging poses or partially hidden limbs, it still captured the full shape accurately. What helps it recover detailed body structure so reliably?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: PoseEstimation-OpenPose
+Paper: https://arxiv.org/pdf/1812.08008
+GitHub: https://github.com/CMU-Perceptual-Computing-Lab/openpose
+
+### Related Papers:
+Model: LaplacianFusion: Detailed 3D Clothed-Human Body Reconstruction
+Paper: http://arxiv.org/pdf/2302.14251v1.pdf
+GitHub: https://github.com/t2kim/laplacianfusion
+Summary: We propose LaplacianFusion, a novel approach that reconstructs detailed and controllable 3D clothed-human body shapes from an input depth or 3D point cloud sequence. The key idea of our approach is to use Laplacian coordinates, well-known differential coordinates that have been used for mesh editing, for representing the local structures contained in the input scans, instead of implicit 3D functions or vertex displacements used previously. Our approach reconstructs a controllable base mesh using SMPL, and learns a surface function that predicts Laplacian coordinates representing surface details on the base mesh. For a given pose, we first build and subdivide a base mesh, which is a deformed SMPL template, and then estimate Laplacian coordinates for the mesh vertices using the surface function. The final reconstruction for the pose is obtained by integrating the estimated Laplacian coordinates as a whole. Experimental results show that our approach based on Laplacian coordinates successfully reconstructs more visually pleasing shape details than previous methods. The approach also enables various surface detail manipulations, such as detail transfer and enhancement.
+
+Model: Pose Modulated Avatars from Video
+Paper: http://arxiv.org/pdf/2308.11951v3.pdf
+Summary: It is now possible to reconstruct dynamic human motion and shape from a sparse set of cameras using Neural Radiance Fields (NeRF) driven by an underlying skeleton. However, a challenge remains to model the deformation of cloth and skin in relation to skeleton pose. Unlike existing avatar models that are learned implicitly or rely on a proxy surface, our approach is motivated by the observation that different poses necessitate unique frequency assignments. Neglecting this distinction yields noisy artifacts in smooth areas or blurs fine-grained texture and shape details in sharp regions. We develop a two-branch neural network that is adaptive and explicit in the frequency domain. The first branch is a graph neural network that models correlations among body parts locally, taking skeleton pose as input. The second branch combines these correlation features to a set of global frequencies and then modulates the feature encoding. Our experiments demonstrate that our network outperforms state-of-the-art methods in terms of preserving details and generalization capabilities.
+
+Model: PARIS: Part-level Reconstruction and Motion Analysis for Articulated Objects
+Paper: http://arxiv.org/pdf/2308.07391v1.pdf
+GitHub: https://github.com/3dlg-hcvc/paris
+Summary: We address the task of simultaneous part-level reconstruction and motion parameter estimation for articulated objects. Given two sets of multi-view images of an object in two static articulation states, we decouple the movable part from the static part and reconstruct shape and appearance while predicting the motion parameters. To tackle this problem, we present PARIS: a self-supervised, end-to-end architecture that learns part-level implicit shape and appearance models and optimizes motion parameters jointly without any 3D supervision, motion, or semantic annotation. Our experiments show that our method generalizes better across object categories, and outperforms baselines and prior work that are given 3D point clouds as input. Our approach improves reconstruction relative to state-of-the-art baselines with a Chamfer-L1 distance reduction of 3.94 (45.2%) for objects and 26.79 (84.5%) for parts, and achieves 5% error rate for motion estimation across 10 object categories.   Video summary at: https://youtu.be/tDSrROPCgUc
+
+
+Answer:

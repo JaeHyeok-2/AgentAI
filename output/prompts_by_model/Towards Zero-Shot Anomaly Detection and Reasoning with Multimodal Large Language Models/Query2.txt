@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even in medical images like MRIs or CT scans, it spotted unusual regions and explained why they looked abnormal. How can a model reason about anomalies so clearly?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Towards Zero-Shot Anomaly Detection and Reasoning with Multimodal Large Language Models
+Paper: https://arxiv.org/pdf/2502.07601
+GitHub: https://github.com/honda-research-institute/Anomaly-OneVision
+
+### Related Papers:
+Model: Transparent Anomaly Detection via Concept-based Explanations
+Paper: http://arxiv.org/pdf/2310.10702v2.pdf
+Summary: Advancements in deep learning techniques have given a boost to the performance of anomaly detection. However, real-world and safety-critical applications demand a level of transparency and reasoning beyond accuracy. The task of anomaly detection (AD) focuses on finding whether a given sample follows the learned distribution. Existing methods lack the ability to reason with clear explanations for their outcomes. Hence to overcome this challenge, we propose Transparent {A}nomaly Detection {C}oncept {E}xplanations (ACE). ACE is able to provide human interpretable explanations in the form of concepts along with anomaly prediction. To the best of our knowledge, this is the first paper that proposes interpretable by-design anomaly detection. In addition to promoting transparency in AD, it allows for effective human-model interaction. Our proposed model shows either higher or comparable results to black-box uninterpretable models. We validate the performance of ACE across three realistic datasets - bird classification on CUB-200-2011, challenging histopathology slide image classification on TIL-WSI-TCGA, and gender classification on CelebA. We further demonstrate that our concept learning paradigm can be seamlessly integrated with other classification-based AD methods.
+
+Model: DiffExplainer: Unveiling Black Box Models Via Counterfactual Generation
+Paper: http://arxiv.org/pdf/2406.15182v2.pdf
+Summary: In the field of medical imaging, particularly in tasks related to early disease detection and prognosis, understanding the reasoning behind AI model predictions is imperative for assessing their reliability. Conventional explanation methods encounter challenges in identifying decisive features in medical image classifications, especially when discriminative features are subtle or not immediately evident. To address this limitation, we propose an agent model capable of generating counterfactual images that prompt different decisions when plugged into a black box model. By employing this agent model, we can uncover influential image patterns that impact the black model's final predictions. Through our methodology, we efficiently identify features that influence decisions of the deep black box. We validated our approach in the rigorous domain of medical prognosis tasks, showcasing its efficacy and potential to enhance the reliability of deep learning models in medical image classification compared to existing interpretation methods. The code will be publicly available at https://github.com/ayanglab/DiffExplainer.
+
+Model: KS-GNNExplainer: Global Model Interpretation Through Instance Explanations On Histopathology images
+Paper: http://arxiv.org/pdf/2304.08240v1.pdf
+Summary: Instance-level graph neural network explainers have proven beneficial for explaining such networks on histopathology images. However, there has been few methods that provide model explanations, which are common patterns among samples within the same class. We envision that graph-based histopathological image analysis can benefit significantly from such explanations. On the other hand, current model-level explainers are based on graph generation methods that are not applicable in this domain because of no corresponding image for their generated graphs in real world. Therefore, such explanations are communicable to the experts. To follow this vision, we developed KS-GNNExplainer, the first instance-level graph neural network explainer that leverages current instance-level approaches in an effective manner to provide more informative and reliable explainable outputs, which are crucial for applied AI in the health domain. Our experiments on various datasets, and based on both quantitative and qualitative measures, demonstrate that the proposed explainer is capable of being a global pattern extractor, which is a fundamental limitation of current instance-level approaches in this domain.
+
+
+Answer:

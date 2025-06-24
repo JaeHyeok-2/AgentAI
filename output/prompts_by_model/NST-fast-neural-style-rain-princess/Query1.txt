@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I typed “rainy night painting style,” and the result had thick palette-knife strokes and streaks of rain. What extra signals does AI layer in to add both water specks and heavy brush texture? How can a single short prompt trigger such a dreamy look?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: NST-fast-neural-style-rain-princess
+Paper: None
+GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+
+### Related Papers:
+Model: WorldSmith: Iterative and Expressive Prompting for World Building with a Generative AI
+Paper: http://arxiv.org/pdf/2308.13355v1.pdf
+Summary: Crafting a rich and unique environment is crucial for fictional world-building, but can be difficult to achieve since illustrating a world from scratch requires time and significant skill. We investigate the use of recent multi-modal image generation systems to enable users iteratively visualize and modify elements of their fictional world using a combination of text input, sketching, and region-based filling. WorldSmith enables novice world builders to quickly visualize a fictional world with layered edits and hierarchical compositions. Through a formative study (4 participants) and first-use study (13 participants) we demonstrate that WorldSmith offers more expressive interactions with prompt-based models. With this work, we explore how creatives can be empowered to leverage prompt-based generative AI as a tool in their creative process, beyond current "click-once" prompting UI paradigms.
+
+Model: Artificial Intelligence and Aesthetic Judgment
+Paper: http://arxiv.org/pdf/2309.12338v1.pdf
+Summary: Generative AIs produce creative outputs in the style of human expression. We argue that encounters with the outputs of modern generative AI models are mediated by the same kinds of aesthetic judgments that organize our interactions with artwork. The interpretation procedure we use on art we find in museums is not an innate human faculty, but one developed over history by disciplines such as art history and art criticism to fulfill certain social functions. This gives us pause when considering our reactions to generative AI, how we should approach this new medium, and why generative AI seems to incite so much fear about the future. We naturally inherit a conundrum of causal inference from the history of art: a work can be read as a symptom of the cultural conditions that influenced its creation while simultaneously being framed as a timeless, seemingly acausal distillation of an eternal human condition. In this essay, we focus on an unresolved tension when we bring this dilemma to bear in the context of generative AI: are we looking for proof that generated media reflects something about the conditions that created it or some eternal human essence? Are current modes of interpretation sufficient for this task? Historically, new forms of art have changed how art is interpreted, with such influence used as evidence that a work of art has touched some essential human truth. As generative AI influences contemporary aesthetic judgment we outline some of the pitfalls and traps in attempting to scrutinize what AI generated media means.
+
+Model: Why is the User Interface a Dark Pattern? : Explainable Auto-Detection and its Analysis
+Paper: http://arxiv.org/pdf/2401.04119v1.pdf
+GitHub: https://github.com/yamanalab/why-darkpattern
+Summary: Dark patterns are deceptive user interface designs for online services that make users behave in unintended ways. Dark patterns, such as privacy invasion, financial loss, and emotional distress, can harm users. These issues have been the subject of considerable debate in recent years. In this paper, we study interpretable dark pattern auto-detection, that is, why a particular user interface is detected as having dark patterns. First, we trained a model using transformer-based pre-trained language models, BERT, on a text-based dataset for the automatic detection of dark patterns in e-commerce. Then, we applied post-hoc explanation techniques, including local interpretable model agnostic explanation (LIME) and Shapley additive explanations (SHAP), to the trained model, which revealed which terms influence each prediction as a dark pattern. In addition, we extracted and analyzed terms that affected the dark patterns. Our findings may prevent users from being manipulated by dark patterns, and aid in the construction of more equitable internet services. Our code is available at https://github.com/yamanalab/why-darkpattern.
+
+
+Answer:

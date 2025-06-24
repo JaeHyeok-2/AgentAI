@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even in crowded photos, it separated overlapping people and objects without a problem—and knew what each thing was. What lets it segment and recognize so precisely?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Segmentation-DeepLabV3-MobileNet-VOC
+Paper: None
+GitHub: https://github.com/VainF/DeepLabV3Plus-Pytorch
+
+### Related Papers:
+Model: A Self-Supervised Method for Body Part Segmentation and Keypoint Detection of Rat Images
+Paper: http://arxiv.org/pdf/2405.04650v1.pdf
+Summary: Recognition of individual components and keypoint detection supported by instance segmentation is crucial to analyze the behavior of agents on the scene. Such systems could be used for surveillance, self-driving cars, and also for medical research, where behavior analysis of laboratory animals is used to confirm the aftereffects of a given medicine. A method capable of solving the aforementioned tasks usually requires a large amount of high-quality hand-annotated data, which takes time and money to produce. In this paper, we propose a method that alleviates the need for manual labeling of laboratory rats. To do so, first, we generate initial annotations with a computer vision-based approach, then through extensive augmentation, we train a deep neural network on the generated data. The final system is capable of instance segmentation, keypoint detection, and body part segmentation even when the objects are heavily occluded.
+
+Model: Sharp Eyes: A Salient Object Detector Working The Same Way as Human Visual Characteristics
+Paper: http://arxiv.org/pdf/2301.07431v1.pdf
+GitHub: https://github.com/lesonly/senet
+Summary: Current methods aggregate multi-level features or introduce edge and skeleton to get more refined saliency maps. However, little attention is paid to how to obtain the complete salient object in cluttered background, where the targets are usually similar in color and texture to the background. To handle this complex scene, we propose a sharp eyes network (SENet) that first seperates the object from scene, and then finely segments it, which is in line with human visual characteristics, i.e., to look first and then focus. Different from previous methods which directly integrate edge or skeleton to supplement the defects of objects, the proposed method aims to utilize the expanded objects to guide the network obtain complete prediction. Specifically, SENet mainly consists of target separation (TS) brach and object segmentation (OS) branch trained by minimizing a new hierarchical difference aware (HDA) loss. In the TS branch, we construct a fractal structure to produce saliency features with expanded boundary via the supervision of expanded ground truth, which can enlarge the detail difference between foreground and background. In the OS branch, we first aggregate multi-level features to adaptively select complementary components, and then feed the saliency features with expanded boundary into aggregated features to guide the network obtain complete prediction. Moreover, we propose the HDA loss to further improve the structural integrity and local details of the salient objects, which assigns weight to each pixel according to its distance from the boundary hierarchically. Hard pixels with similar appearance in border region will be given more attention hierarchically to emphasize their importance in completeness prediction. Comprehensive experimental results on five datasets demonstrate that the proposed approach outperforms the state-of-the-art methods both quantitatively and qualitatively.
+
+Model: ImageNet-Hard: The Hardest Images Remaining from a Study of the Power of Zoom and Spatial Biases in Image Classification
+Paper: http://arxiv.org/pdf/2304.05538v4.pdf
+Summary: Image classifiers are information-discarding machines, by design. Yet, how these models discard information remains mysterious. We hypothesize that one way for image classifiers to reach high accuracy is to first zoom to the most discriminative region in the image and then extract features from there to predict image labels, discarding the rest of the image. Studying six popular networks ranging from AlexNet to CLIP, we find that proper framing of the input image can lead to the correct classification of 98.91% of ImageNet images. Furthermore, we uncover positional biases in various datasets, especially a strong center bias in two popular datasets: ImageNet-A and ObjectNet. Finally, leveraging our insights into the potential of zooming, we propose a test-time augmentation (TTA) technique that improves classification accuracy by forcing models to explicitly perform zoom-in operations before making predictions. Our method is more interpretable, accurate, and faster than MEMO, a state-of-the-art (SOTA) TTA method. We introduce ImageNet-Hard, a new benchmark that challenges SOTA classifiers including large vision-language models even when optimal zooming is allowed.
+
+
+Answer:

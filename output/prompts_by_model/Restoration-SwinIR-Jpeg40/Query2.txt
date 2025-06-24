@@ -1,0 +1,36 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Enlarging old photos used to make them worse, but now AI actually restores them. How does that work?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Restoration-SwinIR-Jpeg40
+Paper: https://arxiv.org/pdf/2108.10257
+GitHub: https://github.com/JingyunLiang/SwinIR
+
+### Related Papers:
+Model: DreamClear: High-Capacity Real-World Image Restoration with Privacy-Safe Dataset Curation
+Paper: http://arxiv.org/pdf/2410.18666v2.pdf
+GitHub: https://github.com/shallowdream204/dreamclear
+Summary: Image restoration (IR) in real-world scenarios presents significant challenges due to the lack of high-capacity models and comprehensive datasets. To tackle these issues, we present a dual strategy: GenIR, an innovative data curation pipeline, and DreamClear, a cutting-edge Diffusion Transformer (DiT)-based image restoration model. GenIR, our pioneering contribution, is a dual-prompt learning pipeline that overcomes the limitations of existing datasets, which typically comprise only a few thousand images and thus offer limited generalizability for larger models. GenIR streamlines the process into three stages: image-text pair construction, dual-prompt based fine-tuning, and data generation & filtering. This approach circumvents the laborious data crawling process, ensuring copyright compliance and providing a cost-effective, privacy-safe solution for IR dataset construction. The result is a large-scale dataset of one million high-quality images. Our second contribution, DreamClear, is a DiT-based image restoration model. It utilizes the generative priors of text-to-image (T2I) diffusion models and the robust perceptual capabilities of multi-modal large language models (MLLMs) to achieve photorealistic restoration. To boost the model's adaptability to diverse real-world degradations, we introduce the Mixture of Adaptive Modulator (MoAM). It employs token-wise degradation priors to dynamically integrate various restoration experts, thereby expanding the range of degradations the model can address. Our exhaustive experiments confirm DreamClear's superior performance, underlining the efficacy of our dual strategy for real-world image restoration. Code and pre-trained models are available at: https://github.com/shallowdream204/DreamClear.
+
+Model: Varformer: Adapting VAR's Generative Prior for Image Restoration
+Paper: http://arxiv.org/pdf/2412.21063v1.pdf
+GitHub: https://github.com/siywang541/Varformer
+Summary: Generative models trained on extensive high-quality datasets effectively capture the structural and statistical properties of clean images, rendering them powerful priors for transforming degraded features into clean ones in image restoration. VAR, a novel image generative paradigm, surpasses diffusion models in generation quality by applying a next-scale prediction approach. It progressively captures both global structures and fine-grained details through the autoregressive process, consistent with the multi-scale restoration principle widely acknowledged in the restoration community. Furthermore, we observe that during the image reconstruction process utilizing VAR, scale predictions automatically modulate the input, facilitating the alignment of representations at subsequent scales with the distribution of clean images. To harness VAR's adaptive distribution alignment capability in image restoration tasks, we formulate the multi-scale latent representations within VAR as the restoration prior, thus advancing our delicately designed VarFormer framework. The strategic application of these priors enables our VarFormer to achieve remarkable generalization on unseen tasks while also reducing training computational costs. Extensive experiments underscores that our VarFormer outperforms existing multi-task image restoration methods across various restoration tasks.
+
+Model: CausalSR: Structural Causal Model-Driven Super-Resolution with Counterfactual Inference
+Paper: http://arxiv.org/pdf/2501.15852v1.pdf
+GitHub: https://github.com/Mnster00/CasualSR
+Summary: Physical and optical factors interacting with sensor characteristics create complex image degradation patterns. Despite advances in deep learning-based super-resolution, existing methods overlook the causal nature of degradation by adopting simplistic black-box mappings. This paper formulates super-resolution using structural causal models to reason about image degradation processes. We establish a mathematical foundation that unifies principles from causal inference, deriving necessary conditions for identifying latent degradation mechanisms and corresponding propagation. We propose a novel counterfactual learning strategy that leverages semantic guidance to reason about hypothetical degradation scenarios, leading to theoretically-grounded representations that capture invariant features across different degradation conditions. The framework incorporates an adaptive intervention mechanism with provable bounds on treatment effects, allowing precise manipulation of degradation factors while maintaining semantic consistency. Through extensive empirical validation, we demonstrate that our approach achieves significant improvements over state-of-the-art methods, particularly in challenging scenarios with compound degradations. On standard benchmarks, our method consistently outperforms existing approaches by significant margins (0.86-1.21dB PSNR), while providing interpretable insights into the restoration process. The theoretical framework and empirical results demonstrate the fundamental importance of causal reasoning in understanding image restoration systems.
+
+
+Answer:

@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I needed to print a tiny logo and enlarged it about 15×, yet the edges stayed perfectly smooth. How does AI store and retrieve an image so it can upscale without a resolution limit? I’m curious how it recovers high-frequency detail even at extreme zoom levels."
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Deblur-MSSNet-GoPro
+Paper: https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf
+GitHub: https://github.com/kky7/MSSNet
+
+### Related Papers:
+Model: FeatSharp: Your Vision Model Features, Sharper
+Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+Summary: The feature maps of vision encoders are fundamental to myriad modern AI tasks, ranging from core perception algorithms (e.g. semantic segmentation, object detection, depth perception, etc.) to modern multimodal understanding in vision-language models (VLMs). Currently, in computer vision, the frontier of general purpose vision backbones are Vision Transformers (ViT), typically trained using contrastive loss (e.g. CLIP). A key problem with most off-the-shelf ViTs, particularly CLIP, is that these models are inflexibly low resolution. Most run at 224x224px, while the "high resolution" versions are around 378-448px, but still inflexible. We introduce a novel method to coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution. We demonstrate the effectiveness of this approach on core perception tasks as well as within agglomerative model (RADIO) training as a way of providing richer targets for distillation.
+
+Model: On the Effect of Image Resolution on Semantic Segmentation
+Paper: http://arxiv.org/pdf/2402.05398v1.pdf
+Summary: High-resolution semantic segmentation requires substantial computational resources. Traditional approaches in the field typically downscale the input images before processing and then upscale the low-resolution outputs back to their original dimensions. While this strategy effectively identifies broad regions, it often misses finer details. In this study, we demonstrate that a streamlined model capable of directly producing high-resolution segmentations can match the performance of more complex systems that generate lower-resolution results. By simplifying the network architecture, we enable the processing of images at their native resolution. Our approach leverages a bottom-up information propagation technique across various scales, which we have empirically shown to enhance segmentation accuracy. We have rigorously tested our method using leading-edge semantic segmentation datasets. Specifically, for the Cityscapes dataset, we further boost accuracy by applying the Noisy Student Training technique.
+
+Model: Elastic-DETR: Making Image Resolution Learnable with Content-Specific Network Prediction
+Paper: http://arxiv.org/pdf/2412.06341v1.pdf
+Summary: Multi-scale image resolution is a de facto standard approach in modern object detectors, such as DETR. This technique allows for the acquisition of various scale information from multiple image resolutions. However, manual hyperparameter selection of the resolution can restrict its flexibility, which is informed by prior knowledge, necessitating human intervention. This work introduces a novel strategy for learnable resolution, called Elastic-DETR, enabling elastic utilization of multiple image resolutions. Our network provides an adaptive scale factor based on the content of the image with a compact scale prediction module (< 2 GFLOPs). The key aspect of our method lies in how to determine the resolution without prior knowledge. We present two loss functions derived from identified key components for resolution optimization: scale loss, which increases adaptiveness according to the image, and distribution loss, which determines the overall degree of scaling based on network performance. By leveraging the resolution's flexibility, we can demonstrate various models that exhibit varying trade-offs between accuracy and computational complexity. We empirically show that our scheme can unleash the potential of a wide spectrum of image resolutions without constraining flexibility. Our models on MS COCO establish a maximum accuracy gain of 3.5%p or 26% decrease in computation than MS-trained DN-DETR.
+
+
+Answer:

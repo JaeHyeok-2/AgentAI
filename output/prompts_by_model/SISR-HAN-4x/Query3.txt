@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"A blurry image became detailed after 4× enlargement—the sharp edges and small textures felt almost real. How can AI recreate such convincing features from so little original input?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-EDSR
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: FeatSharp: Your Vision Model Features, Sharper
+Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+Summary: The feature maps of vision encoders are fundamental to myriad modern AI tasks, ranging from core perception algorithms (e.g. semantic segmentation, object detection, depth perception, etc.) to modern multimodal understanding in vision-language models (VLMs). Currently, in computer vision, the frontier of general purpose vision backbones are Vision Transformers (ViT), typically trained using contrastive loss (e.g. CLIP). A key problem with most off-the-shelf ViTs, particularly CLIP, is that these models are inflexibly low resolution. Most run at 224x224px, while the "high resolution" versions are around 378-448px, but still inflexible. We introduce a novel method to coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution. We demonstrate the effectiveness of this approach on core perception tasks as well as within agglomerative model (RADIO) training as a way of providing richer targets for distillation.
+
+Model: REAL: Realism Evaluation of Text-to-Image Generation Models for Effective Data Augmentation
+Paper: http://arxiv.org/pdf/2502.10663v1.pdf
+Summary: Recent advancements in text-to-image (T2I) generation models have transformed the field. However, challenges persist in generating images that reflect demanding textual descriptions, especially for fine-grained details and unusual relationships. Existing evaluation metrics focus on text-image alignment but overlook the realism of the generated image, which can be crucial for downstream applications like data augmentation in machine learning. To address this gap, we propose REAL, an automatic evaluation framework that assesses realism of T2I outputs along three dimensions: fine-grained visual attributes, unusual visual relationships, and visual styles. REAL achieves a Spearman's rho score of up to 0.62 in alignment with human judgement and demonstrates utility in ranking and filtering augmented data for tasks like image captioning, classification, and visual relationship detection. Empirical results show that high-scoring images evaluated by our metrics improve F1 scores of image classification by up to 11.3%, while low-scoring ones degrade that by up to 4.95%. We benchmark four major T2I models across the realism dimensions, providing insights for future improvements in T2I output realism.
+
+Model: Auto Cherry-Picker: Learning from High-quality Generative Data Driven by Language
+Paper: http://arxiv.org/pdf/2406.20085v2.pdf
+Summary: Diffusion models can generate realistic and diverse images, potentially facilitating data availability for data-intensive perception tasks. However, leveraging these models to boost performance on downstream tasks with synthetic data poses several challenges, including aligning with real data distribution, scaling synthetic sample volumes, and ensuring their quality. To bridge these gaps, we present \textbf{A}uto \textbf{C}herry-\textbf{P}icker (ACP), a novel framework that generates high-quality cross-modality training samples at scale to augment perception and multi-modal training. ACP first uses LLMs to sample descriptions and layouts based on object combinations from real data priors, eliminating the need for ground truth image captions or annotations. Next, we use an off-the-shelf controllable diffusion model to generate multiple images. Then, the generated data are refined using a comprehensively designed metric, Composite Layout and Image Score (CLIS), to ensure quality. Our customized synthetic high-quality samples boost performance in various scenarios, especially in addressing challenges associated with long-tailed distribution and imbalanced datasets. Experiment results on downstream tasks demonstrate that ACP can significantly improve the performance of existing models. In addition, we find a positive correlation between CLIS and performance gains in downstream tasks. This finding shows the potential for evaluation metrics as the role for various visual perception and MLLM tasks.
+
+
+Answer:

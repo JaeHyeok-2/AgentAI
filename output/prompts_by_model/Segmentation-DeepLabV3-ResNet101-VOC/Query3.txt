@@ -1,0 +1,36 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"It was slower than lighter models but much more precise. Why do deeper segmentation models like this offer better performance, and what are the trade-offs?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Segmentation-DeepLabV3-MobileNet-VOC
+Paper: None
+GitHub: https://github.com/VainF/DeepLabV3Plus-Pytorch
+
+### Related Papers:
+Model: Mamba or RWKV: Exploring High-Quality and High-Efficiency Segment Anything Model
+Paper: http://arxiv.org/pdf/2406.19369v1.pdf
+GitHub: https://github.com/harboryuan/ovsam
+Summary: Transformer-based segmentation methods face the challenge of efficient inference when dealing with high-resolution images. Recently, several linear attention architectures, such as Mamba and RWKV, have attracted much attention as they can process long sequences efficiently. In this work, we focus on designing an efficient segment-anything model by exploring these different architectures. Specifically, we design a mixed backbone that contains convolution and RWKV operation, which achieves the best for both accuracy and efficiency. In addition, we design an efficient decoder to utilize the multiscale tokens to obtain high-quality masks. We denote our method as RWKV-SAM, a simple, effective, fast baseline for SAM-like models. Moreover, we build a benchmark containing various high-quality segmentation datasets and jointly train one efficient yet high-quality segmentation model using this benchmark. Based on the benchmark results, our RWKV-SAM achieves outstanding performance in efficiency and segmentation quality compared to transformers and other linear attention models. For example, compared with the same-scale transformer model, RWKV-SAM achieves more than 2x speedup and can achieve better segmentation performance on various datasets. In addition, RWKV-SAM outperforms recent vision Mamba models with better classification and semantic segmentation results. Code and models will be publicly available.
+
+Model: MatchSeg: Towards Better Segmentation via Reference Image Matching
+Paper: http://arxiv.org/pdf/2403.15901v3.pdf
+GitHub: https://github.com/keeplearning-again/matchseg
+Summary: Recently, automated medical image segmentation methods based on deep learning have achieved great success. However, they heavily rely on large annotated datasets, which are costly and time-consuming to acquire. Few-shot learning aims to overcome the need for annotated data by using a small labeled dataset, known as a support set, to guide predicting labels for new, unlabeled images, known as the query set. Inspired by this paradigm, we introduce MatchSeg, a novel framework that enhances medical image segmentation through strategic reference image matching. We leverage contrastive language-image pre-training (CLIP) to select highly relevant samples when defining the support set. Additionally, we design a joint attention module to strengthen the interaction between support and query features, facilitating a more effective knowledge transfer between support and query sets. We validated our method across four public datasets. Experimental results demonstrate superior segmentation performance and powerful domain generalization ability of MatchSeg against existing methods for domain-specific and cross-domain segmentation tasks. Our code is made available at https://github.com/keeplearning-again/MatchSeg
+
+Model: MARS: Mask Attention Refinement with Sequential Quadtree Nodes for Car Damage Instance Segmentation
+Paper: http://arxiv.org/pdf/2305.04743v5.pdf
+GitHub: https://github.com/kaopanboonyuen/mars
+Summary: Evaluating car damages from misfortune is critical to the car insurance industry. However, the accuracy is still insufficient for real-world applications since the deep learning network is not designed for car damage images as inputs, and its segmented masks are still very coarse. This paper presents MARS (Mask Attention Refinement with Sequential quadtree nodes) for car damage instance segmentation. Our MARS represents self-attention mechanisms to draw global dependencies between the sequential quadtree nodes layer and quadtree transformer to recalibrate channel weights and predict highly accurate instance masks. Our extensive experiments demonstrate that MARS outperforms state-of-the-art (SOTA) instance segmentation methods on three popular benchmarks such as Mask R-CNN [9], PointRend [13], and Mask Transfiner [12], by a large margin of +1.3 maskAP-based R50-FPN backbone and +2.3 maskAP-based R101-FPN backbone on Thai car-damage dataset. Our demos are available at https://github.com/kaopanboonyuen/MARS.
+
+
+Answer:

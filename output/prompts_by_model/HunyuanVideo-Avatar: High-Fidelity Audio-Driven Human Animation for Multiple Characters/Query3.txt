@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I used a full-body photo and it turned it into a video avatar that spoke and moved just like a real person. What kind of model can animate full bodies so realistically?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-PirsusEpicRealism
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation
+Paper: http://arxiv.org/pdf/2407.17438v3.pdf
+GitHub: https://github.com/zhenzhiwang/humanvid
+Summary: Human image animation involves generating videos from a character photo, allowing user control and unlocking the potential for video and movie production. While recent approaches yield impressive results using high-quality training data, the inaccessibility of these datasets hampers fair and transparent benchmarking. Moreover, these approaches prioritize 2D human motion and overlook the significance of camera motions in videos, leading to limited control and unstable video generation. To demystify the training data, we present HumanVid, the first large-scale high-quality dataset tailored for human image animation, which combines crafted real-world and synthetic data. For the real-world data, we compile a vast collection of real-world videos from the internet. We developed and applied careful filtering rules to ensure video quality, resulting in a curated collection of 20K high-resolution (1080P) human-centric videos. Human and camera motion annotation is accomplished using a 2D pose estimator and a SLAM-based method. To expand our synthetic dataset, we collected 10K 3D avatar assets and leveraged existing assets of body shapes, skin textures and clothings. Notably, we introduce a rule-based camera trajectory generation method, enabling the synthetic pipeline to incorporate diverse and precise camera motion annotation, which can rarely be found in real-world data. To verify the effectiveness of HumanVid, we establish a baseline model named CamAnimate, short for Camera-controllable Human Animation, that considers both human and camera motions as conditions. Through extensive experimentation, we demonstrate that such simple baseline training on our HumanVid achieves state-of-the-art performance in controlling both human pose and camera motions, setting a new benchmark. Demo, data and code could be found in the project website: https://humanvid.github.io/.
+
+Model: Pose Modulated Avatars from Video
+Paper: http://arxiv.org/pdf/2308.11951v3.pdf
+Summary: It is now possible to reconstruct dynamic human motion and shape from a sparse set of cameras using Neural Radiance Fields (NeRF) driven by an underlying skeleton. However, a challenge remains to model the deformation of cloth and skin in relation to skeleton pose. Unlike existing avatar models that are learned implicitly or rely on a proxy surface, our approach is motivated by the observation that different poses necessitate unique frequency assignments. Neglecting this distinction yields noisy artifacts in smooth areas or blurs fine-grained texture and shape details in sharp regions. We develop a two-branch neural network that is adaptive and explicit in the frequency domain. The first branch is a graph neural network that models correlations among body parts locally, taking skeleton pose as input. The second branch combines these correlation features to a set of global frequencies and then modulates the feature encoding. Our experiments demonstrate that our network outperforms state-of-the-art methods in terms of preserving details and generalization capabilities.
+
+Model: SLoMo: A General System for Legged Robot Motion Imitation from Casual Videos
+Paper: http://arxiv.org/pdf/2304.14389v2.pdf
+GitHub: https://github.com/johnzhang3/slomo
+Summary: We present SLoMo: a first-of-its-kind framework for transferring skilled motions from casually captured "in the wild" video footage of humans and animals to legged robots. SLoMo works in three stages: 1) synthesize a physically plausible reconstructed key-point trajectory from monocular videos; 2) optimize a dynamically feasible reference trajectory for the robot offline that includes body and foot motion, as well as contact sequences that closely tracks the key points; 3) track the reference trajectory online using a general-purpose model-predictive controller on robot hardware. Traditional motion imitation for legged motor skills often requires expert animators, collaborative demonstrations, and/or expensive motion capture equipment, all of which limits scalability. Instead, SLoMo only relies on easy-to-obtain monocular video footage, readily available in online repositories such as YouTube. It converts videos into motion primitives that can be executed reliably by real-world robots. We demonstrate our approach by transferring the motions of cats, dogs, and humans to example robots including a quadruped (on hardware) and a humanoid (in simulation). To the best knowledge of the authors, this is the first attempt at a general-purpose motion transfer framework that imitates animal and human motions on legged robots directly from casual videos without artificial markers or labels.
+
+
+Answer:

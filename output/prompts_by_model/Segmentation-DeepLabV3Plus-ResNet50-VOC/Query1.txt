@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I used an AI editor to swap out skies in landscape shots, and it precisely isolated the sky region. How can models segment such specific regions so accurately?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Segmentation-DeepLabV3-MobileNet-VOC
+Paper: None
+GitHub: https://github.com/VainF/DeepLabV3Plus-Pytorch
+
+### Related Papers:
+Model: SegForestNet: Spatial-Partitioning-Based Aerial Image Segmentation
+Paper: http://arxiv.org/pdf/2302.01585v3.pdf
+GitHub: https://github.com/gritzner/segforestnet
+Summary: Aerial image segmentation is the basis for applications such as automatically creating maps or tracking deforestation. In true orthophotos, which are often used in these applications, many objects and regions can be approximated well by polygons. However, this fact is rarely exploited by state-of-the-art semantic segmentation models. Instead, most models allow unnecessary degrees of freedom in their predictions by allowing arbitrary region shapes. We therefore present a refinement of our deep learning model which predicts binary space partitioning trees, an efficient polygon representation. The refinements include a new feature decoder architecture and a new differentiable BSP tree renderer which both avoid vanishing gradients. Additionally, we designed a novel loss function specifically designed to improve the spatial partitioning defined by the predicted trees. Furthermore, our expanded model can predict multiple trees at once and thus can predict class-specific segmentations. As an additional contribution, we investigate the impact of a non-optimal training process in comparison to an optimized training process. While model architectures optimized for aerial images, such as PFNet or our own model, show an advantage under non-optimal conditions, this advantage disappears under optimal training conditions. Despite this observation, our model still makes better predictions for small rectangular objects, e.g., cars.
+
+Model: Multi-Region Transfer Learning for Segmentation of Crop Field Boundaries in Satellite Images with Limited Labels
+Paper: http://arxiv.org/pdf/2404.00179v1.pdf
+Summary: The goal of field boundary delineation is to predict the polygonal boundaries and interiors of individual crop fields in overhead remotely sensed images (e.g., from satellites or drones). Automatic delineation of field boundaries is a necessary task for many real-world use cases in agriculture, such as estimating cultivated area in a region or predicting end-of-season yield in a field. Field boundary delineation can be framed as an instance segmentation problem, but presents unique research challenges compared to traditional computer vision datasets used for instance segmentation. The practical applicability of previous work is also limited by the assumption that a sufficiently-large labeled dataset is available where field boundary delineation models will be applied, which is not the reality for most regions (especially under-resourced regions such as Sub-Saharan Africa). We present an approach for segmentation of crop field boundaries in satellite images in regions lacking labeled data that uses multi-region transfer learning to adapt model weights for the target region. We show that our approach outperforms existing methods and that multi-region transfer learning substantially boosts performance for multiple model architectures. Our implementation and datasets are publicly available to enable use of the approach by end-users and serve as a benchmark for future work.
+
+Model: Point Cloud Part Editing: Segmentation, Generation, Assembly, and Selection
+Paper: http://arxiv.org/pdf/2312.11867v1.pdf
+GitHub: https://github.com/kaiyizhang/SGAS
+Summary: Ideal part editing should guarantee the diversity of edited parts, the fidelity to the remaining parts, and the quality of the results. However, previous methods do not disentangle each part completely, which means the edited parts will affect the others, resulting in poor diversity and fidelity. In addition, some methods lack constraints between parts, which need manual selections of edited results to ensure quality. Therefore, we propose a four-stage process for point cloud part editing: Segmentation, Generation, Assembly, and Selection. Based on this process, we introduce SGAS, a model for part editing that employs two strategies: feature disentanglement and constraint. By independently fitting part-level feature distributions, we realize the feature disentanglement. By explicitly modeling the transformation from object-level distribution to part-level distributions, we realize the feature constraint. Considerable experiments on different datasets demonstrate the efficiency and effectiveness of SGAS on point cloud part editing. In addition, SGAS can be pruned to realize unsupervised part-aware point cloud generation and achieves state-of-the-art results.
+
+
+Answer:

@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I used an AI model that could detect people and objects in photos, even when they were partially hidden or overlapping. How does a model like DETR accurately identify multiple objects in a scene without needing region proposals?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: ObjDet-HuggingFace-facebook-detr-resnet-50
+Paper: https://arxiv.org/pdf/2005.12872
+GitHub: https://github.com/facebookresearch/detr
+
+### Related Papers:
+Model: Event Camera as Region Proposal Network
+Paper: http://arxiv.org/pdf/2305.00718v1.pdf
+Summary: The human eye consists of two types of photoreceptors, rods and cones. Rods are responsible for monochrome vision, and cones for color vision. The number of rods is much higher than the cones, which means that most human vision processing is done in monochrome. An event camera reports the change in pixel intensity and is analogous to rods. Event and color cameras in computer vision are like rods and cones in human vision. Humans can notice objects moving in the peripheral vision (far right and left), but we cannot classify them (think of someone passing by on your far left or far right, this can trigger your attention without knowing who they are). Thus, rods act as a region proposal network (RPN) in human vision. Therefore, an event camera can act as a region proposal network in deep learning Two-stage object detectors in deep learning, such as Mask R-CNN, consist of a backbone for feature extraction and a RPN. Currently, RPN uses the brute force method by trying out all the possible bounding boxes to detect an object. This requires much computation time to generate region proposals making two-stage detectors inconvenient for fast applications. This work replaces the RPN in Mask-RCNN of detectron2 with an event camera for generating proposals for moving objects. Thus, saving time and being computationally less expensive. The proposed approach is faster than the two-stage detectors with comparable accuracy
+
+Model: Detect Everything with Few Examples
+Paper: http://arxiv.org/pdf/2309.12969v4.pdf
+GitHub: https://github.com/mlzxy/devit
+Summary: Few-shot object detection aims at detecting novel categories given only a few example images. It is a basic skill for a robot to perform tasks in open environments. Recent methods focus on finetuning strategies, with complicated procedures that prohibit a wider application. In this paper, we introduce DE-ViT, a few-shot object detector without the need for finetuning. DE-ViT's novel architecture is based on a new region-propagation mechanism for localization. The propagated region masks are transformed into bounding boxes through a learnable spatial integral layer. Instead of training prototype classifiers, we propose to use prototypes to project ViT features into a subspace that is robust to overfitting on base classes. We evaluate DE-ViT on few-shot, and one-shot object detection benchmarks with Pascal VOC, COCO, and LVIS. DE-ViT establishes new state-of-the-art results on all benchmarks. Notably, for COCO, DE-ViT surpasses the few-shot SoTA by 15 mAP on 10-shot and 7.2 mAP on 30-shot and one-shot SoTA by 2.8 AP50. For LVIS, DE-ViT outperforms few-shot SoTA by 17 box APr. Further, we evaluate DE-ViT with a real robot by building a pick-and-place system for sorting novel objects based on example images. The videos of our robot demonstrations, the source code and the models of DE-ViT can be found at https://mlzxy.github.io/devit.
+
+Model: Region-Based Representations Revisited
+Paper: http://arxiv.org/pdf/2402.02352v4.pdf
+GitHub: https://github.com/michalsr/regions
+Summary: We investigate whether region-based representations are effective for recognition. Regions were once a mainstay in recognition approaches, but pixel and patch-based features are now used almost exclusively. We show that recent class-agnostic segmenters like SAM can be effectively combined with strong unsupervised representations like DINOv2 and used for a wide variety of tasks, including semantic segmentation, object-based image retrieval, and multi-image analysis. Once the masks and features are extracted, these representations, even with linear decoders, enable competitive performance, making them well suited to applications that require custom queries. The compactness of the representation also makes it well-suited to video analysis and other problems requiring inference across many images.
+
+
+Answer:

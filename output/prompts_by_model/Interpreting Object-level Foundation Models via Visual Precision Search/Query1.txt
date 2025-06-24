@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I was trying to figure out why my AI app kept tagging the wrong object in a photo, and this tool showed exactly what part of the image it was focusing on. How does it explain what the model is actually seeing?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Interpreting Object-level Foundation Models via Visual Precision Search
+Paper: https://arxiv.org/pdf/2411.16198
+GitHub: https://github.com/RuoyuChen10/VPS
+
+### Related Papers:
+Model: Allowing humans to interactively guide machines where to look does not always improve human-AI team's classification accuracy
+Paper: http://arxiv.org/pdf/2404.05238v3.pdf
+GitHub: https://github.com/anguyen8/chm-corr-interactive
+Summary: Via thousands of papers in Explainable AI (XAI), attention maps \cite{vaswani2017attention} and feature importance maps \cite{bansal2020sam} have been established as a common means for finding how important each input feature is to an AI's decisions. It is an interesting, unexplored question whether allowing users to edit the feature importance at test time would improve a human-AI team's accuracy on downstream tasks. In this paper, we address this question by leveraging CHM-Corr, a state-of-the-art, ante-hoc explainable classifier \cite{taesiri2022visual} that first predicts patch-wise correspondences between the input and training-set images, and then bases on them to make classification decisions. We build CHM-Corr++, an interactive interface for CHM-Corr, enabling users to edit the feature importance map provided by CHM-Corr and observe updated model decisions. Via CHM-Corr++, users can gain insights into if, when, and how the model changes its outputs, improving their understanding beyond static explanations. However, our study with 18 expert users who performed 1,400 decisions finds no statistical significance that our interactive approach improves user accuracy on CUB-200 bird image classification over static explanations. This challenges the hypothesis that interactivity can boost human-AI team accuracy and raises needs for future research. We open-source CHM-Corr++, an interactive tool for editing image classifier attention (see an interactive demo here: http://137.184.82.109:7080/). We release code and data on github: https://github.com/anguyen8/chm-corr-interactive.
+
+Model: Interaction as Explanation: A User Interaction-based Method for Explaining Image Classification Models
+Paper: http://arxiv.org/pdf/2404.09828v2.pdf
+Summary: In computer vision, explainable AI (xAI) methods seek to mitigate the 'black-box' problem by making the decision-making process of deep learning models more interpretable and transparent. Traditional xAI methods concentrate on visualizing input features that influence model predictions, providing insights primarily suited for experts. In this work, we present an interaction-based xAI method that enhances user comprehension of image classification models through their interaction. Thus, we developed a web-based prototype allowing users to modify images via painting and erasing, thereby observing changes in classification results. Our approach enables users to discern critical features influencing the model's decision-making process, aligning their mental models with the model's logic. Experiments conducted with five images demonstrate the potential of the method to reveal feature importance through user interaction. Our work contributes a novel perspective to xAI by centering on end-user engagement and understanding, paving the way for more intuitive and accessible explainability in AI systems.
+
+Model: Human-Centered Evaluation of XAI Methods
+Paper: http://arxiv.org/pdf/2310.07534v2.pdf
+Summary: In the ever-evolving field of Artificial Intelligence, a critical challenge has been to decipher the decision-making processes within the so-called "black boxes" in deep learning. Over recent years, a plethora of methods have emerged, dedicated to explaining decisions across diverse tasks. Particularly in tasks like image classification, these methods typically identify and emphasize the pivotal pixels that most influence a classifier's prediction. Interestingly, this approach mirrors human behavior: when asked to explain our rationale for classifying an image, we often point to the most salient features or aspects. Capitalizing on this parallel, our research embarked on a user-centric study. We sought to objectively measure the interpretability of three leading explanation methods: (1) Prototypical Part Network, (2) Occlusion, and (3) Layer-wise Relevance Propagation. Intriguingly, our results highlight that while the regions spotlighted by these methods can vary widely, they all offer humans a nearly equivalent depth of understanding. This enables users to discern and categorize images efficiently, reinforcing the value of these methods in enhancing AI transparency.
+
+
+Answer:

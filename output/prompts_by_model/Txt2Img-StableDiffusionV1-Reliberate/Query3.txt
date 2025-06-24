@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I barely described the scene, but it knew how to place the subject and background. What internal cues guide AI in placing objects when prompt info is sparse?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Interpreting Object-level Foundation Models via Visual Precision Search
+Paper: https://arxiv.org/pdf/2411.16198
+GitHub: https://github.com/RuoyuChen10/VPS
+
+### Related Papers:
+Model: Beyond Bare Queries: Open-Vocabulary Object Grounding with 3D Scene Graph
+Paper: http://arxiv.org/pdf/2406.07113v3.pdf
+Summary: Locating objects described in natural language presents a significant challenge for autonomous agents. Existing CLIP-based open-vocabulary methods successfully perform 3D object grounding with simple (bare) queries, but cannot cope with ambiguous descriptions that demand an understanding of object relations. To tackle this problem, we propose a modular approach called BBQ (Beyond Bare Queries), which constructs 3D scene graph representation with metric and semantic spatial edges and utilizes a large language model as a human-to-agent interface through our deductive scene reasoning algorithm. BBQ employs robust DINO-powered associations to construct 3D object-centric map and an advanced raycasting algorithm with a 2D vision-language model to describe them as graph nodes. On the Replica and ScanNet datasets, we have demonstrated that BBQ takes a leading place in open-vocabulary 3D semantic segmentation compared to other zero-shot methods. Also, we show that leveraging spatial relations is especially effective for scenes containing multiple entities of the same semantic class. On challenging Sr3D+, Nr3D and ScanRefer benchmarks, our deductive approach demonstrates a significant improvement, enabling objects grounding by complex queries compared to other state-of-the-art methods. The combination of our design choices and software implementation has resulted in significant data processing speed in experiments on the robot on-board computer. This promising performance enables the application of our approach in intelligent robotics projects. We made the code publicly available at https://linukc.github.io/BeyondBareQueries/.
+
+Model: Towards In-context Scene Understanding
+Paper: http://arxiv.org/pdf/2306.01667v2.pdf
+Summary: In-context learning$\unicode{x2013}$the ability to configure a model's behavior with different prompts$\unicode{x2013}$has revolutionized the field of natural language processing, alleviating the need for task-specific models and paving the way for generalist models capable of assisting with any query. Computer vision, in contrast, has largely stayed in the former regime: specialized decoders and finetuning protocols are generally required to perform dense tasks such as semantic segmentation and depth estimation. In this work we explore a simple mechanism for in-context learning of such scene understanding tasks: nearest neighbor retrieval from a prompt of annotated features. We propose a new pretraining protocol$\unicode{x2013}$leveraging attention within and across images$\unicode{x2013}$which yields representations particularly useful in this regime. The resulting Hummingbird model, suitably prompted, performs various scene understanding tasks without modification while approaching the performance of specialists that have been finetuned for each task. Moreover, Hummingbird can be configured to perform new tasks much more efficiently than finetuned models, raising the possibility of scene understanding in the interactive assistant regime.
+
+Model: GraphEQA: Using 3D Semantic Scene Graphs for Real-time Embodied Question Answering
+Paper: http://arxiv.org/pdf/2412.14480v1.pdf
+Summary: In Embodied Question Answering (EQA), agents must explore and develop a semantic understanding of an unseen environment in order to answer a situated question with confidence. This remains a challenging problem in robotics, due to the difficulties in obtaining useful semantic representations, updating these representations online, and leveraging prior world knowledge for efficient exploration and planning. Aiming to address these limitations, we propose GraphEQA, a novel approach that utilizes real-time 3D metric-semantic scene graphs (3DSGs) and task relevant images as multi-modal memory for grounding Vision-Language Models (VLMs) to perform EQA tasks in unseen environments. We employ a hierarchical planning approach that exploits the hierarchical nature of 3DSGs for structured planning and semantic-guided exploration. Through experiments in simulation on the HM-EQA dataset and in the real world in home and office environments, we demonstrate that our method outperforms key baselines by completing EQA tasks with higher success rates and fewer planning steps.
+
+
+Answer:

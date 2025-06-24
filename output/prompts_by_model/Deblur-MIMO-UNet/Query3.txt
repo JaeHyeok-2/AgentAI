@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I snapped a selfie while running and it turned out super blurry, but the AI fixed it right away. How does it recover such motion-blurred images so cleanly? Can this work instantly on phones too?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Deblur-MIMO-UNet-RealBlur
+Paper: https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf
+GitHub: https://github.com/chosj95/MIMO-UNet
+
+### Related Papers:
+Model: DeblurGS: Gaussian Splatting for Camera Motion Blur
+Paper: http://arxiv.org/pdf/2404.11358v2.pdf
+Summary: Although significant progress has been made in reconstructing sharp 3D scenes from motion-blurred images, a transition to real-world applications remains challenging. The primary obstacle stems from the severe blur which leads to inaccuracies in the acquisition of initial camera poses through Structure-from-Motion, a critical aspect often overlooked by previous approaches. To address this challenge, we propose DeblurGS, a method to optimize sharp 3D Gaussian Splatting from motion-blurred images, even with the noisy camera pose initialization. We restore a fine-grained sharp scene by leveraging the remarkable reconstruction capability of 3D Gaussian Splatting. Our approach estimates the 6-Degree-of-Freedom camera motion for each blurry observation and synthesizes corresponding blurry renderings for the optimization process. Furthermore, we propose Gaussian Densification Annealing strategy to prevent the generation of inaccurate Gaussians at erroneous locations during the early training stages when camera motion is still imprecise. Comprehensive experiments demonstrate that our DeblurGS achieves state-of-the-art performance in deblurring and novel view synthesis for real-world and synthetic benchmark datasets, as well as field-captured blurry smartphone videos.
+
+Model: Patch-wise Features for Blur Image Classification
+Paper: http://arxiv.org/pdf/2304.03156v1.pdf
+Summary: Images captured through smartphone cameras often suffer from degradation, blur being one of the major ones, posing a challenge in processing these images for downstream tasks. In this paper we propose low-compute lightweight patch-wise features for image quality assessment. Using our method we can discriminate between blur vs sharp image degradation. To this end, we train a decision-tree based XGBoost model on various intuitive image features like gray level variance, first and second order gradients, texture features like local binary patterns. Experiments conducted on an open dataset show that the proposed low compute method results in 90.1% mean accuracy on the validation set, which is comparable to the accuracy of a compute-intensive VGG16 network with 94% mean accuracy fine-tuned to this task. To demonstrate the generalizability of our proposed features and model we test the model on BHBID dataset and an internal dataset where we attain accuracy of 98% and 91%, respectively. The proposed method is 10x faster than the VGG16 based model on CPU and scales linearly to the input image size making it suitable to be implemented on low compute edge devices.
+
+Model: VoxDepth: Rectification of Depth Images on Edge Devices
+Paper: http://arxiv.org/pdf/2407.15067v1.pdf
+Summary: Autonomous mobile robots like self-flying drones and industrial robots heavily depend on depth images to perform tasks such as 3D reconstruction and visual SLAM. However, the presence of inaccuracies in these depth images can greatly hinder the effectiveness of these applications, resulting in sub-optimal results. Depth images produced by commercially available cameras frequently exhibit noise, which manifests as flickering pixels and erroneous patches. ML-based methods to rectify these images are unsuitable for edge devices that have very limited computational resources. Non-ML methods are much faster but have limited accuracy, especially for correcting errors that are a result of occlusion and camera movement. We propose a scheme called VoxDepth that is fast, accurate, and runs very well on edge devices. It relies on a host of novel techniques: 3D point cloud construction and fusion, and using it to create a template that can fix erroneous depth images. VoxDepth shows superior results on both synthetic and real-world datasets. We demonstrate a 31% improvement in quality as compared to state-of-the-art methods on real-world depth datasets, while maintaining a competitive framerate of 27 FPS (frames per second).
+
+
+Answer:

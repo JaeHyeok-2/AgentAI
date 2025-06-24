@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I tried it for fitness analysis, and it showed how each joint was behaving, almost like a digital skeleton. How can this model understand human biomechanics so well?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Reconstructing Humans with a Biomechanically Accurate Skeleton
+Paper: https://arxiv.org/pdf/2503.21751
+GitHub: https://github.com/IsshikiHugh/HSMR
+
+### Related Papers:
+Model: Replicating Human Anatomy with Vision Controlled Jetting -- A Pneumatic Musculoskeletal Hand and Forearm
+Paper: http://arxiv.org/pdf/2404.19077v1.pdf
+Summary: The functional replication and actuation of complex structures inspired by nature is a longstanding goal for humanity. Creating such complex structures combining soft and rigid features and actuating them with artificial muscles would further our understanding of natural kinematic structures. We printed a biomimetic hand in a single print process comprised of a rigid skeleton, soft joint capsules, tendons, and printed touch sensors. We showed it's actuation using electric motors. In this work, we expand on this work by adding a forearm that is also closely modeled after the human anatomy and replacing the hand's motors with 22 independently controlled pneumatic artificial muscles (PAMs). Our thin, high-strain (up to 30.1%) PAMs match the performance of state-of-the-art artificial muscles at a lower cost. The system showcases human-like dexterity with independent finger movements, demonstrating successful grasping of various objects, ranging from a small, lightweight coin to a large can of 272g in weight. The performance evaluation, based on fingertip and grasping forces along with finger joint range of motion, highlights the system's potential.
+
+Model: CauSkelNet: Causal Representation Learning for Human Behaviour Analysis
+Paper: http://arxiv.org/pdf/2409.15564v2.pdf
+Summary: Traditional machine learning methods for movement recognition often struggle with limited model interpretability and a lack of insight into human movement dynamics. This study introduces a novel representation learning framework based on causal inference to address these challenges. Our two-stage approach combines the Peter-Clark (PC) algorithm and Kullback-Leibler (KL) divergence to identify and quantify causal relationships between human joints. By capturing joint interactions, the proposed causal Graph Convolutional Network (GCN) produces interpretable and robust representations. Experimental results on the EmoPain dataset demonstrate that the causal GCN outperforms traditional GCNs in accuracy, F1 score, and recall, particularly in detecting protective behaviors. This work contributes to advancing human motion analysis and lays a foundation for adaptive and intelligent healthcare solutions.
+
+Model: Component Modularized Design of Musculoskeletal Humanoid Platform Musashi to Investigate Learning Control Systems
+Paper: http://arxiv.org/pdf/2410.22000v1.pdf
+Summary: To develop Musashi as a musculoskeletal humanoid platform to investigate learning control systems, we aimed for a body with flexible musculoskeletal structure, redundant sensors, and easily reconfigurable structure. For this purpose, we develop joint modules that can directly measure joint angles, muscle modules that can realize various muscle routes, and nonlinear elastic units with soft structures, etc. Next, we develop MusashiLarm, a musculoskeletal platform composed of only joint modules, muscle modules, generic bone frames, muscle wire units, and a few attachments. Finally, we develop Musashi, a musculoskeletal humanoid platform which extends MusashiLarm to the whole body design, and conduct several basic experiments and learning control experiments to verify the effectiveness of its concept.
+
+
+Answer:

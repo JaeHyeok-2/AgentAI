@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"What technologies enable small AI models to perform effective image enlargement without losing details?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-EDSR
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: Speeding Up Image Classifiers with Little Companions
+Paper: http://arxiv.org/pdf/2406.17117v2.pdf
+Summary: Scaling up neural networks has been a key recipe to the success of large language and vision models. However, in practice, up-scaled models can be disproportionately costly in terms of computations, providing only marginal improvements in performance; for example, EfficientViT-L3-384 achieves <2% improvement on ImageNet-1K accuracy over the base L1-224 model, while requiring $14\times$ more multiply-accumulate operations (MACs). In this paper, we investigate scaling properties of popular families of neural networks for image classification, and find that scaled-up models mostly help with "difficult" samples. Decomposing the samples by difficulty, we develop a simple model-agnostic two-pass Little-Big algorithm that first uses a light-weight "little" model to make predictions of all samples, and only passes the difficult ones for the "big" model to solve. Good little companion achieve drastic MACs reduction for a wide variety of model families and scales. Without loss of accuracy or modification of existing models, our Little-Big models achieve MACs reductions of 76% for EfficientViT-L3-384, 81% for EfficientNet-B7-600, 71% for DeiT3-L-384 on ImageNet-1K. Little-Big also speeds up the InternImage-G-512 model by 62% while achieving 90% ImageNet-1K top-1 accuracy, serving both as a strong baseline and as a simple practical method for large model compression.
+
+Model: Machine Learning Techniques for MRI Data Processing at Expanding Scale
+Paper: http://arxiv.org/pdf/2404.14326v1.pdf
+Summary: Imaging sites around the world generate growing amounts of medical scan data with ever more versatile and affordable technology. Large-scale studies acquire MRI for tens of thousands of participants, together with metadata ranging from lifestyle questionnaires to biochemical assays, genetic analyses and more. These large datasets encode substantial information about human health and hold considerable potential for machine learning training and analysis. This chapter examines ongoing large-scale studies and the challenge of distribution shifts between them. Transfer learning for overcoming such shifts is discussed, together with federated learning for safe access to distributed training data securely held at multiple institutions. Finally, representation learning is reviewed as a methodology for encoding embeddings that express abstract relationships in multi-modal input formats.
+
+Model: Elastic-DETR: Making Image Resolution Learnable with Content-Specific Network Prediction
+Paper: http://arxiv.org/pdf/2412.06341v1.pdf
+Summary: Multi-scale image resolution is a de facto standard approach in modern object detectors, such as DETR. This technique allows for the acquisition of various scale information from multiple image resolutions. However, manual hyperparameter selection of the resolution can restrict its flexibility, which is informed by prior knowledge, necessitating human intervention. This work introduces a novel strategy for learnable resolution, called Elastic-DETR, enabling elastic utilization of multiple image resolutions. Our network provides an adaptive scale factor based on the content of the image with a compact scale prediction module (< 2 GFLOPs). The key aspect of our method lies in how to determine the resolution without prior knowledge. We present two loss functions derived from identified key components for resolution optimization: scale loss, which increases adaptiveness according to the image, and distribution loss, which determines the overall degree of scaling based on network performance. By leveraging the resolution's flexibility, we can demonstrate various models that exhibit varying trade-offs between accuracy and computational complexity. We empirically show that our scheme can unleash the potential of a wide spectrum of image resolutions without constraining flexibility. Our models on MS COCO establish a maximum accuracy gain of 3.5%p or 26% decrease in computation than MS-trained DN-DETR.
+
+
+Answer:

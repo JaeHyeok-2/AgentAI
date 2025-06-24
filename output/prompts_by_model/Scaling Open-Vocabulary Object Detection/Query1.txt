@@ -1,0 +1,30 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I pointed it at a photo and asked for “a teal backpack,” and it found it—even though that label wasn’t trained in. How does it detect things it’s never seen before?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Recognize Anything Model
+Paper: https://arxiv.org/pdf/2306.03514
+GitHub: https://github.com/OPPOMKLab/recognize-anything?tab=readme-ov-file
+
+### Related Papers:
+Model: Look Around and Learn: Self-Training Object Detection by Exploration
+Paper: http://arxiv.org/pdf/2302.03566v4.pdf
+GitHub: https://github.com/iit-pavis/look_around_and_learn
+Summary: When an object detector is deployed in a novel setting it often experiences a drop in performance. This paper studies how an embodied agent can automatically fine-tune a pre-existing object detector while exploring and acquiring images in a new environment without relying on human intervention, i.e., a fully self-supervised approach. In our setting, an agent initially learns to explore the environment using a pre-trained off-the-shelf detector to locate objects and associate pseudo-labels. By assuming that pseudo-labels for the same object must be consistent across different views, we learn the exploration policy Look Around to mine hard samples, and we devise a novel mechanism called Disagreement Reconciliation for producing refined pseudo-labels from the consensus among observations. We implement a unified benchmark of the current state-of-the-art and compare our approach with pre-existing exploration policies and perception mechanisms. Our method is shown to outperform existing approaches, improving the object detector by 6.2% in a simulated scenario, a 3.59% advancement over other state-of-the-art methods, and by 9.97% in the real robotic test without relying on ground-truth. Code for the proposed approach and baselines are available at https://iit-pavis.github.io/Look_Around_And_Learn/.
+
+Model: Perception Matters: Enhancing Embodied AI with Uncertainty-Aware Semantic Segmentation
+Paper: http://arxiv.org/pdf/2408.02297v2.pdf
+Summary: Embodied AI has made significant progress acting in unexplored environments. However, tasks such as object search have largely focused on efficient policy learning. In this work, we identify several gaps in current search methods: They largely focus on dated perception models, neglect temporal aggregation, and transfer from ground truth directly to noisy perception at test time, without accounting for the resulting overconfidence in the perceived state. We address the identified problems through calibrated perception probabilities and uncertainty across aggregation and found decisions, thereby adapting the models for sequential tasks. The resulting methods can be directly integrated with pretrained models across a wide family of existing search approaches at no additional training cost. We perform extensive evaluations of aggregation methods across both different semantic perception models and policies, confirming the importance of calibrated uncertainties in both the aggregation and found decisions. We make the code and trained models available at https://semantic-search.cs.uni-freiburg.de.
+
+
+Answer:

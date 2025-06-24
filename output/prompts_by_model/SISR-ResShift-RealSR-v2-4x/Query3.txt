@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"The pixel blocks were gone after enhancement and the image looked natural again. How does the AI fill in damaged areas without overdoing it?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Inpainting-MISF-Places2
+Paper: https://arxiv.org/pdf/2203.06304
+GitHub: https://github.com/tsingqguo/misf
+
+### Related Papers:
+Model: Blind Inpainting with Object-aware Discrimination for Artificial Marker Removal
+Paper: http://arxiv.org/pdf/2303.15124v2.pdf
+Summary: Medical images often incorporate doctor-added markers that can hinder AI-based diagnosis. This issue highlights the need of inpainting techniques to restore the corrupted visual contents. However, existing methods require manual mask annotation as input, limiting the application scenarios. In this paper, we propose a novel blind inpainting method that automatically reconstructs visual contents within the corrupted regions without mask input as guidance. Our model includes a blind reconstruction network and an object-aware discriminator for adversarial training. The reconstruction network contains two branches that predict corrupted regions in images and simultaneously restore the missing visual contents. Leveraging the potent recognition capability of a dense object detector, the object-aware discriminator ensures markers undetectable after inpainting. Thus, the restored images closely resemble the clean ones. We evaluate our method on three datasets of various medical imaging modalities, confirming better performance over other state-of-the-art methods.
+
+Model: HAIR: Hypernetworks-based All-in-One Image Restoration
+Paper: http://arxiv.org/pdf/2408.08091v4.pdf
+GitHub: https://github.com/toummHus/HAIR
+Summary: Image restoration aims to recover a high-quality clean image from its degraded version. Recent progress in image restoration has demonstrated the effectiveness of All-in-One image restoration models in addressing various unknown degradations simultaneously. However, these existing methods typically utilize the same parameters to tackle images with different types of degradation, forcing the model to balance the performance between different tasks and limiting its performance on each task. To alleviate this issue, we propose HAIR, a Hypernetworks-based All-in-One Image Restoration plug-and-play method that generates parameters based on the input image and thus makes the model to adapt to specific degradation dynamically. Specifically, HAIR consists of two main components, i.e., Classifier and Hyper Selecting Net (HSN). The Classifier is a simple image classification network used to generate a Global Information Vector (GIV) that contains the degradation information of the input image, and the HSN is a simple fully-connected neural network that receives the GIV and outputs parameters for the corresponding modules. Extensive experiments demonstrate that HAIR can significantly improve the performance of existing image restoration models in a plug-and-play manner, both in single-task and All-in-One settings. Notably, our proposed model Res-HAIR, which integrates HAIR into the well-known Restormer, can obtain superior or comparable performance compared with current state-of-the-art methods. Moreover, we theoretically demonstrate that to achieve a given small enough error, our proposed HAIR requires fewer parameters in contrast to mainstream embedding-based All-in-One methods. The code is available at https://github.com/toummHus/HAIR.
+
+Model: VET: Visual Error Tomography for Point Cloud Completion and High-Quality Neural Rendering
+Paper: http://arxiv.org/pdf/2311.04634v1.pdf
+GitHub: https://github.com/lfranke/vet
+Summary: In the last few years, deep neural networks opened the doors for big advances in novel view synthesis. Many of these approaches are based on a (coarse) proxy geometry obtained by structure from motion algorithms. Small deficiencies in this proxy can be fixed by neural rendering, but larger holes or missing parts, as they commonly appear for thin structures or for glossy regions, still lead to distracting artifacts and temporal instability. In this paper, we present a novel neural-rendering-based approach to detect and fix such deficiencies. As a proxy, we use a point cloud, which allows us to easily remove outlier geometry and to fill in missing geometry without complicated topological operations. Keys to our approach are (i) a differentiable, blending point-based renderer that can blend out redundant points, as well as (ii) the concept of Visual Error Tomography (VET), which allows us to lift 2D error maps to identify 3D-regions lacking geometry and to spawn novel points accordingly. Furthermore, (iii) by adding points as nested environment maps, our approach allows us to generate high-quality renderings of the surroundings in the same pipeline. In our results, we show that our approach can improve the quality of a point cloud obtained by structure from motion and thus increase novel view synthesis quality significantly. In contrast to point growing techniques, the approach can also fix large-scale holes and missing thin structures effectively. Rendering quality outperforms state-of-the-art methods and temporal stability is significantly improved, while rendering is possible at real-time frame rates.
+
+
+Answer:

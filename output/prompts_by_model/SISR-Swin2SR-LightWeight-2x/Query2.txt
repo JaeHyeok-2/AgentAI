@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"An AI quickly and clearly enlarged images even on lightweight devices. How can lightweight AI models still maintain detailed image quality?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-RDN
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: Data-Side Efficiencies for Lightweight Convolutional Neural Networks
+Paper: http://arxiv.org/pdf/2308.13057v1.pdf
+Summary: We examine how the choice of data-side attributes for two important visual tasks of image classification and object detection can aid in the choice or design of lightweight convolutional neural networks. We show by experimentation how four data attributes - number of classes, object color, image resolution, and object scale affect neural network model size and efficiency. Intra- and inter-class similarity metrics, based on metric learning, are defined to guide the evaluation of these attributes toward achieving lightweight models. Evaluations made using these metrics are shown to require 30x less computation than running full inference tests. We provide, as an example, applying the metrics and methods to choose a lightweight model for a robot path planning application and achieve computation reduction of 66% and accuracy gain of 3.5% over the pre-method model.
+
+Model: Speeding Up Image Classifiers with Little Companions
+Paper: http://arxiv.org/pdf/2406.17117v2.pdf
+Summary: Scaling up neural networks has been a key recipe to the success of large language and vision models. However, in practice, up-scaled models can be disproportionately costly in terms of computations, providing only marginal improvements in performance; for example, EfficientViT-L3-384 achieves <2% improvement on ImageNet-1K accuracy over the base L1-224 model, while requiring $14\times$ more multiply-accumulate operations (MACs). In this paper, we investigate scaling properties of popular families of neural networks for image classification, and find that scaled-up models mostly help with "difficult" samples. Decomposing the samples by difficulty, we develop a simple model-agnostic two-pass Little-Big algorithm that first uses a light-weight "little" model to make predictions of all samples, and only passes the difficult ones for the "big" model to solve. Good little companion achieve drastic MACs reduction for a wide variety of model families and scales. Without loss of accuracy or modification of existing models, our Little-Big models achieve MACs reductions of 76% for EfficientViT-L3-384, 81% for EfficientNet-B7-600, 71% for DeiT3-L-384 on ImageNet-1K. Little-Big also speeds up the InternImage-G-512 model by 62% while achieving 90% ImageNet-1K top-1 accuracy, serving both as a strong baseline and as a simple practical method for large model compression.
+
+Model: The Simpler The Better: An Entropy-Based Importance Metric To Reduce Neural Networks' Depth
+Paper: http://arxiv.org/pdf/2404.18949v2.pdf
+GitHub: https://github.com/vgcq/easier
+Summary: While deep neural networks are highly effective at solving complex tasks, large pre-trained models are commonly employed even to solve consistently simpler downstream tasks, which do not necessarily require a large model's complexity. Motivated by the awareness of the ever-growing AI environmental impact, we propose an efficiency strategy that leverages prior knowledge transferred by large models. Simple but effective, we propose a method relying on an Entropy-bASed Importance mEtRic (EASIER) to reduce the depth of over-parametrized deep neural networks, which alleviates their computational burden. We assess the effectiveness of our method on traditional image classification setups. Our code is available at https://github.com/VGCQ/EASIER.
+
+
+Answer:

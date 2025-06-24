@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"When uploading product images to an app, I saw it auto-tags the items right away. How does it know what’s in the picture so quickly?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Recognize Anything Model
+Paper: https://arxiv.org/pdf/2306.03514
+GitHub: https://github.com/OPPOMKLab/recognize-anything?tab=readme-ov-file
+
+### Related Papers:
+Model: Automatic Creative Selection with Cross-Modal Matching
+Paper: http://arxiv.org/pdf/2405.00029v1.pdf
+Summary: Application developers advertise their Apps by creating product pages with App images, and bidding on search terms. It is then crucial for App images to be highly relevant with the search terms. Solutions to this problem require an image-text matching model to predict the quality of the match between the chosen image and the search terms. In this work, we present a novel approach to matching an App image to search terms based on fine-tuning a pre-trained LXMERT model. We show that compared to the CLIP model and a baseline using a Transformer model for search terms, and a ResNet model for images, we significantly improve the matching accuracy. We evaluate our approach using two sets of labels: advertiser associated (image, search term) pairs for a given application, and human ratings for the relevance between (image, search term) pairs. Our approach achieves 0.96 AUC score for advertiser associated ground truth, outperforming the transformer+ResNet baseline and the fine-tuned CLIP model by 8% and 14%. For human labeled ground truth, our approach achieves 0.95 AUC score, outperforming the transformer+ResNet baseline and the fine-tuned CLIP model by 16% and 17%.
+
+Model: Catalog Phrase Grounding (CPG): Grounding of Product Textual Attributes in Product Images for e-commerce Vision-Language Applications
+Paper: http://arxiv.org/pdf/2308.16354v1.pdf
+Summary: We present Catalog Phrase Grounding (CPG), a model that can associate product textual data (title, brands) into corresponding regions of product images (isolated product region, brand logo region) for e-commerce vision-language applications. We use a state-of-the-art modulated multimodal transformer encoder-decoder architecture unifying object detection and phrase-grounding. We train the model in self-supervised fashion with 2.3 million image-text pairs synthesized from an e-commerce site. The self-supervision data is annotated with high-confidence pseudo-labels generated with a combination of teacher models: a pre-trained general domain phrase grounding model (e.g. MDETR) and a specialized logo detection model. This allows CPG, as a student model, to benefit from transfer knowledge from these base models combining general-domain knowledge and specialized knowledge. Beyond immediate catalog phrase grounding tasks, we can benefit from CPG representations by incorporating them as ML features into downstream catalog applications that require deep semantic understanding of products. Our experiments on product-brand matching, a challenging e-commerce application, show that incorporating CPG representations into the existing production ensemble system leads to on average 5% recall improvement across all countries globally (with the largest lift of 11% in a single country) at fixed 95% precision, outperforming other alternatives including a logo detection teacher model and ResNet50.
+
+Model: AutoFish: Dataset and Benchmark for Fine-grained Analysis of Fish
+Paper: http://arxiv.org/pdf/2501.03767v1.pdf
+Summary: Automated fish documentation processes are in the near future expected to play an essential role in sustainable fisheries management and for addressing challenges of overfishing. In this paper, we present a novel and publicly available dataset named AutoFish designed for fine-grained fish analysis. The dataset comprises 1,500 images of 454 specimens of visually similar fish placed in various constellations on a white conveyor belt and annotated with instance segmentation masks, IDs, and length measurements. The data was collected in a controlled environment using an RGB camera. The annotation procedure involved manual point annotations, initial segmentation masks proposed by the Segment Anything Model (SAM), and subsequent manual correction of the masks. We establish baseline instance segmentation results using two variations of the Mask2Former architecture, with the best performing model reaching an mAP of 89.15%. Additionally, we present two baseline length estimation methods, the best performing being a custom MobileNetV2-based regression model reaching an MAE of 0.62cm in images with no occlusion and 1.38cm in images with occlusion. Link to project page: https://vap.aau.dk/autofish/.
+
+
+Answer:

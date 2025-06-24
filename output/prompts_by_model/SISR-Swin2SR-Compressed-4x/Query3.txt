@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"What kind of training or technology allows AI to reliably enhance compressed images to higher resolutions?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-EDSR
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: Improving Image Coding for Machines through Optimizing Encoder via Auxiliary Loss
+Paper: http://arxiv.org/pdf/2402.08267v2.pdf
+Summary: Image coding for machines (ICM) aims to compress images for machine analysis using recognition models rather than human vision. Hence, in ICM, it is important for the encoder to recognize and compress the information necessary for the machine recognition task. There are two main approaches in learned ICM; optimization of the compression model based on task loss, and Region of Interest (ROI) based bit allocation. These approaches provide the encoder with the recognition capability. However, optimization with task loss becomes difficult when the recognition model is deep, and ROI-based methods often involve extra overhead during evaluation. In this study, we propose a novel training method for learned ICM models that applies auxiliary loss to the encoder to improve its recognition capability and rate-distortion performance. Our method achieves Bjontegaard Delta rate improvements of 27.7% and 20.3% in object detection and semantic segmentation tasks, compared to the conventional training method.   \c{opyright} 2024 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works.
+
+Model: Elastic-DETR: Making Image Resolution Learnable with Content-Specific Network Prediction
+Paper: http://arxiv.org/pdf/2412.06341v1.pdf
+Summary: Multi-scale image resolution is a de facto standard approach in modern object detectors, such as DETR. This technique allows for the acquisition of various scale information from multiple image resolutions. However, manual hyperparameter selection of the resolution can restrict its flexibility, which is informed by prior knowledge, necessitating human intervention. This work introduces a novel strategy for learnable resolution, called Elastic-DETR, enabling elastic utilization of multiple image resolutions. Our network provides an adaptive scale factor based on the content of the image with a compact scale prediction module (< 2 GFLOPs). The key aspect of our method lies in how to determine the resolution without prior knowledge. We present two loss functions derived from identified key components for resolution optimization: scale loss, which increases adaptiveness according to the image, and distribution loss, which determines the overall degree of scaling based on network performance. By leveraging the resolution's flexibility, we can demonstrate various models that exhibit varying trade-offs between accuracy and computational complexity. We empirically show that our scheme can unleash the potential of a wide spectrum of image resolutions without constraining flexibility. Our models on MS COCO establish a maximum accuracy gain of 3.5%p or 26% decrease in computation than MS-trained DN-DETR.
+
+Model: Deep Selector-JPEG: Adaptive JPEG Image Compression for Computer Vision in Image classification with Human Vision Criteria
+Paper: http://arxiv.org/pdf/2302.09560v1.pdf
+Summary: With limited storage/bandwidth resources, input images to Computer Vision (CV) applications that use Deep Neural Networks (DNNs) are often encoded with JPEG that is tailored to Human Vision (HV). This paper presents Deep Selector-JPEG, an adaptive JPEG compression method that targets image classification while satisfying HV criteria. For each image, Deep Selector-JPEG selects adaptively a Quality Factor (QF) to compress the image so that a good trade-off between the Compression Ratio (CR) and DNN classifier Accuracy (Rate-Accuracy performance) can be achieved over a set of images for a variety of DNN classifiers while the MS-SSIM of such compressed image is greater than a threshold value predetermined by HV with a high probability. Deep Selector-JPEG is designed via light-weighted or heavy-weighted selector architectures. Experimental results show that in comparison with JPEG at the same CR, Deep Selector-JPEG achieves better Rate-Accuracy performance over the ImageNet validation set for all tested DNN classifiers with gains in classification accuracy between 0.2% and 1% at the same CRs while satisfying HV constraints. Deep Selector-JPEG can also roughly provide the original classification accuracy at higher CRs.
+
+
+Answer:

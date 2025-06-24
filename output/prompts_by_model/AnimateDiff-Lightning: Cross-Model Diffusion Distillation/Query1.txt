@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I uploaded just one photo of my dog and it turned into a video of him running—how can it bring a still image to life like that?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: NST-fast-neural-style-candy
+Paper: None
+GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+
+### Related Papers:
+Model: SLoMo: A General System for Legged Robot Motion Imitation from Casual Videos
+Paper: http://arxiv.org/pdf/2304.14389v2.pdf
+GitHub: https://github.com/johnzhang3/slomo
+Summary: We present SLoMo: a first-of-its-kind framework for transferring skilled motions from casually captured "in the wild" video footage of humans and animals to legged robots. SLoMo works in three stages: 1) synthesize a physically plausible reconstructed key-point trajectory from monocular videos; 2) optimize a dynamically feasible reference trajectory for the robot offline that includes body and foot motion, as well as contact sequences that closely tracks the key points; 3) track the reference trajectory online using a general-purpose model-predictive controller on robot hardware. Traditional motion imitation for legged motor skills often requires expert animators, collaborative demonstrations, and/or expensive motion capture equipment, all of which limits scalability. Instead, SLoMo only relies on easy-to-obtain monocular video footage, readily available in online repositories such as YouTube. It converts videos into motion primitives that can be executed reliably by real-world robots. We demonstrate our approach by transferring the motions of cats, dogs, and humans to example robots including a quadruped (on hardware) and a humanoid (in simulation). To the best knowledge of the authors, this is the first attempt at a general-purpose motion transfer framework that imitates animal and human motions on legged robots directly from casual videos without artificial markers or labels.
+
+Model: Make-It-4D: Synthesizing a Consistent Long-Term Dynamic Scene Video from a Single Image
+Paper: http://arxiv.org/pdf/2308.10257v1.pdf
+Summary: We study the problem of synthesizing a long-term dynamic video from only a single image. This is challenging since it requires consistent visual content movements given large camera motions. Existing methods either hallucinate inconsistent perpetual views or struggle with long camera trajectories. To address these issues, it is essential to estimate the underlying 4D (including 3D geometry and scene motion) and fill in the occluded regions. To this end, we present Make-It-4D, a novel method that can generate a consistent long-term dynamic video from a single image. On the one hand, we utilize layered depth images (LDIs) to represent a scene, and they are then unprojected to form a feature point cloud. To animate the visual content, the feature point cloud is displaced based on the scene flow derived from motion estimation and the corresponding camera pose. Such 4D representation enables our method to maintain the global consistency of the generated dynamic video. On the other hand, we fill in the occluded regions by using a pretrained diffusion model to inpaint and outpaint the input image. This enables our method to work under large camera motions. Benefiting from our design, our method can be training-free which saves a significant amount of training time. Experimental results demonstrate the effectiveness of our approach, which showcases compelling rendering results.
+
+Model: Online pre-training with long-form videos
+Paper: http://arxiv.org/pdf/2408.15651v1.pdf
+Summary: In this study, we investigate the impact of online pre-training with continuous video clips. We will examine three methods for pre-training (masked image modeling, contrastive learning, and knowledge distillation), and assess the performance on downstream action recognition tasks. As a result, online pre-training with contrast learning showed the highest performance in downstream tasks. Our findings suggest that learning from long-form videos can be helpful for action recognition with short videos.
+
+
+Answer:

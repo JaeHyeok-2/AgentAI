@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I noticed that every object in the image gets a unique box and label without duplicates or misses. How does the system decide which prediction belongs to which object so reliably?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: ObjDet-HuggingFace-facebook-detr-resnet-50
+Paper: https://arxiv.org/pdf/2005.12872
+GitHub: https://github.com/facebookresearch/detr
+
+### Related Papers:
+Model: Drawing the Same Bounding Box Twice? Coping Noisy Annotations in Object Detection with Repeated Labels
+Paper: http://arxiv.org/pdf/2309.09742v1.pdf
+GitHub: https://github.com/madave94/gtiod
+Summary: The reliability of supervised machine learning systems depends on the accuracy and availability of ground truth labels. However, the process of human annotation, being prone to error, introduces the potential for noisy labels, which can impede the practicality of these systems. While training with noisy labels is a significant consideration, the reliability of test data is also crucial to ascertain the dependability of the results. A common approach to addressing this issue is repeated labeling, where multiple annotators label the same example, and their labels are combined to provide a better estimate of the true label. In this paper, we propose a novel localization algorithm that adapts well-established ground truth estimation methods for object detection and instance segmentation tasks. The key innovation of our method lies in its ability to transform combined localization and classification tasks into classification-only problems, thus enabling the application of techniques such as Expectation-Maximization (EM) or Majority Voting (MJV). Although our main focus is the aggregation of unique ground truth for test data, our algorithm also shows superior performance during training on the TexBiG dataset, surpassing both noisy label training and label aggregation using Weighted Boxes Fusion (WBF). Our experiments indicate that the benefits of repeated labels emerge under specific dataset and annotation configurations. The key factors appear to be (1) dataset complexity, the (2) annotator consistency, and (3) the given annotation budget constraints.
+
+Model: Object-Focused Data Selection for Dense Prediction Tasks
+Paper: http://arxiv.org/pdf/2412.10032v1.pdf
+Summary: While unlabeled image data is often plentiful, the costs of high-quality labels pose an important practical challenge: Which images should one select for labeling to use the annotation budget for a particular target task most effectively? To address this problem, we focus on single-pass data selection, which refers to the process of selecting all data to be annotated at once before training a downstream model. Prior methods for single-pass data selection rely on image-level representations and fail to reliably outperform random selection for object detection and segmentation. We propose Object-Focused Data Selection (OFDS) which leverages object-level features from foundation models and ensures semantic coverage of all target classes. In extensive experiments across tasks and target domains, OFDS consistently outperforms random selection and all baselines. The best results for constrained annotation budgets are obtained by combining human labels from OFDS with autolabels from foundation models. Moreover, using OFDS to select the initial labeled set for active learning yields consistent improvements
+
+Model: Learning 3D Perception from Others' Predictions
+Paper: http://arxiv.org/pdf/2410.02646v2.pdf
+Summary: Accurate 3D object detection in real-world environments requires a huge amount of annotated data with high quality. Acquiring such data is tedious and expensive, and often needs repeated effort when a new sensor is adopted or when the detector is deployed in a new environment. We investigate a new scenario to construct 3D object detectors: learning from the predictions of a nearby unit that is equipped with an accurate detector. For example, when a self-driving car enters a new area, it may learn from other traffic participants whose detectors have been optimized for that area. This setting is label-efficient, sensor-agnostic, and communication-efficient: nearby units only need to share the predictions with the ego agent (e.g., car). Naively using the received predictions as ground-truths to train the detector for the ego car, however, leads to inferior performance. We systematically study the problem and identify viewpoint mismatches and mislocalization (due to synchronization and GPS errors) as the main causes, which unavoidably result in false positives, false negatives, and inaccurate pseudo labels. We propose a distance-based curriculum, first learning from closer units with similar viewpoints and subsequently improving the quality of other units' predictions via self-training. We further demonstrate that an effective pseudo label refinement module can be trained with a handful of annotated data, largely reducing the data quantity necessary to train an object detector. We validate our approach on the recently released real-world collaborative driving dataset, using reference cars' predictions as pseudo labels for the ego car. Extensive experiments including several scenarios (e.g., different sensors, detectors, and domains) demonstrate the effectiveness of our approach toward label-efficient learning of 3D perception from other units' predictions.
+
+
+Answer:

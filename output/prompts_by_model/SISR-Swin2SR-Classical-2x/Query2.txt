@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I enlarged a small image by 2x with AI, and the details like edges and textures remained sharp. How does AI preserve such realistic details during enlargement?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-EDSR
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: FeatSharp: Your Vision Model Features, Sharper
+Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+Summary: The feature maps of vision encoders are fundamental to myriad modern AI tasks, ranging from core perception algorithms (e.g. semantic segmentation, object detection, depth perception, etc.) to modern multimodal understanding in vision-language models (VLMs). Currently, in computer vision, the frontier of general purpose vision backbones are Vision Transformers (ViT), typically trained using contrastive loss (e.g. CLIP). A key problem with most off-the-shelf ViTs, particularly CLIP, is that these models are inflexibly low resolution. Most run at 224x224px, while the "high resolution" versions are around 378-448px, but still inflexible. We introduce a novel method to coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution. We demonstrate the effectiveness of this approach on core perception tasks as well as within agglomerative model (RADIO) training as a way of providing richer targets for distillation.
+
+Model: Enhancing Image Matting in Real-World Scenes with Mask-Guided Iterative Refinement
+Paper: http://arxiv.org/pdf/2502.17093v1.pdf
+Summary: Real-world image matting is essential for applications in content creation and augmented reality. However, it remains challenging due to the complex nature of scenes and the scarcity of high-quality datasets. To address these limitations, we introduce Mask2Alpha, an iterative refinement framework designed to enhance semantic comprehension, instance awareness, and fine-detail recovery in image matting. Our framework leverages self-supervised Vision Transformer features as semantic priors, strengthening contextual understanding in complex scenarios. To further improve instance differentiation, we implement a mask-guided feature selection module, enabling precise targeting of objects in multi-instance settings. Additionally, a sparse convolution-based optimization scheme allows Mask2Alpha to recover high-resolution details through progressive refinement,from low-resolution semantic passes to high-resolution sparse reconstructions. Benchmarking across various real-world datasets, Mask2Alpha consistently achieves state-of-the-art results, showcasing its effectiveness in accurate and efficient image matting.
+
+Model: Learning Multiscale Consistency for Self-supervised Electron Microscopy Instance Segmentation
+Paper: http://arxiv.org/pdf/2308.09917v3.pdf
+Summary: Instance segmentation in electron microscopy (EM) volumes is tough due to complex shapes and sparse annotations. Self-supervised learning helps but still struggles with intricate visual patterns in EM. To address this, we propose a pretraining framework that enhances multiscale consistency in EM volumes. Our approach leverages a Siamese network architecture, integrating both strong and weak data augmentations to effectively extract multiscale features. We uphold voxel-level coherence by reconstructing the original input data from these augmented instances. Furthermore, we incorporate cross-attention mechanisms to facilitate fine-grained feature alignment between these augmentations. Finally, we apply contrastive learning techniques across a feature pyramid, allowing us to distill distinctive representations spanning various scales. After pretraining on four large-scale EM datasets, our framework significantly improves downstream tasks like neuron and mitochondria segmentation, especially with limited finetuning data. It effectively captures voxel and feature consistency, showing promise for learning transferable representations for EM analysis.
+
+
+Answer:

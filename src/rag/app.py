@@ -1,6 +1,5 @@
 import streamlit as st
 import json
-import time
 import os
 from retriever import retrieve_models_and_papers
 from prompt import build_prompt
@@ -10,7 +9,7 @@ st.set_page_config(page_title="RAG 쿼리 실행기", layout="centered")
 st.title("📚 모델 1개 + 논문 추천 + GPT 응답 (선택 실행)")
 
 # 🔹 쿼리 불러오기
-with open("/home/cvlab/Desktop/AgentAI/dataset/model_queries_only.json", encoding="utf-8") as f:
+with open("/home/cvlab/Desktop/AgentAI/dataset/merged_query.json", encoding="utf-8") as f:
     model_queries = json.load(f)
 
 query_pool = []
@@ -43,7 +42,7 @@ for i, (query, model_name) in enumerate(query_pool, 1):
         with st.spinner("⏳ 문서 및 모델 추천 중..."):
             try:
                 models, papers = retrieve_models_and_papers(query, k_models=1, k_arxiv=5, use_rerank=use_rerank)
-                prompt = build_prompt(query, papers[:3])
+                prompt = build_prompt(query, papers[:3], models)
                 st.session_state["cache"][query_key] = {
                     "query": query,
                     "model_name": model_name,
@@ -78,11 +77,10 @@ for i, (query, model_name) in enumerate(query_pool, 1):
         st.markdown("### 📝 생성된 프롬프트")
         st.code(prompt, language="text")
 
-        # GPT 실행 버튼
         if st.button(f"🤖 GPT 응답 생성 (Query {i})"):
             with st.spinner("LLM 응답 생성 중..."):
                 try:
-                    answer = generate_answer_with_feedback(prompt)
+                    answer = generate_answer_with_feedback(prompt, selected_model["Model Unique Name"])
                     st.success("✅ GPT 응답 생성 완료")
                     st.markdown(answer)
                 except Exception as e:
@@ -98,7 +96,7 @@ for i, (query, model_name) in enumerate(query_pool, 1):
                 "answer": answer
             })
 
-# 🔹 결과 저장
+# 🔹 결과 저장 (응답 포함)
 if st.session_state["results"]:
     if st.button("💾 전체 결과 JSON 저장"):
         save_path = "/home/cvlab/Desktop/AgentAI/output/llm_rag_results.json"
@@ -106,3 +104,31 @@ if st.session_state["results"]:
         with open(save_path, "w", encoding="utf-8") as f:
             json.dump(st.session_state["results"], f, indent=2, ensure_ascii=False)
         st.success(f"📁 저장 완료 → {save_path}")
+
+# 🔹 프롬프트만 저장 (TXT + JSON)
+if st.button("💾 프롬프트만 저장 (.txt + .json)"):
+    prompt_dir = "/home/cvlab/Desktop/AgentAI/output/prompts"
+    os.makedirs(prompt_dir, exist_ok=True)
+    all_prompts = []
+
+    for idx, (k, v) in enumerate(st.session_state["cache"].items(), 1):
+        prompt_text = v["prompt"]
+        model_name = v["model_name"].replace("/", "_").replace(" ", "_")
+        query = v["query"]
+
+        txt_path = os.path.join(prompt_dir, f"prompt_{idx:03d}_{model_name}.txt")
+        with open(txt_path, "w", encoding="utf-8") as f:
+            f.write(prompt_text)
+
+        all_prompts.append({
+            "index": idx,
+            "query": query,
+            "original_model": model_name,
+            "prompt": prompt_text
+        })
+
+    json_path = os.path.join(prompt_dir, "all_prompts.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(all_prompts, f, indent=2, ensure_ascii=False)
+
+    st.success(f"📁 프롬프트 저장 완료 → {prompt_dir}")

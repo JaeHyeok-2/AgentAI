@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Describing something as simple as “a futuristic coffee machine” was enough—it built a fully rotatable 3D model with amazing detail. How does it turn plain text into objects like that?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Structured 3D Latents for Scalable and Versatile 3D Generation∗
+Paper: https://arxiv.org/pdf/2412.01506
+GitHub: https://github.com/Microsoft/TRELLIS
+
+### Related Papers:
+Model: Text2Robot: Evolutionary Robot Design from Text Descriptions
+Paper: http://arxiv.org/pdf/2406.19963v2.pdf
+GitHub: https://github.com/generalroboticslab/Text2Robot
+Summary: Robot design has traditionally been costly and labor-intensive. Despite advancements in automated processes, it remains challenging to navigate a vast design space while producing physically manufacturable robots. We introduce Text2Robot, a framework that converts user text specifications and performance preferences into physical quadrupedal robots. Within minutes, Text2Robot can use text-to-3D models to provide strong initializations of diverse morphologies. Within a day, our geometric processing algorithms and body-control co-optimization produce a walking robot by explicitly considering real-world electronics and manufacturability. Text2Robot enables rapid prototyping and opens new opportunities for robot design with generative models.
+
+Model: Transcrib3D: 3D Referring Expression Resolution through Large Language Models
+Paper: http://arxiv.org/pdf/2404.19221v1.pdf
+Summary: If robots are to work effectively alongside people, they must be able to interpret natural language references to objects in their 3D environment. Understanding 3D referring expressions is challenging -- it requires the ability to both parse the 3D structure of the scene and correctly ground free-form language in the presence of distraction and clutter. We introduce Transcrib3D, an approach that brings together 3D detection methods and the emergent reasoning capabilities of large language models (LLMs). Transcrib3D uses text as the unifying medium, which allows us to sidestep the need to learn shared representations connecting multi-modal inputs, which would require massive amounts of annotated 3D data. As a demonstration of its effectiveness, Transcrib3D achieves state-of-the-art results on 3D reference resolution benchmarks, with a great leap in performance from previous multi-modality baselines. To improve upon zero-shot performance and facilitate local deployment on edge computers and robots, we propose self-correction for fine-tuning that trains smaller models, resulting in performance close to that of large models. We show that our method enables a real robot to perform pick-and-place tasks given queries that contain challenging referring expressions. Project site is at https://ripl.github.io/Transcrib3D.
+
+Model: Towards an automated workflow in materials science for combining multi-modal simulative and experimental information using data mining and large language models
+Paper: http://arxiv.org/pdf/2502.14904v1.pdf
+Summary: To retrieve and compare scientific data of simulations and experiments in materials science, data needs to be easily accessible and machine readable to qualify and quantify various materials science phenomena. The recent progress in open science leverages the accessibility to data. However, a majority of information is encoded within scientific documents limiting the capability of finding suitable literature as well as material properties. This manuscript showcases an automated workflow, which unravels the encoded information from scientific literature to a machine readable data structure of texts, figures, tables, equations and meta-data, using natural language processing and language as well as vision transformer models to generate a machine-readable database. The machine-readable database can be enriched with local data, as e.g. unpublished or private material data, leading to knowledge synthesis. The study shows that such an automated workflow accelerates information retrieval, proximate context detection and material property extraction from multi-modal input data exemplarily shown for the research field of microstructural analyses of face-centered cubic single crystals. Ultimately, a Retrieval-Augmented Generation (RAG) based Large Language Model (LLM) enables a fast and efficient question answering chat bot.
+
+
+Answer:

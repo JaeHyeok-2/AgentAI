@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Tried it on a clip of a child playing, and it showed exactly what the kid was tracking with their eyes. What kind of model understands gaze in such real-world scenes?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Gaze-LLE: Gaze Target Estimation via Large-Scale Learned Encoders
+Paper: https://arxiv.org/pdf/2412.09586
+GitHub: https://github.com/fkryan/gazelle
+
+### Related Papers:
+Model: Gazeformer: Scalable, Effective and Fast Prediction of Goal-Directed Human Attention
+Paper: http://arxiv.org/pdf/2303.15274v3.pdf
+GitHub: https://github.com/cvlab-stonybrook/gazeformer
+Summary: Predicting human gaze is important in Human-Computer Interaction (HCI). However, to practically serve HCI applications, gaze prediction models must be scalable, fast, and accurate in their spatial and temporal gaze predictions. Recent scanpath prediction models focus on goal-directed attention (search). Such models are limited in their application due to a common approach relying on trained target detectors for all possible objects, and the availability of human gaze data for their training (both not scalable). In response, we pose a new task called ZeroGaze, a new variant of zero-shot learning where gaze is predicted for never-before-searched objects, and we develop a novel model, Gazeformer, to solve the ZeroGaze problem. In contrast to existing methods using object detector modules, Gazeformer encodes the target using a natural language model, thus leveraging semantic similarities in scanpath prediction. We use a transformer-based encoder-decoder architecture because transformers are particularly useful for generating contextual representations. Gazeformer surpasses other models by a large margin on the ZeroGaze setting. It also outperforms existing target-detection models on standard gaze prediction for both target-present and target-absent search tasks. In addition to its improved performance, Gazeformer is more than five times faster than the state-of-the-art target-present visual search model.
+
+Model: Semi-Synthetic Dataset Augmentation for Application-Specific Gaze Estimation
+Paper: http://arxiv.org/pdf/2310.18469v1.pdf
+Summary: Although the number of gaze estimation datasets is growing, the application of appearance-based gaze estimation methods is mostly limited to estimating the point of gaze on a screen. This is in part because most datasets are generated in a similar fashion, where the gaze target is on a screen close to camera's origin. In other applications such as assistive robotics or marketing research, the 3D point of gaze might not be close to the camera's origin, meaning models trained on current datasets do not generalize well to these tasks. We therefore suggest generating a textured tridimensional mesh of the face and rendering the training images from a virtual camera at a specific position and orientation related to the application as a mean of augmenting the existing datasets. In our tests, this lead to an average 47% decrease in gaze estimation angular error.
+
+Model: Evaluating Webcam-based Gaze Data as an Alternative for Human Rationale Annotations
+Paper: http://arxiv.org/pdf/2402.19133v1.pdf
+GitHub: https://github.com/stephaniebrandl/rationales-eyetracking-xai
+Summary: Rationales in the form of manually annotated input spans usually serve as ground truth when evaluating explainability methods in NLP. They are, however, time-consuming and often biased by the annotation process. In this paper, we debate whether human gaze, in the form of webcam-based eye-tracking recordings, poses a valid alternative when evaluating importance scores. We evaluate the additional information provided by gaze data, such as total reading times, gaze entropy, and decoding accuracy with respect to human rationale annotations. We compare WebQAmGaze, a multilingual dataset for information-seeking QA, with attention and explainability-based importance scores for 4 different multilingual Transformer-based language models (mBERT, distil-mBERT, XLMR, and XLMR-L) and 3 languages (English, Spanish, and German). Our pipeline can easily be applied to other tasks and languages. Our findings suggest that gaze data offers valuable linguistic insights that could be leveraged to infer task difficulty and further show a comparable ranking of explainability methods to that of human rationales.
+
+
+Answer:

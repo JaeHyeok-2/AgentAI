@@ -1,0 +1,36 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I ran noisy night photos through AI, and it preserved the textures of clothing and skin surprisingly well. What kind of training helps a model denoise without blurring fine detail?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Deblur-MIMO-UNet-RealBlur
+Paper: https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf
+GitHub: https://github.com/chosj95/MIMO-UNet
+
+### Related Papers:
+Model: DenoiseRep: Denoising Model for Representation Learning
+Paper: http://arxiv.org/pdf/2406.08773v4.pdf
+GitHub: https://github.com/wangguanan/denoiserep
+Summary: The denoising model has been proven a powerful generative model but has little exploration of discriminative tasks. Representation learning is important in discriminative tasks, which is defined as "learning representations (or features) of the data that make it easier to extract useful information when building classifiers or other predictors". In this paper, we propose a novel Denoising Model for Representation Learning (DenoiseRep) to improve feature discrimination with joint feature extraction and denoising. DenoiseRep views each embedding layer in a backbone as a denoising layer, processing the cascaded embedding layers as if we are recursively denoise features step-by-step. This unifies the frameworks of feature extraction and denoising, where the former progressively embeds features from low-level to high-level, and the latter recursively denoises features step-by-step. After that, DenoiseRep fuses the parameters of feature extraction and denoising layers, and theoretically demonstrates its equivalence before and after the fusion, thus making feature denoising computation-free. DenoiseRep is a label-free algorithm that incrementally improves features but also complementary to the label if available. Experimental results on various discriminative vision tasks, including re-identification (Market-1501, DukeMTMC-reID, MSMT17, CUHK-03, vehicleID), image classification (ImageNet, UB200, Oxford-Pet, Flowers), object detection (COCO), image segmentation (ADE20K) show stability and impressive improvements. We also validate its effectiveness on the CNN (ResNet) and Transformer (ViT, Swin, Vmamda) architectures.
+
+Model: Harnessing Joint Rain-/Detail-aware Representations to Eliminate Intricate Rains
+Paper: http://arxiv.org/pdf/2404.12091v1.pdf
+GitHub: https://github.com/schizophreni/coic
+Summary: Recent advances in image deraining have focused on training powerful models on mixed multiple datasets comprising diverse rain types and backgrounds. However, this approach tends to overlook the inherent differences among rainy images, leading to suboptimal results. To overcome this limitation, we focus on addressing various rainy images by delving into meaningful representations that encapsulate both the rain and background components. Leveraging these representations as instructive guidance, we put forth a Context-based Instance-level Modulation (CoI-M) mechanism adept at efficiently modulating CNN- or Transformer-based models. Furthermore, we devise a rain-/detail-aware contrastive learning strategy to help extract joint rain-/detail-aware representations. By integrating CoI-M with the rain-/detail-aware Contrastive learning, we develop CoIC, an innovative and potent algorithm tailored for training models on mixed datasets. Moreover, CoIC offers insight into modeling relationships of datasets, quantitatively assessing the impact of rain and details on restoration, and unveiling distinct behaviors of models given diverse inputs. Extensive experiments validate the efficacy of CoIC in boosting the deraining ability of CNN and Transformer models. CoIC also enhances the deraining prowess remarkably when real-world dataset is included.
+
+Model: Generative Denoise Distillation: Simple Stochastic Noises Induce Efficient Knowledge Transfer for Dense Prediction
+Paper: http://arxiv.org/pdf/2401.08332v2.pdf
+GitHub: https://github.com/ZhgLiu/GDD
+Summary: Knowledge distillation is the process of transferring knowledge from a more powerful large model (teacher) to a simpler counterpart (student). Numerous current approaches involve the student imitating the knowledge of the teacher directly. However, redundancy still exists in the learned representations through these prevalent methods, which tend to learn each spatial location's features indiscriminately. To derive a more compact representation (concept feature) from the teacher, inspired by human cognition, we suggest an innovative method, termed Generative Denoise Distillation (GDD), where stochastic noises are added to the concept feature of the student to embed them into the generated instance feature from a shallow network. Then, the generated instance feature is aligned with the knowledge of the instance from the teacher. We extensively experiment with object detection, instance segmentation, and semantic segmentation to demonstrate the versatility and effectiveness of our method. Notably, GDD achieves new state-of-the-art performance in the tasks mentioned above. We have achieved substantial improvements in semantic segmentation by enhancing PspNet and DeepLabV3, both of which are based on ResNet-18, resulting in mIoU scores of 74.67 and 77.69, respectively, surpassing their previous scores of 69.85 and 73.20 on the Cityscapes dataset of 20 categories. The source code is available at https://github.com/ZhgLiu/GDD.
+
+
+Answer:

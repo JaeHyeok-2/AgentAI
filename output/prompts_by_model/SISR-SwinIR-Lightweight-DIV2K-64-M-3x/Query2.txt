@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even without a strong processor, my phone upscaled photos 3× quite smoothly. What tricks make these lightweight AI models so fast and accurate?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Deblur-MSSNet-GoPro
+Paper: https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf
+GitHub: https://github.com/kky7/MSSNet
+
+### Related Papers:
+Model: Speeding Up Image Classifiers with Little Companions
+Paper: http://arxiv.org/pdf/2406.17117v2.pdf
+Summary: Scaling up neural networks has been a key recipe to the success of large language and vision models. However, in practice, up-scaled models can be disproportionately costly in terms of computations, providing only marginal improvements in performance; for example, EfficientViT-L3-384 achieves <2% improvement on ImageNet-1K accuracy over the base L1-224 model, while requiring $14\times$ more multiply-accumulate operations (MACs). In this paper, we investigate scaling properties of popular families of neural networks for image classification, and find that scaled-up models mostly help with "difficult" samples. Decomposing the samples by difficulty, we develop a simple model-agnostic two-pass Little-Big algorithm that first uses a light-weight "little" model to make predictions of all samples, and only passes the difficult ones for the "big" model to solve. Good little companion achieve drastic MACs reduction for a wide variety of model families and scales. Without loss of accuracy or modification of existing models, our Little-Big models achieve MACs reductions of 76% for EfficientViT-L3-384, 81% for EfficientNet-B7-600, 71% for DeiT3-L-384 on ImageNet-1K. Little-Big also speeds up the InternImage-G-512 model by 62% while achieving 90% ImageNet-1K top-1 accuracy, serving both as a strong baseline and as a simple practical method for large model compression.
+
+Model: T3DNet: Compressing Point Cloud Models for Lightweight 3D Recognition
+Paper: http://arxiv.org/pdf/2402.19264v1.pdf
+Summary: 3D point cloud has been widely used in many mobile application scenarios, including autonomous driving and 3D sensing on mobile devices. However, existing 3D point cloud models tend to be large and cumbersome, making them hard to deploy on edged devices due to their high memory requirements and non-real-time latency. There has been a lack of research on how to compress 3D point cloud models into lightweight models. In this paper, we propose a method called T3DNet (Tiny 3D Network with augmEntation and disTillation) to address this issue. We find that the tiny model after network augmentation is much easier for a teacher to distill. Instead of gradually reducing the parameters through techniques such as pruning or quantization, we pre-define a tiny model and improve its performance through auxiliary supervision from augmented networks and the original model. We evaluate our method on several public datasets, including ModelNet40, ShapeNet, and ScanObjectNN. Our method can achieve high compression rates without significant accuracy sacrifice, achieving state-of-the-art performances on three datasets against existing methods. Amazingly, our T3DNet is 58 times smaller and 54 times faster than the original model yet with only 1.4% accuracy descent on the ModelNet40 dataset.
+
+Model: ImageNet-Hard: The Hardest Images Remaining from a Study of the Power of Zoom and Spatial Biases in Image Classification
+Paper: http://arxiv.org/pdf/2304.05538v4.pdf
+Summary: Image classifiers are information-discarding machines, by design. Yet, how these models discard information remains mysterious. We hypothesize that one way for image classifiers to reach high accuracy is to first zoom to the most discriminative region in the image and then extract features from there to predict image labels, discarding the rest of the image. Studying six popular networks ranging from AlexNet to CLIP, we find that proper framing of the input image can lead to the correct classification of 98.91% of ImageNet images. Furthermore, we uncover positional biases in various datasets, especially a strong center bias in two popular datasets: ImageNet-A and ObjectNet. Finally, leveraging our insights into the potential of zooming, we propose a test-time augmentation (TTA) technique that improves classification accuracy by forcing models to explicitly perform zoom-in operations before making predictions. Our method is more interpretable, accurate, and faster than MEMO, a state-of-the-art (SOTA) TTA method. We introduce ImageNet-Hard, a new benchmark that challenges SOTA classifiers including large vision-language models even when optimal zooming is allowed.
+
+
+Answer:

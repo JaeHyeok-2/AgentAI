@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Even when buildings and cars overlap in the image, the AI segments them perfectly. How does it figure out which object is which so precisely?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Segmentation-DeepLabV3-MobileNet-VOC
+Paper: None
+GitHub: https://github.com/VainF/DeepLabV3Plus-Pytorch
+
+### Related Papers:
+Model: OoDIS: Anomaly Instance Segmentation Benchmark
+Paper: http://arxiv.org/pdf/2406.11835v1.pdf
+GitHub: https://github.com/kumuji/ugains
+Summary: Safe navigation of self-driving cars and robots requires a precise understanding of their environment. Training data for perception systems cannot cover the wide variety of objects that may appear during deployment. Thus, reliable identification of unknown objects, such as wild animals and untypical obstacles, is critical due to their potential to cause serious accidents. Significant progress in semantic segmentation of anomalies has been facilitated by the availability of out-of-distribution (OOD) benchmarks. However, a comprehensive understanding of scene dynamics requires the segmentation of individual objects, and thus the segmentation of instances is essential. Development in this area has been lagging, largely due to the lack of dedicated benchmarks. The situation is similar in object detection. While there is interest in detecting and potentially tracking every anomalous object, the availability of dedicated benchmarks is clearly limited. To address this gap, this work extends some commonly used anomaly segmentation benchmarks to include the instance segmentation and object detection tasks. Our evaluation of anomaly instance segmentation and object detection methods shows that both of these challenges remain unsolved problems. We provide a competition and benchmark website under https://vision.rwth-aachen.de/oodis
+
+Model: LiCAR: pseudo-RGB LiDAR image for CAR segmentation
+Paper: http://arxiv.org/pdf/2501.13960v1.pdf
+Summary: With the advancement of computing resources, an increasing number of Neural Networks (NNs) are appearing for image detection and segmentation appear. However, these methods usually accept as input a RGB 2D image. On the other side, Light Detection And Ranging (LiDAR) sensors with many layers provide images that are similar to those obtained from a traditional low resolution RGB camera. Following this principle, a new dataset for segmenting cars in pseudo-RGB images has been generated. This dataset combines the information given by the LiDAR sensor into a Spherical Range Image (SRI), concretely the reflectivity, near infrared and signal intensity 2D images. These images are then fed into instance segmentation NNs. These NNs segment the cars that appear in these images, having as result a Bounding Box (BB) and mask precision of 88% and 81.5% respectively with You Only Look Once (YOLO)-v8 large. By using this segmentation NN, some trackers have been applied so as to follow each car segmented instance along a video feed, having great performance in real world experiments.
+
+Model: Polygonizer: An auto-regressive building delineator
+Paper: http://arxiv.org/pdf/2304.04048v1.pdf
+Summary: In geospatial planning, it is often essential to represent objects in a vectorized format, as this format easily translates to downstream tasks such as web development, graphics, or design. While these problems are frequently addressed using semantic segmentation, which requires additional post-processing to vectorize objects in a non-trivial way, we present an Image-to-Sequence model that allows for direct shape inference and is ready for vector-based workflows out of the box. We demonstrate the model's performance in various ways, including perturbations to the image input that correspond to variations or artifacts commonly encountered in remote sensing applications. Our model outperforms prior works when using ground truth bounding boxes (one object per image), achieving the lowest maximum tangent angle error.
+
+
+Answer:

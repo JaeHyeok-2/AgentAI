@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I asked for a dual-persona portrait—half neon, half charcoal—and both sides lined up perfectly. How does AI line up symmetry or color inversion so precisely?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-IDSM
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: Towards Safe and Honest AI Agents with Neural Self-Other Overlap
+Paper: http://arxiv.org/pdf/2412.16325v1.pdf
+Summary: As AI systems increasingly make critical decisions, deceptive AI poses a significant challenge to trust and safety. We present Self-Other Overlap (SOO) fine-tuning, a promising approach in AI Safety that could substantially improve our ability to build honest artificial intelligence. Inspired by cognitive neuroscience research on empathy, SOO aims to align how AI models represent themselves and others. Our experiments on LLMs with 7B, 27B, and 78B parameters demonstrate SOO's efficacy: deceptive responses of Mistral-7B-Instruct-v0.2 dropped from 73.6% to 17.2% with no observed reduction in general task performance, while in Gemma-2-27b-it and CalmeRys-78B-Orpo-v0.1 deceptive responses were reduced from 100% to 9.3% and 2.7%, respectively, with a small impact on capabilities. In reinforcement learning scenarios, SOO-trained agents showed significantly reduced deceptive behavior. SOO's focus on contrastive self and other-referencing observations offers strong potential for generalization across AI architectures. While current applications focus on language models and simple RL environments, SOO could pave the way for more trustworthy AI in broader domains. Ethical implications and long-term effects warrant further investigation, but SOO represents a significant step forward in AI safety research.
+
+Model: TIAM -- A Metric for Evaluating Alignment in Text-to-Image Generation
+Paper: http://arxiv.org/pdf/2307.05134v2.pdf
+GitHub: https://github.com/grimalpaul/tiam
+Summary: The progress in the generation of synthetic images has made it crucial to assess their quality. While several metrics have been proposed to assess the rendering of images, it is crucial for Text-to-Image (T2I) models, which generate images based on a prompt, to consider additional aspects such as to which extent the generated image matches the important content of the prompt. Moreover, although the generated images usually result from a random starting point, the influence of this one is generally not considered. In this article, we propose a new metric based on prompt templates to study the alignment between the content specified in the prompt and the corresponding generated images. It allows us to better characterize the alignment in terms of the type of the specified objects, their number, and their color. We conducted a study on several recent T2I models about various aspects. An additional interesting result we obtained with our approach is that image quality can vary drastically depending on the noise used as a seed for the images. We also quantify the influence of the number of concepts in the prompt, their order as well as their (color) attributes. Finally, our method allows us to identify some seeds that produce better images than others, opening novel directions of research on this understudied topic.
+
+Model: A Graph Neural Network Approach for Temporal Mesh Blending and Correspondence
+Paper: http://arxiv.org/pdf/2306.13452v1.pdf
+Summary: We have proposed a self-supervised deep learning framework for solving the mesh blending problem in scenarios where the meshes are not in correspondence. To solve this problem, we have developed Red-Blue MPNN, a novel graph neural network that processes an augmented graph to estimate the correspondence. We have designed a novel conditional refinement scheme to find the exact correspondence when certain conditions are satisfied. We further develop a graph neural network that takes the aligned meshes and the time value as input and fuses this information to process further and generate the desired result. Using motion capture datasets and human mesh designing software, we create a large-scale synthetic dataset consisting of temporal sequences of human meshes in motion. Our results demonstrate that our approach generates realistic deformation of body parts given complex inputs.
+
+
+Answer:

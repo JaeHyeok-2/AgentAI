@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I made a quick composite for a profile image, and the color tones blended perfectly without needing manual tweaks. Even at low resolution, the match felt seamless."
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: NST-fast-neural-style-mosaic
+Paper: None
+GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+
+### Related Papers:
+Model: DreamColour: Controllable Video Colour Editing without Training
+Paper: http://arxiv.org/pdf/2412.05180v1.pdf
+Summary: Video colour editing is a crucial task for content creation, yet existing solutions either require painstaking frame-by-frame manipulation or produce unrealistic results with temporal artefacts. We present a practical, training-free framework that makes precise video colour editing accessible through an intuitive interface while maintaining professional-quality output. Our key insight is that by decoupling spatial and temporal aspects of colour editing, we can better align with users' natural workflow -- allowing them to focus on precise colour selection in key frames before automatically propagating changes across time. We achieve this through a novel technical framework that combines: (i) a simple point-and-click interface merging grid-based colour selection with automatic instance segmentation for precise spatial control, (ii) bidirectional colour propagation that leverages inherent video motion patterns, and (iii) motion-aware blending that ensures smooth transitions even with complex object movements. Through extensive evaluation on diverse scenarios, we demonstrate that our approach matches or exceeds state-of-the-art methods while eliminating the need for training or specialized hardware, making professional-quality video colour editing accessible to everyone.
+
+Model: Robust Multi-Modal Image Stitching for Improved Scene Understanding
+Paper: http://arxiv.org/pdf/2312.17010v1.pdf
+Summary: Multi-modal image stitching can be a difficult feat. That's why, in this paper, we've devised a unique and comprehensive image-stitching pipeline that taps into OpenCV's stitching module. Our approach integrates feature-based matching, transformation estimation, and blending techniques to bring about panoramic views that are of top-tier quality - irrespective of lighting, scale or orientation differences between images. We've put our pipeline to the test with a varied dataset and found that it's very effective in enhancing scene understanding and finding real-world applications.
+
+Model: HCPM: Hierarchical Candidates Pruning for Efficient Detector-Free Matching
+Paper: http://arxiv.org/pdf/2403.12543v1.pdf
+Summary: Deep learning-based image matching methods play a crucial role in computer vision, yet they often suffer from substantial computational demands. To tackle this challenge, we present HCPM, an efficient and detector-free local feature-matching method that employs hierarchical pruning to optimize the matching pipeline. In contrast to recent detector-free methods that depend on an exhaustive set of coarse-level candidates for matching, HCPM selectively concentrates on a concise subset of informative candidates, resulting in fewer computational candidates and enhanced matching efficiency. The method comprises a self-pruning stage for selecting reliable candidates and an interactive-pruning stage that identifies correlated patches at the coarse level. Our results reveal that HCPM significantly surpasses existing methods in terms of speed while maintaining high accuracy. The source code will be made available upon publication.
+
+
+Answer:

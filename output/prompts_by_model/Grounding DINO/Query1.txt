@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I typed in “a person holding a red umbrella” and clicked the image, and it found the exact person—even in a crowded street. How does it find such specific objects just from my words?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: BGE: One-Stop Retrieval Toolkit For Search and RAG
+Paper: https://arxiv.org/pdf/2412.14475
+GitHub: https://github.com/FlagOpen/FlagEmbedding/tree/master?tab=readme-ov-file
+
+### Related Papers:
+Model: Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions
+Paper: http://arxiv.org/pdf/2502.08438v1.pdf
+Summary: Non-native speakers with limited vocabulary often struggle to name specific objects despite being able to visualize them, e.g., people outside Australia searching for numbats. Further, users may want to search for such elusive objects with difficult-to-sketch interactions, e.g., numbat digging in the ground. In such common but complex situations, users desire a search interface that accepts composite multimodal queries comprising hand-drawn sketches of difficult-to-name but easy-to-draw objects and text describing difficult-to-sketch but easy-to-verbalize object attributes or interaction with the scene. This novel problem statement distinctly differs from the previously well-researched TBIR (text-based image retrieval) and SBIR (sketch-based image retrieval) problems. To study this under-explored task, we curate a dataset, CSTBIR (Composite Sketch+Text Based Image Retrieval), consisting of approx. 2M queries and 108K natural scene images. Further, as a solution to this problem, we propose a pretrained multimodal transformer-based baseline, STNET (Sketch+Text Network), that uses a hand-drawn sketch to localize relevant objects in the natural scene image, and encodes the text and image to perform image retrieval. In addition to contrastive learning, we propose multiple training objectives that improve the performance of our model. Extensive experiments show that our proposed method outperforms several state-of-the-art retrieval methods for text-only, sketch-only, and composite query modalities. We make the dataset and code available at our project website.
+
+Model: Smart Multi-Modal Search: Contextual Sparse and Dense Embedding Integration in Adobe Express
+Paper: http://arxiv.org/pdf/2408.14698v2.pdf
+Summary: As user content and queries become increasingly multi-modal, the need for effective multi-modal search systems has grown. Traditional search systems often rely on textual and metadata annotations for indexed images, while multi-modal embeddings like CLIP enable direct search using text and image embeddings. However, embedding-based approaches face challenges in integrating contextual features such as user locale and recency. Building a scalable multi-modal search system requires fine-tuning several components. This paper presents a multi-modal search architecture and a series of AB tests that optimize embeddings and multi-modal technologies in Adobe Express template search. We address considerations such as embedding model selection, the roles of embeddings in matching and ranking, and the balance between dense and sparse embeddings. Our iterative approach demonstrates how utilizing sparse, dense, and contextual features enhances short and long query search, significantly reduces null rates (over 70\%), and increases click-through rates (CTR). Our findings provide insights into developing robust multi-modal search systems, thereby enhancing relevance for complex queries.
+
+Model: Compressing Search with Language Models
+Paper: http://arxiv.org/pdf/2407.00085v1.pdf
+Summary: Millions of people turn to Google Search each day for information on things as diverse as new cars or flu symptoms. The terms that they enter contain valuable information on their daily intent and activities, but the information in these search terms has been difficult to fully leverage. User-defined categorical filters have been the most common way to shrink the dimensionality of search data to a tractable size for analysis and modeling. In this paper we present a new approach to reducing the dimensionality of search data while retaining much of the information in the individual terms without user-defined rules. Our contributions are two-fold: 1) we introduce SLaM Compression, a way to quantify search terms using pre-trained language models and create a representation of search data that has low dimensionality, is memory efficient, and effectively acts as a summary of search, and 2) we present CoSMo, a Constrained Search Model for estimating real world events using only search data. We demonstrate the efficacy of our contributions by estimating with high accuracy U.S. automobile sales and U.S. flu rates using only Google Search data.
+
+
+Answer:

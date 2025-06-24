@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I uploaded a picture of a street scene and asked, “What color is the traffic light?” and it answered correctly. How does AI extract and reason over visual details like that?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-RDN
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: Human-Centered Evaluation of XAI Methods
+Paper: http://arxiv.org/pdf/2310.07534v2.pdf
+Summary: In the ever-evolving field of Artificial Intelligence, a critical challenge has been to decipher the decision-making processes within the so-called "black boxes" in deep learning. Over recent years, a plethora of methods have emerged, dedicated to explaining decisions across diverse tasks. Particularly in tasks like image classification, these methods typically identify and emphasize the pivotal pixels that most influence a classifier's prediction. Interestingly, this approach mirrors human behavior: when asked to explain our rationale for classifying an image, we often point to the most salient features or aspects. Capitalizing on this parallel, our research embarked on a user-centric study. We sought to objectively measure the interpretability of three leading explanation methods: (1) Prototypical Part Network, (2) Occlusion, and (3) Layer-wise Relevance Propagation. Intriguingly, our results highlight that while the regions spotlighted by these methods can vary widely, they all offer humans a nearly equivalent depth of understanding. This enables users to discern and categorize images efficiently, reinforcing the value of these methods in enhancing AI transparency.
+
+Model: LangXAI: Integrating Large Vision Models for Generating Textual Explanations to Enhance Explainability in Visual Perception Tasks
+Paper: http://arxiv.org/pdf/2402.12525v1.pdf
+GitHub: https://github.com/hungntt/LangXAI
+Summary: LangXAI is a framework that integrates Explainable Artificial Intelligence (XAI) with advanced vision models to generate textual explanations for visual recognition tasks. Despite XAI advancements, an understanding gap persists for end-users with limited domain knowledge in artificial intelligence and computer vision. LangXAI addresses this by furnishing text-based explanations for classification, object detection, and semantic segmentation model outputs to end-users. Preliminary results demonstrate LangXAI's enhanced plausibility, with high BERTScore across tasks, fostering a more transparent and reliable AI framework on vision tasks for end-users.
+
+Model: Explanation Strategies for Image Classification in Humans vs. Current Explainable AI
+Paper: http://arxiv.org/pdf/2304.04448v1.pdf
+Summary: Explainable AI (XAI) methods provide explanations of AI models, but our understanding of how they compare with human explanations remains limited. In image classification, we found that humans adopted more explorative attention strategies for explanation than the classification task itself. Two representative explanation strategies were identified through clustering: One involved focused visual scanning on foreground objects with more conceptual explanations diagnostic for inferring class labels, whereas the other involved explorative scanning with more visual explanations rated higher for effectiveness. Interestingly, XAI saliency-map explanations had the highest similarity to the explorative attention strategy in humans, and explanations highlighting discriminative features from invoking observable causality through perturbation had higher similarity to human strategies than those highlighting internal features associated with higher class score. Thus, humans differ in information and strategy use for explanations, and XAI methods that highlight features informing observable causality match better with human explanations, potentially more accessible to users.
+
+
+Answer:

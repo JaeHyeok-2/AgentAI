@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I used AI to upscale a decades-old photo, and it brought out details I didn’t know were there. How can it enhance old images like that?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SISR-Any-LIIF-RDN
+Paper: https://arxiv.org/pdf/2012.09161
+GitHub: https://github.com/yinboc/liif
+
+### Related Papers:
+Model: FeatSharp: Your Vision Model Features, Sharper
+Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+Summary: The feature maps of vision encoders are fundamental to myriad modern AI tasks, ranging from core perception algorithms (e.g. semantic segmentation, object detection, depth perception, etc.) to modern multimodal understanding in vision-language models (VLMs). Currently, in computer vision, the frontier of general purpose vision backbones are Vision Transformers (ViT), typically trained using contrastive loss (e.g. CLIP). A key problem with most off-the-shelf ViTs, particularly CLIP, is that these models are inflexibly low resolution. Most run at 224x224px, while the "high resolution" versions are around 378-448px, but still inflexible. We introduce a novel method to coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution. We demonstrate the effectiveness of this approach on core perception tasks as well as within agglomerative model (RADIO) training as a way of providing richer targets for distillation.
+
+Model: Analyzing Decades-Long Environmental Changes in Namibia Using Archival Aerial Photography and Deep Learning
+Paper: http://arxiv.org/pdf/2404.08544v2.pdf
+Summary: This study explores object detection in historical aerial photographs of Namibia to identify long-term environmental changes. Specifically, we aim to identify key objects -- Waterholes, Omuti homesteads, and Big trees -- around Oshikango in Namibia using sub-meter gray-scale aerial imagery from 1943 and 1972. In this work, we propose a workflow for analyzing historical aerial imagery using a deep semantic segmentation model on sparse hand-labels. To this end, we employ a number of strategies including class-weighting, pseudo-labeling and empirical p-value-based filtering to balance skewed and sparse representations of objects in the ground truth data. Results demonstrate the benefits of these different training strategies resulting in an average $F_1=0.661$ and $F_1=0.755$ over the three objects of interest for the 1943 and 1972 imagery, respectively. We also identified that the average size of Waterhole and Big trees increased while the average size of Omuti homesteads decreased between 1943 and 1972 reflecting some of the local effects of the massive post-Second World War economic, agricultural, demographic, and environmental changes. This work also highlights the untapped potential of historical aerial photographs in understanding long-term environmental changes beyond Namibia (and Africa). With the lack of adequate satellite technology in the past, archival aerial photography offers a great alternative to uncover decades-long environmental changes.
+
+Model: Optimal Layer Selection for Latent Data Augmentation
+Paper: http://arxiv.org/pdf/2408.13426v1.pdf
+Summary: While data augmentation (DA) is generally applied to input data, several studies have reported that applying DA to hidden layers in neural networks, i.e., feature augmentation, can improve performance. However, in previous studies, the layers to which DA is applied have not been carefully considered, often being applied randomly and uniformly or only to a specific layer, leaving room for arbitrariness. Thus, in this study, we investigated the trends of suitable layers for applying DA in various experimental configurations, e.g., training from scratch, transfer learning, various dataset settings, and different models. In addition, to adjust the suitable layers for DA automatically, we propose the adaptive layer selection (AdaLASE) method, which updates the ratio to perform DA for each layer based on the gradient descent method during training. The experimental results obtained on several image classification datasets indicate that the proposed AdaLASE method altered the ratio as expected and achieved high overall test accuracy.
+
+
+Answer:

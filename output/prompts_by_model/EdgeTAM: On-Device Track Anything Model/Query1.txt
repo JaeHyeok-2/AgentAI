@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I ran this on my phone to track my dog in a video, and it followed him the entire time—no internet, no lag. How does it manage that kind of tracking directly on a device?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: EdgeTAM: On-Device Track Anything Model
+Paper: https://arxiv.org/pdf/2501.07256
+GitHub: https://github.com/facebookresearch/EdgeTAM
+
+### Related Papers:
+Model: SLoMo: A General System for Legged Robot Motion Imitation from Casual Videos
+Paper: http://arxiv.org/pdf/2304.14389v2.pdf
+GitHub: https://github.com/johnzhang3/slomo
+Summary: We present SLoMo: a first-of-its-kind framework for transferring skilled motions from casually captured "in the wild" video footage of humans and animals to legged robots. SLoMo works in three stages: 1) synthesize a physically plausible reconstructed key-point trajectory from monocular videos; 2) optimize a dynamically feasible reference trajectory for the robot offline that includes body and foot motion, as well as contact sequences that closely tracks the key points; 3) track the reference trajectory online using a general-purpose model-predictive controller on robot hardware. Traditional motion imitation for legged motor skills often requires expert animators, collaborative demonstrations, and/or expensive motion capture equipment, all of which limits scalability. Instead, SLoMo only relies on easy-to-obtain monocular video footage, readily available in online repositories such as YouTube. It converts videos into motion primitives that can be executed reliably by real-world robots. We demonstrate our approach by transferring the motions of cats, dogs, and humans to example robots including a quadruped (on hardware) and a humanoid (in simulation). To the best knowledge of the authors, this is the first attempt at a general-purpose motion transfer framework that imitates animal and human motions on legged robots directly from casual videos without artificial markers or labels.
+
+Model: Lost in Tracking Translation: A Comprehensive Analysis of Visual SLAM in Human-Centered XR and IoT Ecosystems
+Paper: http://arxiv.org/pdf/2411.07146v1.pdf
+Summary: Advancements in tracking algorithms have empowered nascent applications across various domains, from steering autonomous vehicles to guiding robots to enhancing augmented reality experiences for users. However, these algorithms are application-specific and do not work across applications with different types of motion; even a tracking algorithm designed for a given application does not work in scenarios deviating from highly standard conditions. For example, a tracking algorithm designed for robot navigation inside a building will not work for tracking the same robot in an outdoor environment. To demonstrate this problem, we evaluate the performance of the state-of-the-art tracking methods across various applications and scenarios. To inform our analysis, we first categorize algorithmic, environmental, and locomotion-related challenges faced by tracking algorithms. We quantitatively evaluate the performance using multiple tracking algorithms and representative datasets for a wide range of Internet of Things (IoT) and Extended Reality (XR) applications, including autonomous vehicles, drones, and humans. Our analysis shows that no tracking algorithm works across different applications and scenarios within applications. Ultimately, using the insights generated from our analysis, we discuss multiple approaches to improving the tracking performance using input data characterization, leveraging intermediate information, and output evaluation.
+
+Model: Robo-Platform: A Robotic System for Recording Sensors and Controlling Robots
+Paper: http://arxiv.org/pdf/2409.16595v1.pdf
+GitHub: https://github.com/m-dayani/robo-platform
+Summary: Mobile smartphones compactly provide sensors such as cameras, IMUs, GNSS measurement units, and wireless and wired communication channels required for robotics projects. They are affordable, portable, and programmable, which makes them ideal for testing, data acquisition, controlling mobile robots, and many other robotic applications. A robotic system is proposed in this paper, consisting of an Android phone, a microcontroller board attached to the phone via USB, and a remote wireless controller station. In the data acquisition mode, the Android device can record a dataset of a diverse configuration of multiple cameras, IMUs, GNSS units, and external USB ADC channels in the rawest format used for, but not limited to, pose estimation and scene reconstruction applications. In robot control mode, the Android phone, a microcontroller board, and other peripherals constitute the mobile or stationary robotic system. This system is controlled using a remote server connected over Wi-Fi or Bluetooth. Experiments show that although the SLAM and AR applications can utilize the acquired data, the proposed system can pave the way for more advanced algorithms for processing these noisy and sporadic measurements. Moreover, the characteristics of the communication media are studied, and two example robotic projects, which involve controlling a toy car and a quadcopter, are included.
+
+
+Answer:

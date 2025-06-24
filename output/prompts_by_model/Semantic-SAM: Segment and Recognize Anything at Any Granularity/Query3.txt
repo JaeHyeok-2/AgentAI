@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I used it on a street scene and it broke everything down—cars, signs, poles, even sidewalk lines. How can one model handle all that with such fine granularity?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-PirsusEpicRealism
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: Identifying Systematic Errors in Object Detectors with the SCROD Pipeline
+Paper: http://arxiv.org/pdf/2309.13489v1.pdf
+Summary: The identification and removal of systematic errors in object detectors can be a prerequisite for their deployment in safety-critical applications like automated driving and robotics. Such systematic errors can for instance occur under very specific object poses (location, scale, orientation), object colors/textures, and backgrounds. Real images alone are unlikely to cover all relevant combinations. We overcome this limitation by generating synthetic images with fine-granular control. While generating synthetic images with physical simulators and hand-designed 3D assets allows fine-grained control over generated images, this approach is resource-intensive and has limited scalability. In contrast, using generative models is more scalable but less reliable in terms of fine-grained control. In this paper, we propose a novel framework that combines the strengths of both approaches. Our meticulously designed pipeline along with custom models enables us to generate street scenes with fine-grained control in a fully automated and scalable manner. Moreover, our framework introduces an evaluation setting that can serve as a benchmark for similar pipelines. This evaluation setting will contribute to advancing the field and promoting standardized testing procedures.
+
+Model: Crowd-Sourced NeRF: Collecting Data from Production Vehicles for 3D Street View Reconstruction
+Paper: http://arxiv.org/pdf/2406.16289v1.pdf
+Summary: Recently, Neural Radiance Fields (NeRF) achieved impressive results in novel view synthesis. Block-NeRF showed the capability of leveraging NeRF to build large city-scale models. For large-scale modeling, a mass of image data is necessary. Collecting images from specially designed data-collection vehicles can not support large-scale applications. How to acquire massive high-quality data remains an opening problem. Noting that the automotive industry has a huge amount of image data, crowd-sourcing is a convenient way for large-scale data collection. In this paper, we present a crowd-sourced framework, which utilizes substantial data captured by production vehicles to reconstruct the scene with the NeRF model. This approach solves the key problem of large-scale reconstruction, that is where the data comes from and how to use them. Firstly, the crowd-sourced massive data is filtered to remove redundancy and keep a balanced distribution in terms of time and space. Then a structure-from-motion module is performed to refine camera poses. Finally, images, as well as poses, are used to train the NeRF model in a certain block. We highlight that we present a comprehensive framework that integrates multiple modules, including data selection, sparse 3D reconstruction, sequence appearance embedding, depth supervision of ground surface, and occlusion completion. The complete system is capable of effectively processing and reconstructing high-quality 3D scenes from crowd-sourced data. Extensive quantitative and qualitative experiments were conducted to validate the performance of our system. Moreover, we proposed an application, named first-view navigation, which leveraged the NeRF model to generate 3D street view and guide the driver with a synthesized video.
+
+Model: MLS2LoD3: Refining low LoDs building models with MLS point clouds to reconstruct semantic LoD3 building models
+Paper: http://arxiv.org/pdf/2402.06288v1.pdf
+Summary: Although highly-detailed LoD3 building models reveal great potential in various applications, they have yet to be available. The primary challenges in creating such models concern not only automatic detection and reconstruction but also standard-consistent modeling. In this paper, we introduce a novel refinement strategy enabling LoD3 reconstruction by leveraging the ubiquity of lower LoD building models and the accuracy of MLS point clouds. Such a strategy promises at-scale LoD3 reconstruction and unlocks LoD3 applications, which we also describe and illustrate in this paper. Additionally, we present guidelines for reconstructing LoD3 facade elements and their embedding into the CityGML standard model, disseminating gained knowledge to academics and professionals. We believe that our method can foster development of LoD3 reconstruction algorithms and subsequently enable their wider adoption.
+
+
+Answer:

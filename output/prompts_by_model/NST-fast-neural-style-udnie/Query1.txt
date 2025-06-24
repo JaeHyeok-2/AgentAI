@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I applied an “abstract dancing curves style,” and the photo morphed into pastel swirls while the original outline faintly remained. When AI smears boundaries and draws flowing curves, how does it decide which colors and shapes to blend? And how does it compute such complex distortions fast enough for a live filter?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: NST-fast-neural-style-mosaic
+Paper: None
+GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+
+### Related Papers:
+Model: DreamColour: Controllable Video Colour Editing without Training
+Paper: http://arxiv.org/pdf/2412.05180v1.pdf
+Summary: Video colour editing is a crucial task for content creation, yet existing solutions either require painstaking frame-by-frame manipulation or produce unrealistic results with temporal artefacts. We present a practical, training-free framework that makes precise video colour editing accessible through an intuitive interface while maintaining professional-quality output. Our key insight is that by decoupling spatial and temporal aspects of colour editing, we can better align with users' natural workflow -- allowing them to focus on precise colour selection in key frames before automatically propagating changes across time. We achieve this through a novel technical framework that combines: (i) a simple point-and-click interface merging grid-based colour selection with automatic instance segmentation for precise spatial control, (ii) bidirectional colour propagation that leverages inherent video motion patterns, and (iii) motion-aware blending that ensures smooth transitions even with complex object movements. Through extensive evaluation on diverse scenarios, we demonstrate that our approach matches or exceeds state-of-the-art methods while eliminating the need for training or specialized hardware, making professional-quality video colour editing accessible to everyone.
+
+Model: A Graph Neural Network Approach for Temporal Mesh Blending and Correspondence
+Paper: http://arxiv.org/pdf/2306.13452v1.pdf
+Summary: We have proposed a self-supervised deep learning framework for solving the mesh blending problem in scenarios where the meshes are not in correspondence. To solve this problem, we have developed Red-Blue MPNN, a novel graph neural network that processes an augmented graph to estimate the correspondence. We have designed a novel conditional refinement scheme to find the exact correspondence when certain conditions are satisfied. We further develop a graph neural network that takes the aligned meshes and the time value as input and fuses this information to process further and generate the desired result. Using motion capture datasets and human mesh designing software, we create a large-scale synthetic dataset consisting of temporal sequences of human meshes in motion. Our results demonstrate that our approach generates realistic deformation of body parts given complex inputs.
+
+Model: Control Color: Multimodal Diffusion-based Interactive Image Colorization
+Paper: http://arxiv.org/pdf/2402.10855v1.pdf
+Summary: Despite the existence of numerous colorization methods, several limitations still exist, such as lack of user interaction, inflexibility in local colorization, unnatural color rendering, insufficient color variation, and color overflow. To solve these issues, we introduce Control Color (CtrlColor), a multi-modal colorization method that leverages the pre-trained Stable Diffusion (SD) model, offering promising capabilities in highly controllable interactive image colorization. While several diffusion-based methods have been proposed, supporting colorization in multiple modalities remains non-trivial. In this study, we aim to tackle both unconditional and conditional image colorization (text prompts, strokes, exemplars) and address color overflow and incorrect color within a unified framework. Specifically, we present an effective way to encode user strokes to enable precise local color manipulation and employ a practical way to constrain the color distribution similar to exemplars. Apart from accepting text prompts as conditions, these designs add versatility to our approach. We also introduce a novel module based on self-attention and a content-guided deformable autoencoder to address the long-standing issues of color overflow and inaccurate coloring. Extensive comparisons show that our model outperforms state-of-the-art image colorization methods both qualitatively and quantitatively.
+
+
+Answer:

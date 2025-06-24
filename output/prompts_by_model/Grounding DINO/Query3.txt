@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Tried it across different photos, and I could just say what I wanted to find—it didn’t need categories or labels. How does it recognize anything I describe, even without training on it?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Recognize Anything Model
+Paper: https://arxiv.org/pdf/2306.03514
+GitHub: https://github.com/OPPOMKLab/recognize-anything?tab=readme-ov-file
+
+### Related Papers:
+Model: Vocabulary-free Image Classification and Semantic Segmentation
+Paper: http://arxiv.org/pdf/2404.10864v1.pdf
+GitHub: https://github.com/altndrr/vicss
+Summary: Large vision-language models revolutionized image classification and semantic segmentation paradigms. However, they typically assume a pre-defined set of categories, or vocabulary, at test time for composing textual prompts. This assumption is impractical in scenarios with unknown or evolving semantic context. Here, we address this issue and introduce the Vocabulary-free Image Classification (VIC) task, which aims to assign a class from an unconstrained language-induced semantic space to an input image without needing a known vocabulary. VIC is challenging due to the vastness of the semantic space, which contains millions of concepts, including fine-grained categories. To address VIC, we propose Category Search from External Databases (CaSED), a training-free method that leverages a pre-trained vision-language model and an external database. CaSED first extracts the set of candidate categories from the most semantically similar captions in the database and then assigns the image to the best-matching candidate category according to the same vision-language model. Furthermore, we demonstrate that CaSED can be applied locally to generate a coarse segmentation mask that classifies image regions, introducing the task of Vocabulary-free Semantic Segmentation. CaSED and its variants outperform other more complex vision-language models, on classification and semantic segmentation benchmarks, while using much fewer parameters.
+
+Model: PhotoBot: Reference-Guided Interactive Photography via Natural Language
+Paper: http://arxiv.org/pdf/2401.11061v4.pdf
+Summary: We introduce PhotoBot, a framework for fully automated photo acquisition based on an interplay between high-level human language guidance and a robot photographer. We propose to communicate photography suggestions to the user via reference images that are selected from a curated gallery. We leverage a visual language model (VLM) and an object detector to characterize the reference images via textual descriptions and then use a large language model (LLM) to retrieve relevant reference images based on a user's language query through text-based reasoning. To correspond the reference image and the observed scene, we exploit pre-trained features from a vision transformer capable of capturing semantic similarity across marked appearance variations. Using these features, we compute suggested pose adjustments for an RGB-D camera by solving a perspective-n-point (PnP) problem. We demonstrate our approach using a manipulator equipped with a wrist camera. Our user studies show that photos taken by PhotoBot are often more aesthetically pleasing than those taken by users themselves, as measured by human feedback. We also show that PhotoBot can generalize to other reference sources such as paintings.
+
+Model: Learning Interpretable Queries for Explainable Image Classification with Information Pursuit
+Paper: http://arxiv.org/pdf/2312.11548v1.pdf
+Summary: Information Pursuit (IP) is an explainable prediction algorithm that greedily selects a sequence of interpretable queries about the data in order of information gain, updating its posterior at each step based on observed query-answer pairs. The standard paradigm uses hand-crafted dictionaries of potential data queries curated by a domain expert or a large language model after a human prompt. However, in practice, hand-crafted dictionaries are limited by the expertise of the curator and the heuristics of prompt engineering. This paper introduces a novel approach: learning a dictionary of interpretable queries directly from the dataset. Our query dictionary learning problem is formulated as an optimization problem by augmenting IP's variational formulation with learnable dictionary parameters. To formulate learnable and interpretable queries, we leverage the latent space of large vision and language models like CLIP. To solve the optimization problem, we propose a new query dictionary learning algorithm inspired by classical sparse dictionary learning. Our experiments demonstrate that learned dictionaries significantly outperform hand-crafted dictionaries generated with large language models.
+
+
+Answer:

@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Tried editing a vlog clip outdoors, and even with wind-blown hair and shadows, the subject stayed perfectly separated. What makes it handle those tricky details so well?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos
+Paper: https://arxiv.org/pdf/2409.02095
+GitHub: https://github.com/Tencent/DepthCrafter
+
+### Related Papers:
+Model: CoCap: Coordinated motion Capture for multi-actor scenes in outdoor environments
+Paper: http://arxiv.org/pdf/2412.20695v1.pdf
+Summary: Motion capture has become increasingly important, not only in computer animation but also in emerging fields like the virtual reality, bioinformatics, and humanoid training. Capturing outdoor environments offers extended horizon scenes but introduces challenges with occlusions and obstacles. Recent approaches using multi-drone systems to capture multiple actor scenes often fail to account for multi-view consistency and reasoning across cameras in cluttered environments. Coordinated motion Capture (CoCap), inspired by Conflict-Based Search (CBS), addresses this issue by coordinating view planning to ensure multi-view reasoning during conflicts. In scenarios with high occlusions and obstacles, where the likelihood of inter-robot collisions increases, CoCap demonstrates performance that approaches the ideal outcomes of unconstrained planning, outperforming existing sequential planning methods. Additionally, CoCap offers a single-robot view search approach for real-time applications in dense environments.
+
+Model: MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild
+Paper: http://arxiv.org/pdf/2406.01595v1.pdf
+Summary: We present MultiPly, a novel framework to reconstruct multiple people in 3D from monocular in-the-wild videos. Reconstructing multiple individuals moving and interacting naturally from monocular in-the-wild videos poses a challenging task. Addressing it necessitates precise pixel-level disentanglement of individuals without any prior knowledge about the subjects. Moreover, it requires recovering intricate and complete 3D human shapes from short video sequences, intensifying the level of difficulty. To tackle these challenges, we first define a layered neural representation for the entire scene, composited by individual human and background models. We learn the layered neural representation from videos via our layer-wise differentiable volume rendering. This learning process is further enhanced by our hybrid instance segmentation approach which combines the self-supervised 3D segmentation and the promptable 2D segmentation module, yielding reliable instance segmentation supervision even under close human interaction. A confidence-guided optimization formulation is introduced to optimize the human poses and shape/appearance alternately. We incorporate effective objectives to refine human poses via photometric information and impose physically plausible constraints on human dynamics, leading to temporally consistent 3D reconstructions with high fidelity. The evaluation of our method shows the superiority over prior art on publicly available datasets and in-the-wild videos.
+
+Model: CamCo: Camera-Controllable 3D-Consistent Image-to-Video Generation
+Paper: http://arxiv.org/pdf/2406.02509v1.pdf
+Summary: Recently video diffusion models have emerged as expressive generative tools for high-quality video content creation readily available to general users. However, these models often do not offer precise control over camera poses for video generation, limiting the expression of cinematic language and user control. To address this issue, we introduce CamCo, which allows fine-grained Camera pose Control for image-to-video generation. We equip a pre-trained image-to-video generator with accurately parameterized camera pose input using Pl\"ucker coordinates. To enhance 3D consistency in the videos produced, we integrate an epipolar attention module in each attention block that enforces epipolar constraints to the feature maps. Additionally, we fine-tune CamCo on real-world videos with camera poses estimated through structure-from-motion algorithms to better synthesize object motion. Our experiments show that CamCo significantly improves 3D consistency and camera control capabilities compared to previous models while effectively generating plausible object motion. Project page: https://ir1d.github.io/CamCo/
+
+
+Answer:

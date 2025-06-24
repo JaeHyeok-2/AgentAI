@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I tried it while recording outdoors, and it still tracked smoothly despite motion and lighting changes. How does it stay so stable without needing the cloud?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: MITracker: Multi-View Integration for Visual Object Tracking
+Paper: https://arxiv.org/pdf/2502.20111
+GitHub: https://github.com/XuM007/MITracker
+
+### Related Papers:
+Model: SeqTrack3D: Exploring Sequence Information for Robust 3D Point Cloud Tracking
+Paper: http://arxiv.org/pdf/2402.16249v1.pdf
+GitHub: https://github.com/aron-lin/seqtrack3d
+Summary: 3D single object tracking (SOT) is an important and challenging task for the autonomous driving and mobile robotics. Most existing methods perform tracking between two consecutive frames while ignoring the motion patterns of the target over a series of frames, which would cause performance degradation in the scenes with sparse points. To break through this limitation, we introduce Sequence-to-Sequence tracking paradigm and a tracker named SeqTrack3D to capture target motion across continuous frames. Unlike previous methods that primarily adopted three strategies: matching two consecutive point clouds, predicting relative motion, or utilizing sequential point clouds to address feature degradation, our SeqTrack3D combines both historical point clouds and bounding box sequences. This novel method ensures robust tracking by leveraging location priors from historical boxes, even in scenes with sparse points. Extensive experiments conducted on large-scale datasets show that SeqTrack3D achieves new state-of-the-art performances, improving by 6.00% on NuScenes and 14.13% on Waymo dataset. The code will be made public at https://github.com/aron-lin/seqtrack3d.
+
+Model: CloudTracks: A Dataset for Localizing Ship Tracks in Satellite Images of Clouds
+Paper: http://arxiv.org/pdf/2401.14486v1.pdf
+Summary: Clouds play a significant role in global temperature regulation through their effect on planetary albedo. Anthropogenic emissions of aerosols can alter the albedo of clouds, but the extent of this effect, and its consequent impact on temperature change, remains uncertain. Human-induced clouds caused by ship aerosol emissions, commonly referred to as ship tracks, provide visible manifestations of this effect distinct from adjacent cloud regions and therefore serve as a useful sandbox to study human-induced clouds. However, the lack of large-scale ship track data makes it difficult to deduce their general effects on cloud formation. Towards developing automated approaches to localize ship tracks at scale, we present CloudTracks, a dataset containing 3,560 satellite images labeled with more than 12,000 ship track instance annotations. We train semantic segmentation and instance segmentation model baselines on our dataset and find that our best model substantially outperforms previous state-of-the-art for ship track localization (61.29 vs. 48.65 IoU). We also find that the best instance segmentation model is able to identify the number of ship tracks in each image more accurately than the previous state-of-the-art (1.64 vs. 4.99 MAE). However, we identify cases where the best model struggles to accurately localize and count ship tracks, so we believe CloudTracks will stimulate novel machine learning approaches to better detect elongated and overlapping features in satellite images. We release our dataset openly at {zenodo.org/records/10042922}.
+
+Model: A comparison of extended object tracking with multi-modal sensors in indoor environment
+Paper: http://arxiv.org/pdf/2411.18476v1.pdf
+Summary: This paper presents a preliminary study of an efficient object tracking approach, comparing the performance of two different 3D point cloud sensory sources: LiDAR and stereo cameras, which have significant price differences. In this preliminary work, we focus on single object tracking. We first developed a fast heuristic object detector that utilizes prior information about the environment and target. The resulting target points are subsequently fed into an extended object tracking framework, where the target shape is parameterized using a star-convex hypersurface model. Experimental results show that our object tracking method using a stereo camera achieves performance similar to that of a LiDAR sensor, with a cost difference of more than tenfold.
+
+
+Answer:

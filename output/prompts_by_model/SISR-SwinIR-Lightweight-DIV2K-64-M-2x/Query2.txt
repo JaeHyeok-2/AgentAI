@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"My phone resized a blurry photo 2× and the result looked great even without internet. How does it manage that on-device without heavy processing?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Deblur-MSSNet-GoPro
+Paper: https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf
+GitHub: https://github.com/kky7/MSSNet
+
+### Related Papers:
+Model: Patch-wise Features for Blur Image Classification
+Paper: http://arxiv.org/pdf/2304.03156v1.pdf
+Summary: Images captured through smartphone cameras often suffer from degradation, blur being one of the major ones, posing a challenge in processing these images for downstream tasks. In this paper we propose low-compute lightweight patch-wise features for image quality assessment. Using our method we can discriminate between blur vs sharp image degradation. To this end, we train a decision-tree based XGBoost model on various intuitive image features like gray level variance, first and second order gradients, texture features like local binary patterns. Experiments conducted on an open dataset show that the proposed low compute method results in 90.1% mean accuracy on the validation set, which is comparable to the accuracy of a compute-intensive VGG16 network with 94% mean accuracy fine-tuned to this task. To demonstrate the generalizability of our proposed features and model we test the model on BHBID dataset and an internal dataset where we attain accuracy of 98% and 91%, respectively. The proposed method is 10x faster than the VGG16 based model on CPU and scales linearly to the input image size making it suitable to be implemented on low compute edge devices.
+
+Model: Removing Reflections from RAW Photos
+Paper: http://arxiv.org/pdf/2404.14414v2.pdf
+Summary: We describe a system to remove real-world reflections from images for consumer photography. Our system operates on linear (RAW) photos, and accepts an optional contextual photo looking in the opposite direction (e.g., the "selfie" camera on a mobile device). This optional photo disambiguates what should be considered the reflection. The system is trained solely on synthetic mixtures of real RAW photos, which we combine using a reflection simulation that is photometrically and geometrically accurate. Our system comprises a base model that accepts the captured photo and optional context photo as input, and runs at 256p, followed by an up-sampling model that transforms 256p images to full resolution. The system produces preview images at 1K in 4.5-6.5s on a MacBook or iPhone 14 Pro. We show SOTA results on RAW photos that were captured in the field to embody typical consumer photos, and show that training on RAW simulation data improves performance more than the architectural variations among prior works.
+
+Model: ViT-1.58b: Mobile Vision Transformers in the 1-bit Era
+Paper: http://arxiv.org/pdf/2406.18051v1.pdf
+GitHub: https://github.com/dlyuangod/vit-1.58b
+Summary: Vision Transformers (ViTs) have achieved remarkable performance in various image classification tasks by leveraging the attention mechanism to process image patches as tokens. However, the high computational and memory demands of ViTs pose significant challenges for deployment in resource-constrained environments. This paper introduces ViT-1.58b, a novel 1.58-bit quantized ViT model designed to drastically reduce memory and computational overhead while preserving competitive performance. ViT-1.58b employs ternary quantization, which refines the balance between efficiency and accuracy by constraining weights to {-1, 0, 1} and quantizing activations to 8-bit precision. Our approach ensures efficient scaling in terms of both memory and computation. Experiments on CIFAR-10 and ImageNet-1k demonstrate that ViT-1.58b maintains comparable accuracy to full-precision Vit, with significant reductions in memory usage and computational costs. This paper highlights the potential of extreme quantization techniques in developing sustainable AI solutions and contributes to the broader discourse on efficient model deployment in practical applications. Our code and weights are available at https://github.com/DLYuanGod/ViT-1.58b.
+
+
+Answer:

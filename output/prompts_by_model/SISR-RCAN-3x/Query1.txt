@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I enlarged a portrait by 3x, and the lighting and textures stayed very natural. How do AI models keep such realism in super-resolution?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-PirsusEpicRealism
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolution
+Paper: http://arxiv.org/pdf/2302.13800v1.pdf
+GitHub: https://github.com/sunny2109/safmn
+Summary: Although numerous solutions have been proposed for image super-resolution, they are usually incompatible with low-power devices with many computational and memory constraints. In this paper, we address this problem by proposing a simple yet effective deep network to solve image super-resolution efficiently. In detail, we develop a spatially-adaptive feature modulation (SAFM) mechanism upon a vision transformer (ViT)-like block. Within it, we first apply the SAFM block over input features to dynamically select representative feature representations. As the SAFM block processes the input features from a long-range perspective, we further introduce a convolutional channel mixer (CCM) to simultaneously extract local contextual information and perform channel mixing. Extensive experimental results show that the proposed method is $3\times$ smaller than state-of-the-art efficient SR methods, e.g., IMDN, in terms of the network parameters and requires less computational cost while achieving comparable performance. The code is available at https://github.com/sunny2109/SAFMN.
+
+Model: REAL: Realism Evaluation of Text-to-Image Generation Models for Effective Data Augmentation
+Paper: http://arxiv.org/pdf/2502.10663v1.pdf
+Summary: Recent advancements in text-to-image (T2I) generation models have transformed the field. However, challenges persist in generating images that reflect demanding textual descriptions, especially for fine-grained details and unusual relationships. Existing evaluation metrics focus on text-image alignment but overlook the realism of the generated image, which can be crucial for downstream applications like data augmentation in machine learning. To address this gap, we propose REAL, an automatic evaluation framework that assesses realism of T2I outputs along three dimensions: fine-grained visual attributes, unusual visual relationships, and visual styles. REAL achieves a Spearman's rho score of up to 0.62 in alignment with human judgement and demonstrates utility in ranking and filtering augmented data for tasks like image captioning, classification, and visual relationship detection. Empirical results show that high-scoring images evaluated by our metrics improve F1 scores of image classification by up to 11.3%, while low-scoring ones degrade that by up to 4.95%. We benchmark four major T2I models across the realism dimensions, providing insights for future improvements in T2I output realism.
+
+Model: GVTNet: Graph Vision Transformer For Face Super-Resolution
+Paper: http://arxiv.org/pdf/2502.12570v1.pdf
+Summary: Recent advances in face super-resolution research have utilized the Transformer architecture. This method processes the input image into a series of small patches. However, because of the strong correlation between different facial components in facial images. When it comes to super-resolution of low-resolution images, existing algorithms cannot handle the relationships between patches well, resulting in distorted facial components in the super-resolution results. To solve the problem, we propose a transformer architecture based on graph neural networks called graph vision transformer network. We treat each patch as a graph node and establish an adjacency matrix based on the information between patches. In this way, the patch only interacts between neighboring patches, further processing the relationship of facial components. Quantitative and visualization experiments have underscored the superiority of our algorithm over state-of-the-art techniques. Through detailed comparisons, we have demonstrated that our algorithm possesses more advanced super-resolution capabilities, particularly in enhancing facial components. The PyTorch code is available at https://github.com/continueyang/GVTNet
+
+
+Answer:

@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I clicked once on a photo and it instantly highlighted the object I meant—no manual outlining or labels. How does it know what to segment with such little input?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Segmentation-DeepLabV3-MobileNet-VOC
+Paper: None
+GitHub: https://github.com/VainF/DeepLabV3Plus-Pytorch
+
+### Related Papers:
+Model: Text and Click inputs for unambiguous open vocabulary instance segmentation
+Paper: http://arxiv.org/pdf/2311.14822v1.pdf
+GitHub: https://github.com/nikolaiwarner7/text-and-click-for-open-vocabulary-segmentation
+Summary: Segmentation localizes objects in an image on a fine-grained per-pixel scale. Segmentation benefits by humans-in-the-loop to provide additional input of objects to segment using a combination of foreground or background clicks. Tasks include photoediting or novel dataset annotation, where human annotators leverage an existing segmentation model instead of drawing raw pixel level annotations. We propose a new segmentation process, Text + Click segmentation, where a model takes as input an image, a text phrase describing a class to segment, and a single foreground click specifying the instance to segment. Compared to previous approaches, we leverage open-vocabulary image-text models to support a wide-range of text prompts. Conditioning segmentations on text prompts improves the accuracy of segmentations on novel or unseen classes. We demonstrate that the combination of a single user-specified foreground click and a text prompt allows a model to better disambiguate overlapping or co-occurring semantic categories, such as "tie", "suit", and "person". We study these results across common segmentation datasets such as refCOCO, COCO, VOC, and OpenImages. Source code available here.
+
+Model: Object-Focused Data Selection for Dense Prediction Tasks
+Paper: http://arxiv.org/pdf/2412.10032v1.pdf
+Summary: While unlabeled image data is often plentiful, the costs of high-quality labels pose an important practical challenge: Which images should one select for labeling to use the annotation budget for a particular target task most effectively? To address this problem, we focus on single-pass data selection, which refers to the process of selecting all data to be annotated at once before training a downstream model. Prior methods for single-pass data selection rely on image-level representations and fail to reliably outperform random selection for object detection and segmentation. We propose Object-Focused Data Selection (OFDS) which leverages object-level features from foundation models and ensures semantic coverage of all target classes. In extensive experiments across tasks and target domains, OFDS consistently outperforms random selection and all baselines. The best results for constrained annotation budgets are obtained by combining human labels from OFDS with autolabels from foundation models. Moreover, using OFDS to select the initial labeled set for active learning yields consistent improvements
+
+Model: Allowing humans to interactively guide machines where to look does not always improve human-AI team's classification accuracy
+Paper: http://arxiv.org/pdf/2404.05238v3.pdf
+GitHub: https://github.com/anguyen8/chm-corr-interactive
+Summary: Via thousands of papers in Explainable AI (XAI), attention maps \cite{vaswani2017attention} and feature importance maps \cite{bansal2020sam} have been established as a common means for finding how important each input feature is to an AI's decisions. It is an interesting, unexplored question whether allowing users to edit the feature importance at test time would improve a human-AI team's accuracy on downstream tasks. In this paper, we address this question by leveraging CHM-Corr, a state-of-the-art, ante-hoc explainable classifier \cite{taesiri2022visual} that first predicts patch-wise correspondences between the input and training-set images, and then bases on them to make classification decisions. We build CHM-Corr++, an interactive interface for CHM-Corr, enabling users to edit the feature importance map provided by CHM-Corr and observe updated model decisions. Via CHM-Corr++, users can gain insights into if, when, and how the model changes its outputs, improving their understanding beyond static explanations. However, our study with 18 expert users who performed 1,400 decisions finds no statistical significance that our interactive approach improves user accuracy on CUB-200 bird image classification over static explanations. This challenges the hypothesis that interactivity can boost human-AI team accuracy and raises needs for future research. We open-source CHM-Corr++, an interactive tool for editing image classifier attention (see an interactive demo here: http://137.184.82.109:7080/). We release code and data on github: https://github.com/anguyen8/chm-corr-interactive.
+
+
+Answer:

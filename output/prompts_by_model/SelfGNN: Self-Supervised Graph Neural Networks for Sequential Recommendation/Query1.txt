@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I never told the shopping app what I like, but it shows me exactly what I’d pick. How does it get it so right?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: SelfGNN: Self-Supervised Graph Neural Networks for Sequential Recommendation
+Paper: https://arxiv.org/pdf/2405.20878
+GitHub: https://github.com/HKUDS/SelfGNN
+
+### Related Papers:
+Model: Adaptive User Journeys in Pharma E-Commerce with Reinforcement Learning: Insights from SwipeRx
+Paper: http://arxiv.org/pdf/2408.08024v1.pdf
+Summary: This paper introduces a reinforcement learning (RL) platform that enhances end-to-end user journeys in healthcare digital tools through personalization. We explore a case study with SwipeRx, the most popular all-in-one app for pharmacists in Southeast Asia, demonstrating how the platform can be used to personalize and adapt user experiences. Our RL framework is tested through a series of experiments with product recommendations tailored to each pharmacy based on real-time information on their purchasing history and in-app engagement, showing a significant increase in basket size. By integrating adaptive interventions into existing mobile health solutions and enriching user journeys, our platform offers a scalable solution to improve pharmaceutical supply chain management, health worker capacity building, and clinical decision and patient care, ultimately contributing to better healthcare outcomes.
+
+Model: PUMGPT: A Large Vision-Language Model for Product Understanding
+Paper: http://arxiv.org/pdf/2308.09568v2.pdf
+Summary: E-commerce platforms benefit from accurate product understanding to enhance user experience and operational efficiency. Traditional methods often focus on isolated tasks such as attribute extraction or categorization, posing adaptability issues to evolving tasks and leading to usability challenges with noisy data from the internet. Current Large Vision Language Models (LVLMs) lack domain-specific fine-tuning, thus falling short in precision and instruction following. To address these issues, we introduce PumGPT, the first e-commerce specialized LVLM designed for multi-modal product understanding tasks. We collected and curated a dataset of over one million products from AliExpress, filtering out non-inferable attributes using a universal hallucination detection framework, resulting in 663k high-quality data samples. PumGPT focuses on five essential tasks aimed at enhancing workflows for e-commerce platforms and retailers. We also introduce PumBench, a benchmark to evaluate product understanding across LVLMs. Our experiments show that PumGPT outperforms five other open-source LVLMs and GPT-4V in product understanding tasks. We also conduct extensive analytical experiments to delve deeply into the superiority of PumGPT, demonstrating the necessity for a specialized model in the e-commerce domain.
+
+Model: Why is the User Interface a Dark Pattern? : Explainable Auto-Detection and its Analysis
+Paper: http://arxiv.org/pdf/2401.04119v1.pdf
+GitHub: https://github.com/yamanalab/why-darkpattern
+Summary: Dark patterns are deceptive user interface designs for online services that make users behave in unintended ways. Dark patterns, such as privacy invasion, financial loss, and emotional distress, can harm users. These issues have been the subject of considerable debate in recent years. In this paper, we study interpretable dark pattern auto-detection, that is, why a particular user interface is detected as having dark patterns. First, we trained a model using transformer-based pre-trained language models, BERT, on a text-based dataset for the automatic detection of dark patterns in e-commerce. Then, we applied post-hoc explanation techniques, including local interpretable model agnostic explanation (LIME) and Shapley additive explanations (SHAP), to the trained model, which revealed which terms influence each prediction as a dark pattern. In addition, we extracted and analyzed terms that affected the dark patterns. Our findings may prevent users from being manipulated by dark patterns, and aid in the construction of more equitable internet services. Our code is available at https://github.com/yamanalab/why-darkpattern.
+
+
+Answer:
