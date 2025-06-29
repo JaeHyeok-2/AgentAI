@@ -1,0 +1,31 @@
+1. What task is the user trying to perform?
+
+[cite_start]The user is trying to perform **image super-resolution and deblurring simultaneously**, specifically taking a blurry portrait and enlarging it to poster size while preserving "clarity" and making it look "surprisingly smooth and detailed." [cite: 53]
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow for combined deblurring and super-resolution would involve models capable of handling both degradation types, potentially by learning flexible resolutions or adaptively processing information across scales to preserve fine details.
+
+* [cite_start]Input: A blurry portrait image. [cite: 53]
+
+* Model (Core Deblurring/Super-Resolution Models):
+    * **Deblur-MIMO-UNet-RealBlur (MIMO-UNet):** This model is a deblurring model. [cite_start]It's designed to remove blur from images, which is a critical step in preserving clarity when upscaling a blurry portrait. [cite: 58]
+    * [cite_start]**FeatSharp: Your Vision Model Features, Sharper:** This method introduces a novel approach to "coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution." [cite: 62] [cite_start]This is essential for maintaining detail when upscaling beyond normal resolution, especially from a blurry input. [cite: 59, 60, 61]
+    * [cite_start]**On the Effect of Image Resolution on Semantic Segmentation:** This study demonstrates that a streamlined model can "directly produc[e] high-resolution segmentations" and "match the performance of more complex systems that generate lower-resolution results" by simplifying its network architecture. [cite: 67, 68] [cite_start]It also leverages a "bottom-up information propagation technique across various scales" to enhance accuracy. [cite: 69] This approach to handling native resolution and enhancing detail is directly applicable to preserving clarity during upscaling. [cite_start]Traditional methods often downscale inputs, losing finer details. [cite: 65, 66]
+    * [cite_start]**Elastic-DETR: Making Image Resolution Learnable with Content-Specific Network Prediction:** This work introduces "Elastic-DETR," a strategy for "learnable resolution," enabling "elastic utilization of multiple image resolutions." [cite: 75] [cite_start]This allows the network to provide an "adaptive scale factor based on the content of the image" without prior knowledge. [cite: 76, 77] [cite_start]By leveraging this flexibility, the model can dynamically adjust its internal resolution processing to achieve optimal trade-offs between accuracy and computational complexity, which is crucial for preserving clarity when upscaling to poster size while ensuring smoothness and detail. [cite: 79]
+
+* [cite_start]Output: A blurry portrait enlarged to poster size that looks surprisingly smooth and detailed, with clarity preserved even when upscaling far beyond normal resolution. [cite: 53]
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* Model: Deblur-MIMO-UNet-RealBlur
+    * [cite_start]Paper: https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf [cite: 58]
+    * [cite_start]GitHub: https://github.com/chosj95/MIMO-UNet [cite: 58]
+
+* Related Papers:
+    * Model: FeatSharp: Your Vision Model Features, Sharper
+        * [cite_start]Paper: http://arxiv.org/pdf/2502.16025v1.pdf [cite: 58]
+    * Model: On the Effect of Image Resolution on Semantic Segmentation
+        * [cite_start]Paper: http://arxiv.org/pdf/2402.05398v1.pdf [cite: 64]
+    * Model: Elastic-DETR: Making Image Resolution Learnable with Content-Specific Network Prediction
+        * [cite_start]Paper: http://arxiv.org/pdf/2412.06341v1.pdf [cite: 72]

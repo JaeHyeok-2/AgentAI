@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"Even with makeup or shadows, the model separated facial parts really well. How does it keep track of small changes on the face?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+This task is **dynamic facial parsing**, focusing on maintaining accurate segmentation of small facial features like lips, eyelids, and contours despite variations like cosmetics, expressions, or lighting.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A facial image or sequence affected by cosmetic changes or shadows.  
+- **Model**:  
+  - **Segmentation-HuggingFace-jonathandinu-face-parsing** provides pixel-level parsing of face regions using facial priors embedded in the model.  
+  - It distinguishes semantic zones (e.g., cheeks, eyebrows) by learning spatial consistency and contrast-aware masks.  
+- **Output**: A segmentation mask that respects semantic boundaries and adapts to cosmetic variations.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [FaceCom (3D Completion + Inpainting)](http://arxiv.org/pdf/2406.02074v1.pdf)  
+  💻 [GitHub](https://github.com/dragonylee/facecom)
+
+- 📄 [HeadRecon (3D Head from Monocular Video)](http://arxiv.org/pdf/2312.08863v1.pdf)  
+  Robust to facial variation during geometry modeling.
+
+- 📄 [Pose-Modulated Avatars](http://arxiv.org/pdf/2308.11951v3.pdf)  
+  Adjusts avatar details using pose-conditioned features for more stable fine detail modeling.
+
+---
+
+### ✅ Summary:
+
+Even in variable lighting or cosmetic conditions, pretrained face-parsing models adapt by embedding **facial priors and contrast cues**, producing high-resolution semantic maps resilient to small appearance changes.
+

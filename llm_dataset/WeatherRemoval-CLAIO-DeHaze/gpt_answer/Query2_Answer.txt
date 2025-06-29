@@ -1,0 +1,40 @@
+🧠 **User Question:**  
+"In an old photo taken on a misty morning, the AI removed the grey fog and made the colors pop. What kind of features does it focus on to tell haze apart from the scene?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The task is **contrast-aware image dehazing**, aiming to separate the haze layer from true scene content to recover lost detail and color vibrance.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A foggy or misty image from low-visibility outdoor conditions.  
+- **Model**:  
+  - **CLAIO-DeHaze** applies learned representations to detect **airlight distortions** and **contrast suppression**, distinguishing haze from object-level textures.  
+  - Models like DRACO-DehazeNet refine this by learning **dense feature differences** between clear and hazy regions using a quadruplet contrastive approach.  
+- **Output**: A restored image with vivid color, sharper edge structure, and haze-free visibility.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [CLAIO-DeHaze](https://github.com/xiaojihh/cl_all-in-one)
+
+- 📄 [DRACO-DehazeNet (Contrastive Learning)](http://arxiv.org/pdf/2410.14595v1.pdf)
+
+- 📄 [Compressed Domain Vision](http://arxiv.org/pdf/2310.18849v2.pdf)  
+  Describes use of latent representations to aid faster haze classification.
+
+- 📄 [3D Facade Detail Reconstruction](http://arxiv.org/pdf/2402.06521v1.pdf)  
+  Shows how fine-grain detail can be recovered even under noise and occlusion.
+
+---
+
+### ✅ Summary:
+
+AI dehazing models detect **statistical haze artifacts** (e.g. luminance flattening, gray veil) and reconstruct natural color and edges by learning contrast relationships between clean and degraded samples.
+

@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I cleaned up a snowy night photo and the drifting flakes disappeared while the shop signs became sharp. How does AI distinguish snow from the actual scene so it can cleanly remove it?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **image desnowing**, which involves removing snow particles of varying size and transparency from nighttime photos while preserving background clarity, like text and lights.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A nighttime photo degraded by drifting snowflakes of varying opacity.  
+- **Model**:  
+  - **CLAIO-DeSnow** applies multi-scale attention and edge-guided filters to isolate snow streaks/flakes by contrast and motion cues.  
+  - The model preserves light-based textures (like neon or signage) while filtering transient snowy overlays.
+- **Output**: A clean image with clear objects and no snow noise, especially around high-contrast regions like text.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [CLAIO GitHub](https://github.com/xiaojihh/cl_all-in-one)
+
+- 📄 [Real-time GeoAI for Arctic Segmentation](http://arxiv.org/pdf/2306.05341v1.pdf)  
+  Uses fast segmentation to enhance real-time edge clarity.
+
+- 📄 [Quality Assured Imaging QA](http://arxiv.org/pdf/2407.17596v2.pdf)  
+  Ensures consistent pixel-level precision via training data quality protocols.
+
+---
+
+### ✅ Summary:
+
+CLAIO-DeSnow recognizes **snowflake blur patterns** and adapts filters to remove them while preserving fine, high-frequency content like signs. This makes it highly effective on snowy night images.
+

@@ -1,0 +1,33 @@
+1. What task is the user trying to perform?
+
+[cite_start]The user is trying to perform **automated customer demographic analysis (gender recognition)** from CCTV footage for a retail analytics system. [cite: 28] [cite_start]They are asking how AI models achieve accurate gender recognition and what steps are taken during training to ensure fairness and avoid biases related to ethnicity, clothing, or camera angles. [cite: 28]
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow for accurate and fair gender recognition in retail analytics emphasizes robust performance across diverse demographic attributes and real-world conditions, while actively mitigating biases.
+
+* [cite_start]Input: CCTV footage of customers in a retail setting. [cite: 28]
+
+* Model (Core Gender Recognition Model):
+    * [cite_start]**Classification-HuggingFace-NTQAI-pedestrian_gender_recognition:** This model is directly designed for pedestrian gender recognition. [cite: 33] It would take frames from the CCTV footage as input and classify the gender of individuals.
+
+* Model (Related Concepts for Accuracy, Fairness, and Bias Avoidance):
+    * [cite_start]**Multimodal Approaches to Fair Image Classification: An Ethical Perspective:** This thesis explores using multimodal approaches (combining visual data with text and metadata) to combat harmful demographic bias and enhance the fairness and accuracy of image classification systems. [cite: 39, 40] [cite_start]It critically examines existing biases in image datasets and classification algorithms and proposes innovative methods for mitigating these biases[cite: 41]. [cite_start]This directly addresses how models aim for fairness and avoid biases, emphasizing the importance of carefully balanced and filtered training data to prevent exaggerating hidden biases[cite: 36]. [cite_start]It advocates for responsible AI practices that prioritize fairness. [cite: 42]
+    * [cite_start]**Evaluating Fairness in Large Vision-Language Models Across Diverse Demographic Attributes and Prompts:** This paper empirically investigates visual fairness in mainstream LVLMs by auditing their performance disparities across demographic attributes (gender, skin tone, age, race) using public fairness benchmark datasets (e.g., FACET, UTKFace). [cite: 45] [cite_start]Despite advancements, both open-source and closed-source LVLMs continue to exhibit fairness issues across different prompts and demographic groups. [cite: 47] [cite_start]To mitigate bias, it proposes a potential multi-modal Chain-of-thought (CoT) based strategy, applicable to both open-source and closed-source LVLMs, which enhances transparency and offers a scalable solution. [cite: 48, 49] This directly shows steps taken during training (or post-training) to evaluate and reduce biases.
+    * [cite_start]**The 8th AI City Challenge:** This challenge includes tracks relevant to retail and traffic systems, such as multi-target multi-camera (MTMC) people tracking (Track 1)[cite: 52]. [cite_start]While not specifically on gender recognition fairness, the challenge's focus on enhancing camera count, character number, 3D annotation, and handling diverse camera matrices [cite: 52] indicates the type of complex real-world data environments (like CCTV footage with varying camera angles) that gender recognition models need to handle robustly. [cite_start]The benchmarks set in these challenges push models to perform accurately in varied conditions, indirectly supporting bias reduction by requiring broader generalization. [cite: 56]
+
+* [cite_start]Output: AI models achieve accurate gender recognition by using classification models like `pedestrian_gender_recognition`[cite: 33]. [cite_start]To ensure fairness and avoid biases related to ethnicity, clothing, or camera angles, steps are taken during training to: (1) integrate multimodal approaches to combat demographic bias [cite: 39, 40][cite_start], (2) critically examine and mitigate biases in datasets and algorithms [cite: 41][cite_start], (3) empirically evaluate and audit performance disparities across diverse demographic attributes (gender, skin tone, age, race) [cite: 45, 47][cite_start], and (4) potentially apply bias mitigation strategies like multimodal Chain-of-thought[cite: 48, 49]. [cite_start]Models also benefit from training environments that handle complex real-world scenarios, including varied camera angles. [cite: 52]
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* [cite_start]Model: Classification-HuggingFace-NTQAI-pedestrian_gender_recognition [cite: 33]
+    * [cite_start]Paper: None [cite: 33]
+
+* Related Papers:
+    * [cite_start]Model: Multimodal Approaches to Fair Image Classification: An Ethical Perspective [cite: 33]
+        * [cite_start]Paper: http://arxiv.org/pdf/2412.12165v1.pdf [cite: 33]
+    * [cite_start]Model: Evaluating Fairness in Large Vision-Language Models Across Diverse Demographic Attributes and Prompts [cite: 43]
+        * [cite_start]Paper: http://arxiv.org/pdf/2406.17974v2.pdf [cite: 43]
+        * [cite_start]GitHub: https://github.com/elviswxy/LVLM_fairness [cite: 43]
+    * [cite_start]Model: The 8th AI City Challenge [cite: 50]
+        * [cite_start]Paper: http://arxiv.org/pdf/2404.09432v1.pdf [cite: 50]

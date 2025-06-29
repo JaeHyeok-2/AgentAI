@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"Some of my winter photos were filled with snow blobs and light flurries. After enhancement, they looked like snow was never there. How do models like this handle snow of different shapes and opacity?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+This is **multi-shape snow removal**, where the AI detects and removes both translucent and opaque snow particles from static scenes without distorting background content.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A photo with varying degrees of snow blob size, density, and transparency.  
+- **Model**:  
+  - **CLAIO-DeSnow** identifies snow by combining **spatial patterns**, brightness shifts, and motion-like blur features.  
+  - Models like CoIC (originally for rain) generalize snow as part of transient "detail-aware" artifacts and train to preserve edge-anchored features.
+- **Output**: A clear image where scene details remain and the spatially inconsistent snow artifacts are removed.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [CLAIO GitHub](https://github.com/xiaojihh/cl_all-in-one)
+
+- 📄 [CoIC - Contrastive Restoration](http://arxiv.org/pdf/2404.12091v1.pdf)  
+  💻 [GitHub](https://github.com/schizophreni/coic)
+
+- 📄 [RAW Reflection Removal](http://arxiv.org/pdf/2404.14414v2.pdf)  
+  Uses simulation-based multi-layer image separation to identify transient overlays like snow or reflections.
+
+---
+
+### ✅ Summary:
+
+Modern desnowing models use **multi-scale attention, contrast, and geometric priors** to identify snowy elements regardless of size/opacity, resulting in clean restoration without hallucinating background.
+

@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"My photo turned into colorful geometric tiles while all the main shapes stayed untouched. How does AI manage to stylize each section while keeping the scene recognizable?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: NST-fast-neural-style-mosaic
+Paper: None
+GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+
+### Related Papers:
+Model: Semantic Image Synthesis via Class-Adaptive Cross-Attention
+Paper: http://arxiv.org/pdf/2308.16071v3.pdf
+Summary: In semantic image synthesis the state of the art is dominated by methods that use customized variants of the SPatially-Adaptive DE-normalization (SPADE) layers, which allow for good visual generation quality and editing versatility. By design, such layers learn pixel-wise modulation parameters to de-normalize the generator activations based on the semantic class each pixel belongs to. Thus, they tend to overlook global image statistics, ultimately leading to unconvincing local style editing and causing global inconsistencies such as color or illumination distribution shifts. Also, SPADE layers require the semantic segmentation mask for mapping styles in the generator, preventing shape manipulations without manual intervention. In response, we designed a novel architecture where cross-attention layers are used in place of SPADE for learning shape-style correlations and so conditioning the image generation process. Our model inherits the versatility of SPADE, at the same time obtaining state-of-the-art generation quality, as well as improved global and local style transfer. Code and models available at https://github.com/TFonta/CA2SIS.
+
+Model: Polygonizer: An auto-regressive building delineator
+Paper: http://arxiv.org/pdf/2304.04048v1.pdf
+Summary: In geospatial planning, it is often essential to represent objects in a vectorized format, as this format easily translates to downstream tasks such as web development, graphics, or design. While these problems are frequently addressed using semantic segmentation, which requires additional post-processing to vectorize objects in a non-trivial way, we present an Image-to-Sequence model that allows for direct shape inference and is ready for vector-based workflows out of the box. We demonstrate the model's performance in various ways, including perturbations to the image input that correspond to variations or artifacts commonly encountered in remote sensing applications. Our model outperforms prior works when using ground truth bounding boxes (one object per image), achieving the lowest maximum tangent angle error.
+
+Model: RecolorCloud: A Point Cloud Tool for Recoloring, Segmentation, and Conversion
+Paper: http://arxiv.org/pdf/2310.12470v1.pdf
+Summary: Point clouds are a 3D space representation of an environment that was recorded with a high precision laser scanner. These scanners can suffer from environmental interference such as surface shading, texturing, and reflections. Because of this, point clouds may be contaminated with fake or incorrect colors. Current open source or proprietary tools offer limited or no access to correcting these visual errors automatically.   RecolorCloud is a tool developed to resolve these color conflicts by utilizing automated color recoloring. We offer the ability to deleting or recoloring outlier points automatically with users only needing to specify bounding box regions to effect colors. Results show a vast improvement of the photo-realistic quality of large point clouds. Additionally, users can quickly recolor a point cloud with set semantic segmentation colors.
+
+
+Answer:

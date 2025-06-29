@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"My phone groups my gallery photos into “food”, “pets”, and “places”—without me tagging them. How does AI figure that out so quickly from just the image?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is trying to understand how a model achieves a particular behavior in a real-world scenario, such as tracking, generation, or classification. Based on the question, the task likely falls under one of the following categories: object tracking, image-to-video generation, pose-to-motion conversion, or content moderation.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**:
+- The **input** is typically a static image, text description, sketch, or video sequence.
+- The **model** processes the input using its architecture (e.g., diffusion, transformer, CNN), guided by the pretrained features or control signals like pose, semantics, or spatial constraints.
+- The **output** is a video, prediction label, mask, or stylized version of the input that reflects learned distributions from the training set.
+
+---
+
+### 3. Models and Tools Referenced
+
+- **Model:** Recognize Anything Model
+  - Paper: https://arxiv.org/pdf/2306.03514
+  - GitHub: https://github.com/OPPOMKLab/recognize-anything?tab=readme-ov-file
+- **Model:** PhotoBot: Reference-Guided Interactive Photography via Natural Language
+  - Paper: http://arxiv.org/pdf/2401.11061v4.pdf
+  - GitHub: N/A
+- **Model:** Quality Assured: Rethinking Annotation Strategies in Imaging AI
+  - Paper: http://arxiv.org/pdf/2407.17596v2.pdf
+  - GitHub: N/A
+- **Model:** Perception Matters: Enhancing Embodied AI with Uncertainty-Aware Semantic Segmentation
+  - Paper: http://arxiv.org/pdf/2408.02297v2.pdf
+  - GitHub: N/A
+
+These models are tailored to their specific tasks. For example, video generation models use temporal consistency modules, while tracking models use attention or re-ID embeddings to focus on consistent targets.
+
+---
+
+Each model contributes specific capabilities to solve the user's task efficiently within the CNAPS framework.

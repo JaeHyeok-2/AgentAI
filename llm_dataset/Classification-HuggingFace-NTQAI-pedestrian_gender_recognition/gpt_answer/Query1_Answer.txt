@@ -1,0 +1,28 @@
+🧠 User Question:
+"While scrolling through old street photos, my phone labeled people as ‘male’ or ‘female’—even from behind or at a distance. How does AI recognize gender from photos like that? What kind of training data do these models use, and how do they handle edge cases or ambiguity?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is applying **pedestrian gender classification** in still images—where people are not always facing the camera.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A street image with distant or partially visible pedestrians.  
+- **Model**:  
+  - The model used is **Classification-HuggingFace-NTQAI-pedestrian_gender_recognition**, trained on large-scale surveillance-style datasets.  
+  - It infers gender labels using fine-tuned CNNs trained on datasets like Market1501 or CUHK-SYSU, optimized to deal with occlusion, clothing ambiguity, and viewing angles.  
+- **Output**: A binary (male/female) prediction with confidence scores.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [Human and AI Perceptual Differences](http://arxiv.org/pdf/2304.08733v2.pdf)【446†source】  
+- 📄 [GRADIEND – Gender Debiasing in Transformers](http://arxiv.org/pdf/2502.01406v1.pdf)  
+  💻 [GitHub](https://github.com/aieng-lab/gradiend)【446†source】  
+- 📄 [Web-GAN based boundary improvement](http://arxiv.org/pdf/2310.19986v1.pdf)【446†source】
+

@@ -1,0 +1,25 @@
+🧠 User Question:
+"I'm currently researching automated demographic analysis from surveillance video. How exactly do modern AI models classify pedestrian gender from video or image data? What kind of training data and neural network approaches are commonly used for accurate and unbiased classification?"
+
+---
+
+### 1. What task is the user trying to perform?
+The task is **gender classification in surveillance footage**, typically using CNN-based vision models trained to work under challenging visibility and bias constraints.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Pedestrian crops from video or CCTV imagery.  
+- **Model**:  
+  - The **Classification-HuggingFace-NTQAI-pedestrian_gender_recognition** model is trained using transfer learning from ImageNet-like CNN backbones (ResNet50, MobileNet), with augmentations for occlusion and angle variance.  
+  - To enhance fairness, techniques like **web search + generative augmentation (e.g., DALL·E 2)** improve coverage of underrepresented groups.  
+- **Output**: Gender prediction (typically binary or ternary) with confidence.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [Addressing Weak Boundaries in Image Classification](http://arxiv.org/pdf/2310.19986v1.pdf)【447†source】
+

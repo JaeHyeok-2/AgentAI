@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"Even on a budget phone, the app upscaled a picture 3× in real time with sharp edges. What design choices make AI models so efficient for mobile super-resolution?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: Deblur-MSSNet-GoPro
+  - Paper: https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf
+  - GitHub: https://github.com/kky7/MSSNet
+- **Model**: SeaFormer++: Squeeze-enhanced Axial Transformer for Mobile Visual Recognition
+  - Paper: http://arxiv.org/pdf/2301.13156v6.pdf
+  - GitHub: https://github.com/fudan-zvg/seaformer
+- **Model**: PP-MobileSeg: Explore the Fast and Accurate Semantic Segmentation Model on Mobile Devices
+  - Paper: http://arxiv.org/pdf/2304.05152v1.pdf
+  - GitHub: https://github.com/PaddlePaddle/PaddleSeg
+- **Model**: Atten-Transformer: A Deep Learning Framework for User App Usage Prediction
+  - Paper: http://arxiv.org/pdf/2502.16957v1.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I wrote “make it look like candy art,” and in an instant the photo exploded with pop-art colors while the shapes and shadows stayed intact. How does AI decide where to lay on those bright hues without warping the scene? And since it can run in real-time on video, what kind of design lets it process frames that fast?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is applying **neural style transfer (NST)**, a task where the visual style of one image (e.g., pop-art, candy-like colors) is transferred to another while preserving spatial structure. This variant emphasizes **real-time performance and spatial coherence**.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A standard photo or live video frame and a fixed style preset (e.g., "candy").  
+- **Model**:  
+  - **NST-fast-neural-style-candy** uses a feed-forward convolutional network trained to mimic the style of a target image while minimizing perceptual loss (based on features from VGG networks).  
+  - By avoiding iterative optimization (as in classical NST), it performs single-pass inference with GPU acceleration, making it viable for real-time stylization.  
+- **Output**: A stylized image (or video frame) that reflects the target aesthetic while keeping edge geometry and structure intact.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [GitHub – Fast Neural Style (Candy)](https://github.com/rrmina/fast-neural-style-pytorch)
+
+- 📄 [AI and Aesthetic Judgment](http://arxiv.org/pdf/2309.12338v1.pdf)  
+  Explores how generative AI evokes emotional and stylistic responses by shaping human aesthetic expectations 【396†source】.
+
+- 📄 [AI Image Inpainting and Stylization - SAGI Dataset](http://arxiv.org/pdf/2502.06593v1.pdf)  
+  Introduces semantic alignment pipelines that also enhance stylization quality perception 【396†source】.
+
+---
+
+### ✅ Summary:
+
+Fast NST models like the **“candy” variant** balance color stylization and content retention using **perceptual loss** and **efficient feed-forward networks**. Their real-time capability stems from GPU-friendly architecture and pretraining that allows single-pass stylization without iterative steps.
+

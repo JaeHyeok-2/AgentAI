@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"My plain photo instantly turned into a burst of pop-art colors. How does the AI keep the edges crisp while applying such vibrant styles so fast?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+This is **real-time neural style transfer**, aiming to re-color and re-texture a photo using a specific aesthetic style without losing key object boundaries or geometry.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A regular image and a pre-defined “mosaic” artistic style.  
+- **Model**:  
+  - **NST-fast-neural-style-mosaic** is a feed-forward network trained with perceptual losses derived from VGG feature layers to match style and preserve structure.  
+  - The model learns where to inject texture or color variation (e.g., brush strokes, gradients) based on the original photo’s spatial hierarchy.  
+- **Output**: A stylized image with consistent structure, sharp edges, and colorful aesthetic patterns applied layer-wise.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [GitHub – Fast Neural Style (Mosaic)](https://github.com/rrmina/fast-neural-style-pytorch)
+
+- 📄 [AI Aesthetic Judgment](http://arxiv.org/pdf/2309.12338v1.pdf)  
+  Discusses how AI-generated visuals mirror traditional human responses to visual style, composition, and emotional tone 【397†source】.
+
+- 📄 [AIGI-VC: Visual Communication Quality](http://arxiv.org/pdf/2412.15677v1.pdf)  
+  💻 [GitHub](https://github.com/ytian73/aigi-vc)  
+  Measures how well stylized images preserve clarity and emotion in media contexts 【398†source】.
+
+---
+
+### ✅ Summary:
+
+Real-time style transfer models like **mosaic NST** preserve structural edges using **perceptual feature alignment** and inject stylistic textures using learned visual hierarchies—all in milliseconds due to pre-trained feed-forward pipelines.
+

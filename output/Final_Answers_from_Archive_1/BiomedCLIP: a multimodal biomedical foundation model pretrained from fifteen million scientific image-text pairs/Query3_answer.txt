@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"I ran it on X-ray and pathology scans, and it grouped them by condition without labels. What kind of model can sort medical images with no supervision?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is trying to understand how a model achieves a particular behavior in a real-world scenario, such as tracking, generation, or classification. Based on the question, the task likely falls under one of the following categories: object tracking, image-to-video generation, pose-to-motion conversion, or content moderation.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**:
+- The **input** is typically a static image, text description, sketch, or video sequence.
+- The **model** processes the input using its architecture (e.g., diffusion, transformer, CNN), guided by the pretrained features or control signals like pose, semantics, or spatial constraints.
+- The **output** is a video, prediction label, mask, or stylized version of the input that reflects learned distributions from the training set.
+
+---
+
+### 3. Models and Tools Referenced
+
+- **Model:** BiomedCLIP: a multimodal biomedical foundation model pretrained from fifteen million scientific image-text pairs
+  - Paper: https://arxiv.org/pdf/2303.00915
+  - GitHub: https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+- **Model:** Self-supervision for medical image classification: state-of-the-art performance with ~100 labeled training samples per class
+  - Paper: http://arxiv.org/pdf/2304.05163v2.pdf
+  - GitHub: https://github.com/ipmi-icns-uke/sparsam
+- **Model:** TransMed: Large Language Models Enhance Vision Transformer for Biomedical Image Classification
+  - Paper: http://arxiv.org/pdf/2312.07125v2.pdf
+  - GitHub: N/A
+- **Model:** Data AUDIT: Identifying Attribute Utility- and Detectability-Induced Bias in Task Models
+  - Paper: http://arxiv.org/pdf/2304.03218v1.pdf
+  - GitHub: N/A
+
+These models are tailored to their specific tasks. For example, video generation models use temporal consistency modules, while tracking models use attention or re-ID embeddings to focus on consistent targets.
+
+---
+
+Each model contributes specific capabilities to solve the user's task efficiently within the CNAPS framework.

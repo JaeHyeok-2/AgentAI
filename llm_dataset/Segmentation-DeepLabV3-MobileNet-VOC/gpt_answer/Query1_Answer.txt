@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I used a mobile app that instantly separated people from backgrounds, even in crowded scenes. How can AI figure out what’s a person and what’s the background so quickly?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **real-time semantic segmentation**, specifically person-background separation in cluttered scenes—such as removing the background behind people in selfies or video calls.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: An RGB image with multiple people and complex background.
+- **Model**:  
+  - **Segmentation-DeepLabV3-MobileNet-VOC** uses a lightweight MobileNet encoder with DeepLabV3’s atrous spatial pyramid pooling (ASPP) for multiscale context extraction.
+  - It rapidly identifies person regions by detecting patterns aligned with pre-learned body part features.
+- **Output**: A per-pixel class label map where each pixel is marked as "person" or "background".
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [GitHub - DeepLabV3 MobileNet](https://github.com/VainF/DeepLabV3Plus-Pytorch)
+
+- 📄 [A Little Bit Attention for Person Re-ID](http://arxiv.org/pdf/2302.14574v1.pdf)  
+  Highlights lightweight attention modules for person recognition under resource constraints.
+
+- 📄 [Hi4D: Instance Segmentation of Human Interaction](http://arxiv.org/pdf/2303.15380v1.pdf)  
+  Introduces techniques for separating closely entangled people in 4D data sequences.
+
+---
+
+### ✅ Summary:
+
+Fast, accurate person segmentation on mobile devices is enabled by efficient architectures like **DeepLabV3 + MobileNet**, combined with contextual attention and pretrained datasets that help distinguish humans from background in complex scenes.
+

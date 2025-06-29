@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I requested an “impressionist oil landscape,” and the brush strokes looked thick enough to feel. What extra information does AI need to learn to mimic painterly texture?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-ImpressionismOil
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: ARTxAI: Explainable Artificial Intelligence Curates Deep Representation Learning for Artistic Images using Fuzzy Techniques
+Paper: http://arxiv.org/pdf/2308.15284v1.pdf
+Summary: Automatic art analysis employs different image processing techniques to classify and categorize works of art. When working with artistic images, we need to take into account further considerations compared to classical image processing. This is because such artistic paintings change drastically depending on the author, the scene depicted, and their artistic style. This can result in features that perform very well in a given task but do not grasp the whole of the visual and symbolic information contained in a painting. In this paper, we show how the features obtained from different tasks in artistic image classification are suitable to solve other ones of similar nature. We present different methods to improve the generalization capabilities and performance of artistic classification systems. Furthermore, we propose an explainable artificial intelligence method to map known visual traits of an image with the features used by the deep learning model considering fuzzy rules. These rules show the patterns and variables that are relevant to solve each task and how effective is each of the patterns found. Our results show that our proposed context-aware features can achieve up to $6\%$ and $26\%$ more accurate results than other context- and non-context-aware solutions, respectively, depending on the specific task. We also show that some of the features used by these models can be more clearly correlated to visual traits in the original image than others.
+
+Model: FedStyle: Style-Based Federated Learning Crowdsourcing Framework for Art Commissions
+Paper: http://arxiv.org/pdf/2404.16336v1.pdf
+Summary: The unique artistic style is crucial to artists' occupational competitiveness, yet prevailing Art Commission Platforms rarely support style-based retrieval. Meanwhile, the fast-growing generative AI techniques aggravate artists' concerns about releasing personal artworks to public platforms. To achieve artistic style-based retrieval without exposing personal artworks, we propose FedStyle, a style-based federated learning crowdsourcing framework. It allows artists to train local style models and share model parameters rather than artworks for collaboration. However, most artists possess a unique artistic style, resulting in severe model drift among them. FedStyle addresses such extreme data heterogeneity by having artists learn their abstract style representations and align with the server, rather than merely aggregating model parameters lacking semantics. Besides, we introduce contrastive learning to meticulously construct the style representation space, pulling artworks with similar styles closer and keeping different ones apart in the embedding space. Extensive experiments on the proposed datasets demonstrate the superiority of FedStyle.
+
+Model: Auto Cherry-Picker: Learning from High-quality Generative Data Driven by Language
+Paper: http://arxiv.org/pdf/2406.20085v2.pdf
+Summary: Diffusion models can generate realistic and diverse images, potentially facilitating data availability for data-intensive perception tasks. However, leveraging these models to boost performance on downstream tasks with synthetic data poses several challenges, including aligning with real data distribution, scaling synthetic sample volumes, and ensuring their quality. To bridge these gaps, we present \textbf{A}uto \textbf{C}herry-\textbf{P}icker (ACP), a novel framework that generates high-quality cross-modality training samples at scale to augment perception and multi-modal training. ACP first uses LLMs to sample descriptions and layouts based on object combinations from real data priors, eliminating the need for ground truth image captions or annotations. Next, we use an off-the-shelf controllable diffusion model to generate multiple images. Then, the generated data are refined using a comprehensively designed metric, Composite Layout and Image Score (CLIS), to ensure quality. Our customized synthetic high-quality samples boost performance in various scenarios, especially in addressing challenges associated with long-tailed distribution and imbalanced datasets. Experiment results on downstream tasks demonstrate that ACP can significantly improve the performance of existing models. In addition, we find a positive correlation between CLIS and performance gains in downstream tasks. This finding shows the potential for evaluation metrics as the role for various visual perception and MLLM tasks.
+
+
+Answer:

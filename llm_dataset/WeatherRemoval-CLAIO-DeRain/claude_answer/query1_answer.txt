@@ -1,0 +1,59 @@
+Based on the provided models and papers, here is the analysis of the user's question about separating falling rain from background textures while maintaining building sharpness:
+
+## 1. Task Analysis
+The user is performing **selective rain streak removal with background preservation** for rainy window photography. This involves detecting and removing rain streaks and water droplets from window surfaces while maintaining the sharpness and detail of background architecture and textures.
+
+## 2. CNAPS AI-like Workflow (Input → Model → Output)
+
+**Input:** Photo taken through rainy window with rain streaks obscuring background buildings and architectural details
+
+**Model Processing:**
+- **CLAIO-DeRain (WeatherRemoval-CLAIO-DeRain)** provides comprehensive rain removal through:
+  - All-in-one weather removal architecture specifically designed for rain streak detection and elimination
+  - Multi-scale rain pattern analysis enabling separation of rain effects from background textures
+  - Selective processing that preserves background sharpness while removing foreground rain interference
+  - Specialized handling of window-based photography where rain appears as overlaid streaks
+- **CoIC (Context-based Instance-level Modulation)** enhances rain-background separation via:
+  - Joint rain-/detail-aware representations encapsulating both rain and background components
+  - Context-based Instance-level Modulation mechanism efficiently modulating models for specific rain patterns
+  - Rain-/detail-aware contrastive learning strategy extracting joint representations for precise separation
+  - Meaningful representations providing instructive guidance for distinguishing rain from background textures
+- **AdvRain Analysis** informs rain pattern understanding through:
+  - Study of raindrop effects on camera-based perception systems providing insights into rain detection
+  - Iterative processes for identifying critical raindrop positions and their visual impact
+  - Transformation analysis based on blurring predefined areas corresponding to raindrop coverage
+  - Understanding of how raindrops affect captured images differently from background elements
+- **Two-Stage Adverse Weather Segmentation** supports robust processing via:
+  - Low-rank video deraining methods generating high-fidelity pseudo ground truths
+  - Superior alignment facilitating model convergence during training on rain-affected imagery
+  - Robust framework designed for degraded data captured under adverse weather conditions
+  - Segmentation approaches maintaining background detail while removing weather interference
+
+**Output:** Clear photo with removed rain streaks while preserving sharp background buildings and architectural textures
+
+## 3. Technical Implementation for Rain-Background Separation
+The separation capability stems from:
+- **Multi-scale pattern analysis:** CLAIO's architecture distinguishes rain patterns from background textures across different scales
+- **Contrastive representation learning:** CoIC's approach creates distinct feature representations for rain and background elements
+- **Context-aware modulation:** Instance-level modulation adapts processing based on specific rain and background contexts
+- **Adversarial insights:** AdvRain analysis provides understanding of raindrop visual effects vs. scene content
+- **Pseudo ground truth training:** Two-stage processing ensures robust rain removal while preserving background fidelity
+
+## 4. Relevant Papers and Tools
+
+### Primary Model:
+- **Model:** WeatherRemoval-CLAIO-DeRain
+- **GitHub:** https://github.com/xiaojihh/cl_all-in-one
+
+### Supporting Frameworks:
+- **Model:** Harnessing Joint Rain-/Detail-aware Representations to Eliminate Intricate Rains
+- **Paper:** http://arxiv.org/pdf/2404.12091v1.pdf
+- **GitHub:** https://github.com/schizophreni/coic
+
+- **Model:** AdvRain: Adversarial Raindrops to Attack Camera-based Smart Vision Systems
+- **Paper:** http://arxiv.org/pdf/2303.01338v2.pdf
+
+- **Model:** A Two-Stage Adverse Weather Semantic Segmentation Method for WeatherProof Challenge CVPR 2024 Workshop UG2+
+- **Paper:** http://arxiv.org/pdf/2406.05513v2.pdf
+
+The combination of all-in-one rain removal, context-aware instance modulation, contrastive rain-detail learning, and adversarial rain analysis enables models to separate falling rain from background textures by learning distinct feature representations that differentiate rain patterns from architectural elements, allowing selective removal of rain while preserving background sharpness.

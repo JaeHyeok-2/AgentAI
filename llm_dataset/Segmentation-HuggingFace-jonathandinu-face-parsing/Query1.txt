@@ -1,0 +1,32 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I tried an app that highlights different parts of the face—like lips, eyebrows, and eyes—and it worked even in dim lighting. How can AI recognize such tiny face features?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Segmentation-HuggingFace-facebook-maskformer-swin-base-coco
+Paper: https://arxiv.org/pdf/2107.06278
+
+### Related Papers:
+Model: Improving Facial Landmark Detection Accuracy and Efficiency with Knowledge Distillation
+Paper: http://arxiv.org/pdf/2404.06029v1.pdf
+Summary: The domain of computer vision has experienced significant advancements in facial-landmark detection, becoming increasingly essential across various applications such as augmented reality, facial recognition, and emotion analysis. Unlike object detection or semantic segmentation, which focus on identifying objects and outlining boundaries, faciallandmark detection aims to precisely locate and track critical facial features. However, deploying deep learning-based facial-landmark detection models on embedded systems with limited computational resources poses challenges due to the complexity of facial features, especially in dynamic settings. Additionally, ensuring robustness across diverse ethnicities and expressions presents further obstacles. Existing datasets often lack comprehensive representation of facial nuances, particularly within populations like those in Taiwan. This paper introduces a novel approach to address these challenges through the development of a knowledge distillation method. By transferring knowledge from larger models to smaller ones, we aim to create lightweight yet powerful deep learning models tailored specifically for facial-landmark detection tasks. Our goal is to design models capable of accurately locating facial landmarks under varying conditions, including diverse expressions, orientations, and lighting environments. The ultimate objective is to achieve high accuracy and real-time performance suitable for deployment on embedded systems. This method was successfully implemented and achieved a top 6th place finish out of 165 participants in the IEEE ICME 2024 PAIR competition.
+
+Model: SDFD: Building a Versatile Synthetic Face Image Dataset with Diverse Attributes
+Paper: http://arxiv.org/pdf/2404.17255v2.pdf
+Summary: AI systems rely on extensive training on large datasets to address various tasks. However, image-based systems, particularly those used for demographic attribute prediction, face significant challenges. Many current face image datasets primarily focus on demographic factors such as age, gender, and skin tone, overlooking other crucial facial attributes like hairstyle and accessories. This narrow focus limits the diversity of the data and consequently the robustness of AI systems trained on them. This work aims to address this limitation by proposing a methodology for generating synthetic face image datasets that capture a broader spectrum of facial diversity. Specifically, our approach integrates a systematic prompt formulation strategy, encompassing not only demographics and biometrics but also non-permanent traits like make-up, hairstyle, and accessories. These prompts guide a state-of-the-art text-to-image model in generating a comprehensive dataset of high-quality realistic images and can be used as an evaluation set in face analysis systems. Compared to existing datasets, our proposed dataset proves equally or more challenging in image classification tasks while being much smaller in size.
+
+Model: Moving Healthcare AI-Support Systems for Visually Detectable Diseases onto Constrained Devices
+Paper: http://arxiv.org/pdf/2408.08215v1.pdf
+Summary: Image classification usually requires connectivity and access to the cloud which is often limited in many parts of the world, including hard to reach rural areas. TinyML aims to solve this problem by hosting AI assistants on constrained devices, eliminating connectivity issues by processing data within the device itself, without internet or cloud access. This pilot study explores the use of tinyML to provide healthcare support with low spec devices in low connectivity environments, focusing on diagnosis of skin diseases and the ethical use of AI assistants in a healthcare setting. To investigate this, 10,000 images of skin lesions were used to train a model for classifying visually detectable diseases (VDDs). The model weights were then offloaded to a Raspberry Pi with a webcam attached, to be used for the classification of skin lesions without internet access. It was found that the developed prototype achieved a test accuracy of 78% and a test loss of 1.08.
+
+
+Answer:

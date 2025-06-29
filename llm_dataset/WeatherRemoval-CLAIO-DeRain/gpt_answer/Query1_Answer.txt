@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"I ran a rainy window photo through the AI and the streaks vanished instantly, while the building behind stayed sharp. How does the model separate falling rain from background textures?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **image deraining**, aiming to remove rain streaks while preserving scene structure and background details. This requires fine-grained separation of transient noise (rain) from stable features.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A photo degraded by rain streaks overlaying a textured background.  
+- **Model**:  
+  - **CLAIO-DeRain** learns spatial and frequency cues from rain streak patterns, separating transient high-frequency artifacts (like linear streaks) from consistent background edges.  
+  - It utilizes feature enhancement and residual learning to preserve edges and avoid flattening the scene.  
+- **Output**: A clean image with rain streaks removed and background clarity intact.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [CLAIO GitHub](https://github.com/xiaojihh/cl_all-in-one)
+
+- 📄 [CoIC - Joint Rain/Detail Representations](http://arxiv.org/pdf/2404.12091v1.pdf)  
+  💻 [GitHub](https://github.com/schizophreni/coic)  
+  Uses dual-path rain/detail disentanglement and contextual modulation to improve deraining.
+
+- 📄 [AdvRain - Adversarial Raindrop Simulation](http://arxiv.org/pdf/2303.01338v2.pdf)  
+  Simulates rain artifacts to understand how rain differs from texture, enabling better model robustness.
+
+---
+
+### ✅ Summary:
+
+Derain models like CLAIO detect **statistical and geometric patterns of rain** using residual priors and modulated attention, allowing background textures to remain sharp while selectively removing streaks.
+

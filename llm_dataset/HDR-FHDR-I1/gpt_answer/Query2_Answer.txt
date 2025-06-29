@@ -1,0 +1,40 @@
+🧠 **User Question:**  
+"I used AI on a photo with bright windows and dim interiors, and it brought out detail in both without looking fake. It felt like the image just improved layer by layer."
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is enhancing a **low-light, high dynamic range image**, focusing on both global and local illumination without introducing artifacts. The goal is balanced exposure enhancement across visually distinct zones.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A single image with uneven exposure.  
+- **Model**:  
+  - **Low-Light-Enhancer** and **ALEN** both classify local/global lighting zones and apply **multi-branch enhancement networks** accordingly.  
+  - **ALEN** uses light classifiers and color estimators to selectively adjust exposure and saturation without global flattening.  
+  - **AIGI-VC** measures how perceptually effective the result is, including readability and emotional clarity.  
+- **Output**: A visually natural, enhanced image with contrast-preserving light balance and emotional realism.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [Low-Light Enhancer GitHub](https://github.com/dblasko/low-light-event-img-enhancer)
+
+- 📄 [ALEN - Dual Light Estimation](http://arxiv.org/pdf/2407.19708v4.pdf)  
+  💻 [GitHub](https://github.com/xingyumex/ALEN)
+
+- 📄 [AIGI-VC: Perceptual Quality Assessment](http://arxiv.org/pdf/2412.15677v1.pdf)
+
+- 📄 [A-BDD Augmentation for Lighting](http://arxiv.org/pdf/2408.06071v2.pdf)
+
+---
+
+### ✅ Summary:
+
+Models like **ALEN** and **Low-Light-Enhancer** work by analyzing local and global exposure, using **adaptive light control and color enhancement**, yielding natural results that feel layered rather than flattened.
+

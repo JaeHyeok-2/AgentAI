@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I restored a low-quality meme and the AI cleaned up all the blocky glitches. How does it know what the missing parts should look like?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: Txt2Img-StableDiffusionV1-QGO-PromptingReal
+  - Paper: None
+  - GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+- **Model**: Unveiling Glitches: A Deep Dive into Image Encoding Bugs within CLIP
+  - Paper: http://arxiv.org/pdf/2407.00592v1.pdf
+  - GitHub: None
+- **Model**: Cultural Heritage 3D Reconstruction with Diffusion Networks
+  - Paper: http://arxiv.org/pdf/2410.10927v1.pdf
+  - GitHub: https://github.com/PJaramilloV/pcdiff-method
+- **Model**: Toon3D: Seeing Cartoons from New Perspectives
+  - Paper: http://arxiv.org/pdf/2405.10320v3.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

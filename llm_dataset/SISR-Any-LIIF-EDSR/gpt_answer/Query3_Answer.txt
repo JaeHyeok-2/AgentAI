@@ -1,0 +1,41 @@
+🧠 **User Question:**  
+"I resized an old image to fill a full wall print, and the edges stayed sharp without any visible pixels. How does AI keep such fine detail when zooming way beyond the original size?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **extreme image upsampling and deblurring** for large-format print, requiring edge fidelity and perceptual realism without artifacts.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A low-quality or blurred image targeted for massive upscaling.  
+- **Model**:  
+  - **MSSNet (Deblur-MSSNet-GoPro)** applies multi-stream separation (sharp vs blurry) and spatial attention to isolate blur artifacts at different scales.  
+  - It then recombines feature streams into a clean high-frequency restoration output.
+- **Output**: A deblurred, enlarged image with restored edges and textures.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [MSSNet (GoPro Deblur)](https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf)  
+  💻 [GitHub](https://github.com/kky7/MSSNet)
+
+- 📄 [FeatSharp (Feature Enhancement)](http://arxiv.org/pdf/2502.16025v1.pdf)
+
+- 📄 [ImageNet-Hard](http://arxiv.org/pdf/2304.05538v4.pdf)  
+  Highlights resolution biases in image models and how zoom control affects accuracy.
+
+- 📄 [On the Effect of Image Resolution](http://arxiv.org/pdf/2402.05398v1.pdf)  
+  Discusses high-res processing without performance loss.
+
+---
+
+### ✅ Summary:
+
+Models like **MSSNet** are built to **detect and remove blur at different spatial frequencies**, while frameworks like FeatSharp improve how features are preserved during upscaling—making it possible to print wall-size images from small originals.
+

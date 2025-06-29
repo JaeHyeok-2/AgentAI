@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Dropped in a regular video clip, and it created a smooth depth map for every frame—like the whole scene came alive in 3D. How does it stay consistent over time like that?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos
+Paper: https://arxiv.org/pdf/2409.02095
+GitHub: https://github.com/Tencent/DepthCrafter
+
+### Related Papers:
+Model: Make-It-4D: Synthesizing a Consistent Long-Term Dynamic Scene Video from a Single Image
+Paper: http://arxiv.org/pdf/2308.10257v1.pdf
+Summary: We study the problem of synthesizing a long-term dynamic video from only a single image. This is challenging since it requires consistent visual content movements given large camera motions. Existing methods either hallucinate inconsistent perpetual views or struggle with long camera trajectories. To address these issues, it is essential to estimate the underlying 4D (including 3D geometry and scene motion) and fill in the occluded regions. To this end, we present Make-It-4D, a novel method that can generate a consistent long-term dynamic video from a single image. On the one hand, we utilize layered depth images (LDIs) to represent a scene, and they are then unprojected to form a feature point cloud. To animate the visual content, the feature point cloud is displaced based on the scene flow derived from motion estimation and the corresponding camera pose. Such 4D representation enables our method to maintain the global consistency of the generated dynamic video. On the other hand, we fill in the occluded regions by using a pretrained diffusion model to inpaint and outpaint the input image. This enables our method to work under large camera motions. Benefiting from our design, our method can be training-free which saves a significant amount of training time. Experimental results demonstrate the effectiveness of our approach, which showcases compelling rendering results.
+
+Model: Refinement of Monocular Depth Maps via Multi-View Differentiable Rendering
+Paper: http://arxiv.org/pdf/2410.03861v1.pdf
+Summary: The accurate reconstruction of per-pixel depth for an image is vital for many tasks in computer graphics, computer vision, and robotics. In this paper, we present a novel approach to generate view consistent and detailed depth maps from a number of posed images. We leverage advances in monocular depth estimation, which generate topologically complete, but metrically inaccurate depth maps and refine them in a two-stage optimization process based on a differentiable renderer. Taking the monocular depth map as input, we first scale this map to absolute distances based on structure-from-motion and transform the depths to a triangle surface mesh. We then refine this depth mesh in a local optimization, enforcing photometric and geometric consistency.   Our evaluation shows that our method is able to generate dense, detailed, high-quality depth maps, also in challenging indoor scenarios, and outperforms state-of-the-art depth reconstruction approaches. Overview and supplemental material of this project can be found at https://lorafib.github.io/ref_depth/.
+
+Model: 3D reconstruction using Structure for Motion
+Paper: http://arxiv.org/pdf/2306.06360v1.pdf
+GitHub: https://github.com/kshitijkarnawat/structure-from-motion
+Summary: We are working towards 3D reconstruction of indoor spaces using a pair of HDR cameras in a stereo vision configuration mounted on an indoor mobile floor robot that captures various textures and spatial features as 2D images and this data is simultaneously utilized as a feed to our algorithm which will allow us to visualize the depth map.
+
+
+Answer:

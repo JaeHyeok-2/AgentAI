@@ -1,0 +1,30 @@
+🧠 User Question:
+"I used “epic rim-light portrait” and it came back like a movie still—controlled shadows, strong edges. How does AI calculate light placement that well?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is applying **text-to-image guided portrait rendering**, with a focus on cinematic lighting effects like rim light and edge-enhanced depth.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A descriptive prompt like “epic rim-light portrait.”  
+- **Model**:  
+  - **StableDiffusionV1-PirsusEpicRealism** guides diffusion through text embeddings, focusing light at silhouette boundaries to simulate rim effects.  
+  - The **AGAP model** offers a complementary mechanism by projecting 3D light and texture into a 2D canonical view, allowing faster appearance editing and efficient stylization of localized lighting.  
+  - Edge structures and projection-aware texturing help preserve form under stylized light.  
+- **Output**: A rim-lit image with crisp edges and depth-aware highlight positioning.
+
+---
+
+### 3. Supporting Papers and Tools
+- 📄 [AGAP: Aggregated Appearance Projection](http://arxiv.org/pdf/2312.06657v2.pdf)  
+- 💻 [AGAP GitHub](https://github.com/felixcheng97/agap)
+
+---
+
+### ✅ Summary:
+AI models simulate rim light placement by learning **semantic edges and light-object contours**, and enhanced projection fields (AGAP) help maintain visual coherence under expressive lighting cues.

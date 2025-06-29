@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I blew up an old family photo more than 10× and the details still looked crisp. Normally you’d see pixels at that scale—how does AI recalculate colors just from coordinates? What kind of image representation lets it stay realistic at any magnification?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: SISR-Any-LIIF-EDSR
+  - Paper: https://arxiv.org/pdf/2012.09161
+  - GitHub: https://github.com/yinboc/liif
+- **Model**: FeatSharp: Your Vision Model Features, Sharper
+  - Paper: http://arxiv.org/pdf/2502.16025v1.pdf
+  - GitHub: None
+- **Model**: Towards flexible perception with visual memory
+  - Paper: http://arxiv.org/pdf/2408.08172v2.pdf
+  - GitHub: https://github.com/google-deepmind/visual-memory
+- **Model**: ImageNet-Hard: The Hardest Images Remaining from a Study of the Power of Zoom and Spatial Biases in Image Classification
+  - Paper: http://arxiv.org/pdf/2304.05538v4.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

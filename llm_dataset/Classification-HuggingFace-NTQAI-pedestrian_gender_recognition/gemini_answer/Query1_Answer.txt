@@ -1,0 +1,33 @@
+1. What task is the user trying to perform?
+
+[cite_start]The user is trying to perform **pedestrian gender recognition** from photos, specifically from challenging angles like behind or at a distance. [cite: 1] [cite_start]They are also asking about the training data, how the AI recognizes gender, and how it handles edge cases or ambiguity. [cite: 1]
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow for pedestrian gender recognition emphasizes rapidly adapting to new inputs and handling various scenarios, including challenging ones, by leveraging robustly trained models and potentially using mechanisms to identify and mitigate biases.
+
+* [cite_start]Input: Old street photos of people, possibly from behind or at a distance. [cite: 1]
+
+* Model (Core Gender Recognition Model):
+    * [cite_start]**Classification-HuggingFace-NTQAI-pedestrian_gender_recognition:** This model is directly designed for pedestrian gender recognition. [cite: 6] [cite_start]It would take the input image and perform a classification task to label people as 'male' or 'female'. [cite: 1]
+
+* Model (Related Concepts for Training Data, Bias Handling, and Edge Cases):
+    * [cite_start]**GRADIEND: Monosemantic Feature Learning within Neural Networks Applied to Gender Debiasing of Transformer Models:** This study introduces a novel encoder-decoder approach that leverages model gradients to learn a single monosemantic feature neuron encoding gender information. [cite: 13] [cite_start]This method can be used to debias transformer-based language models, while maintaining other capabilities, and demonstrates effectiveness across various model architectures. [cite: 14, 15] [cite_start]This directly addresses how AI models can handle bias in gender recognition, suggesting that the training process involves methods to learn and isolate gender-specific features to avoid amplifying social biases. [cite: 12, 13]
+    * [cite_start]**Addressing Weak Decision Boundaries in Image Classification by Leveraging Web Search and Generative Models:** This approach aims to alleviate shortcomings of discriminative models, particularly concerning underrepresented groups for whom ML models do not perform equally well. [cite: 17, 19] [cite_start]It leverages web search (e.g., Google queries) and generative models (e.g., DALL-E 2 and Stable Diffusion) to construct new training samples. [cite: 22] [cite_start]These newly captured training samples could alleviate population bias issues [cite: 23][cite_start], leading to a significant reduction in gender accuracy disparity (77.30%) [cite: 24] [cite_start]and an enhancement in the classifier's decision boundary with fewer weakspots and increased separation between classes[cite: 25]. [cite_start]This explains how training data is acquired and refined to handle edge cases and ambiguity by improving robustness and mitigating bias, especially for vulnerable populations (e.g., female doctor of color)[cite: 20]. [cite_start]The technique is extendable to a wide range of problems and domains[cite: 26].
+    * [cite_start]**Human and AI Perceptual Differences in Image Classification Errors:** This study finds that even when AI models outperform humans in overall accuracy, there are significant and consistent differences from human perception. [cite: 10] [cite_start]This highlights that AI models solve classification tasks by imitating human behavior learned from training labels [cite: 6][cite_start], but their perceptual processes are distinct[cite: 8]. [cite_start]Studying these differences can lead to improved human-AI teaming algorithms[cite: 11]. This research implicitly informs the type of training data used by emphasizing the need to understand how AI perceives errors, which impacts how models handle ambiguous cases compared to human perception.
+
+* [cite_start]Output: The phone accurately labels people as ‘male’ or ‘female’ even from challenging angles. [cite: 1] [cite_start]This is achieved by models trained with debiasing techniques (like monosemantic feature learning) [cite: 13] [cite_start]and augmented training data (generated via web search and generative models) [cite: 19, 22] [cite_start]that improve decision boundaries and reduce gender accuracy disparity[cite: 24, 25], helping the AI handle edge cases and ambiguity.
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* [cite_start]Model: Classification-HuggingFace-NTQAI-pedestrian_gender_recognition [cite: 6]
+    * [cite_start]Paper: None [cite: 6]
+
+* Related Papers:
+    * [cite_start]Model: Human and AI Perceptual Differences in Image Classification Errors [cite: 6]
+        * [cite_start]Paper: http://arxiv.org/pdf/2304.08733v2.pdf [cite: 6]
+    * [cite_start]Model: GRADIEND: Monosemantic Feature Learning within Neural Networks Applied to Gender Debiasing of Transformer Models [cite: 12]
+        * [cite_start]Paper: http://arxiv.org/pdf/2502.01406v1.pdf [cite: 12]
+        * [cite_start]GitHub: https://github.com/aieng-lab/gradiend [cite: 12]
+    * [cite_start]Model: Addressing Weak Decision Boundaries in Image Classification by Leveraging Web Search and Generative Models [cite: 16]
+        * [cite_start]Paper: http://arxiv.org/pdf/2310.19986v1.pdf [cite: 16]

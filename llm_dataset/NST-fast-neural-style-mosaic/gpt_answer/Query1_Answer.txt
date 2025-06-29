@@ -1,0 +1,25 @@
+🧠 User Question:
+"I asked to “turn it into a mosaic painting,” and every patch of the image snapped into tile-like color blocks with a Cubist vibe. How does AI decide where to slice the scene into tiles while keeping the shapes intact? And since it runs in real time on video, what tricks keep the computations so light?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is applying **real-time neural style transfer (NST)** with a **mosaic aesthetic**, aiming to stylize images with tile-like Cubist effects while preserving recognizable structure.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+**Input → Model → Output**  
+- **Input**: Natural image or video frame.  
+- **Model**:  
+  - **NST-fast-neural-style-mosaic** uses a feed-forward CNN trained to emulate the mosaic style using perceptual loss (content + style loss from a VGG network).  
+  - Instead of optimizing per image (like classical NST), it runs a single-pass stylization, allowing real-time inference.  
+- **Output**: A stylized image resembling mosaic tiles while maintaining edge and shape integrity.
+
+---
+
+### 3. Supporting Papers and Tools
+- 💻 [GitHub – Fast Neural Style (Mosaic)](https://github.com/rrmina/fast-neural-style-pytorch)
+- 📄 [ARTxAI: Explainable Aesthetics](http://arxiv.org/pdf/2308.15284v1.pdf)【408†source】
+- 📄 [Triangulation Using Sobel Edge](http://arxiv.org/pdf/2408.16112v1.pdf)【408†source】
+

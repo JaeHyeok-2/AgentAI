@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I tried dehazing a city skyline and even the faint outlines of buildings in the background came back. How do models like this preserve structural detail while removing atmospheric blur?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: WeatherRemoval-CLAIO-DeHaze
+  - Paper: None
+  - GitHub: https://github.com/xiaojihh/cl_all-in-one
+- **Model**: SimpliCity: Reconstructing Buildings with Simple Regularized 3D Models
+  - Paper: http://arxiv.org/pdf/2404.08104v1.pdf
+  - GitHub: None
+- **Model**: DRACO-DehazeNet: An Efficient Image Dehazing Network Combining Detail Recovery and a Novel Contrastive Learning Paradigm
+  - Paper: http://arxiv.org/pdf/2410.14595v1.pdf
+  - GitHub: None
+- **Model**: MLS2LoD3: Refining low LoDs building models with MLS point clouds to reconstruct semantic LoD3 building models
+  - Paper: http://arxiv.org/pdf/2402.06288v1.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

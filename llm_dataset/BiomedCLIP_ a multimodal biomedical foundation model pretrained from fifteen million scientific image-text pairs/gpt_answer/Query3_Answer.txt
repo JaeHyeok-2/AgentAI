@@ -1,0 +1,45 @@
+🧠 **User Question:**  
+"I ran it on X-ray and pathology scans, and it grouped them by condition without labels. What kind of model can sort medical images with no supervision?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **unsupervised medical image clustering or representation learning**, where medical scans (like X-rays or pathology slides) are grouped based on shared underlying patterns, such as disease type or severity—**without the use of labels**. This points to **self-supervised representation learning** as the core method.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+#### **Input → Model → Output**
+
+- **Input**: A set of unlabeled medical images from modalities such as X-rays or pathology scans.
+- **Model**:  
+  - **BiomedCLIP** generates joint image-text embeddings via large-scale pretraining on 15 million image-text biomedical pairs. Even without explicit labels, the visual encoder can project image content into a semantically rich space that reflects disease categories learned during training.
+  - Models like **Sparsam (DINO)** leverage **self-supervised contrastive learning**, where the model learns by predicting variations of the same image. These embeddings allow clustering of similar conditions even without supervision.
+- **Output**: Embedding vectors for each image that cluster naturally by condition. The result is unsupervised grouping of images into semantically meaningful categories.
+
+---
+
+### 3. Supporting Papers and Tools
+
+#### 🧠 [BiomedCLIP Paper](https://arxiv.org/pdf/2303.00915)  
+💻 [HuggingFace](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224)  
+- Enables semantically rich visual representation from medical images using large-scale image-text pretraining.
+
+#### 🧠 [Self-supervision with DINO (Sparsam)](http://arxiv.org/pdf/2304.05163v2.pdf)  
+💻 [GitHub](https://github.com/ipmi-icns-uke/sparsam)  
+- Demonstrates that self-supervised DINO achieves state-of-the-art clustering/classification with minimal supervision.
+
+#### 🧠 [TransMed: LLM-enhanced Few-Shot Classification](http://arxiv.org/pdf/2312.07125v2.pdf)  
+- Introduces contextualized few-shot learning for enhanced semantic embedding, potentially supporting unsupervised similarity.
+
+#### 🧠 [Data AUDIT](http://arxiv.org/pdf/2304.03218v1.pdf)  
+- Framework to assess whether unsupervised clusters reflect true medical categories or hidden dataset biases.
+
+---
+
+### ✅ Summary:
+
+The model is able to cluster medical images without labels by leveraging **self-supervised or contrastive learning** methods like DINO, or pretrained vision-language models like **BiomedCLIP**. These techniques allow models to form meaningful visual representations, leading to **label-free grouping** based on condition similarity—enabling robust unsupervised medical analysis.
+

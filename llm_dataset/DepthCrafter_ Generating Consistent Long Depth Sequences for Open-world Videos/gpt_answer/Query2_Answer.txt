@@ -1,0 +1,43 @@
+🧠 **User Question:**  
+"Even when people or objects moved quickly, it kept the depth stable and accurate. What helps it handle dynamic scenes so well?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is evaluating **depth estimation in dynamic video scenes**, especially where rapid object or camera movement could typically cause depth flickering or failure. The focus here is on **robustness to scene motion and occlusion**.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Monocular video of dynamic scenes with rapid movement and complex structures.  
+- **Model**:  
+  - **DepthCrafter** uses frame-to-frame **depth flow estimation** and dynamic temporal fusion to predict consistent depth, even in fast-changing environments.  
+  - Models like **R3D3** refine geometry and ego-motion using dense spatial-temporal constraints, and **MegaSaM** adapts deep SLAM to better handle scene deformation and motion.
+- **Output**: Frame-aligned depth maps that remain structurally and temporally consistent, despite rapid scene changes.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [DepthCrafter](https://arxiv.org/pdf/2409.02095)  
+  💻 [GitHub](https://github.com/Tencent/DepthCrafter)
+
+- 📄 [R3D3: Dense Reconstruction in Dynamic Scenes](http://arxiv.org/pdf/2308.14713v1.pdf)  
+  Dense SLAM using multi-camera feature fusion and motion-adaptive depth priors.
+
+- 📄 [MegaSaM: Structure & Motion from Casual Videos](http://arxiv.org/pdf/2412.04463v2.pdf)  
+  SLAM-based learning framework tuned for dynamic scenes.
+
+- 📄 [Make-It-4D](http://arxiv.org/pdf/2308.10257v1.pdf)  
+  Handles dynamic content by deforming LDIs using motion and camera cues.
+
+---
+
+### ✅ Summary:
+
+DepthCrafter’s dynamic-aware design and temporal alignment allow it to excel at tracking moving objects and people.  
+It preserves depth reliability frame-by-frame by fusing motion priors with learned spatiotemporal depth patterns.
+

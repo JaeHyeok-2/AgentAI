@@ -1,0 +1,43 @@
+🧠 **User Question:**  
+"When I masked out part of a face, the AI filled in the missing cheek and jawline with matching skin texture. How does it understand both facial structure and skin detail to restore symmetry?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The task is **structure-aware facial inpainting**, particularly focusing on maintaining anatomical symmetry and skin realism during recovery of occluded or erased facial regions.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A face image with partial regions masked out (e.g., cheek or jaw).  
+- **Model**:  
+  - **Segmentation-HuggingFace-facebook-maskformer-swin-base-coco** segments semantically meaningful regions like skin, face, or accessories.
+  - This guides facial region recognition and boundary preservation.
+  - Downstream models (like FaceCom or text-to-image inpainting tools) use these masks to generate symmetrical inpainting by understanding layout and local features.
+- **Output**: A visually symmetric and consistent inpainting that restores natural skin gradients and facial boundaries.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 🔗 [MaskFormer Paper (Mask Segmentation with Swin)](https://arxiv.org/pdf/2107.06278)
+
+- 🔗 [SDFD: Synthetic Dataset for Facial Diversity](http://arxiv.org/pdf/2404.17255v2.pdf)  
+  Introduces facial variations across pose, accessories, and biometrics to improve training realism.
+
+- 🔗 [FaceCom](http://arxiv.org/pdf/2406.02074v1.pdf)  
+  💻 [GitHub](https://github.com/dragonylee/facecom)  
+  Performs mesh-based facial completion from partial inputs.
+
+- 🔗 [Fuse after Align](http://arxiv.org/pdf/2404.09509v1.pdf)  
+  Uses multimodal encoders to better align facial structure across voice-image modalities for better reconstruction fidelity.
+
+---
+
+### ✅ Summary:
+
+Semantic segmentation guides inpainting by defining **facial regions**, while completion models reconstruct missing content by referencing symmetry, texture, and latent priors—ensuring both **anatomical and visual consistency**.
+

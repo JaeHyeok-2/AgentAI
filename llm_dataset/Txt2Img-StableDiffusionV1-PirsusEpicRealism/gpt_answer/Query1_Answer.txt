@@ -1,0 +1,32 @@
+🧠 User Question:
+"I typed “golden-hour cinematic still,” and the shot came back with perfect rim light and movie-level depth. What extra cues does AI calculate to recreate dramatic lighting and dimensionality?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is performing **cinematic text-to-image generation**, seeking to recreate a still frame with rich depth, directional light, and filmic atmosphere.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: The text prompt “golden-hour cinematic still.”  
+- **Model**:  
+  - **Txt2Img-StableDiffusionV1-PirsusEpicRealism** uses a latent diffusion model guided by text features to generate photo-realistic imagery with stylized realism.  
+  - It learns to mimic golden-hour lighting by simulating soft shadows, occlusion-aware ambient lighting, and foreground-background separation.  
+  - Structured light-based methods like voxel-based differentiable rendering are conceptually relevant as they enable depth recovery from lighting patterns without image matching.  
+  - **EvLight++** supports low-light enhancement by integrating event-driven spatial cues and SNR-aware regional weighting, enhancing structure and temporal consistency.  
+- **Output**: A still image with golden glow, rim light, and layered depth.
+
+---
+
+### 3. Supporting Papers and Tools
+- 📄 [Structured Light Depth Estimation](http://arxiv.org/pdf/2501.07113v1.pdf)  
+- 📄 [EvLight++](http://arxiv.org/pdf/2408.16254v1.pdf)  
+- 💻 [StableDiffusionV1 GitHub](https://github.com/Kameronski/stable-diffusion-1.5)
+
+---
+
+### ✅ Summary:
+StableDiffusion models generate cinematic light by leveraging **latent scene geometry**, directional shadow priors, and light-structure alignment—enhanced conceptually by structured-light and event-based rendering methods.

@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I saw the AI connect joints instantly even when people crossed paths in the video. How does it keep each skeleton separate and accurate with so much overlap?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: PoseEstimation-OpenPose
+  - Paper: https://arxiv.org/pdf/1812.08008
+  - GitHub: https://github.com/CMU-Perceptual-Computing-Lab/openpose
+- **Model**: How Object Information Improves Skeleton-based Human Action Recognition in Assembly Tasks
+  - Paper: http://arxiv.org/pdf/2306.05844v1.pdf
+  - GitHub: None
+- **Model**: Building Rearticulable Models for Arbitrary 3D Objects from 4D Point Clouds
+  - Paper: http://arxiv.org/pdf/2306.00979v1.pdf
+  - GitHub: https://github.com/stevenlsw/reart
+- **Model**: Hi4D: 4D Instance Segmentation of Close Human Interaction
+  - Paper: http://arxiv.org/pdf/2303.15380v1.pdf
+  - GitHub: https://github.com/yifeiyin04/Hi4D
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

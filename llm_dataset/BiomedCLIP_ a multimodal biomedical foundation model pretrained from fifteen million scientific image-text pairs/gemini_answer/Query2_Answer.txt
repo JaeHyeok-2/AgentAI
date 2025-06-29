@@ -1,0 +1,42 @@
+```
+1. What task is the user trying to perform?
+
+The user is performing a task that involves connecting visual information from diagrams with corresponding medical terms. This falls under the broad category of multimodal understanding, specifically medical image-text alignment or medical visual language grounding, where the system needs to understand both visual content and associated scientific language to make connections.
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow emphasizes rapid adaptation to new tasks with limited data. In this scenario, the models would leverage extensive pre-training on multimodal medical data to quickly connect visuals and scientific language.
+
+* Input: The user provides diagrams from old research papers (visual input).
+
+* Model (Pre-training Phase):
+    * [cite_start]BiomedCLIP (a multimodal biomedical foundation model): This model is pretrained from fifteen million scientific image-text pairs[cite: 6]. This extensive pre-training allows it to learn robust representations that align biomedical images with their corresponding text descriptions, forming a foundational understanding of medical visual and linguistic concepts. It effectively establishes a shared embedding space where visual features from diagrams and semantic features from medical terms are closely mapped.
+    * [cite_start]MLIP (Enhancing Medical Visual Representation with Divergence Encoder and Knowledge-guided Contrastive Learning): This framework addresses the scarcity of annotated data by leveraging medical reports as auxiliary signals for medical visual representation learning[cite: 13]. [cite_start]It integrates domain-specific medical knowledge as guiding signals to combine language information into the visual domain through image-text contrastive learning[cite: 15]. [cite_start]MLIP includes global contrastive learning with a divergence encoder, local token-knowledge-patch alignment contrastive learning, and knowledge-guided category-level contrastive learning with expert knowledge[cite: 16]. [cite_start]This pre-training enhances transfer performance for tasks like image classification, object detection, and semantic segmentation, even with limited annotated data[cite: 17, 18].
+    * [cite_start]VividMed (Vision Language Model with Versatile Visual Grounding for Medicine): This VLM supports generating both semantic segmentation masks and instance-level bounding boxes, and accommodates various imaging modalities, including both 2D and 3D data[cite: 24]. [cite_start]It is trained using a three-stage procedure and an automatic data synthesis pipeline based on open datasets and models[cite: 25]. [cite_start]VividMed also excels in other common downstream tasks, including Visual Question Answering (VQA) and report generation [cite: 26][cite_start], showing that visual grounding ability improves performance on these tasks[cite: 27]. While its primary focus is versatile visual grounding, its VLM capabilities contribute to connecting visual and linguistic information.
+    * [cite_start]Explicd (Aligning Human Knowledge with Visual Concepts Towards Explainable Medical Image Classification): This framework queries domain knowledge from LLMs or human experts to establish diagnostic criteria across various concept axes (e.g., color, shape, texture, or specific patterns of diseases)[cite: 9]. [cite_start]By leveraging a pretrained vision-language model, Explicd injects these criteria into the embedding space as knowledge anchors, thereby facilitating the learning of corresponding visual concepts within medical images[cite: 10]. This process aligns human expert knowledge (textual diagnostic criteria) with visual features.
+
+* Model (Inference Phase - CNAPS-like adaptation):
+    * [cite_start]The strong, generalizable representations learned by BiomedCLIP [cite: 6] from its vast image-text pair pre-training allow it to immediately understand the relationship between new, unseen diagrams and medical terminology.
+    * [cite_start]MLIP's knowledge-guided contrastive learning ensures that visual representations are deeply integrated with linguistic information across multiple granularities, enabling the model to effectively match visual details to specific medical terms even from old papers[cite: 15, 16].
+    * [cite_start]VividMed's versatile visual grounding[cite: 24], even if primarily for segmentation and VQA, contributes to the overall VLM capability, allowing it to interpret the visual elements of diagrams and relate them to textual descriptions.
+    * [cite_start]Explicd's approach of injecting textual diagnostic criteria as "knowledge anchors" into the embedding space, and determining outcomes based on similarity scores between encoded visual concepts and textual criteria[cite: 10, 11], directly explains how the system can connect visuals and scientific language based on predefined or learned medical knowledge. The combined knowledge from these models allows for the immediate understanding.
+
+* Output: The system correctly matches the diagrams with the right medical terms.
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* Model: BiomedCLIP: a multimodal biomedical foundation model pretrained from fifteen million scientific image-text pairs
+    * [cite_start]Paper: https://arxiv.org/pdf/2303.00915 [cite: 6]
+    * [cite_start]GitHub: https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224 [cite: 6]
+
+* Model: Aligning Human Knowledge with Visual Concepts Towards Explainable Medical Image Classification (Explicd)
+    * [cite_start]Paper: http://arxiv.org/pdf/2406.05596v2.pdf [cite: 6]
+    * [cite_start]GitHub: https://github.com/yhygao/Explicd [cite: 13]
+
+* Model: MLIP: Enhancing Medical Visual Representation with Divergence Encoder and Knowledge-guided Contrastive Learning
+    * [cite_start]Paper: http://arxiv.org/pdf/2402.02045v1.pdf [cite: 13]
+
+* Model: VividMed: Vision Language Model with Versatile Visual Grounding for Medicine
+    * [cite_start]Paper: http://arxiv.org/pdf/2410.12694v2.pdf [cite: 19]
+    * [cite_start]GitHub: https://github.com/function2-llx/mmmm [cite: 28]
+```

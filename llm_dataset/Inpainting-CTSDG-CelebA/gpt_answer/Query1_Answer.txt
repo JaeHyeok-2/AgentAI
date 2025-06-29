@@ -1,0 +1,41 @@
+🧠 **User Question:**  
+"I erased someone from a selfie, and the wallpaper and skin blended in perfectly. How does the AI fill in missing face and background parts so naturally?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **semantic inpainting** for facial and background content. This involves filling in missing regions of an image (e.g. due to object removal) with coherent and realistic textures, shapes, and colors—particularly challenging for human regions like skin.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A masked image with regions manually erased (e.g., a face or body).  
+- **Model**:  
+  - **Txt2Img-StableDiffusionV1-QGO-PromptingReal** uses a diffusion-based generation process that fills in missing content by leveraging powerful visual priors learned during training. It can be guided via text or latent prompt optimization to ensure realistic results.
+  - The model samples new pixel values conditioned on the surrounding region, maintaining edge continuity and semantic context.
+- **Output**: A photorealistic inpainted image where missing human parts and backgrounds are reconstructed to appear seamless.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 🔗 [FaceCom (3D Facial Shape Completion)](http://arxiv.org/pdf/2406.02074v1.pdf)  
+  💻 [GitHub](https://github.com/dragonylee/facecom)  
+  Uses shape priors and inpainting to recover full 3D faces with realism, supporting face region guidance.
+
+- 🔗 [Blind Inpainting with Object-aware Discriminator](http://arxiv.org/pdf/2303.15124v2.pdf)  
+  Inpaints without a provided mask, blending content using adversarial training and recognition-based loss.
+
+- 🔗 [Learning Aggregated Appearance (AGAP)](http://arxiv.org/pdf/2312.06657v2.pdf)  
+  💻 [GitHub](https://github.com/felixcheng97/agap)  
+  Provides real-time editable 3D representations that preserve facial appearance across projections.
+
+---
+
+### ✅ Summary:
+
+Diffusion-based models like StableDiffusion and shape-aware methods like FaceCom can **reconstruct erased faces or backgrounds** with near-human precision by learning both **contextual structure** and **fine-grained texture** alignment.
+

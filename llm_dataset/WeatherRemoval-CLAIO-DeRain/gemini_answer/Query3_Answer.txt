@@ -1,0 +1,34 @@
+1. What task is the user trying to perform?
+
+The user is trying to perform **image deraining with detail preservation**, specifically removing thin rain lines from a street photo while ensuring that important image details, such as neon reflections, remain untouched and are not over-smoothed. The core challenge is selectively removing rain without degrading the underlying scene's fine features.
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow for detail-preserving deraining would leverage models capable of precisely separating rain and background components, using contrastive learning to enhance detail awareness, and potentially employing advanced techniques for reflection removal to avoid over-smoothing important highlights.
+
+* Input: A rainy street photo with neon reflections.
+
+* Model (Core Deraining Models):
+    * [cite_start]**WeatherRemoval-CLAIO-DeRain:** This model is a recommended AI model for weather removal, including deraining[cite: 69].
+    * **Harnessing Joint Rain-/Detail-aware Representations to Eliminate Intricate Rains (CoIC):** This model directly addresses the problem of avoiding over-smoothing. [cite_start]It focuses on delving into "meaningful representations that encapsulate both the rain and background components" [cite: 71] [cite_start]and leverages these as "instructive guidance"[cite: 72]. [cite_start]Crucially, it devises a "rain-/detail-aware contrastive learning strategy to help extract joint rain-/detail-aware representations"[cite: 73]. This strategy allows the model to explicitly learn what constitutes "rain" versus "details," preventing over-smoothing. [cite_start]CoIC also offers "insight into modeling relationships of datasets, quantitatively assessing the impact of rain and details on restoration, and unveiling distinct behaviors of models given diverse inputs" [cite: 75][cite_start], validating its efficacy in boosting deraining while preserving details[cite: 76].
+    * [cite_start]**Contrastive Learning Based Recursive Dynamic Multi-Scale Network for Image Deraining (RDMC):** This method proposes a "contrastive learning-based image deraining method that investigates the correlation between rainy and clear images and leverages a contrastive prior to optimize the mutual information of the rainy and restored counterparts"[cite: 81]. This contrastive prior helps the model distinguish between rain and actual scene content, reducing over-smoothing. [cite_start]Given complex rain patterns, it develops a "recursive mechanism" with "multi-scale feature extraction" [cite: 83] [cite_start]to precisely portray diverse rain patterns [cite: 84][cite_start], and "dynamic cross-level information recruitment modules" [cite: 83] [cite_start]that can "selectively compensate high-level features for shallow-level information"[cite: 84]. This multi-scale, selective compensation is key to preserving fine details like neon reflections.
+
+* Model (Related Concepts for Reflection Removal/Detail Preservation):
+    * [cite_start]**Removing Reflections from RAW Photos:** This system is designed to "remove real-world reflections from images"[cite: 88]. [cite_start]It operates on linear (RAW) photos and can use an "optional contextual photo looking in the opposite direction" [cite: 89] [cite_start]to "disambiguate what should be considered the reflection"[cite: 90]. [cite_start]This explicit capability to remove reflections, combined with training on "photometrically and geometrically accurate" [cite: 91] synthetic mixtures, implies a sophisticated understanding of how reflections manifest and how to remove them without affecting underlying details. While for reflections, the principles of distinguishing a superimposed element from the scene apply similarly to deraining, preventing over-smoothing.
+
+* Output: Thin rain lines are gone, but neon reflections remain untouched, as modern derain models avoid over-smoothing important image details by using detail-aware representations, contrastive learning, multi-scale processing, and selective information compensation.
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* Model: WeatherRemoval-CLAIO-DeRain
+    * [cite_start]Paper: None [cite: 69]
+    * [cite_start]GitHub: https://github.com/xiaojihh/cl_all-in-one [cite: 69]
+
+* Related Papers:
+    * Model: Harnessing Joint Rain-/Detail-aware Representations to Eliminate Intricate Rains (CoIC)
+        * [cite_start]Paper: http://arxiv.org/pdf/2404.12091v1.pdf [cite: 69]
+        * [cite_start]GitHub: https://github.com/schizophreni/coic [cite: 69]
+    * Model: Contrastive Learning Based Recursive Dynamic Multi-Scale Network for Image Deraining (RDMC)
+        * [cite_start]Paper: http://arxiv.org/pdf/2305.18092v1.pdf [cite: 78]
+    * Model: Removing Reflections from RAW Photos
+        * [cite_start]Paper: http://arxiv.org/pdf/2404.14414v2.pdf [cite: 88]

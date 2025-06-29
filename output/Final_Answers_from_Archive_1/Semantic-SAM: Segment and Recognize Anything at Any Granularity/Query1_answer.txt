@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I clicked on an image and it instantly labeled not just the object, but also its parts—like wheels, handles, and buttons. How does it recognize things at that level of detail?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: Recognize Anything Model
+  - Paper: https://arxiv.org/pdf/2306.03514
+  - GitHub: https://github.com/OPPOMKLab/recognize-anything?tab=readme-ov-file
+- **Model**: A Self-Supervised Method for Body Part Segmentation and Keypoint Detection of Rat Images
+  - Paper: http://arxiv.org/pdf/2405.04650v1.pdf
+  - GitHub: None
+- **Model**: Open-domain Visual Entity Recognition: Towards Recognizing Millions of Wikipedia Entities
+  - Paper: http://arxiv.org/pdf/2302.11154v2.pdf
+  - GitHub: https://github.com/edchengg/oven_eval
+- **Model**: NeuralLabeling: A versatile toolset for labeling vision datasets using Neural Radiance Fields
+  - Paper: http://arxiv.org/pdf/2309.11966v2.pdf
+  - GitHub: https://github.com/FlorisE/neural-labeling
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

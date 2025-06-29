@@ -1,0 +1,35 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Without needing sketches or blueprints, it generated 3D shapes for all my product ideas—ready for use in mockups. What kind of model makes that level of creation so accessible?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Structured 3D Latents for Scalable and Versatile 3D Generation∗
+Paper: https://arxiv.org/pdf/2412.01506
+GitHub: https://github.com/Microsoft/TRELLIS
+
+### Related Papers:
+Model: 3D VR Sketch Guided 3D Shape Prototyping and Exploration
+Paper: http://arxiv.org/pdf/2306.10830v6.pdf
+GitHub: https://github.com/rowl1ng/3dsketch2shape
+Summary: 3D shape modeling is labor-intensive, time-consuming, and requires years of expertise. To facilitate 3D shape modeling, we propose a 3D shape generation network that takes a 3D VR sketch as a condition. We assume that sketches are created by novices without art training and aim to reconstruct geometrically realistic 3D shapes of a given category. To handle potential sketch ambiguity, our method creates multiple 3D shapes that align with the original sketch's structure. We carefully design our method, training the model step-by-step and leveraging multi-modal 3D shape representation to support training with limited training data. To guarantee the realism of generated 3D shapes we leverage the normalizing flow that models the distribution of the latent space of 3D shapes. To encourage the fidelity of the generated 3D shapes to an input sketch, we propose a dedicated loss that we deploy at different stages of the training process. The code is available at https://github.com/Rowl1ng/3Dsketch2shape.
+
+Model: CAD-Recode: Reverse Engineering CAD Code from Point Clouds
+Paper: http://arxiv.org/pdf/2412.14042v1.pdf
+GitHub: https://github.com/filaPro/cad-recode
+Summary: Computer-Aided Design (CAD) models are typically constructed by sequentially drawing parametric sketches and applying CAD operations to obtain a 3D model. The problem of 3D CAD reverse engineering consists of reconstructing the sketch and CAD operation sequences from 3D representations such as point clouds. In this paper, we address this challenge through novel contributions across three levels: CAD sequence representation, network design, and training dataset. In particular, we represent CAD sketch-extrude sequences as Python code. The proposed CAD-Recode translates a point cloud into Python code that, when executed, reconstructs the CAD model. Taking advantage of the exposure of pre-trained Large Language Models (LLMs) to Python code, we leverage a relatively small LLM as a decoder for CAD-Recode and combine it with a lightweight point cloud projector. CAD-Recode is trained on a procedurally generated dataset of one million CAD sequences. CAD-Recode significantly outperforms existing methods across the DeepCAD, Fusion360 and real-world CC3D datasets. Furthermore, we show that our CAD Python code output is interpretable by off-the-shelf LLMs, enabling CAD editing and CAD-specific question answering from point clouds.
+
+Model: WorldSmith: Iterative and Expressive Prompting for World Building with a Generative AI
+Paper: http://arxiv.org/pdf/2308.13355v1.pdf
+Summary: Crafting a rich and unique environment is crucial for fictional world-building, but can be difficult to achieve since illustrating a world from scratch requires time and significant skill. We investigate the use of recent multi-modal image generation systems to enable users iteratively visualize and modify elements of their fictional world using a combination of text input, sketching, and region-based filling. WorldSmith enables novice world builders to quickly visualize a fictional world with layered edits and hierarchical compositions. Through a formative study (4 participants) and first-use study (13 participants) we demonstrate that WorldSmith offers more expressive interactions with prompt-based models. With this work, we explore how creatives can be empowered to leverage prompt-based generative AI as a tool in their creative process, beyond current "click-once" prompting UI paradigms.
+
+
+Answer:

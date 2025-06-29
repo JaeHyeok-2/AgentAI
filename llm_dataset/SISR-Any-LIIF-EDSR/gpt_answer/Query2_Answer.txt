@@ -1,0 +1,41 @@
+🧠 **User Question:**  
+"I enlarged a blurry portrait to poster size, and it looked surprisingly smooth and detailed. How does AI preserve clarity even when upscaling far beyond normal resolution?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is engaging in **image deblurring + super-resolution**, restoring sharpness and perceptual detail in large-scale portrait images.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A low-res and blurry portrait image.  
+- **Model**:  
+  - **MIMO-UNet (Deblur-MIMO-UNet-RealBlur)** performs **multi-scale deblurring** using both input-level and output-level skip connections. It processes fine-to-coarse and coarse-to-fine features to restore texture and structure across scales.  
+  - The model removes blur while preserving identity features and enhancing local contrast.  
+- **Output**: A crisp portrait suitable for enlargement.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [MIMO-UNet Paper (ICCV 2021)](https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf)  
+  💻 [GitHub](https://github.com/chosj95/MIMO-UNet)
+
+- 📄 [FeatSharp: Sharpen Vision Model Outputs](http://arxiv.org/pdf/2502.16025v1.pdf)
+
+- 📄 [Effect of Resolution on Semantic Segmentation](http://arxiv.org/pdf/2402.05398v1.pdf)  
+  Shows how bottom-up resolution propagation helps recover detail.
+
+- 📄 [Elastic-DETR: Adaptive Image Resolution](http://arxiv.org/pdf/2412.06341v1.pdf)  
+  Introduces learnable resolution scaling to better handle input variation.
+
+---
+
+### ✅ Summary:
+
+MIMO-UNet enhances **multi-scale structural detail** during deblurring, and methods like FeatSharp support clarity preservation. These models allow portraits to be upsampled to poster size with minimal visual loss.
+

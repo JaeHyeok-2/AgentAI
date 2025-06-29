@@ -1,0 +1,51 @@
+Based on the provided models and papers, here is the analysis of the user's question about unsupervised medical image grouping by condition:
+
+## 1. Task Analysis
+The user is performing **unsupervised medical image clustering** or **self-supervised representation learning** for condition-based grouping. This involves automatically organizing X-ray and pathology scans into meaningful categories based on underlying medical conditions without requiring labeled training data.
+
+## 2. CNAPS AI-like Workflow (Input → Model → Output)
+
+**Input:** Mixed collection of X-ray and pathology scans without condition labels
+
+**Model Processing:**
+- **BiomedCLIP** provides foundational multimodal representations by:
+  - Extracting rich visual features from medical images using vision transformer architecture
+  - Leveraging pretraining on 15 million scientific image-text pairs for robust medical domain understanding
+  - Creating embeddings that capture clinical similarities across different imaging modalities
+- **DINO (Self-Distillation with No Labels) framework** enables unsupervised learning by:
+  - Learning image representations without using any labels
+  - Applying self-supervised objectives to discover inherent patterns in medical images
+  - Generating feature vectors that naturally cluster by medical condition
+- **TransMed approach** enhances classification through:
+  - Utilizing vision foundation models adapted for medical imaging
+  - Applying few-shot learning principles for efficient adaptation
+  - Contextualizing semantic information via large language models
+
+**Output:** Automatically grouped image clusters organized by medical conditions (e.g., pneumonia cases, fractures, normal scans, specific pathological patterns)
+
+## 3. Technical Implementation
+The unsupervised grouping capability stems from:
+- **Self-supervised pretraining:** DINO framework learns discriminative features by comparing different augmented views of the same image
+- **Domain-specific embeddings:** BiomedCLIP creates medically meaningful representations that naturally separate different conditions
+- **Clustering algorithms:** Once feature representations are learned, conventional machine learning classifiers can identify condition-based groupings
+- **Multi-modal foundation:** Large-scale pretraining across diverse medical images enables generalization across X-ray and pathology domains
+
+## 4. Relevant Papers and Tools
+
+### Primary Model:
+- **Model:** BiomedCLIP: a multimodal biomedical foundation model pretrained from fifteen million scientific image-text pairs
+- **Paper:** https://arxiv.org/pdf/2303.00915
+- **GitHub:** https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+
+### Supporting Frameworks:
+- **Model:** Self-supervision for medical image classification: state-of-the-art performance with ~100 labeled training samples per class
+- **Paper:** http://arxiv.org/pdf/2304.05163v2.pdf
+- **GitHub:** https://github.com/ipmi-icns-uke/sparsam
+
+- **Model:** TransMed: Large Language Models Enhance Vision Transformer for Biomedical Image Classification
+- **Paper:** http://arxiv.org/pdf/2312.07125v2.pdf
+
+- **Model:** Data AUDIT: Identifying Attribute Utility- and Detectability-Induced Bias in Task Models
+- **Paper:** http://arxiv.org/pdf/2304.03218v1.pdf
+
+The unsupervised grouping capability results from self-supervised learning methods that discover meaningful medical patterns without labels, combined with foundation models pretrained on large-scale medical data that naturally encode condition-specific visual features.

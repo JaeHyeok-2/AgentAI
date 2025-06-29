@@ -1,0 +1,40 @@
+🧠 **User Question:**  
+"I processed a rainy street photo and noticed even thin rain lines were gone but the neon reflections remained untouched. How do modern derain models avoid over-smoothing important image details?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **structure-aware deraining**, where the goal is to remove thin rain lines while preserving fine details like reflections, edges, and lights.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A night or low-light photo with rain streaks and rich reflective details.  
+- **Model**:  
+  - **CLAIO-DeRain** uses rain-aware contrast enhancement with spatial attention to extract fine streaks while ignoring color-dense structures like neon lights.  
+  - Models like **CoIC** integrate joint rain/detail-aware contrastive learning and instance-level modulation, separating rain signal from real detail signal.  
+- **Output**: A derained photo with intact illumination and sharp reflection zones.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [CLAIO GitHub](https://github.com/xiaojihh/cl_all-in-one)
+
+- 📄 [CoIC - Rain/Detail Dual Representation](http://arxiv.org/pdf/2404.12091v1.pdf)
+
+- 📄 [Recursive Multi-Scale Contrastive Deraining (RDMC)](http://arxiv.org/pdf/2305.18092v1.pdf)  
+  Uses recursive feature refinement and contrastive loss to avoid texture erosion.
+
+- 📄 [Reflection Removal Techniques](http://arxiv.org/pdf/2404.14414v2.pdf)  
+  Preserves reflection zones while removing non-scene elements like streaks.
+
+---
+
+### ✅ Summary:
+
+Advanced deraining models like CLAIO and CoIC separate **rain from texture** using **multi-scale detail learning and contrastive supervision**, allowing even **thin streaks to be removed** while preserving ambient scene lighting.
+

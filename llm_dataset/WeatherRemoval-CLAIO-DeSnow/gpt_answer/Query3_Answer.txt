@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"When I used AI on a ski resort photo, the falling snow vanished but the distant trees stayed detailed. What techniques allow the model to clear both thick and faint snow without losing scene integrity?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is doing **depth-aware and texture-preserving desnowing**, where both foreground snow and subtle background haze need to be removed without degrading scene content.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A snow-covered outdoor photo with both close-up flakes and distant scene detail.  
+- **Model**:  
+  - **CLAIO-DeSnow** processes the image using layered spatial attention. Large flakes are removed using high-contrast detection, while faint ones are treated with frequency filtering.  
+  - GeoAI methods like SparseInst-inspired modules localize fine structures like trees and enhance their retention.
+- **Output**: A crisp photo with both large/faint snow gone and scene features intact.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [CLAIO GitHub](https://github.com/xiaojihh/cl_all-in-one)
+
+- 📄 [GeoAI Arctic Permafrost Segmentation](http://arxiv.org/pdf/2306.05341v1.pdf)
+
+- 📄 [SAM Generalization Study](http://arxiv.org/pdf/2401.08787v1.pdf)
+
+- 📄 [CoIC Contrastive Weather Feature Modeling](http://arxiv.org/pdf/2404.12091v1.pdf)
+
+---
+
+### ✅ Summary:
+
+CLAIO-DeSnow separates snow layers by analyzing **spatial frequency, motion blur, and local contrast**. It removes both thick and fine snowflakes while **preserving natural textures** like trees and mountain lines.
+

@@ -1,0 +1,32 @@
+1. What task is the user trying to perform?
+
+The user is trying to perform **extreme image super-resolution**, specifically enlarging an old family photo more than 10 times while maintaining "crisp" details without visible pixels. [cite_start]This requires AI to "recalculate colors just from coordinates" and use an image representation that remains "realistic at any magnification." [cite: 27]
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow for extreme super-resolution would involve models that can implicitly represent images at arbitrary resolutions and effectively synthesize fine details from low-resolution inputs.
+
+* [cite_start]Input: An old family photo (low-resolution image). [cite: 27]
+
+* Model (Core Super-Resolution/Representation Models):
+    * **SISR-Any-LIIF-EDSR (LIIF):** LIIF (Local Implicit Image Function) is a key model for this task. [cite_start]It represents images as continuous functions, where pixel colors can be "recalculated... from coordinates." [cite: 27] [cite_start]This allows for output at "any magnification" without pixelation, as it's not limited to a fixed grid. [cite: 27] [cite_start]It is a "general-purpose model for image super-resolution from arbitrary scale factors." [cite: 32]
+    * [cite_start]**FeatSharp: Your Vision Model Features, Sharper:** This method introduces a way to "coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution." [cite: 36] This is crucial for maintaining crisp details when images are blown up significantly. [cite_start]Vision Transformers (ViT), often used as backbones, are typically low resolution, and FeatSharp addresses this inflexibility. [cite: 33, 34, 35]
+    * [cite_start]**ImageNet-Hard: The Hardest Images Remaining from a Study of the Power of Zoom and Spatial Biases in Image Classification:** This paper notes that image classifiers can reach high accuracy by "zoom[ing] to the most discriminative region" and extracting features. [cite: 46] [cite_start]It also proposes a "test-time augmentation (TTA) technique that improves classification accuracy by forcing models to explicitly perform zoom-in operations before making predictions," demonstrating the "potential of zooming." [cite: 49, 16] This insight is relevant to how models might reconstruct details at very high magnifications.
+    * [cite_start]**Towards flexible perception with visual memory:** This paper explores decomposing image classification into image similarity and search using a "visual memory" that allows "flexibly add[ing] data across scales: from individual samples all the way to entire classes and billion-scale data." [cite: 40] [cite_start]While focused on classification, the concept of a visual memory that can handle data across scales could contribute to an image representation that maintains realism at any magnification, as it allows for flexible knowledge representation beyond fixed network weights. [cite: 38, 39, 44]
+
+* [cite_start]Output: An old family photo enlarged more than 10 times with crisp details, no visible pixels, and a realistic appearance at any magnification due to colors being recalculated from coordinates and a flexible image representation. [cite: 27]
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* Model: SISR-Any-LIIF-EDSR
+    * [cite_start]Paper: https://arxiv.org/pdf/2012.09161 [cite: 32]
+    * [cite_start]GitHub: https://github.com/yinboc/liif [cite: 32]
+
+* Related Papers:
+    * Model: FeatSharp: Your Vision Model Features, Sharper
+        * [cite_start]Paper: http://arxiv.org/pdf/2502.16025v1.pdf [cite: 32]
+    * Model: Towards flexible perception with visual memory
+        * [cite_start]Paper: http://arxiv.org/pdf/2408.08172v2.pdf [cite: 38]
+        * [cite_start]GitHub: https://github.com/google-deepmind/visual-memory [cite: 38]
+    * Model: ImageNet-Hard: The Hardest Images Remaining from a Study of the Power of Zoom and Spatial Biases in Image Classification
+        * [cite_start]Paper: http://arxiv.org/pdf/2304.05538v4.pdf [cite: 45]

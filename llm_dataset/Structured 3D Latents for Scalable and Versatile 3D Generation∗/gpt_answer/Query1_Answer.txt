@@ -1,0 +1,40 @@
+🧠 **User Question:**  
+"Describing something as simple as “a futuristic coffee machine” was enough—it built a fully rotatable 3D model with amazing detail. How does it turn plain text into objects like that?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **text-to-3D object generation**, where a natural language prompt is converted into a full, interactive 3D model with shape, detail, and semantic relevance.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A text prompt describing the desired object.  
+- **Model**:  
+  - **TRELLIS (Structured 3D Latents)** encodes text using a large language model and maps it to structured 3D representations like multi-view depth, mesh, or neural radiance fields.  
+  - It uses latent token hierarchies to preserve global shape and local detail.  
+- **Output**: A realistic 3D model that aligns with the text, viewable and editable from any angle.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [TRELLIS Paper](https://arxiv.org/pdf/2412.01506)  
+  💻 [GitHub - Microsoft/TRELLIS](https://github.com/Microsoft/TRELLIS)
+
+- 📄 [Text2Robot (Design from Prompt)](http://arxiv.org/pdf/2406.19963v2.pdf)  
+  💻 [GitHub](https://github.com/generalroboticslab/Text2Robot)
+
+- 📄 [Transcrib3D (LLM-Guided 3D Grounding)](http://arxiv.org/pdf/2404.19221v1.pdf)
+
+- 📄 [Automated Multi-modal 3D Design in Materials Science](http://arxiv.org/pdf/2502.14904v1.pdf)
+
+---
+
+### ✅ Summary:
+
+Models like TRELLIS translate plain text into structured 3D latents using token hierarchies and multi-view projection. This enables detailed, scalable, prompt-based 3D modeling from just a sentence.
+

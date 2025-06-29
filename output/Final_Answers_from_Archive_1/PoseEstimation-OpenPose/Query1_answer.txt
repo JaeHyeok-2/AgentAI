@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I filmed a dance practice with friends and an app drew joint lines on everyone in real time—even with a busy background. How does it track each pose so fast, and why is there barely any lag when people overlap?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: PoseEstimation-OpenPose
+  - Paper: https://arxiv.org/pdf/1812.08008
+  - GitHub: https://github.com/CMU-Perceptual-Computing-Lab/openpose
+- **Model**: SyncDiff: Synchronized Motion Diffusion for Multi-Body Human-Object Interaction Synthesis
+  - Paper: http://arxiv.org/pdf/2412.20104v2.pdf
+  - GitHub: None
+- **Model**: Estimating Body and Hand Motion in an Ego-sensed World
+  - Paper: http://arxiv.org/pdf/2410.03665v3.pdf
+  - GitHub: None
+- **Model**: StyleLipSync: Style-based Personalized Lip-sync Video Generation
+  - Paper: http://arxiv.org/pdf/2305.00521v2.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

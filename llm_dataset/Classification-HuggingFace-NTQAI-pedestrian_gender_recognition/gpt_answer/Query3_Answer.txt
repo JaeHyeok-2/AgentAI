@@ -1,0 +1,28 @@
+🧠 User Question:
+"How do AI models today achieve accurate gender recognition, and what steps are usually taken during training to ensure fairness and avoid biases related to ethnicity, clothing, or camera angles?"
+
+---
+
+### 1. What task is the user trying to perform?
+This is a **retail or demographic analytics application** for gender classification from camera feeds, with emphasis on ethical fairness and demographic bias mitigation.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: RGB video/image from indoor or outdoor camera feeds.  
+- **Model**:  
+  - Classification models like **Classification-HuggingFace-NTQAI-pedestrian_gender_recognition** are trained on demographically diverse pedestrian datasets.  
+  - Multimodal fairness techniques combine **visual + text + metadata** to reduce bias.  
+  - Fairness audits are done using **benchmarks like UTKFace, FACET**, and others.  
+- **Output**: Gender classification with improved bias mitigation.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [Multimodal Fair Image Classification](http://arxiv.org/pdf/2412.12165v1.pdf)【448†source】  
+- 📄 [Evaluating Fairness in Vision-Language Models](http://arxiv.org/pdf/2406.17974v2.pdf)  
+  💻 [GitHub](https://github.com/elviswxy/LVLM_fairness)【448†source】
+

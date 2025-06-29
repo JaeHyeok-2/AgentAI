@@ -1,0 +1,34 @@
+1. What task is the user trying to perform?
+
+[cite_start]The user is trying to perform **text-to-image generation**, where the AI is able to understand and execute a user's intent even when the input prompt is "messy" or has jumbled words[cite: 1]. The core task is robust prompt interpretation and generation of a coherent image.
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow for cleaning up messy prompts would involve models that can robustly interpret user intent from noisy textual input, learn from unlabeled data to refine understanding, and evaluate the alignment between prompt content and generated images.
+
+* [cite_start]Input: A jumbled or messy text prompt (e.g., "jumbled words in my prompt")[cite: 1].
+
+* Model (Core Text-to-Image Generation Model):
+    * [cite_start]**Txt2Img-StableDiffusionV1-QGO-PromptingReal:** This model is a text-to-image model that takes a textual prompt and generates an image[cite: 6]. This model would be responsible for the actual image generation based on its interpretation of the messy prompt.
+
+* Model (Related Concepts for Prompt Cleaning/Understanding):
+    * **POUF: Prompt-oriented unsupervised fine-tuning for large pre-trained models:** This framework directly addresses how AI handles messy or jumbled prompts. [cite_start]It proposes an "unsupervised fine-tuning framework to directly fine-tune the model or prompt on the unlabeled target data"[cite: 8]. [cite_start]This allows large pre-trained models, which are expressive and powerful [cite: 6][cite_start], to adapt to downstream tasks even when labeled data is a critical limitation[cite: 7, 8]. [cite_start]POUF works by "aligning the discrete distributions extracted from the prompts and target data" [cite: 9][cite_start], enabling the model to learn what the user "really want[s]" [cite: 1] from messy inputs. [cite_start]It has achieved "consistent improvements over the baselines" across various tasks, including image classification[cite: 10, 11], indicating its effectiveness in cleaning up prompts.
+    * [cite_start]**TIAM -- A Metric for Evaluating Alignment in Text-to-Image Generation:** This metric is crucial for understanding how AI "cleans up a messy prompt" [cite: 1] [cite_start]by evaluating the alignment between the "content specified in the prompt and the corresponding generated images"[cite: 15]. [cite_start]TIAM can "better characterize the alignment in terms of the type of the specified objects, their number, and their color"[cite: 16]. [cite_start]It also quantifies "the influence of the number of concepts in the prompt, their order as well as their (color) attributes"[cite: 19]. By doing so, it provides insights into how well the T2I model understands the essential content of the prompt, even when jumbled. [cite_start]The metric reveals that image quality can vary drastically depending on the noise used as a seed[cite: 18], which also influences how the model interprets and generates from a messy prompt.
+    * [cite_start]**Multi-Turn Multi-Modal Question Clarification for Enhanced Conversational Understanding:** This task and proposed framework, Mario, directly address refining "complex user preferences" [cite: 22] [cite_start]over multiple turns of interaction using both text and visual modalities[cite: 24]. [cite_start]While the user's prompt is a single input, the underlying principle of "progressive refinement for complex queries" [cite: 28] [cite_start]through "integrat[ing] textual and visual information from conversational history" [cite: 26] demonstrates how an AI system can effectively understand and clarify ambiguous or messy user intent by leveraging context and multimodal cues, even if that "context" is internal to how the model processes a prompt. [cite_start]This framework's gains are "most significant in longer interactions"[cite: 28], suggesting its ability to handle progressively more complex or messy inputs.
+
+* [cite_start]Output: A correctly generated portrait, despite a messy prompt[cite: 1]. [cite_start]The AI cleans up the prompt by using unsupervised fine-tuning to align prompt and target data distributions [cite: 8, 9][cite_start], quantifying the influence of concept order and attributes [cite: 19][cite_start], and leveraging multi-modal clarification approaches to progressively refine user intent[cite: 24, 28].
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* Model: Txt2Img-StableDiffusionV1-QGO-PromptingReal
+    * [cite_start]GitHub: https://github.com/Kameronski/stable-diffusion-1.5 [cite: 6]
+
+* Related Papers:
+    * Model: POUF: Prompt-oriented unsupervised fine-tuning for large pre-trained models
+        * [cite_start]Paper: http://arxiv.org/pdf/2305.00350v1.pdf [cite: 6]
+        * [cite_start]GitHub: https://github.com/korawat-tanwisuth/pouf [cite: 6]
+    * Model: TIAM -- A Metric for Evaluating Alignment in Text-to-Image Generation
+        * [cite_start]Paper: http://arxiv.org/pdf/2307.05134v2.pdf [cite: 12]
+        * [cite_start]GitHub: https://github.com/grimalpaul/tiam [cite: 12]
+    * Model: Multi-Turn Multi-Modal Question Clarification for Enhanced Conversational Understanding
+        * [cite_start]Paper: http://arxiv.org/pdf/2502.11442v1.pdf [cite: 21]

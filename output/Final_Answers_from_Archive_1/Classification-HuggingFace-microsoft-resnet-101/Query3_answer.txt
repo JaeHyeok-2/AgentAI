@@ -1,0 +1,40 @@
+🧠 **User Question:**  
+"For huge datasets like satellite or medical images, I wonder—
+How do deep models like ResNet-101 manage complexity without slowing down?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is trying to understand how a model achieves a particular behavior in a real-world scenario, such as tracking, generation, or classification. Based on the question, the task likely falls under one of the following categories: object tracking, image-to-video generation, pose-to-motion conversion, or content moderation.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**:
+- The **input** is typically a static image, text description, sketch, or video sequence.
+- The **model** processes the input using its architecture (e.g., diffusion, transformer, CNN), guided by the pretrained features or control signals like pose, semantics, or spatial constraints.
+- The **output** is a video, prediction label, mask, or stylized version of the input that reflects learned distributions from the training set.
+
+---
+
+### 3. Models and Tools Referenced
+
+- **Model:** Segmentation-DeepLabV3-ResNet101-VOC
+  - Paper: None
+  - GitHub: https://github.com/VainF/DeepLabV3Plus-Pytorch
+- **Model:** Which Backbone to Use: A Resource-efficient Domain Specific Comparison for Computer Vision
+  - Paper: http://arxiv.org/pdf/2406.05612v2.pdf
+  - GitHub: https://github.com/pranavphoenix/Backbones
+- **Model:** Exploring Data Redundancy in Real-world Image Classification through Data Selection
+  - Paper: http://arxiv.org/pdf/2306.14113v1.pdf
+  - GitHub: https://github.com/zhenyutang2023/data_selection
+- **Model:** ResBuilder: Automated Learning of Depth with Residual Structures
+  - Paper: http://arxiv.org/pdf/2308.08504v1.pdf
+  - GitHub: N/A
+
+These models are tailored to their specific tasks. For example, video generation models use temporal consistency modules, while tracking models use attention or re-ID embeddings to focus on consistent targets.
+
+---
+
+Each model contributes specific capabilities to solve the user's task efficiently within the CNAPS framework.

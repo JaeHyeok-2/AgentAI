@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"I just described a scene and it made a video that looked like it was in my favorite art style. How can it match styles without needing custom data?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is trying to understand how a model achieves a particular behavior in a real-world scenario, such as tracking, generation, or classification. Based on the question, the task likely falls under one of the following categories: object tracking, image-to-video generation, pose-to-motion conversion, or content moderation.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**:
+- The **input** is typically a static image, text description, sketch, or video sequence.
+- The **model** processes the input using its architecture (e.g., diffusion, transformer, CNN), guided by the pretrained features or control signals like pose, semantics, or spatial constraints.
+- The **output** is a video, prediction label, mask, or stylized version of the input that reflects learned distributions from the training set.
+
+---
+
+### 3. Models and Tools Referenced
+
+- **Model:** NST-fast-neural-style-mosaic
+  - Paper: None
+  - GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+- **Model:** StyleMaster: Stylize Your Video with Artistic Generation and Translation
+  - Paper: http://arxiv.org/pdf/2412.07744v1.pdf
+  - GitHub: N/A
+- **Model:** FedStyle: Style-Based Federated Learning Crowdsourcing Framework for Art Commissions
+  - Paper: http://arxiv.org/pdf/2404.16336v1.pdf
+  - GitHub: N/A
+- **Model:** MuVieCAST: Multi-View Consistent Artistic Style Transfer
+  - Paper: http://arxiv.org/pdf/2312.05046v1.pdf
+  - GitHub: https://github.com/Mirmix/muviecast
+
+These models are tailored to their specific tasks. For example, video generation models use temporal consistency modules, while tracking models use attention or re-ID embeddings to focus on consistent targets.
+
+---
+
+Each model contributes specific capabilities to solve the user's task efficiently within the CNAPS framework.

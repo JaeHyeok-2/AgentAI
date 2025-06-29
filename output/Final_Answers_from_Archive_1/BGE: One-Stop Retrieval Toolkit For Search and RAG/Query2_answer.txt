@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"Even when the wording was vague, it still understood what I meant and found spot-on answers. What helps it go beyond exact keyword matches?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is trying to understand how a model achieves a particular behavior in a real-world scenario, such as tracking, generation, or classification. Based on the question, the task likely falls under one of the following categories: object tracking, image-to-video generation, pose-to-motion conversion, or content moderation.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**:
+- The **input** is typically a static image, text description, sketch, or video sequence.
+- The **model** processes the input using its architecture (e.g., diffusion, transformer, CNN), guided by the pretrained features or control signals like pose, semantics, or spatial constraints.
+- The **output** is a video, prediction label, mask, or stylized version of the input that reflects learned distributions from the training set.
+
+---
+
+### 3. Models and Tools Referenced
+
+- **Model:** BGE: One-Stop Retrieval Toolkit For Search and RAG
+  - Paper: https://arxiv.org/pdf/2412.14475
+  - GitHub: https://github.com/FlagOpen/FlagEmbedding/tree/master?tab=readme-ov-file
+- **Model:** Compressing Search with Language Models
+  - Paper: http://arxiv.org/pdf/2407.00085v1.pdf
+  - GitHub: N/A
+- **Model:** Multi-Turn Multi-Modal Question Clarification for Enhanced Conversational Understanding
+  - Paper: http://arxiv.org/pdf/2502.11442v1.pdf
+  - GitHub: N/A
+- **Model:** Learning Interpretable Queries for Explainable Image Classification with Information Pursuit
+  - Paper: http://arxiv.org/pdf/2312.11548v1.pdf
+  - GitHub: N/A
+
+These models are tailored to their specific tasks. For example, video generation models use temporal consistency modules, while tracking models use attention or re-ID embeddings to focus on consistent targets.
+
+---
+
+Each model contributes specific capabilities to solve the user's task efficiently within the CNAPS framework.

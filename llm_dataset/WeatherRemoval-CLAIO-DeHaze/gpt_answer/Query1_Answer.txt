@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I used AI to clean up a hazy mountain photo, and suddenly the distant peaks looked sharp and clear. How does it know which parts were obscured by haze and restore them so naturally?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **image dehazing**, a task that aims to restore visibility in outdoor photos degraded by atmospheric haze. The challenge lies in estimating both the scene depth and airlight effects to recover the clean image.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A hazy image with low contrast and depth-dependent light scattering.  
+- **Model**:  
+  - **CLAIO-DeHaze** leverages contrast enhancement, luminance equalization, and guided learning to remove haze across regions with different intensities.  
+  - It combines learned priors with color/texture recovery routines tuned for natural scenes like landscapes.  
+- **Output**: A high-contrast, visually clearer image where haze-affected regions (e.g. distant mountains) are sharp and realistic.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [CLAIO GitHub](https://github.com/xiaojihh/cl_all-in-one)
+
+- 📄 [DRACO-DehazeNet](http://arxiv.org/pdf/2410.14595v1.pdf)  
+  Uses a contrastive quadruplet loss to separate haze features from restored detail features for stronger clarity.
+
+- 📄 [Quality Assured Imaging QA](http://arxiv.org/pdf/2407.17596v2.pdf)  
+  Discusses the role of high-quality annotated datasets in benchmarking dehazing models.
+
+---
+
+### ✅ Summary:
+
+CLAIO-DeHaze and DRACO-DehazeNet estimate light scattering patterns in hazy photos and apply detail-aware enhancement, restoring sharpness in atmospheric scenes like mountain landscapes.
+

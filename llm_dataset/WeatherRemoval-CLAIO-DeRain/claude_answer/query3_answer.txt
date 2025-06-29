@@ -1,0 +1,59 @@
+Based on the provided models and papers, here is the analysis of the user's question about avoiding over-smoothing important details like neon reflections while removing thin rain lines:
+
+## 1. Task Analysis
+The user is performing **selective rain removal with detail preservation** for urban street photography. This involves eliminating thin rain lines while preserving important visual details such as neon reflections, lighting effects, and urban textures that should remain untouched during the deraining process.
+
+## 2. CNAPS AI-like Workflow (Input → Model → Output)
+
+**Input:** Rainy street photo containing thin rain lines and important visual details like neon reflections requiring selective processing
+
+**Model Processing:**
+- **CLAIO-DeRain (WeatherRemoval-CLAIO-DeRain)** provides selective rain removal through:
+  - All-in-one rain removal architecture with advanced detail preservation capabilities
+  - Intelligent processing that distinguishes between rain artifacts and important scene elements
+  - Multi-scale analysis enabling removal of thin rain lines while preserving fine visual details
+  - Specialized handling of urban photography with complex lighting and reflection patterns
+- **CoIC (Context-based Instance-level Modulation)** enhances detail-aware processing via:
+  - Joint rain-/detail-aware representations encapsulating both rain interference and important scene details
+  - Context-based Instance-level Modulation mechanism selectively processing rain while preserving details
+  - Rain-/detail-aware contrastive learning strategy extracting representations that distinguish rain from valuable details
+  - Quantitative assessment of rain and detail impact enabling precise control over preservation vs. removal
+- **RDMC (Recursive Dynamic Multi-Scale Network)** prevents over-smoothing through:
+  - Contrastive learning-based approach investigating correlation between rainy and clear images
+  - Multi-scale feature extraction advancing portrayal of diverse rain patterns more precisely
+  - Dynamic cross-level information recruitment selectively compensating features for detail preservation
+  - Recursive mechanism handling complex real-world rain patterns while maintaining detail integrity
+- **RAW Photo Reflection Removal** informs detail preservation via:
+  - System operating on linear (RAW) photos providing superior detail preservation capabilities
+  - Photometrically and geometrically accurate processing maintaining lighting and reflection fidelity
+  - Training on synthetic mixtures enabling robust distinction between artifacts and important details
+  - Up-sampling models transforming processed images to full resolution while preserving fine details
+
+**Output:** Clean street photo with thin rain lines removed while neon reflections and important urban details remain perfectly preserved
+
+## 3. Technical Implementation for Detail Preservation
+The over-smoothing prevention capability stems from:
+- **Joint rain-detail awareness:** CoIC's representations explicitly model both rain and important detail components
+- **Context-based modulation:** Instance-level processing adapts behavior based on local content importance
+- **Contrastive learning:** RDMC's approach optimizes mutual information between rainy and restored images while preserving details
+- **Multi-scale processing:** Recursive mechanisms handle rain at different scales without affecting fine details
+- **RAW-level processing:** Linear photo processing maintains maximum detail fidelity throughout the deraining process
+
+## 4. Relevant Papers and Tools
+
+### Primary Model:
+- **Model:** WeatherRemoval-CLAIO-DeRain
+- **GitHub:** https://github.com/xiaojihh/cl_all-in-one
+
+### Supporting Frameworks:
+- **Model:** Harnessing Joint Rain-/Detail-aware Representations to Eliminate Intricate Rains
+- **Paper:** http://arxiv.org/pdf/2404.12091v1.pdf
+- **GitHub:** https://github.com/schizophreni/coic
+
+- **Model:** Contrastive Learning Based Recursive Dynamic Multi-Scale Network for Image Deraining
+- **Paper:** http://arxiv.org/pdf/2305.18092v1.pdf
+
+- **Model:** Removing Reflections from RAW Photos
+- **Paper:** http://arxiv.org/pdf/2404.14414v2.pdf
+
+The combination of joint rain-detail awareness, context-based instance modulation, contrastive multi-scale processing, and RAW-level detail preservation enables modern derain models to avoid over-smoothing by explicitly modeling important scene details separately from rain artifacts, allowing selective removal of rain while preserving neon reflections and other valuable visual elements.

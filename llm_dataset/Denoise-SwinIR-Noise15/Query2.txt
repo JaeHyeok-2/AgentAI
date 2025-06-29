@@ -1,0 +1,30 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"An old photo I found online had significant degradation and noise, but AI restored it to look like a new image. How does AI successfully recover details from heavily degraded and noisy images? What type of training data and recent AI techniques make this possible?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Denoise-SwinIR-Noise15
+Paper: https://openaccess.thecvf.com/content/ICCV2021W/AIM/papers/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.pdf
+GitHub: https://github.com/JingyunLiang/SwinIR
+
+### Related Papers:
+Model: HAIR: Hypernetworks-based All-in-One Image Restoration
+Paper: http://arxiv.org/pdf/2408.08091v4.pdf
+GitHub: https://github.com/toummHus/HAIR
+Summary: Image restoration aims to recover a high-quality clean image from its degraded version. Recent progress in image restoration has demonstrated the effectiveness of All-in-One image restoration models in addressing various unknown degradations simultaneously. However, these existing methods typically utilize the same parameters to tackle images with different types of degradation, forcing the model to balance the performance between different tasks and limiting its performance on each task. To alleviate this issue, we propose HAIR, a Hypernetworks-based All-in-One Image Restoration plug-and-play method that generates parameters based on the input image and thus makes the model to adapt to specific degradation dynamically. Specifically, HAIR consists of two main components, i.e., Classifier and Hyper Selecting Net (HSN). The Classifier is a simple image classification network used to generate a Global Information Vector (GIV) that contains the degradation information of the input image, and the HSN is a simple fully-connected neural network that receives the GIV and outputs parameters for the corresponding modules. Extensive experiments demonstrate that HAIR can significantly improve the performance of existing image restoration models in a plug-and-play manner, both in single-task and All-in-One settings. Notably, our proposed model Res-HAIR, which integrates HAIR into the well-known Restormer, can obtain superior or comparable performance compared with current state-of-the-art methods. Moreover, we theoretically demonstrate that to achieve a given small enough error, our proposed HAIR requires fewer parameters in contrast to mainstream embedding-based All-in-One methods. The code is available at https://github.com/toummHus/HAIR.
+
+Model: Quality Assured: Rethinking Annotation Strategies in Imaging AI
+Paper: http://arxiv.org/pdf/2407.17596v2.pdf
+Summary: This paper does not describe a novel method. Instead, it studies an essential foundation for reliable benchmarking and ultimately real-world application of AI-based image analysis: generating high-quality reference annotations. Previous research has focused on crowdsourcing as a means of outsourcing annotations. However, little attention has so far been given to annotation companies, specifically regarding their internal quality assurance (QA) processes. Therefore, our aim is to evaluate the influence of QA employed by annotation companies on annotation quality and devise methodologies for maximizing data annotation efficacy. Based on a total of 57,648 instance segmented images obtained from a total of 924 annotators and 34 QA workers from four annotation companies and Amazon Mechanical Turk (MTurk), we derived the following insights: (1) Annotation companies perform better both in terms of quantity and quality compared to the widely used platform MTurk. (2) Annotation companies' internal QA only provides marginal improvements, if any. However, improving labeling instructions instead of investing in QA can substantially boost annotation performance. (3) The benefit of internal QA depends on specific image characteristics. Our work could enable researchers to derive substantially more value from a fixed annotation budget and change the way annotation companies conduct internal QA.
+
+
+Answer:

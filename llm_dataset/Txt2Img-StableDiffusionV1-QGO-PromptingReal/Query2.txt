@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I mixed up the sentence, like “red coat forest snow,” and it still worked. How does AI figure out what matters when the prompt is all jumbled?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Txt2Img-StableDiffusionV1-QGO-PromptingReal
+Paper: None
+GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+
+### Related Papers:
+Model: A Song of Ice and Fire: Analyzing Textual Autotelic Agents in ScienceWorld
+Paper: http://arxiv.org/pdf/2302.05244v5.pdf
+Summary: Building open-ended agents that can autonomously discover a diversity of behaviours is one of the long-standing goals of artificial intelligence. This challenge can be studied in the framework of autotelic RL agents, i.e. agents that learn by selecting and pursuing their own goals, self-organizing a learning curriculum. Recent work identified language as a key dimension of autotelic learning, in particular because it enables abstract goal sampling and guidance from social peers for hindsight relabelling. Within this perspective, we study the following open scientific questions: What is the impact of hindsight feedback from a social peer (e.g. selective vs. exhaustive)? How can the agent learn from very rare language goal examples in its experience replay? How can multiple forms of exploration be combined, and take advantage of easier goals as stepping stones to reach harder ones? To address these questions, we use ScienceWorld, a textual environment with rich abstract and combinatorial physics. We show the importance of selectivity from the social peer's feedback; that experience replay needs to over-sample examples of rare goals; and that following self-generated goal sequences where the agent's competence is intermediate leads to significant improvements in final performance.
+
+Model: Probabilistic Linguistic Knowledge and Token-level Text Augmentation
+Paper: http://arxiv.org/pdf/2306.16644v2.pdf
+Summary: This paper investigates the effectiveness of token-level text augmentation and the role of probabilistic linguistic knowledge within a linguistically-motivated evaluation context. Two text augmentation programs, REDA and REDA$_{NG}$, were developed, both implementing five token-level text editing operations: Synonym Replacement (SR), Random Swap (RS), Random Insertion (RI), Random Deletion (RD), and Random Mix (RM). REDA$_{NG}$ leverages pretrained $n$-gram language models to select the most likely augmented texts from REDA's output. Comprehensive and fine-grained experiments were conducted on a binary question matching classification task in both Chinese and English. The results strongly refute the general effectiveness of the five token-level text augmentation techniques under investigation, whether applied together or separately, and irrespective of various common classification model types used, including transformers. Furthermore, the role of probabilistic linguistic knowledge is found to be minimal.
+
+Model: Sequential annotations for naturally-occurring HRI: first insights
+Paper: http://arxiv.org/pdf/2308.15097v1.pdf
+Summary: We explain the methodology we developed for improving the interactions accomplished by an embedded conversational agent, drawing from Conversation Analytic sequential and multimodal analysis. The use case is a Pepper robot that is expected to inform and orient users in a library. In order to propose and learn better interactive schema, we are creating a corpus of naturally-occurring interactions that will be made available to the community. To do so, we propose an annotation practice based on some theoretical underpinnings about the use of language and multimodal resources in human-robot interaction. CCS CONCEPTS $\bullet$ Computing methodologies $\rightarrow$ Discourse, dialogue and pragmatics; $\bullet$ Human-centered computing $\rightarrow$ Text input; HCI theory, concepts and models; Field studies.
+
+
+Answer:

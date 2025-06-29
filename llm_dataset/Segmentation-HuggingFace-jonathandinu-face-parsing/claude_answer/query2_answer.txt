@@ -1,0 +1,57 @@
+Based on the provided models and papers, here is the analysis of the user's question about tracking small facial changes with makeup or shadows:
+
+## 1. Task Analysis
+The user is performing **robust facial parsing and tracking** under challenging conditions including makeup application and shadow variations. This involves maintaining accurate facial part separation and detection despite surface appearance changes that can obscure natural facial boundaries.
+
+## 2. CNAPS AI-like Workflow (Input → Model → Output)
+
+**Input:** Face images or video with makeup, shadows, or other appearance modifications that change natural facial appearance
+
+**Model Processing:**
+- **Face Parsing (Segmentation-HuggingFace-jonathandinu-face-parsing)** provides the core facial segmentation capability through:
+  - Pixel-level classification of different facial regions despite appearance modifications
+  - Semantic understanding of facial structure independent of surface appearance changes
+  - Real-time parsing capabilities for continuous tracking applications
+- **HeadRecon (High-Fidelity 3D Head Reconstruction)** enhances robustness through:
+  - Prior-guided dynamic implicit neural network handling complex facial variations
+  - Two-part dynamic deformation field transforming current frame space to canonical representation
+  - Learnable signed distance field (SDF) modeling head geometry in canonical space
+  - Volumetric rendering with head priors improving reconstruction accuracy despite appearance changes
+- **FaceCom (3D Facial Shape Completion)** provides structural understanding via:
+  - Mesh-based generative network trained on 2405 facial identities for robust completion
+  - Optimization approach under image inpainting guidance maintaining facial structure consistency
+  - Handling varying degrees of missing or obscured facial areas effectively
+  - Post-processing refinement ensuring high-fidelity facial geometry preservation
+- **Pose Modulated Avatars** enables adaptive frequency handling through:
+  - Two-branch neural network adaptive and explicit in frequency domain
+  - Graph neural network modeling correlations among body parts locally
+  - Feature encoding modulation adapting to different poses and expressions
+  - Superior detail preservation and generalization capabilities across variations
+
+**Output:** Consistent facial part segmentation maintaining accurate boundaries and classifications despite makeup, shadows, or other appearance modifications
+
+## 3. Technical Implementation for Tracking Small Changes
+The robust tracking capability results from:
+- **Canonical space representation:** HeadRecon's transformation to canonical space enables consistent tracking despite appearance variations
+- **3D structural understanding:** FaceCom's mesh-based approach maintains geometric consistency across different appearances
+- **Adaptive frequency processing:** Pose Modulated Avatars adjust frequency assignments based on specific facial configurations
+- **Prior-guided optimization:** Integration of facial priors ensures structural consistency during challenging conditions
+- **Dynamic deformation modeling:** Two-part deformation fields handle complex facial variations while preserving feature relationships
+
+## 4. Relevant Papers and Tools
+
+### Primary Model:
+- **Model:** Segmentation-HuggingFace-jonathandinu-face-parsing
+
+### Supporting Frameworks:
+- **Model:** HeadRecon: High-Fidelity 3D Head Reconstruction from Monocular Video
+- **Paper:** http://arxiv.org/pdf/2312.08863v1.pdf
+
+- **Model:** FaceCom: Towards High-fidelity 3D Facial Shape Completion via Optimization and Inpainting Guidance
+- **Paper:** http://arxiv.org/pdf/2406.02074v1.pdf
+- **GitHub:** https://github.com/dragonylee/facecom
+
+- **Model:** Pose Modulated Avatars from Video
+- **Paper:** http://arxiv.org/pdf/2308.11951v3.pdf
+
+The combination of canonical space transformation, 3D structural modeling, adaptive frequency processing, and prior-guided optimization enables models to track small facial changes effectively by maintaining structural understanding independent of surface appearance modifications like makeup or shadows, ensuring consistent facial part separation across varying conditions.

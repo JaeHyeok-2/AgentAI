@@ -1,0 +1,43 @@
+Here's the answer to your prompt in TXT format:
+
+```
+1. What task is the user trying to perform?
+
+[cite_start]The user is trying to perform an unsupervised clustering or classification task on medical images (X-ray and pathology scans)[cite: 29]. [cite_start]The goal is to group these images by medical condition without the need for pre-existing labels[cite: 29]. This is a form of unsupervised learning, specifically related to learning meaningful representations from medical images that allow for inherent grouping based on underlying conditions.
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow emphasizes rapid adaptation to new tasks with limited or no labeled data. In this scenario, the models would leverage self-supervised learning and pre-trained foundational knowledge to sort medical images without supervision.
+
+* [cite_start]Input: Unlabeled X-ray and pathology scans (medical images)[cite: 29].
+
+* Model (Pre-training Phase - Self-Supervised/Foundation Models):
+    * [cite_start]BiomedCLIP: a multimodal biomedical foundation model pretrained from fifteen million scientific image-text pairs[cite: 34]. While its primary focus is multimodal alignment, the representations learned from this vast dataset are foundational and can capture rich visual features from biomedical images, which are crucial for subsequent unsupervised tasks.
+    * [cite_start]Self-supervision for medical image classification (using DINO framework): This approach directly addresses unsupervised learning for medical images[cite: 36]. [cite_start]It learns an image representation without the use of image labels[cite: 37]. [cite_start]After this self-supervised learning, conventional machine learning classifiers can be applied, fitted using a systematically varied (but typically small) number of labeled data[cite: 38]. [cite_start]This method has achieved state-of-the-art classification performance with only a fraction of available labeled data (e.g., ~100 labeled samples per class)[cite: 39]. This shows its ability to learn powerful representations from unlabeled data.
+    * [cite_start]TransMed (Large Language Models Enhance Vision Transformer for Biomedical Image Classification): This work explores few-shot learning, which is highly relevant when annotated data is scarce, as in unsupervised scenarios[cite: 40, 41]. [cite_start]It adapts rapidly advancing vision foundation models from natural images to few-shot clinical tasks[cite: 44]. [cite_start]A novel approach is proposed that contextualizes labels via large language models (LLMs), which significantly enhances the discrimination of semantic embeddings for similar categories[cite: 49, 50]. Although primarily for classification, the enhanced semantic understanding gained through LLMs could aid in forming more coherent clusters in an unsupervised setting by improving the inherent representation of different conditions.
+    * [cite_start]Data AUDIT: Identifying Attribute Utility- and Detectability-Induced Bias in Task Models: While this model's primary goal is to identify bias in datasets [cite: 52, 55][cite_start], its underlying process of rigorously screening medical image datasets [cite: 55] [cite_start]and decomposing risks based on attribute detectability and utility [cite: 56] implies a deep understanding and representation of image attributes. This foundational understanding of image features could implicitly contribute to or inform unsupervised grouping by helping to discern meaningful differences between image categories, even without explicit labels.
+
+* Model (Inference Phase - CNAPS-like adaptation for unsupervised grouping):
+    * [cite_start]The core mechanism for sorting without labels comes from the **self-supervised learning** inherent in the "Self-supervision for medical image classification" model, which learns a robust image representation without labels[cite: 37]. This representation allows for images of similar conditions to be close to each other in the learned feature space.
+    * [cite_start]**BiomedCLIP**'s pre-trained ability to understand biomedical images provides a rich feature space that facilitates the grouping of visually similar conditions, even without explicit supervision[cite: 34].
+    * [cite_start]The semantic understanding enhanced by LLMs in **TransMed** could contribute to creating a more semantically meaningful embedding space where images of the same condition naturally cluster together[cite: 49, 50].
+    * [cite_start]While **Data AUDIT** focuses on bias, its ability to analyze and quantify attributes within datasets suggests an underlying mechanism for discerning various image characteristics, which is a prerequisite for effective unsupervised grouping[cite: 56].
+
+* [cite_start]Output: The system groups the X-ray and pathology scans by condition without requiring labels[cite: 29].
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* Model: BiomedCLIP: a multimodal biomedical foundation model pretrained from fifteen million scientific image-text pairs
+    * [cite_start]Paper: https://arxiv.org/pdf/2303.00915 [cite: 34]
+    * [cite_start]GitHub: https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224 [cite: 34]
+
+* Model: Self-supervision for medical image classification: state-of-the-art performance with ~100 labeled training samples per class
+    * [cite_start]Paper: http://arxiv.org/pdf/2304.05163v2.pdf [cite: 35]
+    * [cite_start]GitHub: https://github.com/ipmi-icns-uke/sparsam [cite: 35]
+
+* Model: TransMed: Large Language Models Enhance Vision Transformer for Biomedical Image Classification
+    * [cite_start]Paper: http://arxiv.org/pdf/2312.07125v2.pdf [cite: 40]
+
+* Model: Data AUDIT: Identifying Attribute Utility- and Detectability-Induced Bias in Task Models
+    * [cite_start]Paper: http://arxiv.org/pdf/2304.03218v1.pdf [cite: 52]
+```

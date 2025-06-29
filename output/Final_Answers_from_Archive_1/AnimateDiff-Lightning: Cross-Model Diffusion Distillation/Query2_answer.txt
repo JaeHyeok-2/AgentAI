@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"I typed “a panda dancing in the snow” and it made a super smooth video in seconds—how can it create motion just from text?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is trying to understand how a model achieves a particular behavior in a real-world scenario, such as tracking, generation, or classification. Based on the question, the task likely falls under one of the following categories: object tracking, image-to-video generation, pose-to-motion conversion, or content moderation.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**:
+- The **input** is typically a static image, text description, sketch, or video sequence.
+- The **model** processes the input using its architecture (e.g., diffusion, transformer, CNN), guided by the pretrained features or control signals like pose, semantics, or spatial constraints.
+- The **output** is a video, prediction label, mask, or stylized version of the input that reflects learned distributions from the training set.
+
+---
+
+### 3. Models and Tools Referenced
+
+- **Model:** Txt2Img-StableDiffusionV1-Reliberate
+  - Paper: None
+  - GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+- **Model:** MovieFactory: Automatic Movie Creation from Text using Large Generative Models for Language and Images
+  - Paper: http://arxiv.org/pdf/2306.07257v1.pdf
+  - GitHub: N/A
+- **Model:** MotionGPT: Human Motion as a Foreign Language
+  - Paper: http://arxiv.org/pdf/2306.14795v2.pdf
+  - GitHub: https://github.com/openmotionlab/motiongpt
+- **Model:** Prompt Switch: Efficient CLIP Adaptation for Text-Video Retrieval
+  - Paper: http://arxiv.org/pdf/2308.07648v1.pdf
+  - GitHub: https://github.com/bladewaltz1/promptswitch
+
+These models are tailored to their specific tasks. For example, video generation models use temporal consistency modules, while tracking models use attention or re-ID embeddings to focus on consistent targets.
+
+---
+
+Each model contributes specific capabilities to solve the user's task efficiently within the CNAPS framework.

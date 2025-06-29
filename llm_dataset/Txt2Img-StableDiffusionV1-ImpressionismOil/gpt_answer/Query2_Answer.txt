@@ -1,0 +1,30 @@
+🧠 User Question:
+"I typed “sunrise in impressionist oil” and the canvas looked thick, like it was painted with real brush dabs. How does AI capture that kind of impasto texture so well?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is applying **text-to-image generation** with an emphasis on **oil painting thickness and stroke realism** typical of impasto Impressionism.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Text prompt such as “sunrise in impressionist oil.”  
+- **Model**:  
+  - **Txt2Img-StableDiffusionV1-ImpressionismOil** converts this prompt into a latent embedding that is decoded into an image with embedded stroke logic (texture-aware generation).  
+  - **ARTxAI** improves interpretability by linking fuzzy visual traits like stroke curvature and palette selection to internal attention maps.  
+- **Output**: A thickly styled, textured image reflecting natural lighting and pigment layering.
+
+---
+
+### 3. Supporting Papers and Tools
+- 💻 [StableDiffusionV1-ImpressionismOil](https://github.com/Kameronski/stable-diffusion-1.5)  
+- 📄 [ARTxAI](http://arxiv.org/pdf/2308.15284v1.pdf)【460†source】  
+- 📄 [AI & Aesthetic Judgment](http://arxiv.org/pdf/2309.12338v1.pdf)【460†source】
+
+---
+
+### ✅ Summary:
+The model reproduces **impasto and thick-paint textures** by learning implicit spatial patterns across Impressionist artworks, and tools like **ARTxAI** explain how AI perceives texture boundaries and brush cues【460†source】.

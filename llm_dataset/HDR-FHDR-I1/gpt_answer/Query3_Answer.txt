@@ -1,0 +1,40 @@
+🧠 **User Question:**  
+"After a few seconds, a hazy indoor shot became much clearer—like it went through multiple cleanup passes. I’m amazed how naturally the contrast balanced out."
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is applying **indoor image dehazing and enhancement**, where haze-like soft blur is removed and contrast is incrementally recovered without harming detail.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A hazy or low-contrast indoor photo.  
+- **Model**:  
+  - **DRACO-DehazeNet** performs **feedback-based dehazing** with contrastive learning. It separates haze artifacts from true detail using attention and dilated residuals.  
+  - Though originally trained on natural haze, DRACO adapts to indoor use via feature separation and progressive refinement.
+  - **NST-Fast Neural Style** adds perceptual stylization that can enhance contrast, texture, or fine detail layer-by-layer.  
+- **Output**: A clean, high-contrast image that appears naturally refined over time.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [DRACO-DehazeNet](http://arxiv.org/pdf/2410.14595v1.pdf)  
+  💻 [GitHub](https://github.com/GreedYLearner1146/DRACO-DehazeNet)
+
+- 📄 [RAW Reflection Removal](http://arxiv.org/pdf/2404.14414v2.pdf)
+
+- 💻 [Fast Neural Style (NST)](https://github.com/rrmina/fast-neural-style-pytorch)
+
+- 📄 [Hallucinated HDR in Overexposure](http://arxiv.org/pdf/2308.15462v1.pdf)
+
+---
+
+### ✅ Summary:
+
+The "layer-by-layer" effect is achieved by models like **DRACO**, which use contrastive attention and **feedback dehazing**, paired optionally with **style-aware refinement** to ensure clarity without artifacts.
+

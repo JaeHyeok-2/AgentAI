@@ -1,0 +1,41 @@
+🧠 **User Question:**  
+"Without needing sketches or blueprints, it generated 3D shapes for all my product ideas—ready for use in mockups. What kind of model makes that level of creation so accessible?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+This is **sketch-free text-to-3D modeling**, where users generate printable, editable 3D assets from pure text—no CAD or manual modeling required.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A product idea written in natural language.  
+- **Model**:  
+  - **TRELLIS** encodes the prompt into structured 3D latents using transformer-based text and geometry backbones.  
+  - It generates a mesh or neural representation in multiple stages—starting from coarse shape and progressively refining detail.  
+- **Output**: A realistic and rotatable 3D asset directly usable in design mockups or downstream rendering pipelines.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [TRELLIS (Structured Latent 3D)](https://arxiv.org/pdf/2412.01506)  
+  💻 [GitHub](https://github.com/Microsoft/TRELLIS)
+
+- 📄 [3D Sketch2Shape](http://arxiv.org/pdf/2306.10830v6.pdf)  
+  💻 [GitHub](https://github.com/rowl1ng/3dsketch2shape)
+
+- 📄 [CAD-Recode (3D → Code → CAD)](http://arxiv.org/pdf/2412.14042v1.pdf)  
+  💻 [GitHub](https://github.com/filaPro/cad-recode)
+
+- 📄 [WorldSmith (Iterative Prompt-Based Design)](http://arxiv.org/pdf/2308.13355v1.pdf)
+
+---
+
+### ✅ Summary:
+
+By combining latent-space transformers with progressive 3D refinement, models like TRELLIS make **3D creation accessible via text** alone—no sketches, scans, or CAD knowledge needed.
+

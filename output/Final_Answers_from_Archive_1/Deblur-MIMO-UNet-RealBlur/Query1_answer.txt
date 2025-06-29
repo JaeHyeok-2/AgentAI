@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"I thought I couldn’t use the video stills from my action camera because they were all blurry, but AI restored them really well. It’s amazing that it can recover fast motion blur. What kind of data are models like this trained on, and what techniques work best for high-speed motion blur?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is trying to understand how a model achieves a particular behavior in a real-world scenario, such as tracking, generation, or classification. Based on the question, the task likely falls under one of the following categories: object tracking, image-to-video generation, pose-to-motion conversion, or content moderation.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**:
+- The **input** is typically a static image, text description, sketch, or video sequence.
+- The **model** processes the input using its architecture (e.g., diffusion, transformer, CNN), guided by the pretrained features or control signals like pose, semantics, or spatial constraints.
+- The **output** is a video, prediction label, mask, or stylized version of the input that reflects learned distributions from the training set.
+
+---
+
+### 3. Models and Tools Referenced
+
+- **Model:** Deblur-MIMO-UNet-RealBlur
+  - Paper: https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf
+  - GitHub: https://github.com/chosj95/MIMO-UNet
+- **Model:** DeblurGS: Gaussian Splatting for Camera Motion Blur
+  - Paper: http://arxiv.org/pdf/2404.11358v2.pdf
+  - GitHub: N/A
+- **Model:** BAGS: Blur Agnostic Gaussian Splatting through Multi-Scale Kernel Modeling
+  - Paper: http://arxiv.org/pdf/2403.04926v2.pdf
+  - GitHub: https://github.com/snldmt/bags
+- **Model:** Online Overexposed Pixels Hallucination in Videos with Adaptive Reference Frame Selection
+  - Paper: http://arxiv.org/pdf/2308.15462v1.pdf
+  - GitHub: N/A
+
+These models are tailored to their specific tasks. For example, video generation models use temporal consistency modules, while tracking models use attention or re-ID embeddings to focus on consistent targets.
+
+---
+
+Each model contributes specific capabilities to solve the user's task efficiently within the CNAPS framework.

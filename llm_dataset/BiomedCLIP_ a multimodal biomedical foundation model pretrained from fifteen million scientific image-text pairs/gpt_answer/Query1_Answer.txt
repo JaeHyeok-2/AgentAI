@@ -1,0 +1,48 @@
+🧠 **User Question:**  
+"I uploaded a microscope image, and it instantly told me what kind of cells they were—without any extra training. How does it know that right away?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **image-based cell type classification** or **semantic segmentation** using a **pretrained vision model** on microscopic imagery. Specifically, they are curious how the model can identify cellular structures without needing additional training or fine-tuning, implying the model has **zero-shot or few-shot capability** for biomedical image understanding.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+#### **Input → Model → Output**
+
+- **Input**: A raw microscope image, such as a fluorescence or electron microscopy capture.
+- **Model**:  
+  - **ImgTxt2Img-HuggingFace-alaa-lab-InstructCV** operates using instruction-based image-to-image translation. It uses natural language instructions like “highlight mitochondria” or “label nuclei types” to adapt pretrained representations to biomedical tasks without requiring retraining.
+  - This works by leveraging general vision-language representations learned during pretraining and adapting them on the fly based on prompts that correspond to cellular structures.
+- **Output**: A segmented, labeled, or highlighted version of the input image, accurately identifying cell types or substructures—enabled by strong pretraining and prompt alignment.
+
+---
+
+### 3. Supporting Papers and Tools
+
+#### 🔬 [ImgTxt2Img-HuggingFace-alaa-lab-InstructCV](https://arxiv.org/pdf/2310.00390)  
+- This model facilitates controllable visual transformation via instruction-guided input, adaptable to medical and scientific domains without additional training.
+
+#### 🔬 [Self-supervised pseudo-colorizing of masked cells](http://arxiv.org/pdf/2302.05968v2.pdf)  
+🔗 [GitHub](https://github.com/roydenwa/pseudo-colorize-masked-cells)  
+- Demonstrates self-supervised training that enables effective learning of cellular features through masked autoencoding and colorization, improving downstream detection and segmentation accuracy.
+
+#### 🔬 [Human-in-the-loop in Electron Microscopy](http://arxiv.org/pdf/2310.05018v1.pdf)  
+- Proposes integrating AI models directly into microscope systems with real-time inference loops, facilitating dynamic experiments with no retraining.
+
+#### 🔬 [Self-Supervised Learning with GANs for Electron Microscopy](http://arxiv.org/pdf/2402.18286v2.pdf)  
+- Validates the use of self-supervised GAN-based pretraining for tasks like segmentation, denoising, and super-resolution in microscopy, boosting accuracy with minimal labels.
+
+---
+
+### ✅ Summary:
+
+The model can label cell types “instantly” by combining:
+- strong vision-language pretraining,
+- prompt-based conditioning (via InstructCV),
+- and robust feature representations learned through self-supervised methods.
+
+These techniques allow the system to generalize to new types of microscopy data without needing new labels or retraining.

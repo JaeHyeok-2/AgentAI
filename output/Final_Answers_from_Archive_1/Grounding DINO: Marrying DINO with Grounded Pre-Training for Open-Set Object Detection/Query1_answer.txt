@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I highlighted a street scene and asked it to find “a kid holding a red balloon,” and it nailed it right away. How does it pick out specific objects just from text?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: Interpreting Object-level Foundation Models via Visual Precision Search
+  - Paper: https://arxiv.org/pdf/2411.16198
+  - GitHub: https://github.com/RuoyuChen10/VPS
+- **Model**: Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions
+  - Paper: http://arxiv.org/pdf/2502.08438v1.pdf
+  - GitHub: None
+- **Model**: Spot-Compose: A Framework for Open-Vocabulary Object Retrieval and Drawer Manipulation in Point Clouds
+  - Paper: http://arxiv.org/pdf/2404.12440v1.pdf
+  - GitHub: None
+- **Model**: Beyond Bare Queries: Open-Vocabulary Object Grounding with 3D Scene Graph
+  - Paper: http://arxiv.org/pdf/2406.07113v3.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

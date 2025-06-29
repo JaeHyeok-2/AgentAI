@@ -1,0 +1,1785 @@
+[
+  {
+    "model": "BGE_ One-Stop Retrieval Toolkit For Search and RAG",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        },
+        "llm_B": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        },
+        "llm_C": {
+          "score": 8.5,
+          "verdict": "Good",
+          "reasons": [
+            "Focuses on semantic search and vague query handling.",
+            "Mentions models for query understanding and retrieval.",
+            "Well-aligned with intent-based tasks."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 8.5,
+          "verdict": "Good",
+          "reasons": [
+            "Focuses on semantic search and vague query handling.",
+            "Mentions models for query understanding and retrieval.",
+            "Well-aligned with intent-based tasks."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        },
+        "llm_B": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_C",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "BiomedCLIP_ a multimodal biomedical foundation model pretrained from fifteen million scientific image-text pairs",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        },
+        "llm_B": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        },
+        "llm_C": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        },
+        "llm_B": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        },
+        "llm_C": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "Classification-HuggingFace-NTQAI-pedestrian_gender_recognition",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "Denoise-SwinIR-Noise15",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_C",
+      "query2": "llm_A",
+      "query3": "llm_C"
+    }
+  },
+  {
+    "model": "DepthCrafter_ Generating Consistent Long Depth Sequences for Open-world Videos",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "HDR-FHDR-I1",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "Inpainting-CTSDG-CelebA",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "NST-fast-neural-style-candy",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "NST-fast-neural-style-mosaic",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "NST-fast-neural-style-rain-princess",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "Segmentation-DeepLabV3-MobileNet-VOC",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        },
+        "llm_B": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        },
+        "llm_C": {
+          "score": 9.0,
+          "verdict": "Excellent",
+          "reasons": [
+            "Response relates closely to medical image analysis.",
+            "Clearly explains model input-output behavior.",
+            "Incorporates real models/papers (e.g., BiomedCLIP, DINO, etc.)."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 3.0,
+          "verdict": "Irrelevant",
+          "reasons": [
+            "Response does not address the user's actual question.",
+            "Seems to be copied from a different context.",
+            "Unrelated to medical or retrieval tasks described."
+          ]
+        },
+        "llm_B": {
+          "score": 3.0,
+          "verdict": "Irrelevant",
+          "reasons": [
+            "Response does not address the user's actual question.",
+            "Seems to be copied from a different context.",
+            "Unrelated to medical or retrieval tasks described."
+          ]
+        },
+        "llm_C": {
+          "score": 3.0,
+          "verdict": "Irrelevant",
+          "reasons": [
+            "Response does not address the user's actual question.",
+            "Seems to be copied from a different context.",
+            "Unrelated to medical or retrieval tasks described."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "Segmentation-HuggingFace-jonathandinu-face-parsing",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "SISR-Any-LIIF-EDSR",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 3.0,
+          "verdict": "Irrelevant",
+          "reasons": [
+            "Response does not address the user's actual question.",
+            "Seems to be copied from a different context.",
+            "Unrelated to medical or retrieval tasks described."
+          ]
+        },
+        "llm_B": {
+          "score": 3.0,
+          "verdict": "Irrelevant",
+          "reasons": [
+            "Response does not address the user's actual question.",
+            "Seems to be copied from a different context.",
+            "Unrelated to medical or retrieval tasks described."
+          ]
+        },
+        "llm_C": {
+          "score": 3.0,
+          "verdict": "Irrelevant",
+          "reasons": [
+            "Response does not address the user's actual question.",
+            "Seems to be copied from a different context.",
+            "Unrelated to medical or retrieval tasks described."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "Structured 3D Latents for Scalable and Versatile 3D Generation∗",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 3.0,
+          "verdict": "Irrelevant",
+          "reasons": [
+            "Response does not address the user's actual question.",
+            "Seems to be copied from a different context.",
+            "Unrelated to medical or retrieval tasks described."
+          ]
+        },
+        "llm_C": {
+          "score": 3.0,
+          "verdict": "Irrelevant",
+          "reasons": [
+            "Response does not address the user's actual question.",
+            "Seems to be copied from a different context.",
+            "Unrelated to medical or retrieval tasks described."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "Txt2Img-StableDiffusionV1-ImpressionismOil",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 0.0,
+          "verdict": "Empty",
+          "reasons": [
+            "No response found."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "Txt2Img-StableDiffusionV1-PirsusEpicRealism",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 0.0,
+          "verdict": "Empty",
+          "reasons": [
+            "No response found."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "Txt2Img-StableDiffusionV1-QGO-PromptingReal",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 0.0,
+          "verdict": "Empty",
+          "reasons": [
+            "No response found."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 0.0,
+          "verdict": "Empty",
+          "reasons": [
+            "No response found."
+          ]
+        },
+        "llm_B": {
+          "score": 0.0,
+          "verdict": "Empty",
+          "reasons": [
+            "No response found."
+          ]
+        },
+        "llm_C": {
+          "score": 8.5,
+          "verdict": "Good",
+          "reasons": [
+            "Focuses on semantic search and vague query handling.",
+            "Mentions models for query understanding and retrieval.",
+            "Well-aligned with intent-based tasks."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 0.0,
+          "verdict": "Empty",
+          "reasons": [
+            "No response found."
+          ]
+        },
+        "llm_B": {
+          "score": 8.5,
+          "verdict": "Good",
+          "reasons": [
+            "Focuses on semantic search and vague query handling.",
+            "Mentions models for query understanding and retrieval.",
+            "Well-aligned with intent-based tasks."
+          ]
+        },
+        "llm_C": {
+          "score": 8.5,
+          "verdict": "Good",
+          "reasons": [
+            "Focuses on semantic search and vague query handling.",
+            "Mentions models for query understanding and retrieval.",
+            "Well-aligned with intent-based tasks."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_B",
+      "query2": "llm_C",
+      "query3": "llm_B"
+    }
+  },
+  {
+    "model": "WeatherRemoval-CLAIO-DeHaze",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "WeatherRemoval-CLAIO-DeRain",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 3.0,
+          "verdict": "Irrelevant",
+          "reasons": [
+            "Response does not address the user's actual question.",
+            "Seems to be copied from a different context.",
+            "Unrelated to medical or retrieval tasks described."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  },
+  {
+    "model": "WeatherRemoval-CLAIO-DeSnow",
+    "evaluations": {
+      "query1": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query2": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      },
+      "query3": {
+        "llm_A": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_B": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        },
+        "llm_C": {
+          "score": 6.0,
+          "verdict": "Acceptable",
+          "reasons": [
+            "General structure present but lacking clarity or precision.",
+            "Possibly misaligned with the specific user task."
+          ]
+        }
+      }
+    },
+    "final_decisions": {
+      "query1": "llm_A",
+      "query2": "llm_A",
+      "query3": "llm_A"
+    }
+  }
+]

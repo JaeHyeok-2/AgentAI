@@ -1,0 +1,51 @@
+🧠 **User Question:**  
+"I tested it on diagrams from old research papers, and it correctly matched them with the right medical terms. How can it connect visuals and scientific language like that?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is exploring **multimodal medical concept grounding**, where diagrams or visual structures from research papers are linked with precise biomedical terminology. This task combines computer vision and natural language processing, specifically **biomedical visual-language alignment**.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+#### **Input → Model → Output**
+
+- **Input**: A diagram extracted from a research paper (e.g., histopathology, molecular structure, or radiology schematic).
+- **Model**:  
+  - **BiomedCLIP** is a vision-language model pretrained on 15 million image–text pairs from biomedical sources. It aligns visual embeddings from images (like diagrams) with semantic representations of text (PubMed biomedical terminology).
+  - The user’s diagram is embedded into a shared latent space alongside medical terms. The model retrieves or matches the most semantically similar terms—even in zero-shot settings—based on cosine similarity in that embedding space.
+- **Output**: The diagram is matched with correct biomedical terms or categories based on learned visual-linguistic associations.
+
+---
+
+### 3. Supporting Papers and Tools
+
+#### 🧠 [BiomedCLIP Paper](https://arxiv.org/pdf/2303.00915)  
+💻 [GitHub](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224)  
+- Describes the large-scale pretraining pipeline on image–text pairs using PubMed data and ViT-B/16 backbone.
+
+#### 🧠 [Explicd: Explainable Visual Concept Alignment](http://arxiv.org/pdf/2406.05596v2.pdf)  
+- Shows how domain knowledge (e.g., diagnostic criteria) is injected as anchors in embedding space to guide visual-text matching, improving interpretability.
+
+#### 🧠 [MLIP: Medical Visual Representation Learning](http://arxiv.org/pdf/2402.02045v1.pdf)  
+- Introduces multi-granular contrastive learning and expert-guided alignment to enrich fine-grained visual-text associations.
+
+#### 🧠 [VividMed: Versatile Visual Grounding in Medicine](http://arxiv.org/pdf/2410.12694v2.pdf)  
+💻 [GitHub](https://github.com/function2-llx/mmmm)  
+- Provides tools for semantic and instance-level grounding of both 2D and 3D medical visual data, supporting tasks like segmentation, VQA, and report generation.
+
+---
+
+### ✅ Summary:
+
+BiomedCLIP and related models build a shared embedding space between visual and textual medical data.  
+Thanks to this pretraining, when the user inputs a visual diagram—even from older literature—the model can **immediately align it with modern, domain-specific terminology** without needing task-specific training.
+
+This is made possible through:
+- large-scale multimodal pretraining,
+- contrastive learning,
+- knowledge-injected embedding spaces,
+- and versatile visual grounding architectures.

@@ -1,0 +1,29 @@
+🧠 User Question:
+"I applied a rainy painting style and the whole scene became cinematic. What lets the AI combine such moody lighting and thick textures so convincingly?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is using **neural artistic stylization**, tuned for cinematic and weather-inspired looks—especially with emphasis on **lighting atmosphere** and **stroke-based texturing**.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+**Input → Model → Output**  
+- **Input**: A standard photo and the “rain-princess” style prompt.  
+- **Model**:  
+  - **NST-fast-neural-style-rain-princess** applies pre-trained brushwork and ambient tone mappings in one pass.  
+  - Learned style features emphasize **cinematic composition**, with soft rain cues and painterly stroke intensities.  
+- **Output**: A stylized image resembling a **mood painting** with weather-based expression.
+
+---
+
+### 3. Supporting Papers and Tools
+- 💻 [GitHub – Fast Neural Style](https://github.com/rrmina/fast-neural-style-pytorch)  
+- 📄 [ARTxAI – Deep Feature Mapping](http://arxiv.org/pdf/2308.15284v1.pdf)【423†source】  
+- 📄 [CoIC – Rain and Texture Representation](http://arxiv.org/pdf/2404.12091v1.pdf)【423†source】
+
+---
+
+### ✅ Summary:
+Models like RainPrincess use **deep style features** to inject both **rain ambiance** and **expressive brush texture**, producing a rich, cinematic feel through **perceptual-layer alignment and pretrained artistic kernels**【423†source】.

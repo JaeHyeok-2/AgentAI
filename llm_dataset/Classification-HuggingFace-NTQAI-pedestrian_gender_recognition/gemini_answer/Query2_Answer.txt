@@ -1,0 +1,33 @@
+1. What task is the user trying to perform?
+
+[cite_start]The user is researching **automated demographic analysis from surveillance video**, specifically how modern AI models classify pedestrian gender from video or image data. [cite: 57] [cite_start]They are also asking about common training data and neural network approaches used for accurate and unbiased classification. [cite: 57]
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow for unbiased pedestrian gender classification from surveillance video emphasizes accurate recognition while mitigating biases and ensuring fairness, often leveraging methods for robust data generation and comprehensive evaluation.
+
+* [cite_start]Input: Surveillance video or image data of pedestrians. [cite: 57]
+
+* Model (Core Gender Classification Model):
+    * [cite_start]**Classification-HuggingFace-NTQAI-pedestrian_gender_recognition:** This model is directly designed for pedestrian gender recognition from images. [cite: 62] It would process the input video/image data to classify pedestrian gender.
+
+* Model (Related Concepts for Training Data, Neural Network Approaches, and Bias Mitigation):
+    * [cite_start]**Addressing Weak Decision Boundaries in Image Classification by Leveraging Web Search and Generative Models:** This approach addresses the issue that ML models may not perform equally well for underrepresented groups. [cite: 63, 64] [cite_start]It proposes using web search (e.g., Google queries) and generative models (e.g., DALL-E 2 and Stable Diffusion) to construct new training samples, [cite: 68] [cite_start]which can alleviate population bias [cite: 69] [cite_start]and significantly reduce gender accuracy disparity (77.30%)[cite: 70]. [cite_start]This method helps identify weak decision boundaries for such classes [cite: 67] [cite_start]and enhances the classifier's decision boundary with fewer weakspots[cite: 71]. [cite_start]This explains a common neural network approach for accurate and unbiased classification by improving robustness and mitigating bias through data augmentation from diverse sources. [cite: 66] [cite_start]The proposed technique is extendable to a wide range of problems and domains. [cite: 72]
+    * [cite_start]**Speech-based Age and Gender Prediction with Transformers:** This study presents experiments to predict age and gender with models based on a pre-trained wav2vec 2.0, achieving at least 91.1% accuracy for gender (female, male, child) and an improvement of 4% UAR for gender compared to handcrafted features. [cite: 81, 82] [cite_start]While focused on speech, this demonstrates a neural network approach using Transformers for robust gender prediction and highlights the use of publicly available datasets for training[cite: 79]. [cite_start]The findings are made reproducible by releasing the best performing model and data splits. [cite: 83] This illustrates how pre-trained models and robust architectures are used for accurate classification.
+    * [cite_start]**Image Classification for Snow Detection to Improve Pedestrian Safety:** This study uses fine-tuned VGG-19 and ResNet50 convolutional neural networks (CNNs) for image classification. [cite: 74] [cite_start]It employs transfer learning and model ensembling techniques to integrate predictions from multiple CNN architectures. [cite: 77] [cite_start]Although its task is snow detection, it exemplifies common neural network approaches (fine-tuned CNNs, transfer learning, model ensembling) used for accurate image classification tasks, which could be adapted for pedestrian gender classification. [cite: 76] [cite_start]It also highlights the use of a dataset with images evenly split between conditions. [cite: 75]
+
+* [cite_start]Output: Modern AI models classify pedestrian gender by leveraging specific neural network architectures (like fine-tuned CNNs or Transformers) [cite: 74, 80][cite_start], trained on diverse and balanced datasets (potentially augmented using generative models and web search to address underrepresented groups)[cite: 68, 69, 79]. [cite_start]Steps taken to ensure fairness and avoid biases include identifying and strengthening weak decision boundaries, and actively reducing accuracy disparity. [cite: 67, 70, 71]
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* [cite_start]Model: Classification-HuggingFace-NTQAI-pedestrian_gender_recognition [cite: 62]
+    * [cite_start]Paper: None [cite: 62]
+
+* Related Papers:
+    * [cite_start]Model: Addressing Weak Decision Boundaries in Image Classification by Leveraging Web Search and Generative Models [cite: 62]
+        * [cite_start]Paper: http://arxiv.org/pdf/2310.19986v1.pdf [cite: 62]
+    * [cite_start]Model: Image Classification for Snow Detection to Improve Pedestrian Safety [cite: 73]
+        * [cite_start]Paper: http://arxiv.org/pdf/2407.00818v1.pdf [cite: 73]
+    * [cite_start]Model: Speech-based Age and Gender Prediction with Transformers [cite: 79]
+        * [cite_start]Paper: http://arxiv.org/pdf/2306.16962v1.pdf [cite: 79]
+        * [cite_start]GitHub: https://github.com/audeering/w2v2-age-gender-how-to [cite: 79]

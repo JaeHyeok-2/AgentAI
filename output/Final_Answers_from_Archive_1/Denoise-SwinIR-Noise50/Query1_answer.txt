@@ -1,0 +1,36 @@
+🧠 **User Question:**  
+"I tried restoring a really noisy image with compression artifacts, and the AI made it look almost new. How can it reconstruct detail in such degraded photos?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is trying to understand how a model achieves a particular behavior in a real-world scenario, such as tracking, generation, or classification. Based on the question, the task likely falls under one of the following categories: object tracking, image-to-video generation, pose-to-motion conversion, or content moderation.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**:
+- The **input** is typically a static image, text description, sketch, or video sequence.
+- The **model** processes the input using its architecture (e.g., diffusion, transformer, CNN), guided by the pretrained features or control signals like pose, semantics, or spatial constraints.
+- The **output** is a video, prediction label, mask, or stylized version of the input that reflects learned distributions from the training set.
+
+---
+
+### 3. Models and Tools Referenced
+
+- **Model:** Restoration-SwinIR-Jpeg20
+  - Paper: https://arxiv.org/pdf/2108.10257
+  - GitHub: https://github.com/JingyunLiang/SwinIR
+- **Model:** HAIR: Hypernetworks-based All-in-One Image Restoration
+  - Paper: http://arxiv.org/pdf/2408.08091v4.pdf
+  - GitHub: https://github.com/toummHus/HAIR
+- **Model:** Quality Assured: Rethinking Annotation Strategies in Imaging AI
+  - Paper: http://arxiv.org/pdf/2407.17596v2.pdf
+  - GitHub: N/A
+
+These models are tailored to their specific tasks. For example, video generation models use temporal consistency modules, while tracking models use attention or re-ID embeddings to focus on consistent targets.
+
+---
+
+Each model contributes specific capabilities to solve the user's task efficiently within the CNAPS framework.

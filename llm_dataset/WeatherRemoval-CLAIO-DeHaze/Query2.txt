@@ -1,0 +1,34 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"In an old photo taken on a misty morning, the AI removed the grey fog and made the colors pop. What kind of features does it focus on to tell haze apart from the scene?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: WeatherRemoval-CLAIO-DeHaze
+Paper: None
+GitHub: https://github.com/xiaojihh/cl_all-in-one
+
+### Related Papers:
+Model: DRACO-DehazeNet: An Efficient Image Dehazing Network Combining Detail Recovery and a Novel Contrastive Learning Paradigm
+Paper: http://arxiv.org/pdf/2410.14595v1.pdf
+Summary: Image dehazing is crucial for clarifying images obscured by haze or fog, but current learning-based approaches is dependent on large volumes of training data and hence consumed significant computational power. Additionally, their performance is often inadequate under non-uniform or heavy haze. To address these challenges, we developed the Detail Recovery And Contrastive DehazeNet, which facilitates efficient and effective dehazing via a dense dilated inverted residual block and an attention-based detail recovery network that tailors enhancements to specific dehazed scene contexts. A major innovation is its ability to train effectively with limited data, achieved through a novel quadruplet loss-based contrastive dehazing paradigm. This approach distinctly separates hazy and clear image features while also distinguish lower-quality and higher-quality dehazed images obtained from each sub-modules of our network, thereby refining the dehazing process to a larger extent. Extensive tests on a variety of benchmarked haze datasets demonstrated the superiority of our approach. The code repository for this work is available at https://github.com/GreedYLearner1146/DRACO-DehazeNet.
+
+Model: Deep Learning-based Compressed Domain Multimedia for Man and Machine: A Taxonomy and Application to Point Cloud Classification
+Paper: http://arxiv.org/pdf/2310.18849v2.pdf
+Summary: In the current golden age of multimedia, human visualization is no longer the single main target, with the final consumer often being a machine which performs some processing or computer vision tasks. In both cases, deep learning plays a undamental role in extracting features from the multimedia representation data, usually producing a compressed representation referred to as latent representation. The increasing development and adoption of deep learning-based solutions in a wide area of multimedia applications have opened an exciting new vision where a common compressed multimedia representation is used for both man and machine. The main benefits of this vision are two-fold: i) improved performance for the computer vision tasks, since the effects of coding artifacts are mitigated; and ii) reduced computational complexity, since prior decoding is not required. This paper proposes the first taxonomy for designing compressed domain computer vision solutions driven by the architecture and weights compatibility with an available spatio-temporal computer vision processor. The potential of the proposed taxonomy is demonstrated for the specific case of point cloud classification by designing novel compressed domain processors using the JPEG Pleno Point Cloud Coding standard under development and adaptations of the PointGrid classifier. Experimental results show that the designed compressed domain point cloud classification solutions can significantly outperform the spatial-temporal domain classification benchmarks when applied to the decompressed data, containing coding artifacts, and even surpass their performance when applied to the original uncompressed data.
+
+Model: Reconstructing facade details using MLS point clouds and Bag-of-Words approach
+Paper: http://arxiv.org/pdf/2402.06521v1.pdf
+GitHub: https://github.com/thomasfroech/reconstructingfacadedetailsbow
+Summary: In the reconstruction of fa\c{c}ade elements, the identification of specific object types remains challenging and is often circumvented by rectangularity assumptions or the use of bounding boxes. We propose a new approach for the reconstruction of 3D fa\c{c}ade details. We combine MLS point clouds and a pre-defined 3D model library using a BoW concept, which we augment by incorporating semi-global features. We conduct experiments on the models superimposed with random noise and on the TUM-FA\c{C}ADE dataset. Our method demonstrates promising results, improving the conventional BoW approach. It holds the potential to be utilized for more realistic facade reconstruction without rectangularity assumptions, which can be used in applications such as testing automated driving functions or estimating fa\c{c}ade solar potential.
+
+
+Answer:

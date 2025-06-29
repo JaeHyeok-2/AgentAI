@@ -1,0 +1,43 @@
+🧠 **User Question:**  
+"Dropped in a regular video clip, and it created a smooth depth map for every frame—like the whole scene came alive in 3D. How does it stay consistent over time like that?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **monocular video depth estimation**, where a depth map is generated for every frame in a video. The key challenge lies in maintaining **temporal consistency** across frames despite motion, occlusion, or appearance changes.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A standard video clip with arbitrary scenes and camera movement.  
+- **Model**:  
+  - **DepthCrafter** processes long video sequences and ensures consistent depth across frames by using **depth flow estimation**, temporal attention, and self-supervised learning without the need for dense depth supervision.  
+  - It captures spatial and temporal cues to maintain coherence in 3D geometry.
+- **Output**: A temporally smooth depth map sequence that preserves structure and depth alignment across frames.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [DepthCrafter Paper (2024)](https://arxiv.org/pdf/2409.02095)  
+  💻 [GitHub - DepthCrafter](https://github.com/Tencent/DepthCrafter)
+
+- 📄 [Make-It-4D: From Single Image to 4D Video](http://arxiv.org/pdf/2308.10257v1.pdf)  
+  Uses Layered Depth Images (LDI) and point cloud unprojection to maintain consistent 3D structure in synthetic videos.
+
+- 📄 [Multi-view Differentiable Depth Refinement](http://arxiv.org/pdf/2410.03861v1.pdf)  
+  Proposes refining monocular depth using mesh optimization and differentiable rendering.
+
+- 📄 [Structure-from-Motion for 3D Reconstruction](http://arxiv.org/pdf/2306.06360v1.pdf)  
+  Leverages geometric optimization with stereo input for recovering structure from real-world indoor environments.
+
+---
+
+### ✅ Summary:
+
+DepthCrafter solves temporal inconsistency by estimating long-range depth flow and training to align depths over time.  
+It enables standard 2D videos to be reimagined as consistent 3D sequences—even in open, dynamic environments.
+

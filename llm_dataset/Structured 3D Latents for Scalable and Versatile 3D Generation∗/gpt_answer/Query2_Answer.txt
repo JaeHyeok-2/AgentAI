@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"Even vague ideas like “an elegant chair made of wood and metal” were interpreted perfectly, down to the curve of the legs. How can it understand design features that well from just words?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is leveraging **text-based fine-grained 3D shape interpretation**, where abstract descriptions are converted into coherent and detailed structural designs.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Text input with design adjectives and material references.  
+- **Model**:  
+  - **VPS (Visual Precision Search)** leverages object-level foundation models to align textual cues with fine geometry tokens extracted from learned shape priors.  
+  - It evaluates possible part compositions and uses search refinement to select geometry most consistent with the description.  
+- **Output**: A 3D shape that reflects the material, form, and stylistic elements described.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [VPS: Visual Precision Search](https://arxiv.org/pdf/2411.16198)  
+  💻 [GitHub](https://github.com/RuoyuChen10/VPS)
+
+- 📄 [Interpretive LLM-Based Design Graphs](http://arxiv.org/pdf/2310.19998v1.pdf)
+
+- 📄 [Narrative-Driven Design Generation (Materials)](http://arxiv.org/pdf/2308.13687v1.pdf)
+
+- 📄 [Part Naming & CAD Understanding](http://arxiv.org/pdf/2304.14275v1.pdf)
+
+---
+
+### ✅ Summary:
+
+Models like VPS map language to **object-part geometry** using retrieval and semantic token alignment. This enables faithful 3D model creation even from imprecise or stylistic language.
+

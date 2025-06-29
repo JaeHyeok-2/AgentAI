@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"I tried dehazing a city skyline and even the faint outlines of buildings in the background came back. How do models like this preserve structural detail while removing atmospheric blur?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+This is **structure-preserving dehazing**, targeting both **fog removal** and the **retention of edge-level geometry** in complex cityscapes.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A hazy urban image with distant buildings and skyline details occluded by fog.  
+- **Model**:  
+  - **CLAIO-DeHaze** employs global contrast normalization with local enhancement modules to bring out weak visual signals from structural edges.  
+  - DRACO refines this with dense feature disambiguation using residual attention modules and contrastive haze-quality loss.  
+- **Output**: A deblurred, edge-sharpened image that recovers occluded structures like skyscraper silhouettes or skyline contours.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [DRACO-DehazeNet (Detail-Aware)](http://arxiv.org/pdf/2410.14595v1.pdf)  
+  💻 [GitHub](https://github.com/GreedYLearner1146/DRACO-DehazeNet)
+
+- 📄 [SimpliCity (Regularized City Model Reconstruction)](http://arxiv.org/pdf/2404.08104v1.pdf)  
+  Provides tools for preserving geometric realism in reconstructed architecture.
+
+- 📄 [LoD3 Building Model Refinement](http://arxiv.org/pdf/2402.06288v1.pdf)  
+  Promotes structural consistency in semantic modeling of urban environments.
+
+---
+
+### ✅ Summary:
+
+AI dehazing models like CLAIO and DRACO are optimized to **enhance structural fidelity** while cleaning foggy images. They leverage both **global haze estimation** and **local edge attention** to recover fine architectural geometry.
+

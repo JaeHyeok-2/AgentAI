@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"Even when I tapped on a moving object in a live video, it instantly started tracking without delay. What makes it responsive enough for real-time use?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: EdgeTAM: On-Device Track Anything Model
+  - Paper: https://arxiv.org/pdf/2501.07256
+  - GitHub: https://github.com/facebookresearch/EdgeTAM
+- **Model**: PointOdyssey: A Large-Scale Synthetic Dataset for Long-Term Point Tracking
+  - Paper: http://arxiv.org/pdf/2307.15055v1.pdf
+  - GitHub: https://github.com/y-zheng18/point_odyssey
+- **Model**: SLoMo: A General System for Legged Robot Motion Imitation from Casual Videos
+  - Paper: http://arxiv.org/pdf/2304.14389v2.pdf
+  - GitHub: https://github.com/johnzhang3/slomo
+- **Model**: Fast Trajectory End-Point Prediction with Event Cameras for Reactive Robot Control
+  - Paper: http://arxiv.org/pdf/2302.13796v1.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

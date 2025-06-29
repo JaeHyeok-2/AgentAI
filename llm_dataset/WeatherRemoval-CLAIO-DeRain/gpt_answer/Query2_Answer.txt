@@ -1,0 +1,40 @@
+🧠 **User Question:**  
+"In a photo taken through a wet windshield, AI removed all the heavy streaks without blurring the scene. What kind of spatial cues or patterns help it detect rain lines so effectively?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is applying **rain-streak removal under occlusion**, where the goal is to eliminate structured streaks (like those on glass) without affecting the visual integrity of the background.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A rainy photo with overlaid streaks or blobs, especially from windshield interference.  
+- **Model**:  
+  - **CLAIO-DeRain** analyzes local gradients and motion-invariant streak geometry to segment vertical and diagonal streaks.  
+  - Models like **AdvRain** simulate streak formations and use adversarial priors to teach models to focus on what makes rain spatially distinct.  
+- **Output**: A high-contrast, blur-free image with well-preserved structural contours and no rain streaks.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [CLAIO GitHub](https://github.com/xiaojihh/cl_all-in-one)
+
+- 📄 [AdvRain (Adversarial Raindrop Recognition)](http://arxiv.org/pdf/2303.01338v2.pdf)
+
+- 📄 [SemanticSpray++ Dataset](http://arxiv.org/pdf/2406.09945v1.pdf)  
+  Provides benchmark multimodal rainy datasets to test robustness across sensors and occlusion.
+
+- 📄 [DILAM for All-Weather Adaptation](http://arxiv.org/pdf/2305.18953v1.pdf)  
+  Introduces plug-in weather-specific parameters to enable rain pattern specialization.
+
+---
+
+### ✅ Summary:
+
+Rain detection in deraining models is enabled by learning **spatial streak continuity**, **directionality**, and **local blur frequency contrast**—features that distinguish rain from static image content.
+

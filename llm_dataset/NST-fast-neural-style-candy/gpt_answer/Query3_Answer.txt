@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"The photo lit up with vivid candy-like hues in seconds. How does AI decide which areas to color so intensely while preserving the photo’s original shape?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is using **neural style transfer (NST)** to recolor and retexture a photo with vivid stylistic patterns (e.g., pop-art/candy). The challenge is to do this **without distorting object shapes or key contours**.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A regular photo and a stylization model (candy-style).  
+- **Model**:  
+  - **NST-fast-neural-style-candy** applies a convolutional network trained on perceptual losses (e.g., from VGG19) to apply colors based on the reference style image.  
+  - The model learns to preserve content features from early CNN layers and to stylize high-level texture patterns from deeper layers.  
+- **Output**: A recolored image with vivid hues that align to the structure of the input photo.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [Fast Neural Style – Candy](https://github.com/rrmina/fast-neural-style-pytorch)
+
+- 📄 [SAGI Inpainting Benchmark](http://arxiv.org/pdf/2502.06593v1.pdf)  
+  Highlights how perceptual alignment and semantic filtering improve stylization quality and realism 【398†source】.
+
+- 📄 [AI and Aesthetic Judgment](http://arxiv.org/pdf/2309.12338v1.pdf)  
+  Describes how style choices made by AI echo human visual interpretation of art 【396†source】.
+
+---
+
+### ✅ Summary:
+
+NST models like the “candy” variant stylize photos by **balancing texture and structure** through deep visual features. By training with perceptual loss and removing iterative optimization, they enable **instant stylization** that feels artistically rich yet geometrically true.
+

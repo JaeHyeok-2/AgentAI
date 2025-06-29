@@ -1,0 +1,33 @@
+1. What task is the user trying to perform?
+
+The user is trying to perform **image enhancement**, specifically improving the clarity of a photo with both indoor and outdoor areas where the view outside a window was perfectly clear. The user observes a "progressive sharpening" through "feedback loops", implying an iterative refinement process.
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow for progressive sharpening would leverage models capable of handling high dynamic range (HDR) inputs, enhancing fine details, and refining image quality iteratively.
+
+* Input: A photo with indoor and outdoor areas, including a clear view outside a window.
+
+* Model (Core Enhancement/Sharpening Models):
+    * **HDR-FHDR-I1 (FHDR):** This model is designed for HDR (High Dynamic Range) imaging. It is likely used to handle the wide dynamic range present in a scene with both bright outdoor views and dim indoor areas, ensuring details are preserved across all luminance levels. [cite_start]The problem of high dynamic range inputs frequently leads to local overexposure issues[cite: 70, 71]. FHDR likely contributes to preventing such issues and preserving detail in both bright and dim regions, thus contributing to the "perfectly clear" view and overall image quality.
+    * **Sharpening Neural Implicit Functions with Frequency Consolidation Priors (FCP):** This model directly addresses sharpening. [cite_start]It introduces a method to sharpen a low-frequency Signed Distance Function (SDF) observation by recovering its high-frequency components, leading to a sharper and more complete surface[cite: 9]. [cite_start]This method learns a mapping from a low-frequency observation to a full frequency coverage in a data-driven manner, resulting in prior knowledge of shape consolidation in the frequency domain[cite: 10]. [cite_start]This disentanglement allows the prior to generalize on an unseen low-frequency observation by simply recovering its full frequency embedding through a test-time self-reconstruction[cite: 12]. This process directly explains how "progressive sharpening" works by iteratively recovering high-frequency details.
+    * [cite_start]**FeatSharp: Your Vision Model Features, Sharper:** This method introduces a novel approach to "coherently and cheaply upsample the feature maps of low-res vision encoders while picking up on fine-grained details that would otherwise be lost due to resolution"[cite: 19]. This is crucial for sharpening, as it ensures that even from potentially lower-resolution inputs or intermediate representations, the model can enhance and recover fine-grained details, contributing to the "perfectly clear" view.
+    * [cite_start]**Removing Reflections from RAW Photos:** This system removes real-world reflections from images[cite: 21]. [cite_start]It operates on linear (RAW) photos and can accept an optional contextual photo to disambiguate what should be considered the reflection[cite: 22, 23]. [cite_start]While its primary goal is reflection removal, the process of distinguishing reflections from scene content and restoring the underlying image to a high quality [cite: 27] ensures that elements like a clear view outside a window (which might have reflections) are accurately rendered with high fidelity. [cite_start]The system includes an up-sampling model that transforms 256p images to full resolution, producing preview images at 1K[cite: 25, 26].
+
+* Output: A perfectly clear view outside the window and an overall refined image, achieved through models that handle high dynamic range, progressively recover high-frequency details by learning from low-frequency observations, enhance feature maps, and remove visual interference like reflections.
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* Model: HDR-FHDR-I1
+    * [cite_start]Paper: https://arxiv.org/pdf/1912.11463 [cite: 6]
+    * [cite_start]GitHub: https://github.com/mukulkhanna/FHDR [cite: 6]
+
+* Model: Sharpening Neural Implicit Functions with Frequency Consolidation Priors
+    * [cite_start]Paper: http://arxiv.org/pdf/2412.19720v1.pdf [cite: 6]
+    * [cite_start]GitHub: https://github.com/chenchao15/fcp [cite: 14]
+
+* Model: FeatSharp: Your Vision Model Features, Sharper
+    * [cite_start]Paper: http://arxiv.org/pdf/2502.16025v1.pdf [cite: 15]
+
+* Model: Removing Reflections from RAW Photos
+    * [cite_start]Paper: http://arxiv.org/pdf/2404.14414v2.pdf [cite: 21]

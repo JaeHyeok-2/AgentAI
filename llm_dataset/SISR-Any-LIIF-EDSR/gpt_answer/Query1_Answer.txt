@@ -1,0 +1,42 @@
+🧠 **User Question:**  
+"I blew up an old family photo more than 10× and the details still looked crisp. Normally you’d see pixels at that scale—how does AI recalculate colors just from coordinates? What kind of image representation lets it stay realistic at any magnification?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is performing **super-resolution with arbitrary scaling**, aiming for smooth image detail reconstruction at extremely high magnification levels without pixelation. This is enabled by **coordinate-based continuous image representation**.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A low-resolution image and a target coordinate (e.g., pixel location in high-resolution space).  
+- **Model**:  
+  - **SISR-Any-LIIF-EDSR** decouples image representation from fixed resolution grids. It first extracts deep features using **EDSR**, then applies **LIIF (Local Implicit Image Function)** to predict RGB values at any continuous coordinate in the image space.  
+  - The model generalizes to any upscaling factor without needing explicit training for each one.  
+- **Output**: A smooth, high-fidelity image that maintains sharpness even under extreme zoom.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [LIIF Paper](https://arxiv.org/pdf/2012.09161)  
+  💻 [GitHub](https://github.com/yinboc/liif)
+
+- 📄 [FeatSharp (Feature Upsampling for ViTs)](http://arxiv.org/pdf/2502.16025v1.pdf)  
+  Enables coherent upscaling of low-res vision encoder outputs.
+
+- 📄 [Visual Memory + Scalable Retrieval](http://arxiv.org/pdf/2408.08172v2.pdf)  
+  Uses database-like flexible visual features for scalable, interpretable representation.
+
+- 📄 [ImageNet-Hard (Zoom Sensitivity in Classifiers)](http://arxiv.org/pdf/2304.05538v4.pdf)  
+  Explores zoom-level biases and resolution handling in image classification.
+
+---
+
+### ✅ Summary:
+
+LIIF models like **SISR-Any-LIIF-EDSR** avoid fixed grid outputs and instead learn to predict pixel values **at any scale using coordinate queries**, enabling crisp upsampling far beyond the original resolution.
+

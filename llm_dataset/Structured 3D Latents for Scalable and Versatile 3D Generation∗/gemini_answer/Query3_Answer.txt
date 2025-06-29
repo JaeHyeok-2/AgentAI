@@ -1,0 +1,33 @@
+1. What task is the user trying to perform?
+
+[cite_start]The user is trying to perform **text-to-3D shape generation for product ideas**, specifically generating 3D shapes ready for mockups "without needing sketches or blueprints"[cite: 51]. The core task is to make 3D creation highly accessible by directly synthesizing precise 3D geometry from abstract product concepts.
+
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+
+A CNAPS AI-like workflow for text-to-3D shape generation emphasizes direct synthesis from high-level textual prompts, robust handling of ambiguous inputs, and efficient generation of manufacturable or usable 3D models.
+
+* [cite_start]Input: Product ideas as text descriptions (e.g., "all my product ideas")[cite: 51].
+
+* Model (Core Text-to-3D Generation Models):
+    * [cite_start]**Structured 3D Latents for Scalable and Versatile 3D Generation∗:** This model is designed for scalable and versatile 3D generation[cite: 56]. It forms the foundational layer for creating diverse 3D shapes from conceptual inputs, allowing for high accessibility in generating product ideas.
+    * [cite_start]**3D VR Sketch Guided 3D Shape Prototyping and Exploration:** This model takes a "3D VR sketch as a condition" to generate 3D shapes[cite: 57]. [cite_start]Although it uses sketches, it is designed to "handle potential sketch ambiguity" by creating "multiple 3D shapes that align with the original sketch's structure"[cite: 59]. [cite_start]It trains models step-by-step and leverages "multi-modal 3D shape representation" with "limited training data"[cite: 60]. [cite_start]While the user explicitly stated "without needing sketches," the underlying capability to reconstruct "geometrically realistic 3D shapes of a given category" [cite: 58] and handle ambiguity suggests a robust generative process that could be adapted or built upon for text-only input if the model's latent space can be directly prompted by text, effectively inferring the "sketch" from the textual description. Its focus on generating realistic 3D shapes and handling ambiguity makes creation accessible.
+    * [cite_start]**CAD-Recode: Reverse Engineering CAD Code from Point Clouds:** This model translates a 3D representation (point cloud) into "Python code that, when executed, reconstructs the CAD model"[cite: 67]. [cite_start]It leverages pre-trained LLMs as a decoder, taking advantage of their exposure to Python code[cite: 68]. [cite_start]While primarily for reverse engineering, its ability to generate interpretable CAD Python code from 3D data, and the fact that this code can be "interpretable by off-the-shelf LLMs, enabling CAD editing and CAD-specific question answering"[cite: 71], suggests a profound understanding of parametric design. This implies that if a textual product idea can be translated into a conceptual "point cloud" or structural representation, CAD-Recode (or a related generative LLM) could then produce executable CAD code, making 3D creation accessible and ready for mockups.
+    * [cite_start]**WorldSmith: Iterative and Expressive Prompting for World Building with a Generative AI:** This system explores "iteratively visualiz[ing] and modif[ying] elements of their fictional world using a combination of text input, sketching, and region-based filling"[cite: 73]. [cite_start]It enables "novice world builders to quickly visualize a fictional world with layered edits and hierarchical compositions" and offers "more expressive interactions with prompt-based models"[cite: 74, 75]. [cite_start]While focused on world-building, its ability to quickly visualize ideas directly from text prompts, with iterative refinement, aligns with making 3D creation accessible for product ideas without needing prior sketches, leveraging the power of "prompt-based generative AI"[cite: 76].
+
+* [cite_start]Output: Generated 3D shapes for all product ideas, ready for use in mockups, without needing sketches or blueprints[cite: 51]. This accessibility is achieved by directly synthesizing 3D models from text using scalable 3D latent representations, leveraging LLMs for code generation, and enabling iterative visualization from text prompts.
+
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+* Model: Structured 3D Latents for Scalable and Versatile 3D Generation∗
+    * [cite_start]Paper: https://arxiv.org/pdf/2412.01506 [cite: 56]
+    * [cite_start]GitHub: https://github.com/Microsoft/TRELLIS [cite: 56]
+
+* Related Papers:
+    * Model: 3D VR Sketch Guided 3D Shape Prototyping and Exploration
+        * [cite_start]Paper: http://arxiv.org/pdf/2306.10830v6.pdf [cite: 57]
+        * [cite_start]GitHub: https://github.com/rowl1ng/3dsketch2shape [cite: 57]
+    * Model: CAD-Recode: Reverse Engineering CAD Code from Point Clouds
+        * [cite_start]Paper: http://arxiv.org/pdf/2412.14042v1.pdf [cite: 63]
+        * [cite_start]GitHub: https://github.com/filaPro/cad-recode [cite: 63]
+    * Model: WorldSmith: Iterative and Expressive Prompting for World Building with a Generative AI
+        * [cite_start]Paper: http://arxiv.org/pdf/2308.13355v1.pdf [cite: 72]

@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"Tried it on a shared GPU server and got smooth performance without lag. What’s going on under the hood to make it so fast and stable?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: FLUX: FAST SOFTWARE-BASED COMMUNICATION OVERLAP ON GPUS THROUGH KERNEL FUSION
+  - Paper: https://arxiv.org/pdf/2406.06858
+  - GitHub: https://github.com/black-forest-labs/flux
+- **Model**: GPU-Accelerated LOD Generation for Point Clouds
+  - Paper: http://arxiv.org/pdf/2302.14801v1.pdf
+  - GitHub: https://github.com/m-schuetz/cudalod
+- **Model**: Mirage: Towards Low-interruption Services on Batch GPU Clusters with Reinforcement Learning
+  - Paper: http://arxiv.org/pdf/2306.14086v1.pdf
+  - GitHub: https://github.com/zhaozhang/mirage
+- **Model**: Understand Waiting Time in Transaction Fee Mechanism: An Interdisciplinary Perspective
+  - Paper: http://arxiv.org/pdf/2305.02552v1.pdf
+  - GitHub: https://github.com/cs-econ-blockchain/waiting-time-eip1559
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

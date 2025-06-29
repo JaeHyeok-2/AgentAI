@@ -1,0 +1,29 @@
+🧠 User Question:
+"My photo turned into a dreamy rainy-night painting with bold strokes and gentle streaks. How does the AI know where to place the rain and brush patterns so naturally?"
+
+---
+
+### 1. What task is the user trying to perform?
+This is **semantic-aware neural style transfer**, where stylized patterns like brush strokes and weather effects are applied selectively, preserving the overall scene layout.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+**Input → Model → Output**  
+- **Input**: A regular photograph.  
+- **Model**:  
+  - **NST-fast-neural-style-rain-princess** transfers both **texture** (brush stroke style) and **visual tone** (rainy ambience) using features extracted from reference artworks.  
+  - The stylization respects semantic regions by aligning perceptual features at multiple layers.  
+- **Output**: An image with spatially coherent stylization—brush strokes follow structure, and rain streaks mimic ambient depth.
+
+---
+
+### 3. Supporting Papers and Tools
+- 💻 [GitHub – Fast Neural Style](https://github.com/rrmina/fast-neural-style-pytorch)  
+- 📄 [ARTxAI – Artistic Feature Attribution](http://arxiv.org/pdf/2308.15284v1.pdf)【422†source】  
+- 📄 [AI Aesthetic Meaning Study](http://arxiv.org/pdf/2309.12338v1.pdf)【422†source】
+
+---
+
+### ✅ Summary:
+AI stylization respects **visual semantics** by applying brush and rain features that **track scene structure**, made possible via pretrained perceptual embeddings and feed-forward texture synthesis【422†source】.

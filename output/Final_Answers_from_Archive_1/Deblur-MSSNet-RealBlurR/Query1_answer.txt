@@ -1,0 +1,36 @@
+🧠 **User Question:**  
+"I took a photo in a dimly lit area at night, and it came out really grainy with lots of noise. When I processed it with AI, it got much smoother—which was cool—but some parts looked a little blurry. How does AI try to remove noise while keeping the original image intact? What kind of techniques are widely used for this now?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is trying to understand how a model achieves a particular behavior in a real-world scenario, such as tracking, generation, or classification. Based on the question, the task likely falls under one of the following categories: object tracking, image-to-video generation, pose-to-motion conversion, or content moderation.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**:
+- The **input** is typically a static image, text description, sketch, or video sequence.
+- The **model** processes the input using its architecture (e.g., diffusion, transformer, CNN), guided by the pretrained features or control signals like pose, semantics, or spatial constraints.
+- The **output** is a video, prediction label, mask, or stylized version of the input that reflects learned distributions from the training set.
+
+---
+
+### 3. Models and Tools Referenced
+
+- **Model:** NST-fast-neural-style-mosaic
+  - Paper: None
+  - GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+- **Model:** Between Generating Noise and Generating Images: Noise in the Correct Frequency Improves the Quality of Synthetic Histopathology Images for Digital Pathology
+  - Paper: http://arxiv.org/pdf/2302.06549v1.pdf
+  - GitHub: N/A
+- **Model:** Quality Assured: Rethinking Annotation Strategies in Imaging AI
+  - Paper: http://arxiv.org/pdf/2407.17596v2.pdf
+  - GitHub: N/A
+
+These models are tailored to their specific tasks. For example, video generation models use temporal consistency modules, while tracking models use attention or re-ID embeddings to focus on consistent targets.
+
+---
+
+Each model contributes specific capabilities to solve the user's task efficiently within the CNAPS framework.

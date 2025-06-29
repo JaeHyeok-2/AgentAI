@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"I'm currently researching automated demographic analysis from surveillance video. How exactly do modern AI models classify pedestrian gender from video or image data? What kind of training data and neural network approaches are commonly used for accurate and unbiased classification?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: Classification-HuggingFace-NTQAI-pedestrian_gender_recognition
+Paper: None
+
+### Related Papers:
+Model: Addressing Weak Decision Boundaries in Image Classification by Leveraging Web Search and Generative Models
+Paper: http://arxiv.org/pdf/2310.19986v1.pdf
+Summary: Machine learning (ML) technologies are known to be riddled with ethical and operational problems, however, we are witnessing an increasing thrust by businesses to deploy them in sensitive applications. One major issue among many is that ML models do not perform equally well for underrepresented groups. This puts vulnerable populations in an even disadvantaged and unfavorable position. We propose an approach that leverages the power of web search and generative models to alleviate some of the shortcomings of discriminative models. We demonstrate our method on an image classification problem using ImageNet's People Subtree subset, and show that it is effective in enhancing robustness and mitigating bias in certain classes that represent vulnerable populations (e.g., female doctor of color). Our new method is able to (1) identify weak decision boundaries for such classes; (2) construct search queries for Google as well as text for generating images through DALL-E 2 and Stable Diffusion; and (3) show how these newly captured training samples could alleviate population bias issue. While still improving the model's overall performance considerably, we achieve a significant reduction (77.30\%) in the model's gender accuracy disparity. In addition to these improvements, we observed a notable enhancement in the classifier's decision boundary, as it is characterized by fewer weakspots and an increased separation between classes. Although we showcase our method on vulnerable populations in this study, the proposed technique is extendable to a wide range of problems and domains.
+
+Model: Image Classification for Snow Detection to Improve Pedestrian Safety
+Paper: http://arxiv.org/pdf/2407.00818v1.pdf
+Summary: This study presents a computer vision approach aimed at detecting snow on sidewalks and pavements to reduce winter-related fall injuries, especially among elderly and visually impaired individuals. Leveraging fine-tuned VGG-19 and ResNet50 convolutional neural networks (CNNs), the research focuses on identifying snow presence in pavement images. The dataset comprises 98 images evenly split between snowy and snow-free conditions, evaluated with a separate test set using the F1 score and accuracy metrics. This work builds upon existing research by employing fine-tuned CNN architectures to accurately detect snow on pavements from smartphone-captured images. The methodology incorporates transfer learning and model ensembling techniques to integrate the best predictions from both the VGG19 and ResNet50 architectures. The study yields accuracy and F1 scores of 81.8% and 81.7%, respectively, showcasing the potential of computer vision in addressing winter-related hazards for vulnerable populations.
+
+Model: Speech-based Age and Gender Prediction with Transformers
+Paper: http://arxiv.org/pdf/2306.16962v1.pdf
+GitHub: https://github.com/audeering/w2v2-age-gender-how-to
+Summary: We report on the curation of several publicly available datasets for age and gender prediction. Furthermore, we present experiments to predict age and gender with models based on a pre-trained wav2vec 2.0. Depending on the dataset, we achieve an MAE between 7.1 years and 10.8 years for age, and at least 91.1% ACC for gender (female, male, child). Compared to a modelling approach built on handcrafted features, our proposed system shows an improvement of 9% UAR for age and 4% UAR for gender. To make our findings reproducible, we release the best performing model to the community as well as the sample lists of the data splits.
+
+
+Answer:

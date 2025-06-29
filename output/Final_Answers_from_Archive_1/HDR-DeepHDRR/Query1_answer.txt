@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"A back-lit shot had a blown-out sky, but one AI fix brought back all the clouds. With just a single LDR image, what does AI infer to recreate an HDR look?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: HDR-FHDR-I1
+  - Paper: https://arxiv.org/pdf/1912.11463
+  - GitHub: https://github.com/mukulkhanna/FHDR
+- **Model**: Online Overexposed Pixels Hallucination in Videos with Adaptive Reference Frame Selection
+  - Paper: http://arxiv.org/pdf/2308.15462v1.pdf
+  - GitHub: None
+- **Model**: Enhancing the Reliability of LiDAR Point Cloud Sampling: A Colorization and Super-Resolution Approach Based on LiDAR-Generated Images
+  - Paper: http://arxiv.org/pdf/2409.11532v1.pdf
+  - GitHub: None
+- **Model**: A-BDD: Leveraging Data Augmentations for Safe Autonomous Driving in Adverse Weather and Lighting
+  - Paper: http://arxiv.org/pdf/2408.06071v2.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

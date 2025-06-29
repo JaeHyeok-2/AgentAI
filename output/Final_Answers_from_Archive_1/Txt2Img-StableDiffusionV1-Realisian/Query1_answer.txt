@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I wrote “natural-light portrait, 85 mm,” and the pores were crisp while the background melted away. How does AI mimic shallow depth of field so convincingly?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: DEPTH PRO : Sharp Monocular Metric Depth In Less Than a Second
+  - Paper: https://arxiv.org/pdf/2410.02073
+  - GitHub: https://github.com/apple/ml-depth-pro
+- **Model**: Enhancing Image Matting in Real-World Scenes with Mask-Guided Iterative Refinement
+  - Paper: http://arxiv.org/pdf/2502.17093v1.pdf
+  - GitHub: None
+- **Model**: Learning Naturally Aggregated Appearance for Efficient 3D Editing
+  - Paper: http://arxiv.org/pdf/2312.06657v2.pdf
+  - GitHub: https://github.com/felixcheng97/agap
+- **Model**: DebSDF: Delving into the Details and Bias of Neural Indoor Scene Reconstruction
+  - Paper: http://arxiv.org/pdf/2308.15536v3.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

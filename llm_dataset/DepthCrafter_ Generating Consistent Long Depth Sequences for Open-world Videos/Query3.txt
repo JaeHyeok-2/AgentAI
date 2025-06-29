@@ -1,0 +1,33 @@
+You are an AI scientist.
+
+A user has asked the following question:
+"Ran it on some outdoor footage, and it still captured the depth consistently—even with changing light and motion. How can a model handle such open-world complexity?"
+
+Based on the following recommended models, explain:
+
+1. What task the user is trying to perform.
+2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
+3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+
+Use **only the provided models and papers**. Do not refer to outside sources.
+
+### Recommended AI Models:
+Model: DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos
+Paper: https://arxiv.org/pdf/2409.02095
+GitHub: https://github.com/Tencent/DepthCrafter
+
+### Related Papers:
+Model: Foundation Models Meet Low-Cost Sensors: Test-Time Adaptation for Rescaling Disparity for Zero-Shot Metric Depth Estimation
+Paper: http://arxiv.org/pdf/2412.14103v1.pdf
+Summary: The recent development of foundation models for monocular depth estimation such as Depth Anything paved the way to zero-shot monocular depth estimation. Since it returns an affine-invariant disparity map, the favored technique to recover the metric depth consists in fine-tuning the model. However, this stage is not straightforward, it can be costly and time-consuming because of the training and the creation of the dataset. The latter must contain images captured by the camera that will be used at test time and the corresponding ground truth. Moreover, the fine-tuning may also degrade the generalizing capacity of the original model. Instead, we propose in this paper a new method to rescale Depth Anything predictions using 3D points provided by sensors or techniques such as low-resolution LiDAR or structure-from-motion with poses given by an IMU. This approach avoids fine-tuning and preserves the generalizing power of the original depth estimation model while being robust to the noise of the sparse depth or of the depth model. Our experiments highlight enhancements relative to zero-shot monocular metric depth estimation methods, competitive results compared to fine-tuned approaches and a better robustness than depth completion approaches. Code available at https://gitlab.ensta.fr/ssh/monocular-depth-rescaling.
+
+Model: MegaSaM: Accurate, Fast, and Robust Structure and Motion from Casual Dynamic Videos
+Paper: http://arxiv.org/pdf/2412.04463v2.pdf
+Summary: We present a system that allows for accurate, fast, and robust estimation of camera parameters and depth maps from casual monocular videos of dynamic scenes. Most conventional structure from motion and monocular SLAM techniques assume input videos that feature predominantly static scenes with large amounts of parallax. Such methods tend to produce erroneous estimates in the absence of these conditions. Recent neural network-based approaches attempt to overcome these challenges; however, such methods are either computationally expensive or brittle when run on dynamic videos with uncontrolled camera motion or unknown field of view. We demonstrate the surprising effectiveness of a deep visual SLAM framework: with careful modifications to its training and inference schemes, this system can scale to real-world videos of complex dynamic scenes with unconstrained camera paths, including videos with little camera parallax. Extensive experiments on both synthetic and real videos demonstrate that our system is significantly more accurate and robust at camera pose and depth estimation when compared with prior and concurrent work, with faster or comparable running times. See interactive results on our project page: https://mega-sam.github.io/
+
+Model: Matching Free Depth Recovery from Structured Light
+Paper: http://arxiv.org/pdf/2501.07113v1.pdf
+Summary: We present a novel approach for depth estimation from images captured by structured light systems. Unlike many previous methods that rely on image matching process, our approach uses a density voxel grid to represent scene geometry, which is trained via self-supervised differentiable volume rendering. Our method leverages color fields derived from projected patterns in structured light systems during the rendering process, enabling the isolated optimization of the geometry field. This contributes to faster convergence and high-quality output. Additionally, we incorporate normalized device coordinates (NDC), a distortion loss, and a novel surface-based color loss to enhance geometric fidelity. Experimental results demonstrate that our method outperforms existing matching-based techniques in geometric performance for few-shot scenarios, achieving approximately a 60% reduction in average estimated depth errors on synthetic scenes and about 30% on real-world captured scenes. Furthermore, our approach delivers fast training, with a speed roughly three times faster than previous matching-free methods that employ implicit representations.
+
+
+Answer:

@@ -1,0 +1,40 @@
+🧠 **User Question:**  
+"I moved my head around, and the AI still labeled my facial features perfectly. How does it adapt to different angles and expressions?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+This is **pose-invariant facial landmark detection or parsing**, where the system recognizes facial zones despite head rotation, viewpoint shifts, or expression changes.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A moving or rotated facial video/image.  
+- **Model**:  
+  - **StableDiffusionV1-QGO-PromptingReal** generates and aligns detailed facial features by leveraging text-based conditioning or latent prompts.  
+  - For adaptive motion, methods like MonoGaussianAvatar use **Gaussian deformation fields** to track face geometry across poses.  
+- **Output**: Consistent masks or annotations of face parts, updated dynamically per frame or angle.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [MonoGaussianAvatar (Head Avatar via Gaussians)](http://arxiv.org/pdf/2312.04558v1.pdf)  
+  Models head geometry deformation under pose with high fidelity.
+
+- 📄 [CHM-Corr++](http://arxiv.org/pdf/2404.05238v3.pdf)  
+  💻 [GitHub](https://github.com/anguyen8/chm-corr-interactive)  
+  Offers human-guided attention adjustment for better pose tracking.
+
+- 📄 [Aligning Evaluators with Human Preferences](http://arxiv.org/pdf/2407.12847v1.pdf)  
+  Explores model interpretability and feedback alignment to better handle real-world user variation.
+
+---
+
+### ✅ Summary:
+
+Face feature labeling under pose/expression shift is enabled by **geometry-aware modeling**, such as **Gaussian splatting and latent diffusion**, which adaptively reposition facial maps for each viewpoint.
+

@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I made a quick composite for a profile image, and the color tones blended perfectly without needing manual tweaks. Even at low resolution, the match felt seamless."
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: NST-fast-neural-style-mosaic
+  - Paper: None
+  - GitHub: https://github.com/rrmina/fast-neural-style-pytorch
+- **Model**: DreamColour: Controllable Video Colour Editing without Training
+  - Paper: http://arxiv.org/pdf/2412.05180v1.pdf
+  - GitHub: None
+- **Model**: Robust Multi-Modal Image Stitching for Improved Scene Understanding
+  - Paper: http://arxiv.org/pdf/2312.17010v1.pdf
+  - GitHub: None
+- **Model**: HCPM: Hierarchical Candidates Pruning for Efficient Detector-Free Matching
+  - Paper: http://arxiv.org/pdf/2403.12543v1.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

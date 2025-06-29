@@ -1,0 +1,26 @@
+🧠 User Question:
+"I saw the whole image split into neat color blocks without losing structure. How does the AI figure out where one tile should end and another begin?"
+
+---
+
+### 1. What task is the user trying to perform?
+The user is applying **edge-aware artistic segmentation** in neural stylization, focusing on block-based stylization while keeping structure coherent.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+**Input → Model → Output**  
+- **Input**: An input photo to be stylized in tile/patch format.  
+- **Model**:  
+  - **NST-fast-neural-style-mosaic** handles color and texture application.  
+  - For tiling, techniques like **image triangulation using Sobel operators** guide vertex placement, using edges to define tile boundaries.  
+  - Geo-aware tiling methods (e.g., in EarthObservationTiles) or de-aliasing techniques help prevent edge distortion.  
+- **Output**: A stylized image with coherent segmentation into colored tiles.
+
+---
+
+### 3. Supporting Papers and Tools
+- 📄 [Triangulation via Sobel Edges](http://arxiv.org/pdf/2408.16112v1.pdf)【410†source】
+- 📄 [Geo-Tiles Segmentation](http://arxiv.org/pdf/2306.00823v2.pdf)【410†source】
+- 📄 [Seg-Aliasing: Frequency Distortion Handling](http://arxiv.org/pdf/2403.09065v3.pdf)【410†source】
+

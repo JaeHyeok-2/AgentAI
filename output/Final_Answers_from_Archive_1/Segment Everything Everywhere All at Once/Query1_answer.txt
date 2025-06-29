@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I dropped in a random photo, and it instantly outlined every object—big or small—without me selecting anything. How does it know what to segment without prompts?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: Segment Everything Everywhere All at Once
+  - Paper: https://arxiv.org/pdf/2304.06718
+  - GitHub: https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once?tab=readme-ov-file
+- **Model**: AI-SAM: Automatic and Interactive Segment Anything Model
+  - Paper: http://arxiv.org/pdf/2312.03119v1.pdf
+  - GitHub: https://github.com/ymp5078/ai-sam
+- **Model**: RSPrompter: Learning to Prompt for Remote Sensing Instance Segmentation based on Visual Foundation Model
+  - Paper: http://arxiv.org/pdf/2306.16269v2.pdf
+  - GitHub: https://github.com/KyanChen/RSPrompter
+- **Model**: Segment Any Cell: A SAM-based Auto-prompting Fine-tuning Framework for Nuclei Segmentation
+  - Paper: http://arxiv.org/pdf/2401.13220v1.pdf
+  - GitHub: None
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

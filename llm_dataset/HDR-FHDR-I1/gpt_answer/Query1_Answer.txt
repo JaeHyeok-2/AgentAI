@@ -1,0 +1,39 @@
+🧠 **User Question:**  
+"A photo with indoor and outdoor areas came back with the view outside the window perfectly clear. I heard it refines the image in feedback loops—how does that progressive sharpening work?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is applying **HDR reconstruction and progressive sharpening**, particularly in scenes with mixed dynamic range (indoor + outdoor). The task requires enhancing details while maintaining structural integrity across contrast extremes.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: An image with overexposed or underexposed regions.  
+- **Model**:  
+  - **FHDR (Fast High Dynamic Range)** model improves dynamic range by using **feedback refinement blocks** that iteratively enhance low-detail regions.  
+  - Models like **Frequency Consolidation Priors (FCP)** sharpen neural implicit representations by disentangling low-frequency signals and reconstructing high-frequency details during test-time.  
+  - **FeatSharp** enhances feature maps extracted from vision transformers to preserve resolution and edge fidelity during restoration.  
+- **Output**: A refined, HDR-enhanced image with sharper details and clearer high-contrast regions like windows.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [FHDR Paper](https://arxiv.org/pdf/1912.11463)  
+  💻 [GitHub - FHDR](https://github.com/mukulkhanna/FHDR)
+
+- 📄 [Frequency Consolidation Priors](http://arxiv.org/pdf/2412.19720v1.pdf)  
+  💻 [GitHub - FCP](https://github.com/chenchao15/fcp)
+
+- 📄 [FeatSharp: High-Resolution Feature Upsampling](http://arxiv.org/pdf/2502.16025v1.pdf)
+
+---
+
+### ✅ Summary:
+
+The progressive HDR clarity is achieved using **feedback loops (FHDR)** and **feature sharpening priors (FCP, FeatSharp)** that refine both spatial resolution and frequency consistency—especially important in high-contrast scenes with both indoor and outdoor elements.
+

@@ -1,0 +1,40 @@
+🧠 **User Question:**  
+"Even after removing a large portion of the hair and background in a selfie, the AI completed it with smooth textures and sharp contours. What kind of dual modeling lets it keep both structure and texture aligned?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is doing **dual-path inpainting**, where both high-level structure (e.g., face contours, silhouette) and low-level texture (e.g., hair strands, wall grain) need to be restored seamlessly.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: An incomplete image where hair and background are removed or corrupted.  
+- **Model**:  
+  - **CTSDG (Coarse-to-Semantic Dual Guidance)** combines a coarse structure generator with a semantic refinement branch to fill in both structure and fine texture.
+  - It first predicts global layout and then progressively restores localized details with a style-aware loss and dual-attention modules.
+- **Output**: A fully inpainted image with clean edges and aligned textures in both foreground and background.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 🔗 [CTSDG Paper (CelebA)](https://arxiv.org/pdf/2108.09760)  
+  💻 [GitHub](https://github.com/xiefan-guo/ctsdg)
+
+- 🔗 [Doppelgangers Dataset](http://arxiv.org/pdf/2309.02420v1.pdf)  
+  💻 [GitHub](https://github.com/RuojinCai/Doppelgangers)  
+  Tackles visual disambiguation of similar structures, useful in separating foreground/background during completion.
+
+- 🔗 [SurfaceAug](http://arxiv.org/pdf/2312.03808v1.pdf)  
+  Augments semantic structure during multimodal training, helping preserve shape and edges.
+
+---
+
+### ✅ Summary:
+
+CTSDG’s **coarse-to-fine dual modeling** enables the recovery of global facial or background structure and micro-level texture detail. This design makes it highly effective in **preserving geometry and realism simultaneously**, even in large-scale inpainting scenarios.
+

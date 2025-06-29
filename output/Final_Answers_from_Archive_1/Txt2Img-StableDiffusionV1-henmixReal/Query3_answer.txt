@@ -1,0 +1,38 @@
+🧠 **User Question:**  
+"I changed the same prompt from “real face” to “sketched face” and everything morphed smoothly—eyes, lips, proportions intact. How does AI track visual consistency when swapping styles mid-prompt?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is trying to understand how the provided AI model(s) solve a specific perception or generation task based on limited input information. This involves interpreting how the model infers the correct output from subtle or indirect cues.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: Structured data such as a single image, text prompt, video frame, or scene description.
+- **Model**: The listed models process this input using learned feature representations (e.g., convolutional networks, transformer-based encoders, or diffusion models), sometimes guided by prompts or auxiliary data like depth maps or pose.
+- **Output**: The model generates a structured output (e.g., video, segmentation map, depth estimation, classification tag) aligned with the task objective and training distribution.
+
+---
+
+### 3. Referenced Models and Tools
+
+- **Model**: Txt2Img-StableDiffusionV1-QGO-PromptingReal
+  - Paper: None
+  - GitHub: https://github.com/Kameronski/stable-diffusion-1.5
+- **Model**: Visual Style Prompting with Swapping Self-Attention
+  - Paper: http://arxiv.org/pdf/2402.12974v2.pdf
+  - GitHub: https://github.com/naver-ai/Visual-Style-Prompting
+- **Model**: SDFD: Building a Versatile Synthetic Face Image Dataset with Diverse Attributes
+  - Paper: http://arxiv.org/pdf/2404.17255v2.pdf
+  - GitHub: None
+- **Model**: Diversify Question Generation with Retrieval-Augmented Style Transfer
+  - Paper: http://arxiv.org/pdf/2310.14503v1.pdf
+  - GitHub: https://github.com/gouqi666/rast
+
+Each of the models listed plays a distinct role in handling this task, whether by improving accuracy, speed, semantic understanding, or handling ambiguous edge cases.
+
+The response is entirely based on the models and papers provided in the prompt.

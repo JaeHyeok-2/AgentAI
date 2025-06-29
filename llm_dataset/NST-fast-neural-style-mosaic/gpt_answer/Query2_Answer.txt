@@ -1,0 +1,24 @@
+🧠 User Question:
+"My photo turned into colorful geometric tiles while all the main shapes stayed untouched. How does AI manage to stylize each section while keeping the scene recognizable?"
+
+---
+
+### 1. What task is the user trying to perform?
+The task is **semantic-preserving artistic style transfer**, applying stylized geometric textures while maintaining the image’s recognizable structure and layout.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+**Input → Model → Output**  
+- **Input**: A photo and a mosaic-style model.  
+- **Model**:  
+  - **NST-fast-neural-style-mosaic** transforms features from a pretrained VGG network to inject stylistic textures while preserving layout and boundaries via content loss.  
+  - Cross-attention or segmentation-aware backbones (e.g. CA2SIS) may also enhance fidelity to semantic layout.  
+- **Output**: Geometrically rich, stylistically transformed image with intact content boundaries.
+
+---
+
+### 3. Supporting Papers and Tools
+- 💻 [Fast Neural Style – Mosaic](https://github.com/rrmina/fast-neural-style-pytorch)
+- 📄 [CA2SIS: Semantic Synthesis with Cross-Attention](http://arxiv.org/pdf/2308.16071v3.pdf)【409†source】
+

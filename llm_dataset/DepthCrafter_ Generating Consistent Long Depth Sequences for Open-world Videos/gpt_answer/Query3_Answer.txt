@@ -1,0 +1,42 @@
+🧠 **User Question:**  
+"Ran it on some outdoor footage, and it still captured the depth consistently—even with changing light and motion. How can a model handle such open-world complexity?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is testing **open-world monocular depth estimation**, aiming to understand how models perform robustly under diverse conditions like outdoor lighting, camera jitter, motion blur, and environmental complexity.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A handheld or dynamic outdoor video with environmental variation (e.g., shadows, weather, moving vehicles).  
+- **Model**:  
+  - **DepthCrafter** predicts long-range, temporally consistent depth with no fine-tuning using a two-stage temporal encoder and flow-guided propagation.  
+  - **Test-time rescaling techniques** (e.g., from the disparity-to-depth paper) use sparse sensor depth or IMU for scaling without degrading generalization.  
+  - **MegaSaM** supports depth and pose estimation under motion, noise, and minimal parallax.
+- **Output**: High-resolution, robust depth predictions that remain aligned even under wild, real-world variation.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 📄 [DepthCrafter](https://arxiv.org/pdf/2409.02095)  
+  💻 [GitHub](https://github.com/Tencent/DepthCrafter)
+
+- 📄 [Disparity Rescaling with Sensors](http://arxiv.org/pdf/2412.14103v1.pdf)
+
+- 📄 [MegaSaM for Dynamic SLAM](http://arxiv.org/pdf/2412.04463v2.pdf)
+
+- 📄 [Structured Light Depth Estimation](http://arxiv.org/pdf/2501.07113v1.pdf)  
+  Self-supervised depth training using projection and rendering without matching.
+
+---
+
+### ✅ Summary:
+
+DepthCrafter generalizes across open-world videos using robust temporal propagation and flow alignment.  
+Its strength lies in zero-shot transfer and consistency, even in wild outdoor conditions.
+

@@ -1,0 +1,42 @@
+🧠 **User Question:**  
+"The app ran smoothly even on my older phone. What makes segmentation models lightweight enough for real-time use on low-power devices?"
+
+---
+
+### 1. What task is the user trying to perform?
+
+The user is deploying **real-time semantic segmentation** on **edge devices** (e.g., smartphones), emphasizing speed, memory efficiency, and responsiveness.
+
+---
+
+### 2. How does the model work in a CNAPS AI-like workflow?
+
+**Input → Model → Output**  
+- **Input**: A video or photo captured on a mobile device.
+- **Model**:  
+  - **DeepLabV3-MobileNet** leverages a **depthwise separable convolutional encoder** (MobileNet) and a fast **ASPP decoder**.
+  - Compared to transformer-heavy backbones, this significantly reduces parameter count and FLOPs while maintaining accuracy.
+- **Output**: A real-time segmentation map usable for background blur, AR masks, or object overlays.
+
+---
+
+### 3. Supporting Papers and Tools
+
+- 💻 [GitHub - DeepLabV3Plus PyTorch](https://github.com/VainF/DeepLabV3Plus-Pytorch)
+
+- 📄 [LV-UNet (Mobile Semantic Segmentation)](http://arxiv.org/pdf/2408.16886v3.pdf)  
+  💻 [GitHub](https://github.com/juntaojianggavin/lv-unet)
+
+- 📄 [PP-MobileSeg](http://arxiv.org/pdf/2304.05152v1.pdf)  
+  💻 [GitHub](https://github.com/PaddlePaddle/PaddleSeg)  
+  Shows state-of-the-art accuracy vs latency tradeoffs on Snapdragon-class devices.
+
+- 📄 [TraceNet](http://arxiv.org/pdf/2406.14874v1.pdf)  
+  One-tap driven efficient segmentation architecture focusing on reduced inference overhead.
+
+---
+
+### ✅ Summary:
+
+Mobile-ready models like **DeepLabV3-MobileNet** and **PP-MobileSeg** use efficient design principles (e.g., strided convolution, attention pruning) to offer **accurate, low-latency segmentation**—perfect for AR, editing, and live camera applications.
+

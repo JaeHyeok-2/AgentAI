@@ -1,0 +1,58 @@
+Based on the provided models and papers, here is the analysis of the user's question about multiple cleanup passes and natural contrast balancing in hazy indoor photography:
+
+## 1. Task Analysis
+The user is performing **iterative image dehazing with progressive contrast enhancement** for indoor photography. This involves processing hazy indoor shots through multiple cleanup passes to achieve natural contrast balancing and improved clarity over several seconds of processing time.
+
+## 2. CNAPS AI-like Workflow (Input → Model → Output)
+
+**Input:** Hazy indoor shot requiring multiple cleanup passes for contrast balancing and clarity enhancement
+
+**Model Processing:**
+- **Fast Neural Style (NST-fast-neural-style-mosaic)** provides iterative processing framework through:
+  - Neural style transfer architecture enabling multiple processing passes
+  - Fast processing capabilities allowing real-time iterative enhancement
+  - Progressive style application that can be adapted for contrast and clarity improvement
+  - Multi-pass processing supporting gradual image transformation
+- **DRACO-DehazeNet** enhances progressive dehazing via:
+  - Detail Recovery And Contrastive DehazeNet with dense dilated inverted residual blocks
+  - Attention-based detail recovery network tailoring enhancements to specific scene contexts
+  - Quadruplet loss-based contrastive dehazing paradigm distinguishing quality levels between processing stages
+  - Progressive refinement through sub-modules producing lower-quality and higher-quality dehazed outputs
+- **Online Overexposed Pixels Hallucination** supports temporal processing through:
+  - Transformer-based deep neural network inferring missing details through multiple processing stages
+  - Multiscale DNN approach with proper cost functions achieving progressive quality improvement
+  - Reference frame selection enabling temporal context for enhanced processing
+  - Causal HDR hallucination algorithm applicable to common indoor acquisition settings
+- **RAW Photo Reflection Removal** informs multi-stage enhancement via:
+  - Two-stage processing comprising base model at 256p followed by up-sampling model
+  - Progressive enhancement from low resolution to full resolution maintaining detail integrity
+  - Photometrically accurate processing ensuring natural appearance throughout multiple passes
+  - System demonstrating effective multi-pass processing principles for consumer photography
+
+**Output:** Significantly clearer indoor photo with naturally balanced contrast achieved through multiple cleanup passes over several seconds
+
+## 3. Technical Implementation for Multiple Cleanup Passes
+The iterative cleanup capability stems from:
+- **Multi-pass neural processing:** Fast Neural Style enables iterative refinement through repeated network applications
+- **Progressive dehazing:** DRACO-DehazeNet uses sub-module quality distinction for iterative improvement
+- **Temporal context integration:** Online hallucination leverages reference frames for enhanced multi-pass processing
+- **Multi-stage resolution enhancement:** RAW photo processing demonstrates effective progressive enhancement principles
+- **Contrast-aware refinement:** Attention-based detail recovery ensures natural contrast balancing throughout iterations
+
+## 4. Relevant Papers and Tools
+
+### Primary Model:
+- **Model:** NST-fast-neural-style-mosaic
+- **GitHub:** https://github.com/rrmina/fast-neural-style-pytorch
+
+### Supporting Frameworks:
+- **Model:** DRACO-DehazeNet: An Efficient Image Dehazing Network Combining Detail Recovery and a Novel Contrastive Learning Paradigm
+- **Paper:** http://arxiv.org/pdf/2410.14595v1.pdf
+
+- **Model:** Online Overexposed Pixels Hallucination in Videos with Adaptive Reference Frame Selection
+- **Paper:** http://arxiv.org/pdf/2308.15462v1.pdf
+
+- **Model:** Removing Reflections from RAW Photos
+- **Paper:** http://arxiv.org/pdf/2404.14414v2.pdf
+
+The combination of fast neural style transfer, progressive dehazing networks, temporal context processing, and multi-stage enhancement enables multiple cleanup passes by applying iterative neural processing, leveraging quality
