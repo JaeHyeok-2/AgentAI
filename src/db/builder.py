@@ -13,12 +13,12 @@ os.makedirs(SAVE_DIR, exist_ok=True)
 
 # 💡 처리할 데이터셋 목록
 DATASETS = [
-    {
-        "name": "arxiv",
-        "input": "/home/cvlab/Desktop/AgentAI/dataset/arxiv_sample_2023_after.json",
-        "index_file": os.path.join(SAVE_DIR, "arxiv_index.faiss"),
-        "output_json": os.path.join(SAVE_DIR, "arxiv_data.json"),
-    },
+    # {
+    #     "name": "arxiv",
+    #     "input": "/home/cvlab/Desktop/AgentAI/dataset/arxiv_sample_2023_after.json",
+    #     "index_file": os.path.join(SAVE_DIR, "arxiv_index.faiss"),
+    #     "output_json": os.path.join(SAVE_DIR, "arxiv_data.json"),
+    # },
     {
         "name": "new_models",
         "input": "/home/cvlab/Desktop/AgentAI/dataset/merged_data.json",

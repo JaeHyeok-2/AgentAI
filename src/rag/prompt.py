@@ -4,40 +4,42 @@ from typing import List, Dict
 def build_prompt(query: str, selected_docs: List[Dict], model_list: List[Dict]) -> str:
     context = ""
 
-    # ▶ 추천된 모델 정보 여러 개 처리
+    # ▶ 추천된 모델 정보
     if model_list:
         context += "### Recommended AI Models:\n"
         for model in model_list:
-            context += f"Model: {model.get('Model Unique Name', 'N/A')}\n"
-            context += f"Paper: {model.get('Paper', 'N/A')}\n"
+            context += f"- **{model.get('Model Unique Name','N/A')}**\n"
+            context += f"  Paper: {model.get('Paper','N/A')}\n"
             if model.get("GitHub"):
-                context += f"GitHub: {model['GitHub']}\n"
+                context += f"  GitHub: {model['GitHub']}\n"
             context += "\n"
 
-    # ▶ 논문 포함
-    context += "### Related Papers:\n"
-    for doc in selected_docs:
-        context += f"Model: {doc.get('Model Unique Name', 'N/A')}\n"
-        context += f"Paper: {doc.get('Paper', 'N/A')}\n"
-        if doc.get("GitHub"):
-            context += f"GitHub: {doc['GitHub']}\n"
-        if doc.get("Summary"):
-            context += f"Summary: {doc['Summary']}\n"
-        context += "\n"
+    # ▶ 논문 정보
+    if selected_docs:
+        context += "### Related Papers:\n"
+        for doc in selected_docs:
+            context += f"- **{doc.get('Model Unique Name','N/A')}**\n"
+            context += f"  Paper: {doc.get('Paper','N/A')}\n"
+            if doc.get("GitHub"):
+                context += f"  GitHub: {doc['GitHub']}\n"
+            if doc.get("Summary"):
+                context += f"  Summary: {doc['Summary']}\n"
+            context += "\n"
 
-    return f"""You are an AI scientist.
+    return f"""You are an expert AI scientist and architect of a CNAPS‑style multi‑module workflow.  
+Here, CNAPS means a **synapse‑like branching network** of AI models working together—not a simple linear pipeline.
 
-A user has asked the following question:
-\"{query}\"
+A user asks:
+"{query}"
 
-Based on the following recommended models, explain:
+**Using ONLY the provided models and papers in the context below, do the following:**
 
-1. What task the user is trying to perform.
-2. How the model(s) would work in a CNAPS AI-like workflow (input → model → output).
-3. List relevant papers and tools (with GitHub or ArXiv links) that support your answer.
+1. **Identify the core task or goal** implied by the user’s request.  
+2. **Design a CNAPS-style synaptic workflow**:
+   - Describe how input is routed to one or more modules.
+   - Explain how modules branch, interact, merge, or loop.
+   - Define each module’s intermediate and final output formats/include examples.
+3. **Justify your design** with references to the papers and tools (include GitHub or ArXiv links listed).
 
-Use **only the provided models and papers**. Do not refer to outside sources.
-
-{context}
-Answer:
+\n{context}\nAnswer:
 """

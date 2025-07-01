@@ -5,6 +5,26 @@ from retriever import retrieve_models_and_papers
 from prompt import build_prompt
 from answer import generate_answer_with_feedback
 
+def build_rag_prompt(prompt: str, model_name: str) -> str:
+    return f"""
+You are an expert AI scientist.
+
+The user has a question. Please answer based **only on the following retrieved academic papers** from arXiv (from 2023 to 2025).
+
+The recommended AI model for this task is **{model_name}**.
+
+{prompt.strip()}
+
+Remember:
+- Start your answer by explicitly recommending the model: {model_name}.
+- Structure the answer into numbered steps for clarity.
+- Use only the provided context.
+- Do not make up facts or refer to papers not listed.
+- Make your explanation clear and suitable for non-expert users.
+
+Answer:
+"""
+
 st.set_page_config(page_title="RAG 쿼리 실행기", layout="centered")
 st.title("📚 모델 1개 + 논문 추천 + GPT 응답 (선택 실행)")
 
@@ -80,7 +100,8 @@ for i, (query, model_name) in enumerate(query_pool, 1):
         if st.button(f"🤖 GPT 응답 생성 (Query {i})"):
             with st.spinner("LLM 응답 생성 중..."):
                 try:
-                    answer = generate_answer_with_feedback(prompt, selected_model["Model Unique Name"])
+                    rag_prompt = build_rag_prompt(prompt, selected_model["Model Unique Name"])
+                    answer = generate_answer_with_feedback(rag_prompt, selected_model["Model Unique Name"])
                     st.success("✅ GPT 응답 생성 완료")
                     st.markdown(answer)
                 except Exception as e:
