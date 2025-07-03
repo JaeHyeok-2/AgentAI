@@ -17,9 +17,9 @@ KEEP_COLS = [
     "Github",
     "HuggingFace",
     "Query1",
-    "Query2",
-    "Query3",
-    "Summary"
+    # "Query2",
+    # "Query3",
+    "Summary_update"
 ]
 
 def load_table(path: Path) -> pd.DataFrame:
@@ -42,7 +42,7 @@ def main(src_file: str):
     # 결측값 (NaN) → None으로 변환
     records = df.where(pd.notnull(df), None).to_dict(orient="records")
 
-    out_path = src.with_name("AI_models_CNAPS_159.json")
+    out_path = src.with_name("AI_models_CNAPS_159_query1.json")
     out_path.write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print(f"✅ arxiv_only.json 저장 완료 → {out_path}")

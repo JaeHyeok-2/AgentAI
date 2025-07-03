@@ -13,7 +13,7 @@ gemini_client = OpenAI(
 )
 
 MODEL_KEYS = {
-    "chatgpt": "openai/gpt-3.5-turbo-0125",
+    # "chatgpt": "openai/gpt-3.5-turbo-0125",
     "claude": "anthropic/claude-3-5-sonnet-20240620",
     "gemini": "gemini/gemini-2.5-flash"
 }

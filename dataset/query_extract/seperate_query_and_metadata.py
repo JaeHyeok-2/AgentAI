@@ -23,15 +23,15 @@ def split_json(src: Path):
         queries_only.append({
             "Model Unique Name": d.get("Model Unique Name"),
             "Query1": d.get("Query1"),
-            "Query2": d.get("Query2"),
-            "Query3": d.get("Query3")
+            # "Query2": d.get("Query2"),
+            # "Query3": d.get("Query3")
         })
         # ② Query 제거본
         cleaned = {k: v for k, v in d.items() if not k.startswith("Query")}
         models_no_queries.append(cleaned)
 
-    out_queries = src.with_name("model_queries_CNAPS_159.json")
-    out_models  = src.with_name("New_AI_model_no_query_CNAPS_159.json")
+    out_queries = src.with_name("model_queries_CNAPS_159_query1.json")
+    out_models  = src.with_name("model_no_query_CNAPS_159_query1.json")
 
     out_queries.write_text(json.dumps(queries_only, ensure_ascii=False, indent=2),
                            encoding="utf-8")

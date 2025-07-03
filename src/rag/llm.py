@@ -25,21 +25,34 @@ def call_llm(model_key: str, prompt: str, temperature=0.7) -> str:
             temperature=temperature
         )
         return resp["completion"].strip()
-    elif model_key.startswith("anthropic/claude") or model_key.startswith("claude"):
-        # if using simple model name
-        resp = anthropic_client.completions.create(
-            model=model_key,
-            prompt=prompt,
-            max_tokens_to_sample=1024,
-            temperature=temperature
+
+    elif model_key.startswith("anthropic/") or model_key.startswith("claude"):
+        model_name = model_key.split("/", 1)[1] if "/" in model_key else model_key
+
+        resp = anthropic_client.messages.create(
+            model=model_name,
+            max_tokens=1024,
+            temperature=temperature,
+            system="You are a helpful assistant.",
+            messages=[
+                {
+                    "role": "user",
+                    "content": [{"type": "text", "text": prompt}]
+                }
+            ]
         )
-        return resp["completion"].strip()
+        return resp.content[0].text.strip()
+        
     elif model_key.startswith("gemini/"):
+        model_name = model_key.split("/", 1)[1]
         resp = gemini_client.chat.completions.create(
-            model=model_key.split("/",1)[1],
-            messages=[{"role": "user", "content": prompt}],
+            model=model_name,
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": prompt}
+            ],
             temperature=temperature
         )
-        return resp.choices[0].message["content"].strip()
+        return resp.choices[0].message.content.strip()
     else:
-        raise ValueError(f"Unknown model key: {model_key}")
+        raise ValueError(f"Unknown model key: {model_key}"

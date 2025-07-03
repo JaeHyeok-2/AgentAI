@@ -9,7 +9,7 @@ from db.embedder import MODEL_ID
 # 🔧 임베딩 모델 디렉토리
 MODEL_NAME = MODEL_ID.split("/")[-1]
 BASE = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE / "data" / "merged_data" / MODEL_NAME
+DATA_DIR = BASE / "data" / "158_model" / MODEL_NAME
 
 def load_index_and_docs(index_path, json_path):
     index = faiss.read_index(str(index_path))
@@ -49,6 +49,7 @@ def search_split(query_vec: np.ndarray, k_models: int = 5, k_arxiv: int = 5):
     results = {}
 
     for key, k in [("models", k_models), ("arxiv", k_arxiv)]:
+
         cfg = index_dict[key]
         D, I = cfg["index"].search(np.array([query_vec], dtype="float32"), k)
         results[key] = [cfg["docs"][i] for i in I[0]]
