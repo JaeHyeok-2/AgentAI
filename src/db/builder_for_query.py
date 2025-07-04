@@ -39,7 +39,7 @@ def build_vector_db_for(dataset: dict):
             continue
 
         # ✅ 임베딩 텍스트: 모델명 + Query1
-        text = f"{title} {query}"
+        text = f"{query}"
         vec = embed([text])[0]
         vecs.append(vec)
         valid_docs.append(e)
