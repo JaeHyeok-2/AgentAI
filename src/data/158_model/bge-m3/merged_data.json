@@ -7,7 +7,10 @@
     "Paper": "https://arxiv.org/pdf/2010.11929",
     "Github": null,
     "HuggingFace": "https://huggingface.co/Falconsai/nsfw_image_detection",
-    "Summary_update": "This model excels at fast, reliable NSFW detection, with a transformer-based backbone offering strong image understanding and real-world applicability—well-suited for content safety pipelines."
+    "Summary_update": "This model excels at fast, reliable NSFW detection, with a transformer-based backbone offering strong image understanding and real-world applicability—well-suited for content safety pipelines.",
+    "Task Tags": [
+      "classification"
+    ]
   },
   {
     "Model Unique Name": "Classification-HuggingFace-microsoft-resnet-18",
@@ -17,7 +20,10 @@
     "Paper": "https://arxiv.org/pdf/1512.03385",
     "Github": "https://github.com/KaimingHe/deep-residual-networks",
     "HuggingFace": "https://huggingface.co/microsoft/resnet-18",
-    "Summary_update": "A lightweight deep residual network with 18 layers, using basic residual blocks featuring skip connections. Enables efficient training and inference, making it ideal for real-time or resource-constrained image classification tasks."
+    "Summary_update": "A lightweight deep residual network with 18 layers, using basic residual blocks featuring skip connections. Enables efficient training and inference, making it ideal for real-time or resource-constrained image classification tasks.",
+    "Task Tags": [
+      "classification"
+    ]
   },
   {
     "Model Unique Name": "Classification-HuggingFace-microsoft-resnet-50",
@@ -27,7 +33,10 @@
     "Paper": "https://arxiv.org/pdf/1512.03385",
     "Github": "https://github.com/KaimingHe/deep-residual-networks",
     "HuggingFace": "https://huggingface.co/microsoft/resnet-50",
-    "Summary_update": "A deeper 50-layer CNN leveraging bottleneck residual blocks, balancing computational efficiency and accuracy. Excels in object recognition and feature extraction, widely used in backbones for detection, segmentation, and image analysis."
+    "Summary_update": "A deeper 50-layer CNN leveraging bottleneck residual blocks, balancing computational efficiency and accuracy. Excels in object recognition and feature extraction, widely used in backbones for detection, segmentation, and image analysis.",
+    "Task Tags": [
+      "classification"
+    ]
   },
   {
     "Model Unique Name": "Classification-HuggingFace-microsoft-resnet-101",
@@ -37,7 +46,10 @@
     "Paper": "https://arxiv.org/pdf/1512.03385",
     "Github": "https://github.com/KaimingHe/deep-residual-networks",
     "HuggingFace": "https://huggingface.co/microsoft/resnet-101",
-    "Summary_update": "An even deeper 101-layer residual network that retains the bottleneck architecture, improving feature richness and representation power. Ideal for high-accuracy image classification and transfer learning on complex datasets."
+    "Summary_update": "An even deeper 101-layer residual network that retains the bottleneck architecture, improving feature richness and representation power. Ideal for high-accuracy image classification and transfer learning on complex datasets.",
+    "Task Tags": [
+      "classification"
+    ]
   },
   {
     "Model Unique Name": "Classification-HuggingFace-NTQAI-pedestrian_gender_recognition",
@@ -47,7 +59,10 @@
     "Paper": null,
     "Github": null,
     "HuggingFace": "https://huggingface.co/NTQAI/pedestrian_gender_recognition",
-    "Summary_update": "A fine-tuned BEiT-base vision transformer model for classifying pedestrian gender, trained on the PETA dataset. Achieves ~91% accuracy in distinguishing male vs. female individuals in surveillance-style images."
+    "Summary_update": "A fine-tuned BEiT-base vision transformer model for classifying pedestrian gender, trained on the PETA dataset. Achieves ~91% accuracy in distinguishing male vs. female individuals in surveillance-style images.",
+    "Task Tags": [
+      "classification"
+    ]
   },
   {
     "Model Unique Name": "Inpainting-LatentDiffusion",
@@ -57,7 +72,10 @@
     "Paper": "https://arxiv.org/pdf/2112.10752",
     "Github": "https://github.com/CompVis/latent-diffusion",
     "HuggingFace": null,
-    "Summary_update": "A foundational latent diffusion model (LDM) operating in compressed latent space, enabling high-resolution image synthesis, inpainting, semantic scene generation, and super-resolution. Notably more efficient than pixel-based diffusion. Developed by CompVis on LAION‑400M."
+    "Summary_update": "A foundational latent diffusion model (LDM) operating in compressed latent space, enabling high-resolution image synthesis, inpainting, semantic scene generation, and super-resolution. Notably more efficient than pixel-based diffusion. Developed by CompVis on LAION‑400M.",
+    "Task Tags": [
+      "inpainting"
+    ]
   },
   {
     "Model Unique Name": "Colorization-DISCO-c0_2",
@@ -67,7 +85,10 @@
     "Paper": "https://menghanxia.github.io/projects/disco/disco_main.pdf",
     "Github": "https://github.com/MenghanXia/DisentangledColorization",
     "HuggingFace": null,
-    "Summary_update": "A variation of the DISentangled Colorization framework featuring restrained color saturation (“c0.2”) to produce naturally toned results. It predicts a small, fixed set of global color anchors for each image, then generates smooth, consistent colors with balanced vibrancy. Tailored for subtle and realistic colorization needs."
+    "Summary_update": "A variation of the DISentangled Colorization framework featuring restrained color saturation (“c0.2”) to produce naturally toned results. It predicts a small, fixed set of global color anchors for each image, then generates smooth, consistent colors with balanced vibrancy. Tailored for subtle and realistic colorization needs.",
+    "Task Tags": [
+      "colorization"
+    ]
   },
   {
     "Model Unique Name": "Colorization-DISCO-rand",
@@ -77,7 +98,10 @@
     "Paper": "https://menghanxia.github.io/projects/disco/disco_main.pdf",
     "Github": "https://github.com/MenghanXia/DisentangledColorization",
     "HuggingFace": null,
-    "Summary_update": "A variant of the same framework that introduces randomness in anchor placement to generate diverse colorization outputs. Ideal for creative applications that benefit from varying color palettes and styles across runs."
+    "Summary_update": "A variant of the same framework that introduces randomness in anchor placement to generate diverse colorization outputs. Ideal for creative applications that benefit from varying color palettes and styles across runs.",
+    "Task Tags": [
+      "colorization"
+    ]
   },
   {
     "Model Unique Name": "Deblur-MIMO-UNet-Plus",
@@ -87,7 +111,10 @@
     "Paper": "https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf",
     "Github": "https://github.com/chosj95/MIMO-UNet",
     "HuggingFace": null,
-    "Summary_update": "MIMO UNet Plus excels at removing motion blur using a sophisticated yet efficient architecture that elegantly balances high-quality restoration and runtime performance, making it well-suited for enhancing blurred images from handheld and dynamic environments."
+    "Summary_update": "MIMO UNet Plus excels at removing motion blur using a sophisticated yet efficient architecture that elegantly balances high-quality restoration and runtime performance, making it well-suited for enhancing blurred images from handheld and dynamic environments.",
+    "Task Tags": [
+      "deblur"
+    ]
   },
   {
     "Model Unique Name": "Deblur-MIMO-UNet-RealBlur",
@@ -97,7 +124,10 @@
     "Paper": "https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf",
     "Github": "https://github.com/chosj95/MIMO-UNet",
     "HuggingFace": null,
-    "Summary_update": "MIMO UNet RealBlur delivers efficient and robust deblurring by combining multi-scale processing, smart feature fusion, and artifact-free reconstruction—making it ideal for enhancing photos with real-world motion blur."
+    "Summary_update": "MIMO UNet RealBlur delivers efficient and robust deblurring by combining multi-scale processing, smart feature fusion, and artifact-free reconstruction—making it ideal for enhancing photos with real-world motion blur.",
+    "Task Tags": [
+      "deblur"
+    ]
   },
   {
     "Model Unique Name": "Deblur-MIMO-UNet",
@@ -107,7 +137,10 @@
     "Paper": "https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf",
     "Github": "https://github.com/chosj95/MIMO-UNet",
     "HuggingFace": null,
-    "Summary_update": "MIMO‑UNet delivers high-quality deblurring with impressive speed by compressing a coarse-to-fine framework into one efficient encoder-decoder network enhanced with smart feature fusion. It excels in restoring real-world blurred images from datasets like GoPro and RealBlur."
+    "Summary_update": "MIMO‑UNet delivers high-quality deblurring with impressive speed by compressing a coarse-to-fine framework into one efficient encoder-decoder network enhanced with smart feature fusion. It excels in restoring real-world blurred images from datasets like GoPro and RealBlur.",
+    "Task Tags": [
+      "deblur"
+    ]
   },
   {
     "Model Unique Name": "Deblur-MSSNet-GoPro",
@@ -117,7 +150,10 @@
     "Paper": "https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf",
     "Github": "https://github.com/kky7/MSSNet",
     "HuggingFace": null,
-    "Summary_update": "MSSNet GoPro excels at removing motion blur and restoring sharpness by combining multi-scale processing, inter‑stage information sharing, and advanced loss functions, making it well-suited for enhancing real-world blurred images."
+    "Summary_update": "MSSNet GoPro excels at removing motion blur and restoring sharpness by combining multi-scale processing, inter‑stage information sharing, and advanced loss functions, making it well-suited for enhancing real-world blurred images.",
+    "Task Tags": [
+      "deblur"
+    ]
   },
   {
     "Model Unique Name": "Deblur-MSSNet-L-GoPro",
@@ -127,7 +163,10 @@
     "Paper": "https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf",
     "Github": "https://github.com/kky7/MSSNet",
     "HuggingFace": null,
-    "Summary_update": "MSSNet L GoPro excels at restoring sharpness in motion-blurred images (e.g., from handheld cameras) by combining scalable multi-stage processing, feature-sharing across scales, and artifact-minimizing reconstruction—offering clear, detailed deblurring for real-world footage."
+    "Summary_update": "MSSNet L GoPro excels at restoring sharpness in motion-blurred images (e.g., from handheld cameras) by combining scalable multi-stage processing, feature-sharing across scales, and artifact-minimizing reconstruction—offering clear, detailed deblurring for real-world footage.",
+    "Task Tags": [
+      "deblur"
+    ]
   },
   {
     "Model Unique Name": "Deblur-MSSNet-S-GoPro",
@@ -137,7 +176,10 @@
     "Paper": "https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf",
     "Github": "https://github.com/kky7/MSSNet",
     "HuggingFace": null,
-    "Summary_update": "MSSNet S GoPro excels in speed-focused deblurring by offering a streamlined multi-stage architecture with inter-scale feature sharing and artifact-minimizing reconstruction—perfect for real-world, handheld motion-blurred images."
+    "Summary_update": "MSSNet S GoPro excels in speed-focused deblurring by offering a streamlined multi-stage architecture with inter-scale feature sharing and artifact-minimizing reconstruction—perfect for real-world, handheld motion-blurred images.",
+    "Task Tags": [
+      "deblur"
+    ]
   },
   {
     "Model Unique Name": "Deblur-MSSNet-RealBlurJ",
@@ -147,7 +189,10 @@
     "Paper": "https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf",
     "Github": "https://github.com/kky7/MSSNet",
     "HuggingFace": null,
-    "Summary_update": "MSSNet RealBlurJ excels at recovering facial features, text, and fine textures from real-world blurred images through a structured, multi-scale approach that balances efficiency and restoration quality."
+    "Summary_update": "MSSNet RealBlurJ excels at recovering facial features, text, and fine textures from real-world blurred images through a structured, multi-scale approach that balances efficiency and restoration quality.",
+    "Task Tags": [
+      "deblur"
+    ]
   },
   {
     "Model Unique Name": "Deblur-MSSNet-RealBlurR",
@@ -157,7 +202,10 @@
     "Paper": "https://cg.postech.ac.kr/Research/MSSNet/MSSNet.pdf",
     "Github": "https://github.com/kky7/MSSNet",
     "HuggingFace": null,
-    "Summary_update": "MSSNet RealBlurR excels in restoring real-world, motion-blurred photos — including faces, text, and fine textures — using a structured, multi-scale design that balances efficient processing with detailed image recovery."
+    "Summary_update": "MSSNet RealBlurR excels in restoring real-world, motion-blurred photos — including faces, text, and fine textures — using a structured, multi-scale design that balances efficient processing with detailed image recovery.",
+    "Task Tags": [
+      "deblur"
+    ]
   },
   {
     "Model Unique Name": "Denoise-SwinIR-Noise15",
@@ -167,7 +215,10 @@
     "Paper": "https://openaccess.thecvf.com/content/ICCV2021W/AIM/papers/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.pdf",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Noise15 is a specialized image restoration model based on Swin Transformer architecture, trained to remove light noise (σ=15) from images. It excels in denoising everyday photos, producing clean results while preserving fine textures and details under mild noise conditions."
+    "Summary_update": "SwinIR Noise15 is a specialized image restoration model based on Swin Transformer architecture, trained to remove light noise (σ=15) from images. It excels in denoising everyday photos, producing clean results while preserving fine textures and details under mild noise conditions.",
+    "Task Tags": [
+      "denoise"
+    ]
   },
   {
     "Model Unique Name": "Denoise-SwinIR-Noise25",
@@ -177,7 +228,10 @@
     "Paper": "https://openaccess.thecvf.com/content/ICCV2021W/AIM/papers/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.pdf",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Noise25 uses Swin Transformer techniques to target moderate noise levels (σ=25). The model balances effective noise reduction with texture preservation, making it ideal for enhancing low-light, indoor, or slightly degraded photographs."
+    "Summary_update": "SwinIR Noise25 uses Swin Transformer techniques to target moderate noise levels (σ=25). The model balances effective noise reduction with texture preservation, making it ideal for enhancing low-light, indoor, or slightly degraded photographs.",
+    "Task Tags": [
+      "denoise"
+    ]
   },
   {
     "Model Unique Name": "Denoise-SwinIR-Noise50",
@@ -187,7 +241,10 @@
     "Paper": "https://openaccess.thecvf.com/content/ICCV2021W/AIM/papers/Liang_SwinIR_Image_Restoration_Using_Swin_Transformer_ICCVW_2021_paper.pdf",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Noise50 extends the SwinIR framework to handle heavy noise (σ=50), delivering robust denoising while retaining structural integrity. It’s well-suited for severely degraded images, such as high-ISO captures or aged media, restoring clarity and detail."
+    "Summary_update": "SwinIR Noise50 extends the SwinIR framework to handle heavy noise (σ=50), delivering robust denoising while retaining structural integrity. It’s well-suited for severely degraded images, such as high-ISO captures or aged media, restoring clarity and detail.",
+    "Task Tags": [
+      "denoise"
+    ]
   },
   {
     "Model Unique Name": "Img2Txt-HuggingFace-Salesforce-blip-image-captioning-large",
@@ -197,7 +254,10 @@
     "Paper": "https://arxiv.org/pdf/2201.12086",
     "Github": "https://github.com/salesforce/BLIP",
     "HuggingFace": "https://huggingface.co/Salesforce/blip-image-captioning-large",
-    "Summary_update": "BLIP‑L is a unified vision-language model based on a ViT backbone and bootstrapped image-text pretraining. It supports both image captioning and visual question answering, and uses a two-stage approach: generating synthetic captions and filtering noisy web data for robust, real-world performance"
+    "Summary_update": "BLIP‑L is a unified vision-language model based on a ViT backbone and bootstrapped image-text pretraining. It supports both image captioning and visual question answering, and uses a two-stage approach: generating synthetic captions and filtering noisy web data for robust, real-world performance",
+    "Task Tags": [
+      "ocr"
+    ]
   },
   {
     "Model Unique Name": "ImgTxt2Txt-HuggingFace-dandelin-vilt-b32-finetuned-vqa",
@@ -207,7 +267,10 @@
     "Paper": "https://arxiv.org/pdf/2102.03334",
     "Github": "https://github.com/dandelin/vilt",
     "HuggingFace": "https://huggingface.co/dandelin/vilt-b32-finetuned-vqa",
-    "Summary_update": "ViLT VQAv2 is a lightweight, pure-transformer model for visual question answering. It processes text and image patches in a single Transformer stack (no CNN or region proposals), making it highly efficient while effectively handling VQA tasks. "
+    "Summary_update": "ViLT VQAv2 is a lightweight, pure-transformer model for visual question answering. It processes text and image patches in a single Transformer stack (no CNN or region proposals), making it highly efficient while effectively handling VQA tasks. ",
+    "Task Tags": [
+      "unknown"
+    ]
   },
   {
     "Model Unique Name": "SISR-CARN-2x",
@@ -217,7 +280,10 @@
     "Paper": "https://arxiv.org/pdf/1803.08664",
     "Github": "https://github.com/nmhkahn/CARN-pytorch",
     "HuggingFace": null,
-    "Summary_update": "CARN 2× is a cascading residual network designed for 2× single-image super-resolution. Its architecture stacks residual blocks with cascading connections to efficiently propagate information, delivering high-quality upscaled images from low-resolution inputs. Trained on DIV2K and validated on standard benchmarks like Set5 and Urban100"
+    "Summary_update": "CARN 2× is a cascading residual network designed for 2× single-image super-resolution. Its architecture stacks residual blocks with cascading connections to efficiently propagate information, delivering high-quality upscaled images from low-resolution inputs. Trained on DIV2K and validated on standard benchmarks like Set5 and Urban100",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-CARN-3x",
@@ -227,7 +293,10 @@
     "Paper": "https://arxiv.org/pdf/1803.08664",
     "Github": "https://github.com/nmhkahn/CARN-pytorch",
     "HuggingFace": null,
-    "Summary_update": "CARN 3× applies the same cascading residual network architecture for 3× upscaling, balancing enhanced image detail recovery with computational efficiency. It reconstructs sharper textures and edges compared to simple bicubic interpolation, using the DIV2K training set."
+    "Summary_update": "CARN 3× applies the same cascading residual network architecture for 3× upscaling, balancing enhanced image detail recovery with computational efficiency. It reconstructs sharper textures and edges compared to simple bicubic interpolation, using the DIV2K training set.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-CARN-4x",
@@ -237,7 +306,10 @@
     "Paper": "https://arxiv.org/pdf/1803.08664",
     "Github": "https://github.com/nmhkahn/CARN-pytorch",
     "HuggingFace": null,
-    "Summary_update": "CARN 4× targets 4× resolution enhancement with its cascading residual design. It preserves structural consistency and recovers intricate patterns in high-upscaling scenarios, demonstrating strong performance across DIV2K-derived datasets."
+    "Summary_update": "CARN 4× targets 4× resolution enhancement with its cascading residual design. It preserves structural consistency and recovers intricate patterns in high-upscaling scenarios, demonstrating strong performance across DIV2K-derived datasets.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-CARN-M-2x",
@@ -247,7 +319,10 @@
     "Paper": "https://arxiv.org/pdf/1803.08664",
     "Github": "https://github.com/nmhkahn/CARN-pytorch",
     "HuggingFace": null,
-    "Summary_update": "CARN-M 2× is the mobile-optimized version of CARN, tailored for 2× super-resolution with lower parameter count and resource needs. It retains cascading residual connections for effective detail enhancement while enabling efficient on-device execution."
+    "Summary_update": "CARN-M 2× is the mobile-optimized version of CARN, tailored for 2× super-resolution with lower parameter count and resource needs. It retains cascading residual connections for effective detail enhancement while enabling efficient on-device execution.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-CARN-M-3x",
@@ -257,7 +332,10 @@
     "Paper": "https://arxiv.org/pdf/1803.08664",
     "Github": "https://github.com/nmhkahn/CARN-pytorch",
     "HuggingFace": null,
-    "Summary_update": "CARN-M 3× brings the lightweight mobile cascade residual architecture to 3× upscaling, delivering high-fidelity visual enhancement under resource constraints. It enables sharper image reconstruction with minimal computational overhead. "
+    "Summary_update": "CARN-M 3× brings the lightweight mobile cascade residual architecture to 3× upscaling, delivering high-fidelity visual enhancement under resource constraints. It enables sharper image reconstruction with minimal computational overhead. ",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-CARN-M-4x",
@@ -267,7 +345,10 @@
     "Paper": "https://arxiv.org/pdf/1803.08664",
     "Github": "https://github.com/nmhkahn/CARN-pytorch",
     "HuggingFace": null,
-    "Summary_update": "CARN-M 4× is the mobile-friendly version focused on 4× super-resolution, combining cascading residual blocks with efficient model size. It offers high-resolution reconstruction capabilities optimized for on-device or real-time applications"
+    "Summary_update": "CARN-M 4× is the mobile-friendly version focused on 4× super-resolution, combining cascading residual blocks with efficient model size. It offers high-resolution reconstruction capabilities optimized for on-device or real-time applications",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-ESRT-2x",
@@ -277,7 +358,10 @@
     "Paper": null,
     "Github": "https://github.com/luissen/ESRT",
     "HuggingFace": null,
-    "Summary_update": "ESRT 2× is an efficient hybrid model combining a lightweight CNN backbone with transformer-based modules for 2× single-image super-resolution. It dynamically adjusts feature-map resolution via high-frequency preserving blocks and leverages efficient multi-head attention to capture long-range dependencies with reduced GPU memory usage."
+    "Summary_update": "ESRT 2× is an efficient hybrid model combining a lightweight CNN backbone with transformer-based modules for 2× single-image super-resolution. It dynamically adjusts feature-map resolution via high-frequency preserving blocks and leverages efficient multi-head attention to capture long-range dependencies with reduced GPU memory usage.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-ESRT-3x",
@@ -287,7 +371,10 @@
     "Paper": null,
     "Github": "https://github.com/luissen/ESRT",
     "HuggingFace": null,
-    "Summary_update": "ESRT 3× extends the efficient transformer-based SR approach to 3× upscaling, maintaining the lightweight CNN-plus-transformer structure. It balances effective texture reconstruction with low memory footprint—ideal for mobile or embedded super-resolution deployment. "
+    "Summary_update": "ESRT 3× extends the efficient transformer-based SR approach to 3× upscaling, maintaining the lightweight CNN-plus-transformer structure. It balances effective texture reconstruction with low memory footprint—ideal for mobile or embedded super-resolution deployment. ",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-ESRT-4x",
@@ -297,7 +384,10 @@
     "Paper": null,
     "Github": "https://github.com/luissen/ESRT",
     "HuggingFace": null,
-    "Summary_update": "ESRT 4× provides 4× resolution enhancement, utilizing the same hybrid architecture of lightweight CNN and efficient transformers. It preserves detailed textures while supporting higher magnification with constrained computational demands."
+    "Summary_update": "ESRT 4× provides 4× resolution enhancement, utilizing the same hybrid architecture of lightweight CNN and efficient transformers. It preserves detailed textures while supporting higher magnification with constrained computational demands.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-HAN-2x",
@@ -307,7 +397,10 @@
     "Paper": "https://arxiv.org/pdf/2008.08767",
     "Github": "https://github.com/wwlCape/HAN",
     "HuggingFace": null,
-    "Summary_update": "HAN 2× delivers sharp and visually consistent upscaling by harnessing holistic attention across layers and nuanced channel-spatial contexts, making it particularly effective at enhancing image textures and preserving structural integrity on DIV2K-derived datasets  "
+    "Summary_update": "HAN 2× delivers sharp and visually consistent upscaling by harnessing holistic attention across layers and nuanced channel-spatial contexts, making it particularly effective at enhancing image textures and preserving structural integrity on DIV2K-derived datasets  ",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-HAN-3x",
@@ -317,7 +410,10 @@
     "Paper": "https://arxiv.org/pdf/2008.08767",
     "Github": "https://github.com/wwlCape/HAN",
     "HuggingFace": null,
-    "Summary_update": "HAN 3× delivers crisp and coherent 3× upscaling by blending holistic inter-layer context with precise channel-spatial focus, making it well-suited for detailed image enhancement tasks using DIV2K-trained models."
+    "Summary_update": "HAN 3× delivers crisp and coherent 3× upscaling by blending holistic inter-layer context with precise channel-spatial focus, making it well-suited for detailed image enhancement tasks using DIV2K-trained models.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-HAN-4x",
@@ -327,7 +423,10 @@
     "Paper": "https://arxiv.org/pdf/2008.08767",
     "Github": "https://github.com/wwlCape/HAN",
     "HuggingFace": null,
-    "Summary_update": "HAN 4× employs holistic attention mechanisms for 4× super-resolution, effectively harnessing multi-layer context and spatial-channel signals to reconstruct high-fidelity textures and structure."
+    "Summary_update": "HAN 4× employs holistic attention mechanisms for 4× super-resolution, effectively harnessing multi-layer context and spatial-channel signals to reconstruct high-fidelity textures and structure.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-HAN-8x",
@@ -337,7 +436,10 @@
     "Paper": "https://arxiv.org/pdf/2008.08767",
     "Github": "https://github.com/wwlCape/HAN",
     "HuggingFace": null,
-    "Summary_update": "HAN 8× delivers crisp, structurally consistent, and texture-rich results at high magnification by leveraging holistic and channel-spatial attention across layers—ideal for demanding super-resolution applications such as DIV2K-based imagery."
+    "Summary_update": "HAN 8× delivers crisp, structurally consistent, and texture-rich results at high magnification by leveraging holistic and channel-spatial attention across layers—ideal for demanding super-resolution applications such as DIV2K-based imagery.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-DRN-S-4x",
@@ -347,7 +449,10 @@
     "Paper": "https://arxiv.org/pdf/2003.07018",
     "Github": "https://github.com/guoyongcs/DRN",
     "HuggingFace": null,
-    "Summary_update": "DRN‑S 4× is the small variant of the Deep Recursive Residual Network, designed for 4× single-image super-resolution. It uses recursive residual blocks for both local and global learning, achieving compact yet deep feature extraction (~4.8 M parameters) and delivering clear high-resolution images on datasets like Set5 and DIV2K. "
+    "Summary_update": "DRN‑S 4× is the small variant of the Deep Recursive Residual Network, designed for 4× single-image super-resolution. It uses recursive residual blocks for both local and global learning, achieving compact yet deep feature extraction (~4.8 M parameters) and delivering clear high-resolution images on datasets like Set5 and DIV2K. ",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-DRN-S-8x",
@@ -357,7 +462,10 @@
     "Paper": "https://arxiv.org/pdf/2003.07018",
     "Github": "https://github.com/guoyongcs/DRN",
     "HuggingFace": null,
-    "Summary_update": "DRN‑S 8× extends the small DRN architecture to 8× upscaling, maintaining its recursive residual design. It balances depth and parameter efficiency (~5.4 M) to reconstruct fine-grained detail in high-magnification scenarios, suitable for significant enlargement from low-resolution inputs."
+    "Summary_update": "DRN‑S 8× extends the small DRN architecture to 8× upscaling, maintaining its recursive residual design. It balances depth and parameter efficiency (~5.4 M) to reconstruct fine-grained detail in high-magnification scenarios, suitable for significant enlargement from low-resolution inputs.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-DRN-L-4x",
@@ -367,7 +475,10 @@
     "Paper": "https://arxiv.org/pdf/2003.07018",
     "Github": "https://github.com/guoyongcs/DRN",
     "HuggingFace": null,
-    "Summary_update": "DRN‑L 4× is the larger counterpart, offering deeper capacity (~9.8 M parameters) for 4× super-resolution. By stacking recursive residual techniques, it captures richer hierarchical features for improved texture restoration while retaining parameter efficiency. "
+    "Summary_update": "DRN‑L 4× is the larger counterpart, offering deeper capacity (~9.8 M parameters) for 4× super-resolution. By stacking recursive residual techniques, it captures richer hierarchical features for improved texture restoration while retaining parameter efficiency. ",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-DRN-L-8x",
@@ -377,7 +488,10 @@
     "Paper": "https://arxiv.org/pdf/2003.07018",
     "Github": "https://github.com/guoyongcs/DRNN",
     "HuggingFace": null,
-    "Summary_update": "DRN‑L 8× scales the Deep Recursive Residual Network to 8× upscaling, preserving its strong feature hierarchy (~10 M parameters). Its recursive residual design enables detailed reconstruction even at very high magnification, ideal for applications like medical imaging and satellite enhancement."
+    "Summary_update": "DRN‑L 8× scales the Deep Recursive Residual Network to 8× upscaling, preserving its strong feature hierarchy (~10 M parameters). Its recursive residual design enables detailed reconstruction even at very high magnification, ideal for applications like medical imaging and satellite enhancement.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-RCAN-it-2x",
@@ -387,7 +501,10 @@
     "Paper": "https://arxiv.org/pdf/2201.11279",
     "Github": "https://github.com/zudi-lin/rcan-it",
     "HuggingFace": null,
-    "Summary_update": "RCAN‑it 2× delivers clear, texture-preserving upscaling by combining a deep residual channel-aware architecture with improved training protocols, making it particularly effective for enhancing real-world images."
+    "Summary_update": "RCAN‑it 2× delivers clear, texture-preserving upscaling by combining a deep residual channel-aware architecture with improved training protocols, making it particularly effective for enhancing real-world images.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-RCAN-it-3x",
@@ -397,7 +514,10 @@
     "Paper": "https://arxiv.org/pdf/2201.11279",
     "Github": "https://github.com/zudi-lin/rcan-it",
     "HuggingFace": null,
-    "Summary_update": "RCAN‑it 3× offers sharp, texture-aware 3× super-resolution by combining a deep residual architecture with adaptive channel attention and optimized training—ideal for enhancing real-world imagery with high fidelity."
+    "Summary_update": "RCAN‑it 3× offers sharp, texture-aware 3× super-resolution by combining a deep residual architecture with adaptive channel attention and optimized training—ideal for enhancing real-world imagery with high fidelity.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-RCAN-it-4x",
@@ -407,7 +527,10 @@
     "Paper": "https://arxiv.org/pdf/2201.11279",
     "Github": "https://github.com/zudi-lin/rcan-it",
     "HuggingFace": null,
-    "Summary_update": "RCAN‑it 4× delivers high-fidelity, texture-preserving 4× upscaling by combining a deep residual channel-aware architecture with smart training improvements and robust dataset support—ideal for enhancing real-world images with fine detail and consistency."
+    "Summary_update": "RCAN‑it 4× delivers high-fidelity, texture-preserving 4× upscaling by combining a deep residual channel-aware architecture with smart training improvements and robust dataset support—ideal for enhancing real-world images with fine detail and consistency.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-Swin2SR-Classical-2x",
@@ -417,7 +540,10 @@
     "Paper": "https://arxiv.org/pdf/2209.11345",
     "Github": "https://github.com/mv-lab/swin2sr",
     "HuggingFace": null,
-    "Summary_update": "Swin2SR 2× is a SwinV2 Transformer-based model focused on 2× image super-resolution under classical degradation (simple downsampling), combining the strengths of SwinIR and Transformer V2 to offer efficient feature extraction and restoration on clean low-resolution images."
+    "Summary_update": "Swin2SR 2× is a SwinV2 Transformer-based model focused on 2× image super-resolution under classical degradation (simple downsampling), combining the strengths of SwinIR and Transformer V2 to offer efficient feature extraction and restoration on clean low-resolution images.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-Swin2SR-Classical-4x",
@@ -427,7 +553,10 @@
     "Paper": "https://arxiv.org/pdf/2209.11345",
     "Github": "https://github.com/mv-lab/swin2sr",
     "HuggingFace": null,
-    "Summary_update": "Swin2SR 4× applies the same SwinV2 Transformer improvements to 4× upscaling, reconstructing higher-resolution images with enhanced texture and structural detail, making it suitable for tasks like photo enlargement and detail-critical applications"
+    "Summary_update": "Swin2SR 4× applies the same SwinV2 Transformer improvements to 4× upscaling, reconstructing higher-resolution images with enhanced texture and structural detail, making it suitable for tasks like photo enlargement and detail-critical applications",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-Swin2SR-Compressed-4x",
@@ -437,7 +566,10 @@
     "Paper": "https://arxiv.org/pdf/2209.11345",
     "Github": "https://github.com/mv-lab/swin2sr",
     "HuggingFace": null,
-    "Summary_update": "Swin2SR Compressed 4× is designed for compressed-input super-resolution, handling heavily compressed (e.g., JPEG) images and simultaneously removing artifacts while upscaling 4×, leveraging the SwinV2 backbone to address restoration and upscale in one step. "
+    "Summary_update": "Swin2SR Compressed 4× is designed for compressed-input super-resolution, handling heavily compressed (e.g., JPEG) images and simultaneously removing artifacts while upscaling 4×, leveraging the SwinV2 backbone to address restoration and upscale in one step. ",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-Swin2SR-LightWeight-2x",
@@ -447,7 +579,10 @@
     "Paper": "https://arxiv.org/pdf/2209.11345",
     "Github": "https://github.com/mv-lab/swin2sr",
     "HuggingFace": null,
-    "Summary_update": "Swin2SR‑LightWeight 2× is a compact SwinV2 Transformer model tailored for lightweight 2× super-resolution, particularly effective on compressed or artifact-heavy inputs. It adapts the Swin2SR approach—with SwinV2-based shifted-window self-attention—to efficiently upscale compressed images using fewer parameters (~1 M), supporting low-resource deployment scenarios."
+    "Summary_update": "Swin2SR‑LightWeight 2× is a compact SwinV2 Transformer model tailored for lightweight 2× super-resolution, particularly effective on compressed or artifact-heavy inputs. It adapts the Swin2SR approach—with SwinV2-based shifted-window self-attention—to efficiently upscale compressed images using fewer parameters (~1 M), supporting low-resource deployment scenarios.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-Swin2SR-Real-4x",
@@ -457,7 +592,10 @@
     "Paper": "https://arxiv.org/pdf/2209.11345",
     "Github": "https://github.com/mv-lab/swin2sr",
     "HuggingFace": null,
-    "Summary_update": "Swin2SR‑Real 4× extends Swin2SR to real-world super-resolution, trained to handle natural distortions andJPEG compression imperfections before upscaling 4×, using Transformer V2 capacity to adapt to realistic image noise and artifacts."
+    "Summary_update": "Swin2SR‑Real 4× extends Swin2SR to real-world super-resolution, trained to handle natural distortions andJPEG compression imperfections before upscaling 4×, using Transformer V2 capacity to adapt to realistic image noise and artifacts.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "ObjDet-HuggingFace-facebook-detr-resnet-50",
@@ -467,7 +605,10 @@
     "Paper": "https://arxiv.org/pdf/2005.12872",
     "Github": "https://github.com/facebookresearch/detr",
     "HuggingFace": "https://huggingface.co/facebook/detr-resnet-50",
-    "Summary_update": "DETR is a streamlined, end-to-end object detector that leverages transformers to perform global reasoning and parallel prediction, eliminating traditional detection steps like NMS or anchor generation—ideal for clean and modular object detection workflows."
+    "Summary_update": "DETR is a streamlined, end-to-end object detector that leverages transformers to perform global reasoning and parallel prediction, eliminating traditional detection steps like NMS or anchor generation—ideal for clean and modular object detection workflows.",
+    "Task Tags": [
+      "object_detection"
+    ]
   },
   {
     "Model Unique Name": "ObjDet-HuggingFace-hustvl-yolos-small",
@@ -477,7 +618,10 @@
     "Paper": null,
     "Github": null,
     "HuggingFace": "https://huggingface.co/hustvl/yolos-small",
-    "Summary_update": "YOLOS‑S offers real-time object detection with a streamlined transformer design—performing accurate bounding box and classification tasks without complex heuristics, making it well-suited for clean, end-to-end detection workflows."
+    "Summary_update": "YOLOS‑S offers real-time object detection with a streamlined transformer design—performing accurate bounding box and classification tasks without complex heuristics, making it well-suited for clean, end-to-end detection workflows.",
+    "Task Tags": [
+      "object_detection"
+    ]
   },
   {
     "Model Unique Name": "ObjDet-HuggingFace-valentinafeve-yolos-fashionpedia",
@@ -487,7 +631,10 @@
     "Paper": null,
     "Github": "https://github.com/valentinafeve/fine_tunning_YOLOS_for_fashion",
     "HuggingFace": "https://huggingface.co/valentinafeve/yolos-fashionpedia",
-    "Summary_update": "YOLOS‑Fashionpedia excels at fine-grained fashion item detection, combining transformer-driven object detection with deep fashion-specific training data—ideal for applications like e-commerce tagging, virtual fitting rooms, and detailed product search."
+    "Summary_update": "YOLOS‑Fashionpedia excels at fine-grained fashion item detection, combining transformer-driven object detection with deep fashion-specific training data—ideal for applications like e-commerce tagging, virtual fitting rooms, and detailed product search.",
+    "Task Tags": [
+      "object_detection"
+    ]
   },
   {
     "Model Unique Name": "Segmentation-DeepLabV3-MobileNet-VOC",
@@ -497,7 +644,10 @@
     "Paper": null,
     "Github": "https://github.com/VainF/DeepLabV3Plus-Pytorch",
     "HuggingFace": null,
-    "Summary_update": "DeepLabV3‑MobileNet balances speed, size, and segmentation quality, making it well-suited for real-world use cases like robotics, mobile apps, and lightweight backend services that require fast and accurate scene parsing."
+    "Summary_update": "DeepLabV3‑MobileNet balances speed, size, and segmentation quality, making it well-suited for real-world use cases like robotics, mobile apps, and lightweight backend services that require fast and accurate scene parsing.",
+    "Task Tags": [
+      "segmentation"
+    ]
   },
   {
     "Model Unique Name": "Segmentation-DeepLabV3-ResNet50-VOC",
@@ -507,7 +657,10 @@
     "Paper": null,
     "Github": "https://github.com/VainF/DeepLabV3Plus-Pytorch",
     "HuggingFace": null,
-    "Summary_update": "DeepLabV3‑ResNet50 excels at fast, multiscale semantic segmentation by combining dilated convolutions, pyramid pooling, and skip-enriched structure, packaged into an efficient model ideal for both server and mobile deployment tasks."
+    "Summary_update": "DeepLabV3‑ResNet50 excels at fast, multiscale semantic segmentation by combining dilated convolutions, pyramid pooling, and skip-enriched structure, packaged into an efficient model ideal for both server and mobile deployment tasks.",
+    "Task Tags": [
+      "segmentation"
+    ]
   },
   {
     "Model Unique Name": "Segmentation-DeepLabV3-ResNet101-VOC",
@@ -517,7 +670,10 @@
     "Paper": null,
     "Github": "https://github.com/VainF/DeepLabV3Plus-Pytorch",
     "HuggingFace": null,
-    "Summary_update": "DeepLabV3‑ResNet101 excels at producing precise, context-aware pixel-level segmentation, thanks to its deep encoding backbone, multi-scale feature extraction via ASPP, and effective boundary refinement—making it ideal for tasks requiring high spatial fidelity, like urban scene parsing or detailed environmental analysis."
+    "Summary_update": "DeepLabV3‑ResNet101 excels at producing precise, context-aware pixel-level segmentation, thanks to its deep encoding backbone, multi-scale feature extraction via ASPP, and effective boundary refinement—making it ideal for tasks requiring high spatial fidelity, like urban scene parsing or detailed environmental analysis.",
+    "Task Tags": [
+      "segmentation"
+    ]
   },
   {
     "Model Unique Name": "Segmentation-DeepLabV3Plus-MobileNet-VOC",
@@ -527,7 +683,10 @@
     "Paper": null,
     "Github": "https://github.com/VainF/DeepLabV3Plus-Pytorch",
     "HuggingFace": null,
-    "Summary_update": "DeepLabV3+ MobileNet delivers fast, resource-efficient semantic segmentation by merging multi-scale context via ASPP and lightweight convolutional operations—perfect for real-time, on-device image understanding."
+    "Summary_update": "DeepLabV3+ MobileNet delivers fast, resource-efficient semantic segmentation by merging multi-scale context via ASPP and lightweight convolutional operations—perfect for real-time, on-device image understanding.",
+    "Task Tags": [
+      "segmentation"
+    ]
   },
   {
     "Model Unique Name": "Segmentation-DeepLabV3Plus-ResNet50-VOC",
@@ -537,7 +696,10 @@
     "Paper": null,
     "Github": "https://github.com/VainF/DeepLabV3Plus-Pytorch",
     "HuggingFace": null,
-    "Summary_update": "DeepLabV3+ ResNet50 excels at delivering precise, multiscale semantic segmentation by integrating dilated convolutions, pyramid pooling, and skip-enhanced decoding—ideal for tasks that demand detailed pixel-level understanding across complex scenes."
+    "Summary_update": "DeepLabV3+ ResNet50 excels at delivering precise, multiscale semantic segmentation by integrating dilated convolutions, pyramid pooling, and skip-enhanced decoding—ideal for tasks that demand detailed pixel-level understanding across complex scenes.",
+    "Task Tags": [
+      "segmentation"
+    ]
   },
   {
     "Model Unique Name": "Segmentation-DeepLabV3Plus-ResNet101-VOC",
@@ -547,7 +709,10 @@
     "Paper": null,
     "Github": "https://github.com/VainF/DeepLabV3Plus-Pytorch",
     "HuggingFace": null,
-    "Summary_update": "DeepLabV3+ ResNet101 excels at context-aware and boundary-precise segmentation, thanks to its deep backbone, multi-scale feature aggregation, and effective decoder design—making it well-suited for complex dense prediction tasks in environments like urban scene understanding or high-resolution image analysis."
+    "Summary_update": "DeepLabV3+ ResNet101 excels at context-aware and boundary-precise segmentation, thanks to its deep backbone, multi-scale feature aggregation, and effective decoder design—making it well-suited for complex dense prediction tasks in environments like urban scene understanding or high-resolution image analysis.",
+    "Task Tags": [
+      "segmentation"
+    ]
   },
   {
     "Model Unique Name": "Restoration-SwinIR-Jpeg10",
@@ -557,7 +722,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR (JPEG 10) is designed for mild JPEG compression artifact removal, using a three-part Swin Transformer-based architecture composed of shallow feature extraction, deep feature processing with Residual Swin Transformer Blocks (RSTBs), and image reconstruction. It effectively mitigates blocks and ringing artifacts in lightly compressed images using content-aware windowed self-attention. "
+    "Summary_update": "SwinIR (JPEG 10) is designed for mild JPEG compression artifact removal, using a three-part Swin Transformer-based architecture composed of shallow feature extraction, deep feature processing with Residual Swin Transformer Blocks (RSTBs), and image reconstruction. It effectively mitigates blocks and ringing artifacts in lightly compressed images using content-aware windowed self-attention. ",
+    "Task Tags": [
+      "restoration"
+    ]
   },
   {
     "Model Unique Name": "Restoration-SwinIR-Jpeg20",
@@ -567,7 +735,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR (JPEG 20) tackles moderate JPEG artifact reduction. With the same SwinIR restoration pipeline, it specifically targets compression artifacts (e.g. 80% quality images), efficiently smoothing banding and preserving detail through deep Transformer-based context modeling. "
+    "Summary_update": "SwinIR (JPEG 20) tackles moderate JPEG artifact reduction. With the same SwinIR restoration pipeline, it specifically targets compression artifacts (e.g. 80% quality images), efficiently smoothing banding and preserving detail through deep Transformer-based context modeling. ",
+    "Task Tags": [
+      "restoration"
+    ]
   },
   {
     "Model Unique Name": "Restoration-SwinIR-Jpeg30",
@@ -577,7 +748,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR (JPEG 30) is designed for severe JPEG artifact correction. Using its robust deep-swin Transformer backbone, it removes strong block artifacts and color shifts typical of heavy compression, restoring clarity and texture in highly compressed images."
+    "Summary_update": "SwinIR (JPEG 30) is designed for severe JPEG artifact correction. Using its robust deep-swin Transformer backbone, it removes strong block artifacts and color shifts typical of heavy compression, restoring clarity and texture in highly compressed images.",
+    "Task Tags": [
+      "restoration"
+    ]
   },
   {
     "Model Unique Name": "Restoration-SwinIR-Jpeg40",
@@ -587,7 +761,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR (JPEG 40) addresses extreme JPEG artifact restoration on heavily compressed images (e.g. 60% quality or lower). Its Swin Transformer-based design excels at reconstructing compressed textures and suppressing compression noise and block patterns."
+    "Summary_update": "SwinIR (JPEG 40) addresses extreme JPEG artifact restoration on heavily compressed images (e.g. 60% quality or lower). Its Swin Transformer-based design excels at reconstructing compressed textures and suppressing compression noise and block patterns.",
+    "Task Tags": [
+      "restoration"
+    ]
   },
   {
     "Model Unique Name": "Segmentation-HuggingFace-facebook-maskformer-swin-base-coco",
@@ -597,7 +774,10 @@
     "Paper": "https://arxiv.org/pdf/2107.06278",
     "Github": null,
     "HuggingFace": "https://huggingface.co/facebook/maskformer-swin-base-coco",
-    "Summary_update": "MaskFormer excels at delivering all-in-one segmentation—semantic, instance, and panoptic—through a mask-centric transformer design that predicts object masks and their labels in parallel, supported by strong multi-scale representation from the Swin backbone."
+    "Summary_update": "MaskFormer excels at delivering all-in-one segmentation—semantic, instance, and panoptic—through a mask-centric transformer design that predicts object masks and their labels in parallel, supported by strong multi-scale representation from the Swin backbone.",
+    "Task Tags": [
+      "segmentation"
+    ]
   },
   {
     "Model Unique Name": "Segmentation-HuggingFace-jonathandinu-face-parsing",
@@ -607,7 +787,10 @@
     "Paper": null,
     "Github": null,
     "HuggingFace": "https://huggingface.co/jonathandinu/face-parsing",
-    "Summary_update": "Segformer Face-Parsing excels at detailed facial part segmentation, offering precise pixel-level masks of facial features and adornments using a transformer-based encoder with a compact decoder—perfect for face editing, AR enhancement, and nuanced image analysis."
+    "Summary_update": "Segformer Face-Parsing excels at detailed facial part segmentation, offering precise pixel-level masks of facial features and adornments using a transformer-based encoder with a compact decoder—perfect for face editing, AR enhancement, and nuanced image analysis.",
+    "Task Tags": [
+      "segmentation"
+    ]
   },
   {
     "Model Unique Name": "Segmentation-HuggingFace-nvidia-segformer-b3-finetuned-ade-512-512",
@@ -617,7 +800,10 @@
     "Paper": null,
     "Github": null,
     "HuggingFace": "https://huggingface.co/nvidia/segformer-b3-finetuned-ade-512-512",
-    "Summary_update": "SegFormer B3 offers a simple, scalable, and efficient solution for pixel-wise semantic segmentation—ideal for parsing diverse scenes on datasets like ADE20K and Cityscapes."
+    "Summary_update": "SegFormer B3 offers a simple, scalable, and efficient solution for pixel-wise semantic segmentation—ideal for parsing diverse scenes on datasets like ADE20K and Cityscapes.",
+    "Task Tags": [
+      "segmentation"
+    ]
   },
   {
     "Model Unique Name": "SISR-IMDN-2x",
@@ -627,7 +813,10 @@
     "Paper": "https://arxiv.org/pdf/1909.11856v1",
     "Github": "https://github.com/Zheng222/IMDN",
     "HuggingFace": null,
-    "Summary_update": "IMDN 2× performs 2× single-image super-resolution, enhancing low-resolution images by processing input patches of any size and combining hierarchical features using multi-distillation blocks and contrast-aware attention. Designed for fast, efficient texture and detail reconstruction. "
+    "Summary_update": "IMDN 2× performs 2× single-image super-resolution, enhancing low-resolution images by processing input patches of any size and combining hierarchical features using multi-distillation blocks and contrast-aware attention. Designed for fast, efficient texture and detail reconstruction. ",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-IMDN-3x",
@@ -637,7 +826,10 @@
     "Paper": "https://arxiv.org/pdf/1909.11856v1",
     "Github": "https://github.com/Zheng222/IMDN",
     "HuggingFace": null,
-    "Summary_update": "IMDN 3× handles 3× image upscaling, extending the same architecture to recover more intermediate-level visual detail. Its information multi-distillation blocks and adaptive cropping strategy enable efficient and versatile mid-range super-resolution."
+    "Summary_update": "IMDN 3× handles 3× image upscaling, extending the same architecture to recover more intermediate-level visual detail. Its information multi-distillation blocks and adaptive cropping strategy enable efficient and versatile mid-range super-resolution.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-IMDN-4x",
@@ -647,7 +839,10 @@
     "Paper": "https://arxiv.org/pdf/1909.11856v1",
     "Github": "https://github.com/Zheng222/IMDN",
     "HuggingFace": null,
-    "Summary_update": "IMDN 4× targets 4× super-resolution, using cascaded distillation blocks and contrast-aware attention to extract and fuse detailed textures. It employs adaptive cropping to upscale large images efficiently, maintaining clarity and structure in high-resolution outputs."
+    "Summary_update": "IMDN 4× targets 4× super-resolution, using cascaded distillation blocks and contrast-aware attention to extract and fuse detailed textures. It employs adaptive cropping to upscale large images efficiently, maintaining clarity and structure in high-resolution outputs.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-LatticeNet-2x",
@@ -657,7 +852,10 @@
     "Paper": "https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123670273.pdf",
     "Github": "https://github.com/ymff0592/super-resolution",
     "HuggingFace": null,
-    "Summary_update": "LatticeNet 2× performs 2× single-image super-resolution, using innovative Lattice Blocks that integrate two residual blocks with attention-driven, butterfly-structured fusion, followed by a backward feature fusion module. This lightweight network delivers efficient, high-detail image enhancement while minimizing parameter count."
+    "Summary_update": "LatticeNet 2× performs 2× single-image super-resolution, using innovative Lattice Blocks that integrate two residual blocks with attention-driven, butterfly-structured fusion, followed by a backward feature fusion module. This lightweight network delivers efficient, high-detail image enhancement while minimizing parameter count.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-LatticeNet-3x",
@@ -667,7 +865,10 @@
     "Paper": "https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123670273.pdf",
     "Github": "https://github.com/ymff0592/super-resolution",
     "HuggingFace": null,
-    "Summary_update": "LatticeNet 3× handles 3× super-resolution, leveraging the same architecture of attention-enhanced Lattice Blocks and backward feature fusion to upscale mid-resolution images. It excels at reconstructing textures and edges from moderate-resolution sources in a lightweight framework."
+    "Summary_update": "LatticeNet 3× handles 3× super-resolution, leveraging the same architecture of attention-enhanced Lattice Blocks and backward feature fusion to upscale mid-resolution images. It excels at reconstructing textures and edges from moderate-resolution sources in a lightweight framework.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-LatticeNet-4x",
@@ -677,7 +878,10 @@
     "Paper": "https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123670273.pdf",
     "Github": "https://github.com/ymff0592/super-resolution",
     "HuggingFace": null,
-    "Summary_update": "LatticeNet 3× handles 3× super-resolution, leveraging the same architecture of attention-enhanced Lattice Blocks and backward feature fusion to upscale mid-resolution images. It excels at reconstructing textures and edges from moderate-resolution sources in a lightweight framework."
+    "Summary_update": "LatticeNet 3× handles 3× super-resolution, leveraging the same architecture of attention-enhanced Lattice Blocks and backward feature fusion to upscale mid-resolution images. It excels at reconstructing textures and edges from moderate-resolution sources in a lightweight framework.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-RCAN-2x",
@@ -687,7 +891,10 @@
     "Paper": "https://arxiv.org/pdf/1807.02758",
     "Github": "https://github.com/yulunzhang/RCAN",
     "HuggingFace": null,
-    "Summary_update": "RCAN-2x is a deep learning model for 2× single-image super-resolution that enhances low-resolution images by reconstructing high-frequency details. It uses a Residual-in-Residual (RIR) architecture with Channel Attention (CA) modules to effectively extract and emphasize texture-rich features while suppressing redundant information."
+    "Summary_update": "RCAN-2x is a deep learning model for 2× single-image super-resolution that enhances low-resolution images by reconstructing high-frequency details. It uses a Residual-in-Residual (RIR) architecture with Channel Attention (CA) modules to effectively extract and emphasize texture-rich features while suppressing redundant information.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-RCAN-3x",
@@ -697,7 +904,10 @@
     "Paper": "https://arxiv.org/pdf/1807.02758",
     "Github": "https://github.com/yulunzhang/RCAN",
     "HuggingFace": null,
-    "Summary_update": "RCAN-3x is a deep neural network designed for 3× single-image super-resolution, aiming to restore mid-scale details from lower-resolution inputs. It applies a Residual-in-Residual framework combined with Channel Attention to selectively focus on informative feature channels and produce sharper, more natural image reconstructions."
+    "Summary_update": "RCAN-3x is a deep neural network designed for 3× single-image super-resolution, aiming to restore mid-scale details from lower-resolution inputs. It applies a Residual-in-Residual framework combined with Channel Attention to selectively focus on informative feature channels and produce sharper, more natural image reconstructions.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-RCAN-4x",
@@ -707,7 +917,10 @@
     "Paper": "https://arxiv.org/pdf/1807.02758",
     "Github": "https://github.com/yulunzhang/RCAN",
     "HuggingFace": null,
-    "Summary_update": "RCAN-4x is a convolutional model built for 4× single-image super-resolution, which reconstructs fine textures and structural details from heavily downsampled images. It leverages a deep Residual-in-Residual backbone and Channel Attention mechanism to prioritize high-frequency information for high-quality image upscaling."
+    "Summary_update": "RCAN-4x is a convolutional model built for 4× single-image super-resolution, which reconstructs fine textures and structural details from heavily downsampled images. It leverages a deep Residual-in-Residual backbone and Channel Attention mechanism to prioritize high-frequency information for high-quality image upscaling.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-RCAN-8x",
@@ -717,7 +930,10 @@
     "Paper": "https://arxiv.org/pdf/1807.02758",
     "Github": "https://github.com/yulunzhang/RCAN",
     "HuggingFace": null,
-    "Summary_update": "RCAN-8x is a high-scale super-resolution model developed for 8× single-image enlargement, targeting ultra-low-resolution inputs. By stacking deep Residual-in-Residual groups with Channel Attention, it is capable of recovering sharp edges and textures even from severely degraded image data."
+    "Summary_update": "RCAN-8x is a high-scale super-resolution model developed for 8× single-image enlargement, targeting ultra-low-resolution inputs. By stacking deep Residual-in-Residual groups with Channel Attention, it is capable of recovering sharp edges and textures even from severely degraded image data.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Classical-DF2K-64-M-2x",
@@ -727,7 +943,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Classical DF2K 2x is a transformer-based model for 2× single-image super-resolution that enhances image quality using a shallow feature extractor, deep Residual Swin Transformer Blocks (RSTBs), and a reconstruction layer. It is trained on bicubic-downsampled DF2K images and excels at restoring textures and sharp edges from low-resolution inputs."
+    "Summary_update": "SwinIR Classical DF2K 2x is a transformer-based model for 2× single-image super-resolution that enhances image quality using a shallow feature extractor, deep Residual Swin Transformer Blocks (RSTBs), and a reconstruction layer. It is trained on bicubic-downsampled DF2K images and excels at restoring textures and sharp edges from low-resolution inputs.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Classical-DF2K-64-M-3x",
@@ -737,7 +956,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Classical DF2K 3x is a model designed for 3× single-image super-resolution, built on Swin Transformer architecture with residual attention mechanisms. It processes bicubic-degraded images and effectively recovers medium-scale image structures while maintaining high visual fidelity."
+    "Summary_update": "SwinIR Classical DF2K 3x is a model designed for 3× single-image super-resolution, built on Swin Transformer architecture with residual attention mechanisms. It processes bicubic-degraded images and effectively recovers medium-scale image structures while maintaining high visual fidelity.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Classical-DF2K-64-M-4x",
@@ -747,7 +969,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Classical DF2K 4x is a super-resolution model aimed at 4× upscaling tasks, using a combination of Swin Transformer layers and hierarchical feature aggregation. Trained on DF2K, it delivers high-quality reconstructions by learning long-range dependencies and fine-grained image features."
+    "Summary_update": "SwinIR Classical DF2K 4x is a super-resolution model aimed at 4× upscaling tasks, using a combination of Swin Transformer layers and hierarchical feature aggregation. Trained on DF2K, it delivers high-quality reconstructions by learning long-range dependencies and fine-grained image features.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Classical-DF2K-64-M-8x",
@@ -757,7 +982,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Classical DF2K 8x is a deep learning model for 8× single-image super-resolution, optimized for recovering highly detailed outputs from extremely low-resolution inputs. It leverages window-based attention in Residual Swin Transformer Blocks to model global context and restore complex structures with minimal artifacts."
+    "Summary_update": "SwinIR Classical DF2K 8x is a deep learning model for 8× single-image super-resolution, optimized for recovering highly detailed outputs from extremely low-resolution inputs. It leverages window-based attention in Residual Swin Transformer Blocks to model global context and restore complex structures with minimal artifacts.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Classical-DIV2K-48-M-2x",
@@ -767,7 +995,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Classical DIV2K 2x is a super-resolution model for 2× image upscaling, designed to recover fine image details from bicubic-downsampled low-resolution inputs. It uses a combination of shallow convolutional layers, deep Residual Swin Transformer Blocks (RSTBs), and window-based self-attention to reconstruct high-quality outputs with structural fidelity."
+    "Summary_update": "SwinIR Classical DIV2K 2x is a super-resolution model for 2× image upscaling, designed to recover fine image details from bicubic-downsampled low-resolution inputs. It uses a combination of shallow convolutional layers, deep Residual Swin Transformer Blocks (RSTBs), and window-based self-attention to reconstruct high-quality outputs with structural fidelity.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Classical-DIV2K-48-M-3x",
@@ -777,7 +1008,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Classical DIV2K 3x is a deep learning model for 3× single-image super-resolution that restores medium-scale textures and edges from degraded inputs. Built on the Swin Transformer backbone, it applies residual attention-based modules to learn contextual information for enhanced visual recovery."
+    "Summary_update": "SwinIR Classical DIV2K 3x is a deep learning model for 3× single-image super-resolution that restores medium-scale textures and edges from degraded inputs. Built on the Swin Transformer backbone, it applies residual attention-based modules to learn contextual information for enhanced visual recovery.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Classical-DIV2K-48-M-4x",
@@ -787,7 +1021,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Classical DIV2K 4x is a transformer-based image restoration model used for 4× upscaling in super-resolution tasks. Leveraging long-range feature interactions through windowed attention, it efficiently reconstructs sharp and natural images from low-resolution sources created via bicubic degradation.\n"
+    "Summary_update": "SwinIR Classical DIV2K 4x is a transformer-based image restoration model used for 4× upscaling in super-resolution tasks. Leveraging long-range feature interactions through windowed attention, it efficiently reconstructs sharp and natural images from low-resolution sources created via bicubic degradation.\n",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Classical-DIV2K-48-M-8x",
@@ -797,7 +1034,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Classical DIV2K 8x is a high-scale single-image super-resolution model that performs 8× enlargement of low-resolution images. Using hierarchical feature processing and deep Residual Swin Transformer Blocks, it captures both local and global context to produce detailed and artifact-free reconstructions from severely downsampled inputs."
+    "Summary_update": "SwinIR Classical DIV2K 8x is a high-scale single-image super-resolution model that performs 8× enlargement of low-resolution images. Using hierarchical feature processing and deep Residual Swin Transformer Blocks, it captures both local and global context to produce detailed and artifact-free reconstructions from severely downsampled inputs.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Lightweight-DIV2K-64-M-2x",
@@ -807,7 +1047,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR LightWeight DIV2K 2x is a transformer-based model for 2× single-image super-resolution, designed with a reduced parameter count for efficiency on low-power devices. It combines lightweight convolutional layers and Residual Swin Transformer Blocks to upscale bicubic-degraded images while balancing quality and computational cost."
+    "Summary_update": "SwinIR LightWeight DIV2K 2x is a transformer-based model for 2× single-image super-resolution, designed with a reduced parameter count for efficiency on low-power devices. It combines lightweight convolutional layers and Residual Swin Transformer Blocks to upscale bicubic-degraded images while balancing quality and computational cost.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Lightweight-DIV2K-64-M-3x",
@@ -817,7 +1060,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR LightWeight DIV2K 3x is a super-resolution model optimized for 3× upscaling of low-resolution images using a lightweight Swin Transformer architecture. By reducing model complexity while preserving attention-based restoration capabilities, it enables faster inference suitable for real-time applications on edge devices.\n\n"
+    "Summary_update": "SwinIR LightWeight DIV2K 3x is a super-resolution model optimized for 3× upscaling of low-resolution images using a lightweight Swin Transformer architecture. By reducing model complexity while preserving attention-based restoration capabilities, it enables faster inference suitable for real-time applications on edge devices.\n\n",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Lightweight-DIV2K-64-M-4x",
@@ -827,7 +1073,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR LightWeight DIV2K 4x is a 4× single-image super-resolution model that maintains high image quality with minimal resource usage. It employs a compact version of the SwinIR framework, using window-based attention and lightweight residual blocks to reconstruct fine textures from compressed inputs on devices with limited compute."
+    "Summary_update": "SwinIR LightWeight DIV2K 4x is a 4× single-image super-resolution model that maintains high image quality with minimal resource usage. It employs a compact version of the SwinIR framework, using window-based attention and lightweight residual blocks to reconstruct fine textures from compressed inputs on devices with limited compute.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Real-DFO-64-M-2x",
@@ -837,7 +1086,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Real DFO 2x is a 2× single-image super-resolution model designed for real-world image restoration using the Swin Transformer architecture. Unlike models trained on synthetic bicubic degradation, it is trained on data from the RealSR dataset (DFO) to handle authentic low-quality inputs, making it effective for enhancing images with unknown or complex degradations."
+    "Summary_update": "SwinIR Real DFO 2x is a 2× single-image super-resolution model designed for real-world image restoration using the Swin Transformer architecture. Unlike models trained on synthetic bicubic degradation, it is trained on data from the RealSR dataset (DFO) to handle authentic low-quality inputs, making it effective for enhancing images with unknown or complex degradations.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Real-DFO-64-M-4x",
@@ -847,7 +1099,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Real DFO 4x is a transformer-based model for 4× super-resolution, specifically trained on the RealSR dataset (DFO) to upscale real-world low-resolution images. It leverages Residual Swin Transformer Blocks and window-based self-attention to restore fine textures and structural consistency in naturally degraded inputs."
+    "Summary_update": "SwinIR Real DFO 4x is a transformer-based model for 4× super-resolution, specifically trained on the RealSR dataset (DFO) to upscale real-world low-resolution images. It leverages Residual Swin Transformer Blocks and window-based self-attention to restore fine textures and structural consistency in naturally degraded inputs.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-SwinIR-Real-DFOWMFC-64-L-4x",
@@ -857,7 +1112,10 @@
     "Paper": "https://arxiv.org/pdf/2108.10257",
     "Github": "https://github.com/JingyunLiang/SwinIR",
     "HuggingFace": null,
-    "Summary_update": "SwinIR Real DFOWMFC 4x is a high-capacity 4× super-resolution model trained on the RealSR DFOWMFC dataset, tailored for restoring high-frequency details in real-world degraded images. Using a large Swin Transformer architecture with deeper residual attention modules, it is well-suited for complex scenes where conventional synthetic degradation models fall short."
+    "Summary_update": "SwinIR Real DFOWMFC 4x is a high-capacity 4× super-resolution model trained on the RealSR DFOWMFC dataset, tailored for restoring high-frequency details in real-world degraded images. Using a large Swin Transformer architecture with deeper residual attention modules, it is well-suited for complex scenes where conventional synthetic degradation models fall short.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-AbsoluteReality",
@@ -867,7 +1125,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - AbsoluteReality is a text-to-image generation model based on Stable Diffusion v1.5, designed to produce realistic and photographic imagery. It focuses on natural lighting, skin tones, and environment coherence, making it suitable for photorealistic portraits, products, and cinematic scenes from text prompts."
+    "Summary_update": "SD v1.5 - AbsoluteReality is a text-to-image generation model based on Stable Diffusion v1.5, designed to produce realistic and photographic imagery. It focuses on natural lighting, skin tones, and environment coherence, making it suitable for photorealistic portraits, products, and cinematic scenes from text prompts.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-majicMix-sombre",
@@ -877,7 +1138,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - majicMix-sombre is a text-to-image model built on Stable Diffusion v1.5, optimized for generating atmospheric, moody, and low-light imagery. It excels at delivering dark-toned compositions with cinematic shading and emotional depth, ideal for dramatic scenes and ambient character art."
+    "Summary_update": "SD v1.5 - majicMix-sombre is a text-to-image model built on Stable Diffusion v1.5, optimized for generating atmospheric, moody, and low-light imagery. It excels at delivering dark-toned compositions with cinematic shading and emotional depth, ideal for dramatic scenes and ambient character art.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-SimpleMix",
@@ -887,7 +1151,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - SimpleMix is a Stable Diffusion v1.5 variant that balances realism and artistic clarity, emphasizing clean lines, soft lighting, and general-purpose versatility. It is designed for high usability across portraits, products, and illustration-style scenes with a polished, neutral aesthetic."
+    "Summary_update": "SD v1.5 - SimpleMix is a Stable Diffusion v1.5 variant that balances realism and artistic clarity, emphasizing clean lines, soft lighting, and general-purpose versatility. It is designed for high usability across portraits, products, and illustration-style scenes with a polished, neutral aesthetic.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-ToonYou",
@@ -897,7 +1164,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - ToonYou is a text-to-image diffusion model fine-tuned for cartoon and illustration generation. Based on Stable Diffusion v1.5, it specializes in stylized character rendering with smooth outlines, vivid colors, and animation-friendly features, ideal for storybooks, avatars, and visual branding."
+    "Summary_update": "SD v1.5 - ToonYou is a text-to-image diffusion model fine-tuned for cartoon and illustration generation. Based on Stable Diffusion v1.5, it specializes in stylized character rendering with smooth outlines, vivid colors, and animation-friendly features, ideal for storybooks, avatars, and visual branding.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "SISR-Any-LIIF-EDSR",
@@ -907,7 +1177,10 @@
     "Paper": "https://arxiv.org/pdf/2012.09161",
     "Github": "https://github.com/yinboc/liif",
     "HuggingFace": null,
-    "Summary_update": "LIIF - EDSR Baseline is a super-resolution model that performs arbitrary-scale upsampling by learning continuous implicit image functions from discrete image features. It uses an EDSR backbone to extract deep features and predicts RGB values at any coordinate, allowing flexible resolution generation without fixed scaling factors."
+    "Summary_update": "LIIF - EDSR Baseline is a super-resolution model that performs arbitrary-scale upsampling by learning continuous implicit image functions from discrete image features. It uses an EDSR backbone to extract deep features and predicts RGB values at any coordinate, allowing flexible resolution generation without fixed scaling factors.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-Any-LIIF-RDN",
@@ -917,7 +1190,10 @@
     "Paper": "https://arxiv.org/pdf/2012.09161",
     "Github": "https://github.com/yinboc/liif",
     "HuggingFace": null,
-    "Summary_update": "LIIF - RDN is a continuous-resolution super-resolution model that combines a Residual Dense Network (RDN) feature extractor with an implicit function predictor. It enables arbitrary-scale image generation by inferring pixel values at non-grid coordinates, making it suitable for tasks requiring resolution-adaptive output from a single low-resolution input."
+    "Summary_update": "LIIF - RDN is a continuous-resolution super-resolution model that combines a Residual Dense Network (RDN) feature extractor with an implicit function predictor. It enables arbitrary-scale image generation by inferring pixel values at non-grid coordinates, making it suitable for tasks requiring resolution-adaptive output from a single low-resolution input.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-Any-LTE-EDSR",
@@ -927,7 +1203,10 @@
     "Paper": "https://ipl.dgist.ac.kr/LTE_cvpr.pdf",
     "Github": "https://github.com/jaewon-lee-b/lte",
     "HuggingFace": null,
-    "Summary_update": "LTE - EDSR Baseline is an arbitrary-scale super-resolution model that uses an EDSR backbone to extract image features and a Local Texture Estimator to guide high-frequency detail synthesis. It predicts pixel values at arbitrary coordinates by leveraging local textures, enabling precise and resolution-adaptive image reconstruction."
+    "Summary_update": "LTE - EDSR Baseline is an arbitrary-scale super-resolution model that uses an EDSR backbone to extract image features and a Local Texture Estimator to guide high-frequency detail synthesis. It predicts pixel values at arbitrary coordinates by leveraging local textures, enabling precise and resolution-adaptive image reconstruction.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-Any-LTE-RDN",
@@ -937,7 +1216,10 @@
     "Paper": "https://ipl.dgist.ac.kr/LTE_cvpr.pdf",
     "Github": "https://github.com/jaewon-lee-b/lte",
     "HuggingFace": null,
-    "Summary_update": "LTE - RDN is an arbitrary-scale image super-resolution model that combines a Residual Dense Network with a Local Texture Estimator. It enables continuous-resolution output by predicting pixel values conditioned on both hierarchical features and local texture cues, providing fine-grained detail restoration at any target scale."
+    "Summary_update": "LTE - RDN is an arbitrary-scale image super-resolution model that combines a Residual Dense Network with a Local Texture Estimator. It enables continuous-resolution output by predicting pixel values conditioned on both hierarchical features and local texture cues, providing fine-grained detail restoration at any target scale.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-Any-LTE-SwinIR-LIIF",
@@ -947,7 +1229,10 @@
     "Paper": "https://ipl.dgist.ac.kr/LTE_cvpr.pdf",
     "Github": "https://github.com/jaewon-lee-b/lte",
     "HuggingFace": null,
-    "Summary_update": "LTE - SwinIR - LIIF integrates SwinIR-based feature extraction with LIIF-style implicit function prediction and LTE's texture guidance. It is designed for continuous-scale super-resolution, producing sharp and natural images across a wide range of resolutions by explicitly modeling local texture patterns in the image domain."
+    "Summary_update": "LTE - SwinIR - LIIF integrates SwinIR-based feature extraction with LIIF-style implicit function prediction and LTE's texture guidance. It is designed for continuous-scale super-resolution, producing sharp and natural images across a wide range of resolutions by explicitly modeling local texture patterns in the image domain.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-Any-LTE-SwinIR",
@@ -957,7 +1242,10 @@
     "Paper": "https://ipl.dgist.ac.kr/LTE_cvpr.pdf",
     "Github": "https://github.com/jaewon-lee-b/lte",
     "HuggingFace": null,
-    "Summary_update": "LTE - SwinIR is a transformer-enhanced variant of the LTE framework for arbitrary-scale super-resolution. It uses SwinIR to extract rich multi-scale features and applies the Local Texture Estimator to refine pixel predictions at any resolution, effectively restoring detailed textures and structural consistency from low-resolution inputs."
+    "Summary_update": "LTE - SwinIR is a transformer-enhanced variant of the LTE framework for arbitrary-scale super-resolution. It uses SwinIR to extract rich multi-scale features and applies the Local Texture Estimator to refine pixel predictions at any resolution, effectively restoring detailed textures and structural consistency from low-resolution inputs.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-1",
@@ -967,7 +1255,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.1 is a text-to-image diffusion model that generates images from natural language prompts using a latent diffusion architecture. It establishes the foundation for prompt-based image synthesis, capable of producing coherent and creative outputs across general visual concepts."
+    "Summary_update": "SD v1.1 is a text-to-image diffusion model that generates images from natural language prompts using a latent diffusion architecture. It establishes the foundation for prompt-based image synthesis, capable of producing coherent and creative outputs across general visual concepts.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-2",
@@ -977,7 +1268,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.2 is an improved version of the Stable Diffusion v1.1 model, offering enhanced prompt fidelity and visual coherence. It retains the same latent diffusion architecture while refining sampling behavior to improve realism, composition, and stylistic diversity in generated images."
+    "Summary_update": "SD v1.2 is an improved version of the Stable Diffusion v1.1 model, offering enhanced prompt fidelity and visual coherence. It retains the same latent diffusion architecture while refining sampling behavior to improve realism, composition, and stylistic diversity in generated images.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-4",
@@ -987,7 +1281,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.4 is a widely adopted text-to-image generation model built on the Stable Diffusion architecture, known for its balanced output quality, speed, and creative flexibility. It excels at generating diverse and semantically aligned images from open-ended prompts, and supports artistic, realistic, and conceptual styles."
+    "Summary_update": "SD v1.4 is a widely adopted text-to-image generation model built on the Stable Diffusion architecture, known for its balanced output quality, speed, and creative flexibility. It excels at generating diverse and semantically aligned images from open-ended prompts, and supports artistic, realistic, and conceptual styles.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-5",
@@ -997,7 +1294,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 is a fine-tuned Stable Diffusion model that improves upon v1.4 by enhancing detail fidelity, image sharpness, and prompt responsiveness. It is widely used for both artistic and photorealistic image generation tasks, supporting a wide range of creative workflows through stable and high-quality visual output."
+    "Summary_update": "SD v1.5 is a fine-tuned Stable Diffusion model that improves upon v1.4 by enhancing detail fidelity, image sharpness, and prompt responsiveness. It is widely used for both artistic and photorealistic image generation tasks, supporting a wide range of creative workflows through stable and high-quality visual output.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-ArteYou",
@@ -1007,7 +1307,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 – ArteYou is a text-to-image model enhanced with an Arcane-inspired illustration style. It combines flat design with subtle 3D shading, producing clean color blocks, gentle gradients, and a polished, artful appearance"
+    "Summary_update": "SD v1.5 – ArteYou is a text-to-image model enhanced with an Arcane-inspired illustration style. It combines flat design with subtle 3D shading, producing clean color blocks, gentle gradients, and a polished, artful appearance",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-Artius_v1.5",
@@ -1017,7 +1320,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - Artius v1.5 is a text-to-image generation model based on Stable Diffusion v1.5, fine-tuned for producing elegant, art-inspired visuals with a cinematic and realistic finish. It balances clarity and mood, making it well-suited for concept design, portraiture, and storytelling visuals with a refined, expressive aesthetic."
+    "Summary_update": "SD v1.5 - Artius v1.5 is a text-to-image generation model based on Stable Diffusion v1.5, fine-tuned for producing elegant, art-inspired visuals with a cinematic and realistic finish. It balances clarity and mood, making it well-suited for concept design, portraiture, and storytelling visuals with a refined, expressive aesthetic.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-CCDDA_ArtStyle",
@@ -1027,7 +1333,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 – CCCDA ArtStyle is a Stable Diffusion variant tailored for blending classical painting techniques with contemporary art sensibilities. It emphasizes layered textures, painterly brushwork, and refined color palettes, ideal for artistic visuals that feel both timeless and modern."
+    "Summary_update": "SD v1.5 – CCCDA ArtStyle is a Stable Diffusion variant tailored for blending classical painting techniques with contemporary art sensibilities. It emphasizes layered textures, painterly brushwork, and refined color palettes, ideal for artistic visuals that feel both timeless and modern.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-colorful",
@@ -1037,7 +1346,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - colorful is a text-to-image model fine-tuned for generating vibrant, saturated, and color-rich outputs. It emphasizes vivid palettes and bold contrasts, making it well-suited for stylized compositions, fantasy art, and visually dynamic illustrations based on user prompts."
+    "Summary_update": "SD v1.5 - colorful is a text-to-image model fine-tuned for generating vibrant, saturated, and color-rich outputs. It emphasizes vivid palettes and bold contrasts, making it well-suited for stylized compositions, fantasy art, and visually dynamic illustrations based on user prompts.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-ConsistentFactor",
@@ -1047,7 +1359,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - ConsistentFactor is a Stable Diffusion variant designed for consistent subject rendering across multiple generations. It is optimized for identity preservation and character coherence, making it useful in workflows like character design, branding, and storyboard generation."
+    "Summary_update": "SD v1.5 - ConsistentFactor is a Stable Diffusion variant designed for consistent subject rendering across multiple generations. It is optimized for identity preservation and character coherence, making it useful in workflows like character design, branding, and storyboard generation.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-CyberRealistic",
@@ -1057,7 +1372,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - CyberRealistic is a photorealistic variant of Stable Diffusion v1.5 trained to produce clean, natural-looking human figures and environments. It is frequently used for portrait-style outputs and realistic human modeling with well-balanced lighting and skin tones."
+    "Summary_update": "SD v1.5 - CyberRealistic is a photorealistic variant of Stable Diffusion v1.5 trained to produce clean, natural-looking human figures and environments. It is frequently used for portrait-style outputs and realistic human modeling with well-balanced lighting and skin tones.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-DreamShaper",
@@ -1067,7 +1385,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - DreamShaper is a hybrid text-to-image generation model that blends realism and fantasy aesthetics. It is designed to create dreamlike compositions, character-centric artworks, and stylized scenery with a soft, painterly finish."
+    "Summary_update": "SD v1.5 - DreamShaper is a hybrid text-to-image generation model that blends realism and fantasy aesthetics. It is designed to create dreamlike compositions, character-centric artworks, and stylized scenery with a soft, painterly finish.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-epiCRealism_newEra",
@@ -1077,7 +1398,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - epiCRealism newEra is a fine-tuned model focused on cinematic realism and dramatic lighting. It generates highly detailed, emotionally expressive imagery, and is particularly suited for creating filmic scenes, concept art, and moody environments from textual prompts."
+    "Summary_update": "SD v1.5 - epiCRealism newEra is a fine-tuned model focused on cinematic realism and dramatic lighting. It generates highly detailed, emotionally expressive imagery, and is particularly suited for creating filmic scenes, concept art, and moody environments from textual prompts.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-GhostMix",
@@ -1087,7 +1411,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - GhostMix is a stylized text-to-image model designed to produce ethereal, surreal, and visually haunting compositions. It emphasizes spectral lighting, soft diffusion, and ghostly atmospheres, making it well-suited for fantasy scenes, spiritual motifs, and dreamlike artwork."
+    "Summary_update": "SD v1.5 - GhostMix is a stylized text-to-image model designed to produce ethereal, surreal, and visually haunting compositions. It emphasizes spectral lighting, soft diffusion, and ghostly atmospheres, making it well-suited for fantasy scenes, spiritual motifs, and dreamlike artwork.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-henmixReal",
@@ -1097,7 +1424,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - henmixReal is a realistic-style model fine-tuned for clean, photographic human rendering and sharp environmental detail. It performs well in producing lifelike portraits and structured scenes, with a focus on natural lighting, skin tone balance, and realism across a wide range of prompts."
+    "Summary_update": "SD v1.5 - henmixReal is a realistic-style model fine-tuned for clean, photographic human rendering and sharp environmental detail. It performs well in producing lifelike portraits and structured scenes, with a focus on natural lighting, skin tone balance, and realism across a wide range of prompts.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-ICBINP",
@@ -1107,7 +1437,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - ICBINP (\"I Can't Believe It's Not Photography\") is a text-to-image model optimized for ultra-realistic outputs that closely resemble high-resolution photographs. It is often used for producing commercial-grade visuals, synthetic portraits, and simulated product imagery with photographic fidelity."
+    "Summary_update": "SD v1.5 - ICBINP (\"I Can't Believe It's Not Photography\") is a text-to-image model optimized for ultra-realistic outputs that closely resemble high-resolution photographs. It is often used for producing commercial-grade visuals, synthetic portraits, and simulated product imagery with photographic fidelity.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-IDSM",
@@ -1117,7 +1450,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - IDSM is a diffusion model focused on delivering stylish, expressive, and character-rich images with a painterly or semi-realistic feel. It blends imaginative design with subtle realism, making it suitable for creative concept art, fashion poses, and stylized renderings."
+    "Summary_update": "SD v1.5 - IDSM is a diffusion model focused on delivering stylish, expressive, and character-rich images with a painterly or semi-realistic feel. It blends imaginative design with subtle realism, making it suitable for creative concept art, fashion poses, and stylized renderings.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-ImpressionismOil",
@@ -1127,7 +1463,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - ImpressionismOil is a text-to-image generation model fine-tuned for creating artwork in the style of impressionist oil paintings. It emphasizes brushstroke texture, warm lighting, and painterly aesthetics, making it ideal for landscape art, portraits, and classical-themed visuals."
+    "Summary_update": "SD v1.5 - ImpressionismOil is a text-to-image generation model fine-tuned for creating artwork in the style of impressionist oil paintings. It emphasizes brushstroke texture, warm lighting, and painterly aesthetics, making it ideal for landscape art, portraits, and classical-themed visuals.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-LemonTeaMix",
@@ -1137,7 +1476,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - LemonTeaMix is a stylized Stable Diffusion model that produces light-toned, warm, and softly colored images with a cozy and uplifting feel. It is well-suited for casual illustrations, lifestyle visuals, and friendly, approachable scenes."
+    "Summary_update": "SD v1.5 - LemonTeaMix is a stylized Stable Diffusion model that produces light-toned, warm, and softly colored images with a cozy and uplifting feel. It is well-suited for casual illustrations, lifestyle visuals, and friendly, approachable scenes.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-majicMix-realistic",
@@ -1147,7 +1489,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - majicMix-realistic is a high-fidelity text-to-image model tuned for realism and clarity. It focuses on generating sharp, lifelike visuals with accurate lighting and textures, making it useful for photorealistic portraiture, product rendering, and environmental scenes."
+    "Summary_update": "SD v1.5 - majicMix-realistic is a high-fidelity text-to-image model tuned for realism and clarity. It focuses on generating sharp, lifelike visuals with accurate lighting and textures, making it useful for photorealistic portraiture, product rendering, and environmental scenes.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-NextPhoto",
@@ -1157,7 +1502,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - NextPhoto is a Stable Diffusion variant trained for high-resolution photographic generation. It is optimized to simulate professional DSLR-like image quality, capturing fine textures and lighting consistency suitable for realistic portraits, fashion, and commercial imagery."
+    "Summary_update": "SD v1.5 - NextPhoto is a Stable Diffusion variant trained for high-resolution photographic generation. It is optimized to simulate professional DSLR-like image quality, capturing fine textures and lighting consistency suitable for realistic portraits, fashion, and commercial imagery.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-PirsusEpicRealism",
@@ -1167,7 +1515,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - PirsusEpicRealism is a cinematic-style model focused on highly detailed, dramatic, and photorealistic scene generation. It emphasizes epic composition, rich lighting, and depth, making it suitable for storytelling visuals, concept art, and realistic fantasy scenes."
+    "Summary_update": "SD v1.5 - PirsusEpicRealism is a cinematic-style model focused on highly detailed, dramatic, and photorealistic scene generation. It emphasizes epic composition, rich lighting, and depth, making it suitable for storytelling visuals, concept art, and realistic fantasy scenes.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-QGO-PromptingReal",
@@ -1177,7 +1528,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - QGO-PromptingReal is a Stable Diffusion variant fine-tuned for consistent and prompt-aligned photorealistic image generation. It is built to respond precisely to textual inputs while preserving realism, making it reliable for coherent visual storytelling."
+    "Summary_update": "SD v1.5 - QGO-PromptingReal is a Stable Diffusion variant fine-tuned for consistent and prompt-aligned photorealistic image generation. It is built to respond precisely to textual inputs while preserving realism, making it reliable for coherent visual storytelling.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-Realisian",
@@ -1187,7 +1541,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - Realisian is a realism-focused model that generates highly natural images with balanced skin tones, lighting, and sharpness. It is effective for producing portraits, lifestyle photography, and realistic people-centric visuals with minimal stylistic distortion."
+    "Summary_update": "SD v1.5 - Realisian is a realism-focused model that generates highly natural images with balanced skin tones, lighting, and sharpness. It is effective for producing portraits, lifestyle photography, and realistic people-centric visuals with minimal stylistic distortion.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-Reliberate",
@@ -1197,7 +1554,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - Reliberate is a refined Stable Diffusion model designed for creative illustration and semi-realistic styles. It blends clarity with imaginative flexibility, producing images that are visually clean while supporting varied artistic genres from fantasy to slice-of-life.\n"
+    "Summary_update": "SD v1.5 - Reliberate is a refined Stable Diffusion model designed for creative illustration and semi-realistic styles. It blends clarity with imaginative flexibility, producing images that are visually clean while supporting varied artistic genres from fantasy to slice-of-life.\n",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-StableDiffusionV1-RunDiffusionFX",
@@ -1207,7 +1567,10 @@
     "Paper": null,
     "Github": "https://github.com/Kameronski/stable-diffusion-1.5",
     "HuggingFace": null,
-    "Summary_update": "SD v1.5 - RunDiffusion FX is a text-to-image generation model specialized for polished, visually dynamic compositions with studio-lighting quality. It delivers detailed, stylish visuals ideal for editorial-style portraits, fashion, and media-oriented production."
+    "Summary_update": "SD v1.5 - RunDiffusion FX is a text-to-image generation model specialized for polished, visually dynamic compositions with studio-lighting quality. It delivers detailed, stylish visuals ideal for editorial-style portraits, fashion, and media-oriented production.",
+    "Task Tags": [
+      "txt2img"
+    ]
   },
   {
     "Model Unique Name": "Txt2Txt-HuggingFace-facebook-bart-large-cnn",
@@ -1217,7 +1580,10 @@
     "Paper": "https://arxiv.org/pdf/1910.13461",
     "Github": "https://github.com/facebookresearch/fairseq/tree/main/examples/bart",
     "HuggingFace": "https://huggingface.co/facebook/bart-large-cnn",
-    "Summary_update": "BART-L is a large text-to-text transformer model fine-tuned for abstractive summarization. It takes long-form documents and generates concise summaries while maintaining semantic coherence, making it suitable for news, article, and report summarization tasks."
+    "Summary_update": "BART-L is a large text-to-text transformer model fine-tuned for abstractive summarization. It takes long-form documents and generates concise summaries while maintaining semantic coherence, making it suitable for news, article, and report summarization tasks.",
+    "Task Tags": [
+      "text2text"
+    ]
   },
   {
     "Model Unique Name": "Txt2Txt-HuggingFace-microsoft-Promptist",
@@ -1227,7 +1593,10 @@
     "Paper": null,
     "Github": "https://github.com/microsoft/LMOps/tree/main/promptist",
     "HuggingFace": "https://huggingface.co/microsoft/Promptist",
-    "Summary_update": "Promptist is a text-to-text transformer model designed to rewrite or enhance user prompts for better performance in downstream tasks, such as text-to-image generation. It improves prompt clarity and structure, helping users create more effective and visually aligned AI-generated outputs."
+    "Summary_update": "Promptist is a text-to-text transformer model designed to rewrite or enhance user prompts for better performance in downstream tasks, such as text-to-image generation. It improves prompt clarity and structure, helping users create more effective and visually aligned AI-generated outputs.",
+    "Task Tags": [
+      "text2text"
+    ]
   },
   {
     "Model Unique Name": "Txt2Voice-HuggingFace-espnet-fastspeech2_conformer_with_hifigan",
@@ -1237,7 +1606,10 @@
     "Paper": null,
     "Github": null,
     "HuggingFace": "https://huggingface.co/espnet/fastspeech2_conformer_with_hifigan",
-    "Summary_update": "FastSpeech2Conformer is a text-to-speech (TTS) model that converts written sentences into natural-sounding speech using a FastSpeech 2 backbone and Conformer blocks, paired with a HiFi-GAN vocoder. It generates fluent, expressive audio with low latency and high intelligibility."
+    "Summary_update": "FastSpeech2Conformer is a text-to-speech (TTS) model that converts written sentences into natural-sounding speech using a FastSpeech 2 backbone and Conformer blocks, paired with a HiFi-GAN vocoder. It generates fluent, expressive audio with low latency and high intelligibility.",
+    "Task Tags": [
+      "tts"
+    ]
   },
   {
     "Model Unique Name": "Txt2Img-HuggingFace-prompthero-openjourney-v4",
@@ -1247,7 +1619,10 @@
     "Paper": null,
     "Github": null,
     "HuggingFace": "https://huggingface.co/prompthero/openjourney-v4",
-    "Summary_update": "OpenJourney v4 is a text-to-image generation model based on Stable Diffusion, fine-tuned for producing artistic and conceptual visuals in the style of fantasy and digital concept art. It is ideal for creating illustrations, environments, and character art from text prompts."
+    "Summary_update": "OpenJourney v4 is a text-to-image generation model based on Stable Diffusion, fine-tuned for producing artistic and conceptual visuals in the style of fantasy and digital concept art. It is ideal for creating illustrations, environments, and character art from text prompts.",
+    "Task Tags": [
+      "tts"
+    ]
   },
   {
     "Model Unique Name": "Txt2Voice-HuggingFace-suno-bark",
@@ -1257,7 +1632,10 @@
     "Paper": null,
     "Github": null,
     "HuggingFace": "https://huggingface.co/suno/bark",
-    "Summary_update": "Bark is a text-to-speech model that generates natural speech, expressive voice styles, and even non-verbal sounds like laughter or music. It supports multilingual inputs and is capable of generating highly realistic, emotion-infused audio outputs from text.\n"
+    "Summary_update": "Bark is a text-to-speech model that generates natural speech, expressive voice styles, and even non-verbal sounds like laughter or music. It supports multilingual inputs and is capable of generating highly realistic, emotion-infused audio outputs from text.\n",
+    "Task Tags": [
+      "tts"
+    ]
   },
   {
     "Model Unique Name": "Voice2Txt-nvidia-parakeet-tdt-1.1b",
@@ -1267,7 +1645,10 @@
     "Paper": null,
     "Github": "https://github.com/NVIDIA/NeMo",
     "HuggingFace": "https://huggingface.co/nvidia/parakeet-tdt-1.1b",
-    "Summary_update": "Parakeet TDT is a speech-to-text (S2T) model developed by NVIDIA for transcribing spoken audio into text. It uses a transformer-based architecture trained on multilingual datasets, providing accurate and efficient transcription suitable for general-purpose and low-latency applications."
+    "Summary_update": "Parakeet TDT is a speech-to-text (S2T) model developed by NVIDIA for transcribing spoken audio into text. It uses a transformer-based architecture trained on multilingual datasets, providing accurate and efficient transcription suitable for general-purpose and low-latency applications.",
+    "Task Tags": [
+      "asr"
+    ]
   },
   {
     "Model Unique Name": "WeatherRemoval-CLAIO-DeHaze",
@@ -1277,7 +1658,10 @@
     "Paper": null,
     "Github": "https://github.com/xiaojihh/cl_all-in-one",
     "HuggingFace": null,
-    "Summary_update": "CLAIO-DeHaze is an image-to-image restoration model designed to remove haze from outdoor photographs. It is part of the CL All-In-One framework and is specifically trained on the OTS dataset to recover clear visual details and natural colors from hazy or fog-obscured scenes."
+    "Summary_update": "CLAIO-DeHaze is an image-to-image restoration model designed to remove haze from outdoor photographs. It is part of the CL All-In-One framework and is specifically trained on the OTS dataset to recover clear visual details and natural colors from hazy or fog-obscured scenes.",
+    "Task Tags": [
+      "weather_removal"
+    ]
   },
   {
     "Model Unique Name": "WeatherRemoval-CLAIO-DeRain",
@@ -1287,7 +1671,10 @@
     "Paper": null,
     "Github": "https://github.com/xiaojihh/cl_all-in-one",
     "HuggingFace": null,
-    "Summary_update": "CLAIO-DeRain is a weather removal model trained to eliminate rain streaks and motion blur from rainy images. Using single-pass inference, it restores clarity and sharpness while preserving fine details, and is evaluated for generalization on datasets like OTS and Snow100K."
+    "Summary_update": "CLAIO-DeRain is a weather removal model trained to eliminate rain streaks and motion blur from rainy images. Using single-pass inference, it restores clarity and sharpness while preserving fine details, and is evaluated for generalization on datasets like OTS and Snow100K.",
+    "Task Tags": [
+      "weather_removal"
+    ]
   },
   {
     "Model Unique Name": "WeatherRemoval-CLAIO-DeSnow",
@@ -1297,7 +1684,10 @@
     "Paper": null,
     "Github": "https://github.com/xiaojihh/cl_all-in-one",
     "HuggingFace": null,
-    "Summary_update": "CLAIO-DeSnow is a deep learning model developed for removing snow artifacts such as translucent flakes and dense snow blobs from images. As part of the CLAIO framework, it performs one-step de-snowing and is trained on Snow100K to enhance visibility in snowy environments."
+    "Summary_update": "CLAIO-DeSnow is a deep learning model developed for removing snow artifacts such as translucent flakes and dense snow blobs from images. As part of the CLAIO framework, it performs one-step de-snowing and is trained on Snow100K to enhance visibility in snowy environments.",
+    "Task Tags": [
+      "weather_removal"
+    ]
   },
   {
     "Model Unique Name": "Inpainting-CTSDG-CelebA",
@@ -1307,7 +1697,10 @@
     "Paper": "https://arxiv.org/pdf/2108.09760",
     "Github": "https://github.com/xiefan-guo/ctsdg",
     "HuggingFace": null,
-    "Summary_update": "CTSDG - CelebA is an image inpainting model trained on the CelebA dataset, designed to restore missing or corrupted facial regions. It uses a coarse-to-fine structure-aware approach with dual generators to fill in masked areas realistically, maintaining symmetry and texture continuity in face images."
+    "Summary_update": "CTSDG - CelebA is an image inpainting model trained on the CelebA dataset, designed to restore missing or corrupted facial regions. It uses a coarse-to-fine structure-aware approach with dual generators to fill in masked areas realistically, maintaining symmetry and texture continuity in face images.",
+    "Task Tags": [
+      "inpainting"
+    ]
   },
   {
     "Model Unique Name": "Inpainting-CTSDG-Paris",
@@ -1317,7 +1710,10 @@
     "Paper": "https://arxiv.org/pdf/2108.09760",
     "Github": "https://github.com/xiefan-guo/ctsdg",
     "HuggingFace": null,
-    "Summary_update": "CTSDG - Paris is an inpainting model trained on Paris StreetView images, aimed at restoring architectural and urban scene details. It reconstructs missing building parts or damaged regions with context-aware synthesis, preserving structural alignment and geometric consistency."
+    "Summary_update": "CTSDG - Paris is an inpainting model trained on Paris StreetView images, aimed at restoring architectural and urban scene details. It reconstructs missing building parts or damaged regions with context-aware synthesis, preserving structural alignment and geometric consistency.",
+    "Task Tags": [
+      "inpainting"
+    ]
   },
   {
     "Model Unique Name": "Inpainting-CTSDG-Places2",
@@ -1327,7 +1723,10 @@
     "Paper": "https://arxiv.org/pdf/2108.09760",
     "Github": "https://github.com/xiefan-guo/ctsdg",
     "HuggingFace": null,
-    "Summary_update": "CTSDG - Places2 is a general-purpose inpainting model trained on the large-scale Places2 dataset. It restores various types of natural and man-made scenes by learning contextual semantics and textures, making it suitable for completing missing regions in diverse environments."
+    "Summary_update": "CTSDG - Places2 is a general-purpose inpainting model trained on the large-scale Places2 dataset. It restores various types of natural and man-made scenes by learning contextual semantics and textures, making it suitable for completing missing regions in diverse environments.",
+    "Task Tags": [
+      "inpainting"
+    ]
   },
   {
     "Model Unique Name": "Inpainting-MISF-CelebA",
@@ -1337,7 +1736,10 @@
     "Paper": "https://arxiv.org/pdf/2203.06304",
     "Github": "https://github.com/tsingqguo/misf",
     "HuggingFace": null,
-    "Summary_update": "MISF - CelebA is an image inpainting model trained on facial images from the CelebA dataset. It uses a multi-scale information fusion (MISF) network to reconstruct missing facial regions by progressively integrating contextual and structural cues across spatial scales, resulting in realistic and identity-preserving face completions."
+    "Summary_update": "MISF - CelebA is an image inpainting model trained on facial images from the CelebA dataset. It uses a multi-scale information fusion (MISF) network to reconstruct missing facial regions by progressively integrating contextual and structural cues across spatial scales, resulting in realistic and identity-preserving face completions.",
+    "Task Tags": [
+      "inpainting"
+    ]
   },
   {
     "Model Unique Name": "Inpainting-MISF-Places2",
@@ -1347,7 +1749,10 @@
     "Paper": "https://arxiv.org/pdf/2203.06304",
     "Github": "https://github.com/tsingqguo/misf",
     "HuggingFace": null,
-    "Summary_update": "MISF - Places2 is a scene-aware inpainting model trained on the Places2 dataset, designed to complete diverse natural and urban images. It leverages a multi-scale fusion strategy to capture global structure and fine details simultaneously, allowing for semantically plausible and visually coherent image restoration."
+    "Summary_update": "MISF - Places2 is a scene-aware inpainting model trained on the Places2 dataset, designed to complete diverse natural and urban images. It leverages a multi-scale fusion strategy to capture global structure and fine details simultaneously, allowing for semantically plausible and visually coherent image restoration.",
+    "Task Tags": [
+      "inpainting"
+    ]
   },
   {
     "Model Unique Name": "Inpainting-ResShift-Face",
@@ -1357,7 +1762,10 @@
     "Paper": "https://proceedings.neurips.cc/paper_files/paper/2023/file/2ac2eac5098dba08208807b65c5851cc-Paper-Conference.pdf",
     "Github": "https://github.com/zsyOAOA/ResShift",
     "HuggingFace": null,
-    "Summary_update": "ResShift - Face is a face inpainting model based on the ResShift framework, optimized for reconstructing occluded or masked facial regions with high fidelity. It uses a shift-based diffusion mechanism to refine facial textures and symmetry without relying on explicit segmentation, enabling natural identity-consistent restoration."
+    "Summary_update": "ResShift - Face is a face inpainting model based on the ResShift framework, optimized for reconstructing occluded or masked facial regions with high fidelity. It uses a shift-based diffusion mechanism to refine facial textures and symmetry without relying on explicit segmentation, enabling natural identity-consistent restoration.",
+    "Task Tags": [
+      "inpainting"
+    ]
   },
   {
     "Model Unique Name": "Inpainting-ResShift-ImageNet",
@@ -1367,7 +1775,10 @@
     "Paper": "https://proceedings.neurips.cc/paper_files/paper/2023/file/2ac2eac5098dba08208807b65c5851cc-Paper-Conference.pdf",
     "Github": "https://github.com/zsyOAOA/ResShift",
     "HuggingFace": null,
-    "Summary_update": "ResShift - ImageNet is a general-purpose inpainting model from the ResShift family, trained on ImageNet-style images to perform class-agnostic image completion. It applies a residual shifting mechanism within a diffusion-based pipeline to generate visually realistic and semantically aligned content in missing or corrupted regions."
+    "Summary_update": "ResShift - ImageNet is a general-purpose inpainting model from the ResShift family, trained on ImageNet-style images to perform class-agnostic image completion. It applies a residual shifting mechanism within a diffusion-based pipeline to generate visually realistic and semantically aligned content in missing or corrupted regions.",
+    "Task Tags": [
+      "inpainting"
+    ]
   },
   {
     "Model Unique Name": "ImgTxt2Img-HuggingFace-alaa-lab-InstructCV",
@@ -1377,7 +1788,10 @@
     "Paper": "https://arxiv.org/pdf/2310.00390",
     "Github": "https://github.com/AlaaLab/InstructCV",
     "HuggingFace": "https://huggingface.co/alaa-lab/InstructCV",
-    "Summary_update": "Instruct CV is a multi-task image editing and understanding model that performs instruction-guided image-to-image transformations. Trained on datasets like NYUv2, ADE20K, and COCO, it can handle diverse tasks such as depth estimation, segmentation, and image manipulation based on natural language prompts, bridging vision and language for interpretable visual outputs."
+    "Summary_update": "Instruct CV is a multi-task image editing and understanding model that performs instruction-guided image-to-image transformations. Trained on datasets like NYUv2, ADE20K, and COCO, it can handle diverse tasks such as depth estimation, segmentation, and image manipulation based on natural language prompts, bridging vision and language for interpretable visual outputs.",
+    "Task Tags": [
+      "imgtxt2img"
+    ]
   },
   {
     "Model Unique Name": "ImgTxt2Img-HuggingFace-timbrooks-instruct-pix2pix",
@@ -1387,7 +1801,10 @@
     "Paper": "https://arxiv.org/pdf/2211.09800",
     "Github": "https://github.com/timothybrooks/instruct-pix2pix",
     "HuggingFace": "https://huggingface.co/timbrooks/instruct-pix2pix",
-    "Summary_update": "Instruct Pix2Pix is a diffusion-based image editing model that performs text-driven transformations on images using a single forward pass. It fine-tunes Stable Diffusion to respond to instructions like \"make it snowy\" or \"add graffiti,\" enabling localized, prompt-aligned edits without requiring paired training data."
+    "Summary_update": "Instruct Pix2Pix is a diffusion-based image editing model that performs text-driven transformations on images using a single forward pass. It fine-tunes Stable Diffusion to respond to instructions like \"make it snowy\" or \"add graffiti,\" enabling localized, prompt-aligned edits without requiring paired training data.",
+    "Task Tags": [
+      "imgtxt2img"
+    ]
   },
   {
     "Model Unique Name": "HDR-DeepHDRR",
@@ -1397,7 +1814,10 @@
     "Paper": "https://people.engr.tamu.edu/nimak/Papers/SIGGRAPH2020_HDR/files/SIGGRAPH2020Final.pdf",
     "Github": "https://github.com/marcelsan/Deep-HdrReconstruction",
     "HuggingFace": null,
-    "Summary_update": "DeepHDRR is an image-to-image restoration model that generates high dynamic range (HDR) images from single low dynamic range (LDR) inputs. It uses a dual-branch CNN architecture with domain-specific priors to recover both saturated highlights and dark details, making it suitable for real-world HDR photography from a single exposure."
+    "Summary_update": "DeepHDRR is an image-to-image restoration model that generates high dynamic range (HDR) images from single low dynamic range (LDR) inputs. It uses a dual-branch CNN architecture with domain-specific priors to recover both saturated highlights and dark details, making it suitable for real-world HDR photography from a single exposure.",
+    "Task Tags": [
+      "hdr"
+    ]
   },
   {
     "Model Unique Name": "HDR-FHDR-I1",
@@ -1407,7 +1827,10 @@
     "Paper": "https://arxiv.org/pdf/1912.11463",
     "Github": "https://github.com/mukulkhanna/FHDR",
     "HuggingFace": null,
-    "Summary_update": "FHDR I1 is a single-image HDR reconstruction model that restores high dynamic range content from LDR inputs using a two-branch fully convolutional network. One branch predicts the base tone while the other estimates residual high-frequency components, enabling more detailed and perceptually accurate HDR synthesis."
+    "Summary_update": "FHDR I1 is a single-image HDR reconstruction model that restores high dynamic range content from LDR inputs using a two-branch fully convolutional network. One branch predicts the base tone while the other estimates residual high-frequency components, enabling more detailed and perceptually accurate HDR synthesis.",
+    "Task Tags": [
+      "hdr"
+    ]
   },
   {
     "Model Unique Name": "HDR-FHDR-I2",
@@ -1417,7 +1840,10 @@
     "Paper": "https://arxiv.org/pdf/1912.11463",
     "Github": "https://github.com/mukulkhanna/FHDR",
     "HuggingFace": null,
-    "Summary_update": "FHDR I2 is an extension of the FHDR framework that incorporates perceptual loss and additional structural cues to improve HDR restoration. It further refines tone mapping and texture recovery from LDR inputs, enhancing visual consistency and luminance realism in reconstructed HDR outputs."
+    "Summary_update": "FHDR I2 is an extension of the FHDR framework that incorporates perceptual loss and additional structural cues to improve HDR restoration. It further refines tone mapping and texture recovery from LDR inputs, enhancing visual consistency and luminance realism in reconstructed HDR outputs.",
+    "Task Tags": [
+      "hdr"
+    ]
   },
   {
     "Model Unique Name": "FaceReplacement-ResShift",
@@ -1427,7 +1853,10 @@
     "Paper": "https://proceedings.neurips.cc/paper_files/paper/2023/file/2ac2eac5098dba08208807b65c5851cc-Paper-Conference.pdf",
     "Github": "https://github.com/zsyOAOA/ResShift",
     "HuggingFace": null,
-    "Summary_update": "ResShift FaceReplacement is a face-swapping model that replaces faces in images while preserving pose, lighting, and skin tone consistency. Built on a residual-shifting diffusion framework, it enables high-quality face replacement without requiring explicit segmentation, making it suitable for identity editing in a variety of visual contexts."
+    "Summary_update": "ResShift FaceReplacement is a face-swapping model that replaces faces in images while preserving pose, lighting, and skin tone consistency. Built on a residual-shifting diffusion framework, it enables high-quality face replacement without requiring explicit segmentation, making it suitable for identity editing in a variety of visual contexts.",
+    "Task Tags": [
+      "face_edit"
+    ]
   },
   {
     "Model Unique Name": "Enhancement-low-light-img-enhancer",
@@ -1437,7 +1866,10 @@
     "Paper": null,
     "Github": "https://github.com/dblasko/low-light-event-img-enhancer",
     "HuggingFace": "https://huggingface.co/dblasko/mirnet-low-light-img-enhancement",
-    "Summary_update": "Low Light Enhancement is an image enhancement model based on MIRNet, designed to improve the visibility and clarity of images captured in poorly lit environments. It enhances brightness, contrast, and fine details while suppressing noise, making it useful for event photography, surveillance footage, and nighttime mobile images."
+    "Summary_update": "Low Light Enhancement is an image enhancement model based on MIRNet, designed to improve the visibility and clarity of images captured in poorly lit environments. It enhances brightness, contrast, and fine details while suppressing noise, making it useful for event photography, surveillance footage, and nighttime mobile images.",
+    "Task Tags": [
+      "low_light_enhancement"
+    ]
   },
   {
     "Model Unique Name": "Harmonization-INR-RAW-HAdobe5K",
@@ -1447,7 +1879,10 @@
     "Paper": "https://arxiv.org/pdf/2303.01681",
     "Github": "https://github.com/WindVChen/INR-Harmonization",
     "HuggingFace": null,
-    "Summary_update": "INR - HAdobe5K is an image harmonization model trained on the HAdobe5K dataset to adjust foreground elements so they blend naturally with complex photographic backgrounds. It uses an implicit neural representation to align lighting, color, and tone between composited regions and their surrounding context."
+    "Summary_update": "INR - HAdobe5K is an image harmonization model trained on the HAdobe5K dataset to adjust foreground elements so they blend naturally with complex photographic backgrounds. It uses an implicit neural representation to align lighting, color, and tone between composited regions and their surrounding context.",
+    "Task Tags": [
+      "unknown"
+    ]
   },
   {
     "Model Unique Name": "Harmonization-INR-RAW-iHarmony4",
@@ -1457,7 +1892,10 @@
     "Paper": "https://arxiv.org/pdf/2303.01681",
     "Github": "https://github.com/WindVChen/INR-Harmonization",
     "HuggingFace": null,
-    "Summary_update": "INR - iHarmony4 is a harmonization model that uses an INR-based architecture to refine foreground compositing on scenes from the iHarmony4 dataset. It adjusts illumination and color balance between pasted objects and background environments to produce seamless, realistic image edits."
+    "Summary_update": "INR - iHarmony4 is a harmonization model that uses an INR-based architecture to refine foreground compositing on scenes from the iHarmony4 dataset. It adjusts illumination and color balance between pasted objects and background environments to produce seamless, realistic image edits.",
+    "Task Tags": [
+      "unknown"
+    ]
   },
   {
     "Model Unique Name": "Harmonization-INR-Res256-iHarmony4",
@@ -1467,7 +1905,10 @@
     "Paper": "https://arxiv.org/pdf/2303.01681",
     "Github": "https://github.com/WindVChen/INR-Harmonization",
     "HuggingFace": null,
-    "Summary_update": "INR - Res256 iHarmony4 is a resolution-specific variant of the INR harmonization model, optimized for inputs with a resolution of 256 pixels. Trained on iHarmony4, it performs fast and accurate color and tone matching between foreground and background elements in small to mid-size composite images."
+    "Summary_update": "INR - Res256 iHarmony4 is a resolution-specific variant of the INR harmonization model, optimized for inputs with a resolution of 256 pixels. Trained on iHarmony4, it performs fast and accurate color and tone matching between foreground and background elements in small to mid-size composite images.",
+    "Task Tags": [
+      "unknown"
+    ]
   },
   {
     "Model Unique Name": "Harmonization-INR-Res1024-HAdobe5K",
@@ -1477,7 +1918,10 @@
     "Paper": "https://arxiv.org/pdf/2303.01681",
     "Github": "https://github.com/WindVChen/INR-Harmonization",
     "HuggingFace": null,
-    "Summary_update": "INR - Res1024 HAdobe5K is a high-resolution version of the INR harmonization model designed for 1024px inputs. It adapts foregrounds to high-detail photographic backgrounds from the HAdobe5K dataset, ensuring stylistic and tonal consistency across large-scale compositions."
+    "Summary_update": "INR - Res1024 HAdobe5K is a high-resolution version of the INR harmonization model designed for 1024px inputs. It adapts foregrounds to high-detail photographic backgrounds from the HAdobe5K dataset, ensuring stylistic and tonal consistency across large-scale compositions.",
+    "Task Tags": [
+      "unknown"
+    ]
   },
   {
     "Model Unique Name": "Harmonization-INR-Res2048-HAdobe5K",
@@ -1487,7 +1931,10 @@
     "Paper": "https://arxiv.org/pdf/2303.01681",
     "Github": "https://github.com/WindVChen/INR-Harmonization",
     "HuggingFace": null,
-    "Summary_update": "INR - Res2048 HAdobe5K is an ultra-high-resolution image harmonization model using implicit neural representation techniques. Trained on HAdobe5K, it fine-tunes color, lighting, and shadow interactions between foregrounds and 2048px-resolution backgrounds for photorealistic image blending."
+    "Summary_update": "INR - Res2048 HAdobe5K is an ultra-high-resolution image harmonization model using implicit neural representation techniques. Trained on HAdobe5K, it fine-tunes color, lighting, and shadow interactions between foregrounds and 2048px-resolution backgrounds for photorealistic image blending.",
+    "Task Tags": [
+      "unknown"
+    ]
   },
   {
     "Model Unique Name": "NST-fast-neural-style-candy",
@@ -1497,7 +1944,10 @@
     "Paper": null,
     "Github": "https://github.com/rrmina/fast-neural-style-pytorch",
     "HuggingFace": null,
-    "Summary_update": "Fast NST – Candy is an image-to-image neural style transfer model that applies a vibrant, abstract painting style inspired by modern art. It transforms ordinary photos into stylized images with bold color palettes and dynamic brushstroke patterns, emphasizing expressive and vivid aesthetics."
+    "Summary_update": "Fast NST – Candy is an image-to-image neural style transfer model that applies a vibrant, abstract painting style inspired by modern art. It transforms ordinary photos into stylized images with bold color palettes and dynamic brushstroke patterns, emphasizing expressive and vivid aesthetics.",
+    "Task Tags": [
+      "style_transfer"
+    ]
   },
   {
     "Model Unique Name": "NST-fast-neural-style-mosaic",
@@ -1507,7 +1957,10 @@
     "Paper": null,
     "Github": "https://github.com/rrmina/fast-neural-style-pytorch",
     "HuggingFace": null,
-    "Summary_update": "Fast NST – Mosaic stylizes input images with a cubist, tile-like effect reminiscent of classical mosaic artwork. It creates geometric and fragmented compositions with sharp contrast and structured color regions, giving images a historical or architectural artistic appearance."
+    "Summary_update": "Fast NST – Mosaic stylizes input images with a cubist, tile-like effect reminiscent of classical mosaic artwork. It creates geometric and fragmented compositions with sharp contrast and structured color regions, giving images a historical or architectural artistic appearance.",
+    "Task Tags": [
+      "style_transfer"
+    ]
   },
   {
     "Model Unique Name": "NST-fast-neural-style-rain-princess",
@@ -1517,7 +1970,10 @@
     "Paper": null,
     "Github": "https://github.com/rrmina/fast-neural-style-pytorch",
     "HuggingFace": null,
-    "Summary_update": "Fast NST – Rain Princess offers an instant artistic transform, applying shimmering brushstrokes and dreamy hues of the “Rain Princess” style in a single forward pass—perfect for live style filters and creative content tools."
+    "Summary_update": "Fast NST – Rain Princess offers an instant artistic transform, applying shimmering brushstrokes and dreamy hues of the “Rain Princess” style in a single forward pass—perfect for live style filters and creative content tools.",
+    "Task Tags": [
+      "style_transfer"
+    ]
   },
   {
     "Model Unique Name": "NST-fast-neural-style-udnie",
@@ -1527,7 +1983,10 @@
     "Paper": null,
     "Github": "https://github.com/rrmina/fast-neural-style-pytorch",
     "HuggingFace": null,
-    "Summary_update": "Fast NST – Udnie is a style transfer model that recreates the fluid, surreal aesthetics of Francis Picabia's \"Udnie\" painting. It introduces bold movement, swirling forms, and abstract distortions, ideal for producing artistic outputs with an energetic and avant-garde look."
+    "Summary_update": "Fast NST – Udnie is a style transfer model that recreates the fluid, surreal aesthetics of Francis Picabia's \"Udnie\" painting. It introduces bold movement, swirling forms, and abstract distortions, ideal for producing artistic outputs with an energetic and avant-garde look.",
+    "Task Tags": [
+      "style_transfer"
+    ]
   },
   {
     "Model Unique Name": "PoseEstimation-OpenPose",
@@ -1537,7 +1996,10 @@
     "Paper": "https://arxiv.org/pdf/1812.08008",
     "Github": "https://github.com/CMU-Perceptual-Computing-Lab/openpose",
     "HuggingFace": null,
-    "Summary_update": "OpenPose is a real-time multi-person 2D pose estimation model that detects body parts and maps skeletal keypoints from RGB images. It uses Part Affinity Fields (PAFs) to associate limbs and joints across individuals, enabling accurate full-body pose tracking in crowded scenes or dynamic environments."
+    "Summary_update": "OpenPose is a real-time multi-person 2D pose estimation model that detects body parts and maps skeletal keypoints from RGB images. It uses Part Affinity Fields (PAFs) to associate limbs and joints across individuals, enabling accurate full-body pose tracking in crowded scenes or dynamic environments.",
+    "Task Tags": [
+      "pose_estimation"
+    ]
   },
   {
     "Model Unique Name": "SISR-ResShift-BICSR-4x",
@@ -1547,7 +2009,10 @@
     "Paper": "https://proceedings.neurips.cc/paper_files/paper/2023/file/2ac2eac5098dba08208807b65c5851cc-Paper-Conference.pdf",
     "Github": "https://github.com/zsyOAOA/ResShift",
     "HuggingFace": null,
-    "Summary_update": "ResShift - BicSR is a diffusion-based super-resolution model trained on bicubic-downsampled inputs for 4× upscaling. It introduces a residual shifting mechanism to enhance pixel-wise sharpness and structure, enabling detailed and photorealistic reconstructions with efficient sampling."
+    "Summary_update": "ResShift - BicSR is a diffusion-based super-resolution model trained on bicubic-downsampled inputs for 4× upscaling. It introduces a residual shifting mechanism to enhance pixel-wise sharpness and structure, enabling detailed and photorealistic reconstructions with efficient sampling.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-ResShift-RealSR-v1-4x",
@@ -1557,7 +2022,10 @@
     "Paper": "https://proceedings.neurips.cc/paper_files/paper/2023/file/2ac2eac5098dba08208807b65c5851cc-Paper-Conference.pdf",
     "Github": "https://github.com/zsyOAOA/ResShift",
     "HuggingFace": null,
-    "Summary_update": "ResShift v1 4× is the first real-world version of the ResShift super-resolution model, trained on real-world degradation patterns instead of synthetic bicubic inputs. It applies residual shifting to produce sharp, artifact-free 4× upscaled images from naturally low-resolution inputs, such as mobile or compressed photos."
+    "Summary_update": "ResShift v1 4× is the first real-world version of the ResShift super-resolution model, trained on real-world degradation patterns instead of synthetic bicubic inputs. It applies residual shifting to produce sharp, artifact-free 4× upscaled images from naturally low-resolution inputs, such as mobile or compressed photos.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-ResShift-RealSR-v2-4x",
@@ -1567,7 +2035,10 @@
     "Paper": "https://proceedings.neurips.cc/paper_files/paper/2023/file/2ac2eac5098dba08208807b65c5851cc-Paper-Conference.pdf",
     "Github": "https://github.com/zsyOAOA/ResShift",
     "HuggingFace": null,
-    "Summary_update": "ResShift v2 4× builds upon the original ResShift RealSR framework with improved training data and refined noise modeling. It enhances natural image restoration by maintaining edge sharpness and texture consistency while mitigating over-smoothing and hallucination during 4× upscaling."
+    "Summary_update": "ResShift v2 4× builds upon the original ResShift RealSR framework with improved training data and refined noise modeling. It enhances natural image restoration by maintaining edge sharpness and texture consistency while mitigating over-smoothing and hallucination during 4× upscaling.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   },
   {
     "Model Unique Name": "SISR-ResShift-RealSR-v3-4x",
@@ -1577,6 +2048,9 @@
     "Paper": "https://proceedings.neurips.cc/paper_files/paper/2023/file/2ac2eac5098dba08208807b65c5851cc-Paper-Conference.pdf",
     "Github": "https://github.com/zsyOAOA/ResShift",
     "HuggingFace": null,
-    "Summary_update": "ResShift v3 4× is the third generation of the RealSR-trained ResShift series, optimized for high-fidelity 4× image super-resolution under diverse real-world conditions. It further stabilizes fine-grained detail recovery and suppresses degradation-induced artifacts using residual diffusion sampling techniques."
+    "Summary_update": "ResShift v3 4× is the third generation of the RealSR-trained ResShift series, optimized for high-fidelity 4× image super-resolution under diverse real-world conditions. It further stabilizes fine-grained detail recovery and suppresses degradation-induced artifacts using residual diffusion sampling techniques.",
+    "Task Tags": [
+      "super_resolution"
+    ]
   }
 ]

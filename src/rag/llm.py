@@ -1,13 +1,10 @@
 # rag/llm.py
 import os, openai, anthropic
-from openai import OpenAI
+import google.generativeai as genai
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 anthropic_client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-gemini_client = OpenAI(
-    api_key=os.getenv("GEMINI_API_KEY"),
-    base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
-)
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 def call_llm(model_key: str, prompt: str, temperature=0.7) -> str:
     if model_key.startswith("openai/"):
@@ -44,15 +41,15 @@ def call_llm(model_key: str, prompt: str, temperature=0.7) -> str:
         return resp.content[0].text.strip()
         
     elif model_key.startswith("gemini/"):
-        model_name = model_key.split("/", 1)[1]
-        resp = gemini_client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": prompt}
-            ],
-            temperature=temperature
+        model_name = model_key.split("/", 1)[1]  # 예: gemini-2.5-flash
+        chat = genai.GenerativeModel(model_name).start_chat(history=[])
+        resp = chat.send_message(
+            prompt,
+            generation_config={
+                "temperature": temperature,
+                "max_tokens": 2048
+            }
         )
-        return resp.choices[0].message.content.strip()
+        return resp.text.strip()
     else:
-        raise ValueError(f"Unknown model key: {model_key}"
+        raise ValueError(f"Unknown model key: {model_key}")

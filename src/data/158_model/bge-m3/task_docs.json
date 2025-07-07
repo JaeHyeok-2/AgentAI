@@ -1,0 +1,191 @@
+[
+  {
+    "task_id": "classification",
+    "description": "Predict a class label or attribute from an image or text.",
+    "aliases": [
+      "image classification",
+      "object category",
+      "nsfw detection"
+    ]
+  },
+  {
+    "task_id": "inpainting",
+    "description": "Fill missing or masked regions in an image seamlessly.",
+    "aliases": [
+      "image completion",
+      "remove object",
+      "mask2img"
+    ]
+  },
+  {
+    "task_id": "colorization",
+    "description": "Add or modify colors in a grayscale or muted image.",
+    "aliases": [
+      "image colorization",
+      "re-color photo",
+      "add colour"
+    ]
+  },
+  {
+    "task_id": "deblur",
+    "description": "Restore sharp details to motion-blurred or out-of-focus images.",
+    "aliases": [
+      "remove blur",
+      "sharpen blurry photo",
+      "image deblurring"
+    ]
+  },
+  {
+    "task_id": "denoise",
+    "description": "Remove sensor or compression noise while preserving detail.",
+    "aliases": [
+      "image denoising",
+      "noise reduction",
+      "clean noisy photo"
+    ]
+  },
+  {
+    "task_id": "ocr",
+    "description": "Extract printed or handwritten text from images.",
+    "aliases": [
+      "img2txt",
+      "text extraction",
+      "optical character recognition"
+    ]
+  },
+  {
+    "task_id": "text2text",
+    "description": "Transform, rewrite, or summarise text into new text.",
+    "aliases": [
+      "rewrite text",
+      "summarise",
+      "prompt polishing"
+    ]
+  },
+  {
+    "task_id": "super_resolution",
+    "description": "Upscale images while recovering fine textures and edges.",
+    "aliases": [
+      "SISR",
+      "image upscaling",
+      "4× super-res"
+    ]
+  },
+  {
+    "task_id": "object_detection",
+    "description": "Locate and classify objects with bounding boxes in images.",
+    "aliases": [
+      "detect objects",
+      "find people",
+      "bbox detection"
+    ]
+  },
+  {
+    "task_id": "segmentation",
+    "description": "Pixel-wise assignment of class labels or instance masks.",
+    "aliases": [
+      "semantic segmentation",
+      "instance mask",
+      "pixel labeling"
+    ]
+  },
+  {
+    "task_id": "restoration",
+    "description": "Generic image quality restoration (scratch removal, JPEG artefacts).",
+    "aliases": [
+      "image restoration",
+      "quality enhancement",
+      "repair photo"
+    ]
+  },
+  {
+    "task_id": "txt2img",
+    "description": "Generate a new image from a natural-language prompt.",
+    "aliases": [
+      "text-to-image",
+      "image generation",
+      "stable diffusion"
+    ]
+  },
+  {
+    "task_id": "tts",
+    "description": "Convert written text into natural-sounding speech audio.",
+    "aliases": [
+      "text-to-speech",
+      "voice generation",
+      "read aloud"
+    ]
+  },
+  {
+    "task_id": "asr",
+    "description": "Transcribe spoken audio into written text.",
+    "aliases": [
+      "voice2txt",
+      "speech recognition",
+      "audio transcription"
+    ]
+  },
+  {
+    "task_id": "weather_removal",
+    "description": "Remove rain, snow or haze artefacts from outdoor images.",
+    "aliases": [
+      "derain",
+      "dehaze",
+      "desnow"
+    ]
+  },
+  {
+    "task_id": "hdr",
+    "description": "Reconstruct high-dynamic-range detail from a single low-dynamic image.",
+    "aliases": [
+      "HDR reconstruction",
+      "exposure fusion",
+      "brighten shadows"
+    ]
+  },
+  {
+    "task_id": "face_edit",
+    "description": "Swap or replace faces while keeping background consistent.",
+    "aliases": [
+      "face replacement",
+      "face swap",
+      "identity edit"
+    ]
+  },
+  {
+    "task_id": "low_light_enhancement",
+    "description": "Brighten and restore images shot in very dark conditions.",
+    "aliases": [
+      "low-light enhancement",
+      "night-photo brighten",
+      "light up image"
+    ]
+  },
+  {
+    "task_id": "harmonization",
+    "description": "Adjust foreground and background so composite looks natural.",
+    "aliases": [
+      "image harmonization",
+      "blend composite",
+      "tone match"
+    ]
+  },
+  {
+    "task_id": "style_transfer",
+    "description": "Render a content image in the artistic style of another.",
+    "aliases": [
+      "neural style transfer",
+      "apply painting style",
+      "NST"
+    ]
+  },
+  {
+    "task_id": "pose_estimation",
+    "description": "Predict human body keypoints or skeleton from an image.",
+    "aliases": [
+      "keypoint detection",
+      "openpose",
+      "body pose"
+    ]
+  }
+]
