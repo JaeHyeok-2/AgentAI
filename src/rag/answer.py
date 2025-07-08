@@ -15,7 +15,7 @@ gemini_client = OpenAI(
 MODEL_KEYS = {
     # "chatgpt": "openai/gpt-3.5-turbo-0125",
     "claude": "anthropic/claude-3-5-sonnet-20240620",
-    "gemini": "gemini/gemini-2.5-flash"
+    "gemini": "gemini/gemini-live-2.5-flash"
 }
 
 def call_llm(model_key: str, prompt: str, temperature: float = 0.7) -> str:
