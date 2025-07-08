@@ -13,3 +13,6 @@ __pycache__/
 
 # Output
 output/
+
+eval/results/
+
