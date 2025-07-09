@@ -2,8 +2,8 @@ import os
 import json
 
 # 루트 디렉토리 (예: prompts_by_model_query1_bge_mermaid)
-BASE_DIR = "/home/cvlab/Desktop/AgentAI/output/prompts_by_model_query1_bge_mermaid"
-
+BASE_DIR = "/home/cvlab/Desktop/AgentAI/output/prompts_by_model_query1_bge_highlevel"
+# BASE_DIR='/home/cvlab/Desktop/AgentAI/output/prompts_by_model_query1_bge_highlevel/WeatherRemoval-CLAIO-DeHaze'
 # LLM 익명 키
 LLM_KEYS = ["llm_a", "llm_b", "llm_c"]
 

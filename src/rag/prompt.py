@@ -26,52 +26,49 @@ def build_prompt(query: str, selected_docs: List[Dict], model_list: List[Dict]) 
                 context += f"  Summary: {doc['Summary']}\n"
             context += "\n"
 
-    return f"""
-You are an expert AI scientist and architect of a CNAPS‑style multi‑module workflow.  
-Here, CNAPS means a **synapse‑like branching network** of AI models working together—not a simple linear pipeline.
+    return f"""You are an expert AI scientist and architect of a CNAPS‑style multi‑module workflow.
+Here, CNAPS means a synapse‑like network of AI models connected in series or parallel—but without any built-in decision logic or condition-based branching; it simply executes the pre-defined model chain like block coding.
+Only the models you explicitly connect are run. Unconnected models are never used.
 
 A user asks:
 "{query}"
 
-**Using ONLY the provided models and papers in the context below, answer the following in full detail.**  
-You do **not** need to use all listed models—only those that are clearly relevant to the user's goal.
+Using ONLY the provided models and papers below, respond in full detail.
+You do not need to use all listed models—only those essential to the user's goal.
 
 ---
-
-## 1. Core Task  
-Summarize what the user wants to achieve in one or two sentences.  
-List any sub-goals involved (e.g., structure preservation, texture realism, style matching).
-
----
-
-## 2. CNAPS-style Workflow  
-Design a **high-level synaptic workflow** that clearly shows branching, merging, or conditional paths.  
-Your answer **must include all 3 parts below**:
+## 1. Core Task
+Summarize the user's intent in one or two sentences.
+List any sub-goals (e.g., deblurring, colorization, style transfer).
 
 ---
+## 2. CNAPS-style Workflow
+Design a high-level CNAPS workflow that:
+- Connects only the minimum necessary model(s) required for the task.
+- Does not include unused branches or models.
+- Maintains CNAPS structure (series or simple parallel flows) but no conditional routing logic.
 
-### A. High-Level Overview  
-Explain how the system works in natural language:  
-What flows in, how it branches, what gets combined, and what comes out.
+Your answer must include:
 
----
+### A. High-Level Overview
+Explain in natural language how the chain works: what the input is, which model(s) process it, and what the output is.
 
-### B. Visual Flow Diagram (block-style, text-based)  
-Use a simple visual flow chart using boxed steps, arrows, and indentation.  
-Use this style:
-# Here, CNAPS means a **synapse‑like branching network** of AI models working together—not a simple linear pipeline.
+### B. Visual Flow Diagram (text-based blocks)
+Use a simple flow chart style:
+[Input: ...]
+   |
+   v
+[Model A (purpose)]
+   |
+   v
+[Model B (purpose)]         # Optional second stage if needed
+   |
+   v
+[Final Output (goal + confidence)]
+Only include the model(s) you selected—no extras.
 
-# A user asks:
-# "{query}"
-
-# **Using ONLY the provided models and papers in the context below, do the following:**
-
-# 1. **Identify the core task or goal** implied by the user’s request.  
-# 2. **Design a CNAPS-style synaptic workflow**:
-#    - Describe how input is routed to one or more modules.
-#    - Explain how modules branch, interact, merge, or loop.
-#    - Define each module’s intermediate and final output formats/include examples.
-# 3. **Justify your design** with references to the papers and tools (include GitHub or ArXiv links listed).
+### C. Justify Your Design
+Explain why each selected model is necessary and why others were omitted, with references to their papers or GitHub/ArXiv links.
 
 # \n{context}\nAnswer:
 # """

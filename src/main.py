@@ -10,7 +10,7 @@ sys.path.append("src")                # 프로젝트 루트에서 실행할 때 
 from rag.llm import call_llm          # 기존에 작성한 LLM 호출 헬퍼 사용
 
 # ── 사용자 설정 영역 ──────────────────────────────────────────
-PROMPT_ROOT = "../output/prompts_by_model_query1_bge_mermaid"  # 프롬프트들이 들어 있는 최상위 폴더
+PROMPT_ROOT = "../output/prompts_by_model_query1_bge_highlevel"  # 프롬프트들이 들어 있는 최상위 폴더
 
 # 저장할 파일명 : call_llm 에 넘길 model_key  매핑
 LLM_KEYS = {

@@ -68,7 +68,7 @@ if __name__ == "__main__":
     
     
     # 🔹 결과 저장 경로
-    base_output_dir = "/home/cvlab/Desktop/AgentAI/output/prompts_by_model_query1_bge_mermaid"
+    base_output_dir = "/home/cvlab/Desktop/AgentAI/output/prompts_by_model_query1_bge_highlevel"
     os.makedirs(base_output_dir, exist_ok=True)
 
     # 🔹 전체 처리
