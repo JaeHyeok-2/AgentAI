@@ -10,8 +10,8 @@ from db.embedder import embed
 from db.vectordb import search_split
 from sentence_transformers import CrossEncoder
 
-# 🔁 Cross-Encoder 로드
-reranker = CrossEncoder("BAAI/bge-reranker-large", device="cuda")
+# Cross-Encoder 로드
+reranker = CrossEncoder("BAAI/bge-reranker-large", device="cpu")
 
 def retrieve_models_and_papers(query: str,
                                 k_models: int = 5,
@@ -62,36 +62,43 @@ def _dedup(docs):
 # ── CLI 테스트 ─────────────────────────────
 if __name__ == "__main__":
 
-    # 🔹 쿼리 로딩
-    with open("/home/cvlab/Desktop/AgentAI/dataset/model_queries_CNAPS_158_query1.json", encoding="utf-8") as f:
+    # 쿼리 로딩
+    with open("/Users/jaeyoung/kuaicv/AgentAI/dataset/query_extract/model_queries_CNAPS_159_query3.json", encoding="utf-8") as f:
         model_queries = json.load(f)
     
     
-    # 🔹 결과 저장 경로
-    base_output_dir = "/home/cvlab/Desktop/AgentAI/output/prompts_by_model_query1_bge_highlevel"
+    # 결과 저장 경로
+    base_output_dir = "/Users/jaeyoung/kuaicv/AgentAI/output/prompts_by_model_query"
     os.makedirs(base_output_dir, exist_ok=True)
 
-    # 🔹 전체 처리
+    # 전체 처리
     for model in model_queries:
         # model_name = model.get("Model Unique Name", "Unknown_Model").replace("/", "_")
         model_name = model.get("Model Unique Name")
         model_dir = os.path.join(base_output_dir, model_name)
         os.makedirs(model_dir, exist_ok=True)
 
-        for i in range(1, 2):
+        query_dir = os.path.join(model_dir, "Query3")
+        os.makedirs(query_dir, exist_ok=True)
+
+        for i in range(3, 4):
             query = model.get(f"Query{i}", "").strip()
             if not query:
+                print("empty query")
                 continue  # 빈 쿼리 건너뛰기
             try:
-                
                 models, papers = retrieve_models_and_papers(query, k_models=3, k_arxiv=5, use_rerank=True)
                 prompt = build_prompt(query, selected_docs=None, model_list=models)
 
-                query_path = os.path.join(model_dir, f"Query{i}.txt")
+
+                query_path = os.path.join(query_dir, f"Query{i}.txt")
+
+                print(query_path)
+
                 with open(query_path, "w", encoding="utf-8") as f:
                     f.write(prompt)
 
-                print(f"✅ Saved: {query_path}")
+                print(f"Saved: {query_path}")
 
             except Exception as e:
-                print(f"❌ Error on {model_name} Query{i}: {e}")
+                print(f"Error on {model_name} Query{i}: {e}")

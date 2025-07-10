@@ -4,7 +4,7 @@ from typing import List
 
 # BAAI/bge-m3  |  jinaai/jina-embeddings-v3
 
-device = "cuda"
+device = "cpu"
 MODEL_ID = "BAAI/bge-m3"
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, trust_remote_code=True)

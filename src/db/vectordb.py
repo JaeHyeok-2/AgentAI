@@ -49,7 +49,9 @@ def search_split(query_vec: np.ndarray, k_models: int = 5, k_arxiv: int = 5):
     results = {}
 
     for key, k in [("models", k_models), ("arxiv", k_arxiv)]:
-
+        # key = "models", "arxiv"
+        # k = 5, 5
+        # 총 2번 loop 한다.
         cfg = index_dict[key]
         D, I = cfg["index"].search(np.array([query_vec], dtype="float32"), k)
         results[key] = [cfg["docs"][i] for i in I[0]]

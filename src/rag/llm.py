@@ -1,11 +1,13 @@
 # rag/llm.py
 import os
-import openai
+from openai import OpenAI
 import anthropic
 import google.generativeai as genai
 
 # ── API 키 설정 ─────────────────────────
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai_client = OpenAI(  # OpenAI 클래스 인스턴스 생성
+    api_key=os.getenv("OPENAI_API_KEY")
+)
 
 anthropic_client = anthropic.Anthropic(
     api_key=os.getenv("ANTHROPIC_API_KEY")
@@ -14,6 +16,8 @@ anthropic_client = anthropic.Anthropic(
 genai.configure(
     api_key=os.getenv("GEMINI_API_KEY")
 )
+
+client = OpenAI()
 
 # ── LLM 호출 헬퍼 ───────────────────────
 def call_llm(model_key: str, prompt: str, temperature: float = 0.7) -> str:
@@ -25,11 +29,12 @@ def call_llm(model_key: str, prompt: str, temperature: float = 0.7) -> str:
       • gemini/gemini-2.5-flash
     """
     # ---------- OpenAI ----------
+    # model_key : "anthropic/claude-sonnet-4-20250514", "gemini/gemini-2.5-pro",  "openai/gpt-4o-mini"
     if model_key.startswith("openai/"):
-        model_name = model_key.split("/", 1)[1]
-        resp = openai.ChatCompletion.create(
+        model_name = model_key.split("/", 1)[1] #split once, model_name : "anthropic", "gemini", "openai"
+        resp = client.chat.completions.create(
             model=model_name,
-            messages=[{"role": "user", "content": prompt}],
+            messages=[{"role": "user", "content": prompt}], # the prompt that we manually made with our query
             temperature=temperature
         )
         return resp.choices[0].message.content.strip()

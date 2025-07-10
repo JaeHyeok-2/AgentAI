@@ -17,3 +17,10 @@ output/
 eval/results/
 
 train/
+
+.DS_Store
+
+
+dataset/query_extract/file.xlsx
+dataset/query_extract/prac.json
+src/db/prac.py

@@ -1,0 +1,634 @@
+[
+  {
+    "Model Unique Name": "Classification-HuggingFace-falconsai-nsfw_image_detection",
+    "Query1": "Will this picture be a problem before I post it in the company chat room? I see people taking it outdoors, please let me know if you don't mind.\n"
+  },
+  {
+    "Model Unique Name": "Classification-HuggingFace-microsoft-resnet-18",
+    "Query1": "I'm going to post it on a shopping mall bulletin board, please let me know what's in this image. If there's a person, you can just say it's a person.\n"
+  },
+  {
+    "Model Unique Name": "Classification-HuggingFace-microsoft-resnet-50",
+    "Query1": "Which trash category is the object shown in this image, 'plastic', 'paper', or 'glass'?\n"
+  },
+  {
+    "Model Unique Name": "Classification-HuggingFace-microsoft-resnet-101",
+    "Query1": "I took this picture at a park, and I can see a lot of people and animals. Specifically, what animals are there and how many people do you think there are?"
+  },
+  {
+    "Model Unique Name": "Classification-HuggingFace-NTQAI-pedestrian_gender_recognition",
+    "Query1": "It was taken on the street, but it was taken from a distance, so I can't see my face very well. Can you tell me if the people in the picture are male or female?"
+  },
+  {
+    "Model Unique Name": "Inpainting-LatentDiffusion",
+    "Query1": "I want to erase the bag logo because it's taken incorrectly in the picture, can you fill it in like the background naturally?\n"
+  },
+  {
+    "Model Unique Name": "Colorization-DISCO-c0_2",
+    "Query1": "I want to color this black-and-white photo. Paint the wood naturally with a green color scheme and a person with a skin tone feel."
+  },
+  {
+    "Model Unique Name": "Colorization-DISCO-rand",
+    "Query1": "Put the color in this black and white picture.Please draw different colors different from the random style.\n"
+  },
+  {
+    "Model Unique Name": "Deblur-MIMO-UNet-Plus",
+    "Query1": "Please clearly restore the face of the person who was photographed blurryly in the subway during the business trip."
+  },
+  {
+    "Model Unique Name": "Deblur-MIMO-UNet-RealBlur",
+    "Query1": "There's a cloudy picture taken on the street.Please restore the car number of automatically.\n"
+  },
+  {
+    "Model Unique Name": "Deblur-MIMO-UNet",
+    "Query1": "This is a blurry picture of a person's face taken last night due to shaking hands in the subway. Please restore it clearly with the details.\n"
+  },
+  {
+    "Model Unique Name": "Deblur-MSSNet-GoPro",
+    "Query1": "There is a picture of the blurry scenery shaken in the night view. Please restore the picture clearly."
+  },
+  {
+    "Model Unique Name": "Deblur-MSSNet-L-GoPro",
+    "Query1": "This is a blurry street photo taken with hand tremors at night. Please restore it clearly with the details.\n"
+  },
+  {
+    "Model Unique Name": "Deblur-MSSNet-S-GoPro",
+    "Query1": "The photos of the food I took at the restaurant were shaking. Please restore the food details clearly.\n"
+  },
+  {
+    "Model Unique Name": "Deblur-MSSNet-RealBlurJ",
+    "Query1": "Blurry picture taken on the street where the car was passing by. Please restore the license plate to make it look clear.\n"
+  },
+  {
+    "Model Unique Name": "Deblur-MSSNet-RealBlurR",
+    "Query1": "It's a picture of a blurred puppy during a walk, so please restore it so that the movement is clear"
+  },
+  {
+    "Model Unique Name": "Denoise-SwinIR-Noise15",
+    "Query1": "The pictures of the beach daytime scenery are blurred due to noise, so please restore the sea water and the sky clearly and clearly.\n"
+  },
+  {
+    "Model Unique Name": "Denoise-SwinIR-Noise25",
+    "Query1": "There are noise photos taken in the night picture like sand know.Please restore the sea and sky clean and clean.\n"
+  },
+  {
+    "Model Unique Name": "Denoise-SwinIR-Noise50",
+    "Query1": "The interior lighting is dark, so there is a lot of noise in the product picture. Please remove the noise so that the product details can be seen clearly.\n"
+  },
+  {
+    "Model Unique Name": "Img2Txt-HuggingFace-Salesforce-blip-image-captioning-large",
+    "Query1": "Let me show you a picture of this family outing. Please explain naturally who is doing what in the picture.\n"
+  },
+  {
+    "Model Unique Name": "ImgTxt2Txt-HuggingFace-dandelin-vilt-b32-finetuned-vqa",
+    "Query1": "Please let me know how many products there are in the display picture of this store and what kind they are.\n"
+  },
+  {
+    "Model Unique Name": "SISR-CARN-2x",
+    "Query1": "I'm sorry about the landscape photos I took while traveling. Please enlarge them twice so that they are clearer and show more details.\n"
+  },
+  {
+    "Model Unique Name": "SISR-CARN-3x",
+    "Query1": "This sunrise photo is blurry and low resolution. Please enlarge it 3x to get clearer details.\n"
+  },
+  {
+    "Model Unique Name": "SISR-CARN-4x",
+    "Query1": "My friend's face looks pixelated. Please enlarge it 4x to restore the facial details clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-CARN-M-2x",
+    "Query1": "The scanned document is blurry. Please restore it to its clarity by enlarging it twice so that the letters are clearly visible."
+  },
+  {
+    "Model Unique Name": "SISR-CARN-M-3x",
+    "Query1": "The travel photos are blurry and low resolution. Please enlarge them 3x to make the landscape details clearer.\n"
+  },
+  {
+    "Model Unique Name": "SISR-CARN-M-4x",
+    "Query1": "The scanned contract photo is blurry and the text is small. Please enlarge it by 4x to restore the text so that it is clear.\n"
+  },
+  {
+    "Model Unique Name": "SISR-ESRT-2x",
+    "Query1": "The whiteboard photo taken during the meeting has small and blurry letters. Please enlarge it by 2x so that all letters can be seen clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-ESRT-3x",
+    "Query1": "The food photos taken at the restaurant have low resolution. Please enlarge them by 3x so that the texture and color of the food can be seen clearly."
+  },
+  {
+    "Model Unique Name": "SISR-ESRT-4x",
+    "Query1": "The photo resolution for online sales is low. Please restore it by enlarging it by 4x so that the product material and label are clearly visible.\n"
+  },
+  {
+    "Model Unique Name": "SISR-HAN-2x",
+    "Query1": "The photos of mountains and trees I took while traveling are blurry. Please enlarge them by 2x to make the details clearer.\n"
+  },
+  {
+    "Model Unique Name": "SISR-HAN-3x",
+    "Query1": "This photo was taken at a sports field, but the runner is far away, so it's blurry. Please enlarge it by 3x so that the athlete's movements can be seen clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-HAN-4x",
+    "Query1": "The license plate in the photo taken in the parking lot is small and blurry. Please enlarge it 4 times and restore it so that the number can be read clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-HAN-8x",
+    "Query1": "The drone footage is too far away, so it’s small and blurry. I’d like to zoom in 8x to see the terrain and building structures much more clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-DRN-S-4x",
+    "Query1": "The art print photo I am using for display purposes is blurry. Please restore it to a high resolution by enlarging it 4x so that I can clearly see the brush stroke details and texture.\n"
+  },
+  {
+    "Model Unique Name": "SISR-DRN-S-8x",
+    "Query1": "The satellite map screenshot is pixelated. Please upscale it by 8x so that the building outlines and roads are clearer.\n"
+  },
+  {
+    "Model Unique Name": "SISR-DRN-L-4x",
+    "Query1": "The small figure photo is blurry. Please enlarge it 4 times to restore the figure's detailed decoration and expression."
+  },
+  {
+    "Model Unique Name": "SISR-DRN-L-8x",
+    "Query1": "These are low-quality video frames received from the Internet. Please upscale them 8x and restore them so that each frame's details come to life.\n"
+  },
+  {
+    "Model Unique Name": "SISR-RCAN-it-2x",
+    "Query1": "The photos of the bag you are uploading online are blurry. Please enlarge them by 2x so that the sewing lines and material texture can be clearly seen.\n"
+  },
+  {
+    "Model Unique Name": "SISR-RCAN-it-3x",
+    "Query1": "Grandma's old black and white photo is blurry due to low resolution. Please enlarge it 3x to restore the facial outline and background clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-RCAN-it-4x",
+    "Query1": "The oil painting I photographed in the gallery is blurry. Please enlarge it to 4x to show the brush strokes and colors in high resolution.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Swin2SR-Classical-2x",
+    "Query1": "The photos taken with a mobile phone have low quality because of the way they are saved. Please enlarge them to 2x the resolution and restore them clearly without compression artifacts.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Swin2SR-Classical-4x",
+    "Query1": "The YouTube thumbnail is blurry. Please enlarge it to 4x so that the text and graphics are clear.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Swin2SR-Compressed-4x",
+    "Query1": "I scanned an old photo album, but it was compressed and the quality was poor. Please enlarge it by 4x to bring out the details and colors of the face and background clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Swin2SR-LightWeight-2x",
+    "Query1": "This is a product photo I took myself, but it shows signs of compression. Please enlarge it to 2x high resolution so that the texture and color can be seen clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Swin2SR-Real-4x",
+    "Query1": "I copied an old black and white photo to a digital file, but there are a lot of artifacts. Please restore it so that the facial contour and background details come to life naturally and clearly by upscaling it by 4x.\n"
+  },
+  {
+    "Model Unique Name": "ObjDet-HuggingFace-facebook-detr-resnet-50",
+    "Query1": "Please check if there are any main objects in this photo, such as people, cars, or bicycles.\n"
+  },
+  {
+    "Model Unique Name": "ObjDet-HuggingFace-hustvl-yolos-small",
+    "Query1": "This photo was taken in a park. Can you tell me if there are people or pets among the trees?\n"
+  },
+  {
+    "Model Unique Name": "ObjDet-HuggingFace-valentinafeve-yolos-fashionpedia",
+    "Query1": "Please check this image for accessories such as belts, scarves, and necklaces."
+  },
+  {
+    "Model Unique Name": "Segmentation-DeepLabV3-MobileNet-VOC",
+    "Query1": "This is a picture of a living room. Please segment the sofa, desk, chair, window, and carpet."
+  },
+  {
+    "Model Unique Name": "Segmentation-DeepLabV3-ResNet50-VOC",
+    "Query1": "This is an outdoor cafe photo. Please segment the tables, chairs, and plants."
+  },
+  {
+    "Model Unique Name": "Segmentation-DeepLabV3-ResNet101-VOC",
+    "Query1": "This is a child’s room. Please segment the bed, desk, and toys."
+  },
+  {
+    "Model Unique Name": "Segmentation-DeepLabV3Plus-MobileNet-VOC",
+    "Query1": "This is a farm image. Please segment the fields, fences, and livestock such as cows and horses."
+  },
+  {
+    "Model Unique Name": "Segmentation-DeepLabV3Plus-ResNet50-VOC",
+    "Query1": "This is a construction site. Please segment the machinery, workers, and materials."
+  },
+  {
+    "Model Unique Name": "Segmentation-DeepLabV3Plus-ResNet101-VOC",
+    "Query1": "This is a road CCTV image. Please segment the lanes, pedestrians, bicycles, and motorcycles."
+  },
+  {
+    "Model Unique Name": "Restoration-SwinIR-Jpeg10",
+    "Query1": "The night city photos are of low quality due to compression blur. Please clean them up so that the lights and buildings look natural.\n"
+  },
+  {
+    "Model Unique Name": "Restoration-SwinIR-Jpeg20",
+    "Query1": "The scanned document image was compressed and the letters were blurred. Please restore the letters and lines so that they are clear.\n"
+  },
+  {
+    "Model Unique Name": "Restoration-SwinIR-Jpeg30",
+    "Query1": "Please organize the landscape photos I received from the Internet so that they look natural without color bleeding.\n"
+  },
+  {
+    "Model Unique Name": "Restoration-SwinIR-Jpeg40",
+    "Query1": "SNS food photos are compressed and the texture is blurry. Please make the colors and textures more realistic.\n"
+  },
+  {
+    "Model Unique Name": "Segmentation-HuggingFace-facebook-maskformer-swin-base-coco",
+    "Query1": "This is a picture of a park. Please color-code the benches, trees, and grass where people are sitting.\n"
+  },
+  {
+    "Model Unique Name": "Segmentation-HuggingFace-jonathandinu-face-parsing",
+    "Query1": "Here is a picture of me wearing earrings. Please use color to differentiate between the earrings and my face."
+  },
+  {
+    "Model Unique Name": "Segmentation-HuggingFace-nvidia-segformer-b3-finetuned-ade-512-512",
+    "Query1": "This is a photo taken at a bus stop. I wish the bus, people, benches, and background were color-coded.\n"
+  },
+  {
+    "Model Unique Name": "SISR-IMDN-2x",
+    "Query1": "The game screenshot is low resolution and the screen is blurry. Please enlarge it to 2x so that the border and text are clear."
+  },
+  {
+    "Model Unique Name": "SISR-IMDN-3x",
+    "Query1": "The cat photo is pixelated. Please enlarge it 3x to restore the fur details.\n"
+  },
+  {
+    "Model Unique Name": "SISR-IMDN-4x",
+    "Query1": "The book cover photo is too small to see the title. Please enlarge it to 4× so that the title and image are clearly visible.\n"
+  },
+  {
+    "Model Unique Name": "SISR-LatticeNet-2x",
+    "Query1": "The landscape capture is low resolution. Please restore it to twice its size so that the road, trees, and sky are clear.\n"
+  },
+  {
+    "Model Unique Name": "SISR-LatticeNet-3x",
+    "Query1": "The picture of my cat is blurry. Please enlarge it 3x so I can see each hair strand clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-LatticeNet-4x",
+    "Query1": "This is a photo of food posted on SNS, but the details of the ingredients are buried. Please enlarge it by 4 times to bring out the texture and color.\n"
+  },
+  {
+    "Model Unique Name": "SISR-RCAN-2x",
+    "Query1": "The text in the camping video appears small. Please enlarge the screen by 2x so that you can see the menu and instructions clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-RCAN-3x",
+    "Query1": "This is a picture of a dessert taken at a cafe, but I can't see the cream details. Please enlarge it 3x so that the texture can be seen vividly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-RCAN-4x",
+    "Query1": "This is a landscape shot with a drone, but the details of the buildings, cars, and people are too small. Please enlarge it by 4x so that the entire composition can be seen clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-RCAN-8x",
+    "Query1": "The rural landscape taken by a drone is blurry. Please restore it to 8× so that the houses and trees in the distance can be clearly seen.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Classical-DF2K-64-M-2x",
+    "Query1": "I took a picture of a sports game, but the players' license plates are small. Please enlarge it twice so that the numbers and faces are clear.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Classical-DF2K-64-M-3x",
+    "Query1": "The outdoor mural photo is too small to show the artistic details. Please restore it to 3x so that the colors and lines are clear.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Classical-DF2K-64-M-4x",
+    "Query1": "The drone shot of the landscape is small and I can't see the entire composition. Please enlarge it by 4x to make the entire scene clearer.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Classical-DF2K-64-M-8x",
+    "Query1": "The license plate photo is too blurry. Please enlarge it 8 times so that the number can be seen clearly.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Classical-DIV2K-48-M-2x",
+    "Query1": "The photo of the child's drawing is small. Please enlarge it twice so that the colors and lines are clear.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Classical-DIV2K-48-M-3x",
+    "Query1": "The streetlights are blurry at night. Please zoom in 3x to make the lights and letters clearer.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Classical-DIV2K-48-M-4x",
+    "Query1": "The SNS food photos are blurry. Please enlarge them 4x so that you can see all the toppings and textures.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Classical-DIV2K-48-M-8x",
+    "Query1": "The stadium match photos are small. Please enlarge them 8x so that the players can be recognized.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Lightweight-DIV2K-64-M-2x",
+    "Query1": "The game capture text is not visible. Please zoom in 2x so that the buttons and menus are clearly visible.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Lightweight-DIV2K-64-M-3x",
+    "Query1": "The photo of the baked bread is small. Please make it clearer at 3× so that you can see the texture and ingredient details.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Lightweight-DIV2K-64-M-4x",
+    "Query1": "The map image taken with a smartphone is too small to see. Please enlarge it 4 times so that the road names and terrain can be read.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Real-DFO-64-M-2x",
+    "Query1": "The street photo taken at night is blurry. Please restore it by 2x so that the street lights and people's outlines are clear.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Real-DFO-64-M-4x",
+    "Query1": "The cat's pupils are captured small. Please enlarge the image by 4x to see the details of the pupils.\n"
+  },
+  {
+    "Model Unique Name": "SISR-SwinIR-Real-DFOWMFC-64-L-4x",
+    "Query1": "The text in the dessert photo cupcakes is small. Please enlarge it 4x so that you can see the text and ingredient details together.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-AbsoluteReality",
+    "Query1": "Turn this rainy city alley photo into a cinematic scene with neon lights reflecting off it.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-majicMix-sombre",
+    "Query1": "This photo of a person in front of a tunnel, please adjust the background to a blurred tone and only the face to a clear tone.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-SimpleMix",
+    "Query1": "Please adjust the store front photos to create a comfortable atmosphere by adjusting the lighting and brightness evenly.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-ToonYou",
+    "Query1": "Please recreate this princess character image like a fairy tale illustration with clear lines and bright colors.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Any-LIIF-EDSR",
+    "Query1": "Please enlarge this photo 7.5 times so that the building exterior texture and window corners are clearly restored.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Any-LIIF-RDN",
+    "Query1": "enlarge the aerial photos taken by this drone by 20.2x so that the small buildings and roads are not blurred.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Any-LTE-EDSR",
+    "Query1": "Please enlarge this interior shot by 4x so that you can see the details of the wallpaper pattern and lighting texture.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Any-LTE-RDN",
+    "Query1": "enlarge this external poster image (including the person's face) by 3.5x. Make sure that both the person's expression and the text are clear.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Any-LTE-SwinIR-LIIF",
+    "Query1": "enlarge this cafe sign photo by 3.2x. Please make sure the sign logo and text are not blurred when taken from a distance.\n"
+  },
+  {
+    "Model Unique Name": "SISR-Any-LTE-SwinIR",
+    "Query1": "Please enlarge this business card photo to twice its size so that the small text and contact information are not blurred.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-1",
+    "Query1": "Please turn this landscape into a surreal illustration. Feel free to interpret the colors and shapes.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-2",
+    "Query1": "remake this portrait in a pop art style. I would like a style with strong color contrast and free composition.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-4",
+    "Query1": "retouch this product photo so that it is smooth and free of impurities. Please make the background blurry under soft lighting.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-5",
+    "Query1": "Please reproduce this city night view photo as if it were in 4K high definition. I would like to see the lights and building exteriors clearly.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-ArteYou",
+    "Query1": "Please illustrate this landscape painting with magical forest lighting and soft shading.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-Artius_v1.5",
+    "Query1": "Please redesign the product image to look like a high-resolution illustration, with clear lines and details.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-CCDDA_ArtStyle",
+    "Query1": "Re-create handwritten menus as antique works of art. Bring out the texture of the paper and the feel of cursive writing.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-colorful",
+    "Query1": "retouch this bouquet photo with vivid colors so that the colors of each flower stand out more."
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-ConsistentFactor",
+    "Query1": "Using this portrait, create multiple cuts with similar expressions and hairstyles, so that the facial features remain consistent.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-CyberRealistic",
+    "Query1": "Retouch your portraits for banners with cinematic, high-quality lighting and realistic textures for a hyper-realistic look.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-DreamShaper",
+    "Query1": "Transform this landscape photo into a soft and dreamy art style.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-epiCRealism_newEra",
+    "Query1": "Please retouch the CEO's profile photo in a style that uses high-quality lighting and realistic skin texture.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-GhostMix",
+    "Query1": "Transform your character illustrations into a hybrid style that combines realistic details and soft coloring.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-henmixReal",
+    "Query1": "Please retouch this employee profile photo into a soft, realistic portrait as if lit by natural light.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-ICBINP",
+    "Query1": "Please make the representative's face photo look like a real photo by expressing the skin pores and hair details precisely.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-IDSM",
+    "Query1": "Please retouch the photos of clothes worn by models with soft and realistic tones that make the skin, fabric, and light appear lifelike.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-ImpressionismOil",
+    "Query1": "Transform your store exterior photo into an impressionist oil painting style. Express the soft brush texture and warm colors.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-LemonTeaMix",
+    "Query1": "Please retouch this cafe interior image with a soft conversational feel and warm yellow tones. For a cozy atmosphere like a hand-painted painting.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-majicMix-realistic",
+    "Query1": "Please retouch the product model photos to make them look natural and realistic. Express Asian skin tones and facial expressions in detail.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-NextPhoto",
+    "Query1": "Please retouch the menu photos to make them look like high-quality photos with DSLR-level clarity and natural light."
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-PirsusEpicRealism",
+    "Query1": "Please retouch the portrait to make it look as realistic as a movie poster, with lighting, expressions, and textures.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-QGO-PromptingReal",
+    "Query1": "Retouch your store exterior photos with realistic textures that bring the walls, signs, and lighting to life.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-Realisian",
+    "Query1": "Please retouch this staff profile photo with warm tones and soft lighting to convey the emotion well.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-Reliberate",
+    "Query1": "Please make this product photo a clean, refined image without any impurities. Make it look like an actual product cut from a shopping mall.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-StableDiffusionV1-RunDiffusionFX",
+    "Query1": "Please retouch the staff group photo with cinematic colors and textures. Make it atmospheric and natural.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Txt-HuggingFace-facebook-bart-large-cnn",
+    "Query1": "Please summarize this 300-character blog post in three key sentences.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Txt-HuggingFace-microsoft-Promptist",
+    "Query1": "Please make this image prompt more vivid: ‘a cat on a chair in the sun’\n"
+  },
+  {
+    "Model Unique Name": "Txt2Voice-HuggingFace-espnet-fastspeech2_conformer_with_hifigan",
+    "Query1": "Please read this sentence in a soft female voice: ‘Hello, the weather is sunny today.’\n"
+  },
+  {
+    "Model Unique Name": "Txt2Img-HuggingFace-prompthero-openjourney-v4",
+    "Query1": "Please create a full-shot social media promotional illustration with the theme of 'Sunset Beach'. Please make it a warm and emotional landscape.\n"
+  },
+  {
+    "Model Unique Name": "Txt2Voice-HuggingFace-suno-bark",
+    "Query1": "Please make it sound soft and trustworthy by saying, ‘We look forward to hearing your valuable opinions.’\n"
+  },
+  {
+    "Model Unique Name": "Voice2Txt-nvidia-parakeet-tdt-1.1b",
+    "Query1": "Please receive the interview recording file and convert the audio into text.\n"
+  },
+  {
+    "Model Unique Name": "WeatherRemoval-CLAIO-DeHaze",
+    "Query1": "The photo in front of this store came out blurry due to the fog. Please clean it up so that the background is clear and sharp.\n"
+  },
+  {
+    "Model Unique Name": "WeatherRemoval-CLAIO-DeRain",
+    "Query1": "There are raindrop marks on this outdoor menu board photo. Please remove the raindrops so that the text and background are clean.\n"
+  },
+  {
+    "Model Unique Name": "WeatherRemoval-CLAIO-DeSnow",
+    "Query1": "The scene outside this window is hazy with snow and frost. Please remove all the snow specks and frost marks.\n"
+  },
+  {
+    "Model Unique Name": "Inpainting-CTSDG-CelebA",
+    "Query1": "There are some parts of this representative's face that are blurry or have flaws. Please restore the natural facial contour, eyebrows, and skin texture."
+  },
+  {
+    "Model Unique Name": "Inpainting-CTSDG-Paris",
+    "Query1": "Some of the doors and windows in the store exterior photos are damaged. Please fill them in so that the window frames and brick structures can be restored naturally.\n"
+  },
+  {
+    "Model Unique Name": "Inpainting-CTSDG-Places2",
+    "Query1": "The corner of the table was cut off in the interior photo of the cafe. Please restore the table structure and lighting texture to be natural.\n"
+  },
+  {
+    "Model Unique Name": "Inpainting-MISF-CelebA",
+    "Query1": "This profile picture shows some blurry or flawed areas (such as around the eyes and mouth). Please restore the natural facial structure and skin texture with precision.\n"
+  },
+  {
+    "Model Unique Name": "Inpainting-MISF-Places2",
+    "Query1": "In this restaurant interior photo, some tables are cut off and some walls are damaged. Please fill in the space structure and lighting texture naturally.\n"
+  },
+  {
+    "Model Unique Name": "Inpainting-ResShift-Face",
+    "Query1": "This profile picture is a bit blurry and the eyes look puffy. Please restore it to clarity while maintaining the natural facial structure and pose.\n"
+  },
+  {
+    "Model Unique Name": "Inpainting-ResShift-ImageNet",
+    "Query1": "Please remove the blur from this mountain landscape photo and restore the tree and sky details to vivid clarity.\n"
+  },
+  {
+    "Model Unique Name": "ImgTxt2Img-HuggingFace-alaa-lab-InstructCV",
+    "Query1": "Please detect and display products such as donuts, cakes, and breads in the image of a bakery display case.\n"
+  },
+  {
+    "Model Unique Name": "ImgTxt2Img-HuggingFace-timbrooks-instruct-pix2pix",
+    "Query1": "Please change the background in the video conference screenshot to something like a library.\n"
+  },
+  {
+    "Model Unique Name": "HDR-DeepHDRR",
+    "Query1": "The outdoor event photos are too blurry. Please change them to HDR to give them a sunlight feel.\n"
+  },
+  {
+    "Model Unique Name": "HDR-FHDR-I1",
+    "Query1": "The night photo with lighting has low contrast. Please retouch it with emphasized light and shade.\n"
+  },
+  {
+    "Model Unique Name": "HDR-FHDR-I2",
+    "Query1": "Outdoor photos with lighting have blown out highlights. Please restore brightness information.\n"
+  },
+  {
+    "Model Unique Name": "FaceReplacement-ResShift",
+    "Query1": "My face is blurry in my travel photos. Please restore it so that my skin tone and contours are naturally clear.\n"
+  },
+  {
+    "Model Unique Name": "Enhancement-low-light-img-enhancer",
+    "Query1": "This concert hall photo is dark and noisy. Please correct it to make it clearer by improving the lighting and colors.\n"
+  },
+  {
+    "Model Unique Name": "Harmonization-INR-RAW-HAdobe5K",
+    "Query1": "I composited my friend's face onto a beach background, but the face tone doesn't match the background lighting of the photo. Please adjust the overall color temperature to make it harmonious.\n"
+  },
+  {
+    "Model Unique Name": "Harmonization-INR-RAW-iHarmony4",
+    "Query1": "I photoshopped the newly released hoodie onto a model photo, but the brightness and contrast don't match the face. Please make the lighting and tone match naturally.\n"
+  },
+  {
+    "Model Unique Name": "Harmonization-INR-Res256-iHarmony4",
+    "Query1": "I quickly put together this prototype ad image. Could you please make a color corrected version as well?\n"
+  },
+  {
+    "Model Unique Name": "Harmonization-INR-Res1024-HAdobe5K",
+    "Query1": "There is a small flower pot with a composite light in this photo. Please adjust the light so that it blends naturally with the background.\n"
+  },
+  {
+    "Model Unique Name": "Harmonization-INR-Res2048-HAdobe5K",
+    "Query1": "This is an A4 image for flyers. Please adjust the high resolution so that the character's tone blends smoothly with the background. I hope the colors won't pop out when printed.\n"
+  },
+  {
+    "Model Unique Name": "NST-fast-neural-style-candy",
+    "Query1": "Transform your new product cup photos into bright, vivid, candy-like photos with high saturation.\n"
+  },
+  {
+    "Model Unique Name": "NST-fast-neural-style-mosaic",
+    "Query1": "Add mosaic texture to your handmade craft photos to make them look like works of art."
+  },
+  {
+    "Model Unique Name": "NST-fast-neural-style-rain-princess",
+    "Query1": "Please retouch the wedding photos with a blurred feeling.\n"
+  },
+  {
+    "Model Unique Name": "NST-fast-neural-style-udnie",
+    "Query1": "Convert your portrait into an abstract art style for social media.\n"
+  },
+  {
+    "Model Unique Name": "PoseEstimation-OpenPose",
+    "Query1": "In this employee training video, please recognize all employees' arm raising movements and record them for each position.\n"
+  },
+  {
+    "Model Unique Name": "SISR-ResShift-BICSR-4x",
+    "Query1": "There is light bleed in the interior shots of the house. Please increase the resolution while preserving the structure and furniture details.\n"
+  },
+  {
+    "Model Unique Name": "SISR-ResShift-RealSR-v1-4x",
+    "Query1": "Enlarge family photos taken in a dark house by 4x to make facial expressions and clothing textures clearer.\n"
+  },
+  {
+    "Model Unique Name": "SISR-ResShift-RealSR-v2-4x",
+    "Query1": "Please enlarge the photo of the exhibited work by 4 times and correct it so that the material texture and color appear closer to reality.\n"
+  },
+  {
+    "Model Unique Name": "SISR-ResShift-RealSR-v3-4x",
+    "Query1": "The outdoor food stall photo is blurry. Please enlarge it 4x so that the lighting and cooking scenes are clear.\n"
+  }
+]

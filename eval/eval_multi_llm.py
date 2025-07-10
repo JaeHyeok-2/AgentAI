@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import glob 
 load_dotenv()
 
-ROOT_DIR = "./home/cvlab/Desktop/AgentAI/eval/results"
+ROOT_DIR = "/Users/jaeyoung/kuaicv/AgentAI/output/prompts_by_model_query"
 MODEL_KEYS = [
     "openai/gpt-4o",
     "anthropic/claude-sonnet-4-20250514",
@@ -22,12 +22,15 @@ LLM_NAME_MAP = {
 
 # rag/llm.py
 import os
-import openai
+from openai import OpenAI
 import anthropic
 import google.generativeai as genai
 
 # ── API 키 설정 ─────────────────────────
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai_client = OpenAI(  # OpenAI 클래스 인스턴스 생성
+    api_key=os.getenv("OPENAI_API_KEY")
+)
+
 
 anthropic_client = anthropic.Anthropic(
     api_key=os.getenv("ANTHROPIC_API_KEY")
@@ -36,6 +39,8 @@ anthropic_client = anthropic.Anthropic(
 genai.configure(
     api_key=os.getenv("GEMINI_API_KEY")
 )
+
+client = OpenAI()
 
 # ── LLM 호출 헬퍼 ───────────────────────
 def call_llm(model_key: str, prompt: str, system_prompt: str = "", temperature: float = 0.7) -> str:
@@ -50,9 +55,9 @@ def call_llm(model_key: str, prompt: str, system_prompt: str = "", temperature: 
     # ---------- OpenAI ----------
     if model_key.startswith("openai/"):
         model_name = model_key.split("/", 1)[1]
-        resp = openai.ChatCompletion.create(
+        resp = client.chat.completions.create(
             model=model_name,
-            messages=[{"role": "user", "content": prompt}],
+            messages=[{"role": "user", "content": prompt}], # the prompt that we manually made with our query
             temperature=temperature
         )
         return resp.choices[0].message.content.strip()
@@ -131,7 +136,11 @@ def create_evaluation_prompt(llm_a, llm_b, llm_c):
 {llm_c}
 
 —
+—
 **REQUIRED OUTPUT FORMAT:**
+You must provide numerical scores (0–10) for each criterion and each response in the evaluation table.  
+**Do not omit this table or alter its structure. It is required for automatic evaluation.**
+
 ## Overall Winner: llm_[a/b/c]
 
 ### Evaluation Table
@@ -144,6 +153,7 @@ def create_evaluation_prompt(llm_a, llm_b, llm_c):
 | 5. Interpretability & Reasoning| /10 | /10 | /10 |
 | **Total Score**                | /50 | /50 | /50 |
 
+
 ### Brief Justification
 - **llm_a**: ...
 - **llm_b**: ...
@@ -152,17 +162,34 @@ def create_evaluation_prompt(llm_a, llm_b, llm_c):
     return system_prompt, user_prompt.strip()
 
 
-def parse_evaluation_result(md_text):
+def parse_evaluation_result(md_text, model_key):
     """LLM 평가 결과에서 승자, 스코어표, 이유를 추출"""
     vote_match = re.search(r"Overall Winner: (llm_[abc])", md_text)
     winner = vote_match.group(1) if vote_match else None
 
     # 스코어 테이블 파싱
     score_table = {}
-    total_score_match = re.findall(
-    r"\|\s*\*\*Total Score\*\*\s*\|\s*\*\*(\d+)/50\*\*\s*\|\s*\*\*(\d+)/50\*\*\s*\|\s*\*\*(\d+)/50\*\*\s*\|",
-    md_text
+    if model_key.startswith("gemini"):
+        total_score_match = re.findall(
+            r"\|\s*\*\*Total Score\*\*\s*\|\s*\*\*(\d+)/50\*\*\s*\|\s*\*\*(\d+)/50\*\*\s*\|\s*\*\*(\d+)/50\*\*\s*\|",
+            md_text
+        )
+    else:
+        total_score_match = re.findall(
+        r"\|\s*(\d{1,2})\s*/?\s*50\s*\|\s*(\d{1,2})\s*/?\s*50\s*\|\s*(\d{1,2})\s*/?\s*50\s*\|?",
+        md_text
     )
+
+
+    
+    # total_score_match = re.findall(
+    #     r"\|\s*Total Score\s*\|\s*(\d{1,2})\s*/?\s*50\s*\|\s*(\d{1,2})\s*/?\s*50\s*\|\s*(\d{1,2})\s*/?\s*50\s*\|?",
+    #     md_text,
+    #     flags=re.IGNORECASE
+    # )
+
+    # print(model_key) #gpt, claude는 이거로 된다.
+
     if total_score_match:
         a, b, c = map(int, total_score_match[0])
         score_table = {"llm_a": a, "llm_b": b, "llm_c": c}
@@ -211,7 +238,7 @@ def evaluate_and_update(json_path):
         j = json.load(f)
 
     llm_a, llm_b, llm_c = j["responses"]["llm_a"], j["responses"]["llm_b"], j["responses"]["llm_c"]
-    system_prompt, user_prompt = create_evaluation_prompt(llm_a, llm_b, llm_c)
+    system_prompt, user_prompt = create_evaluation_prompt(llm_a, llm_b, llm_c) # generate system_prompt and user_prompt
 
     votes = {}
     scores = {}
@@ -221,7 +248,7 @@ def evaluate_and_update(json_path):
 
     for model_key in MODEL_KEYS:
         model_name = model_key.split("/")[1]
-        print(f"🔍 Evaluating: {model_name}")
+        print(f"Evaluating: {model_name}")
 
         md_result = call_llm(
             model_key,
@@ -230,23 +257,23 @@ def evaluate_and_update(json_path):
             temperature=0.7
         )
 
-        vote, score_table, rationale_map = parse_evaluation_result(md_result)
+        vote, score_table, rationale_map = parse_evaluation_result(md_result, model_key)
         votes[model_name] = vote
         scores[model_name] = score_table
         rationales[model_name] = rationale_map.get(vote, "")
 
-        # ✅ JSON별 디렉토리 안에 모델별 평가 저장
-        output_dir = os.path.join(os.path.dirname(json_path), json_basename, model_name)
-        os.makedirs(output_dir, exist_ok=True)
+        # # ✅ JSON별 디렉토리 안에 모델별 평가 저장
+        # output_dir = os.path.join(os.path.dirname(json_path), json_basename, model_name)
+        # os.makedirs(output_dir, exist_ok=True)
 
-        eval_path = os.path.join(output_dir, "eval.md")
-        with open(eval_path, "w", encoding="utf-8") as f:
-            f.write(md_result)
+        # eval_path = os.path.join(output_dir, "eval.md")
+        # with open(eval_path, "w", encoding="utf-8") as f:
+        #     f.write(md_result)
 
     update_llm_mapping_json(json_path, votes, scores, rationales)
 
 
-ROOT_DIR = "/home/cvlab/Desktop/AgentAI/eval/results"
+# ROOT_DIR = "/Users/jaeyoung/kuaicv/AgentAI/output/prompts_by_model_query1_bge_highlevel2"
 
 def is_valid_response_json(path):
     try:
@@ -267,20 +294,20 @@ def is_valid_response_json(path):
 
 
 def main():
-    pattern = os.path.join(ROOT_DIR, "*.json")
-    print(f"🔍 Looking for: {pattern}")
+    pattern = os.path.join(ROOT_DIR, "**", "**", "*.json")
+    print(f"Looking for: {pattern}")
     json_paths = sorted(glob.glob(pattern))
-    print(f"📄 Found {len(json_paths)} candidate JSONs")
+    print(f"Found {len(json_paths)} candidate JSONs")
 
     for path in json_paths:
-        if not is_valid_response_json(path):
-            print(f"⏭️ Skipping invalid or incomplete file: {path}")
+        if not is_valid_response_json(path): # check if the merged llm responses have more than two llm responses e.g llm_a and llm_B
+            print(f"Skipping invalid or incomplete file: {path}")
             continue
         try:
-            print(f"✅ Evaluating: {path}")
+            print(f"Evaluating: {path}")
             evaluate_and_update(path)
         except Exception as e:
-            print(f"❌ Failed on {path}: {e}")
-
+            print(f"Failed on {path}: {e}")
+        break
 if __name__ == "__main__":
     main()
