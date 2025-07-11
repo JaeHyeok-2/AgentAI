@@ -2,6 +2,7 @@ import os
 import json
 import re
 from dotenv import load_dotenv
+from tqdm import tqdm
 
 import glob 
 load_dotenv()
@@ -170,11 +171,13 @@ def parse_evaluation_result(md_text, model_key):
     # 스코어 테이블 파싱
     score_table = {}
     if model_key.startswith("gemini"):
+        # print(model_key, "iff")
         total_score_match = re.findall(
             r"\|\s*\*\*Total Score\*\*\s*\|\s*\*\*(\d+)/50\*\*\s*\|\s*\*\*(\d+)/50\*\*\s*\|\s*\*\*(\d+)/50\*\*\s*\|",
             md_text
         )
     else:
+        # print(model_key, "elsee")
         total_score_match = re.findall(
         r"\|\s*(\d{1,2})\s*/?\s*50\s*\|\s*(\d{1,2})\s*/?\s*50\s*\|\s*(\d{1,2})\s*/?\s*50\s*\|?",
         md_text
@@ -248,7 +251,7 @@ def evaluate_and_update(json_path):
 
     for model_key in MODEL_KEYS:
         model_name = model_key.split("/")[1]
-        print(f"Evaluating: {model_name}")
+        # print(f"Evaluating: {model_name}")
 
         md_result = call_llm(
             model_key,
@@ -262,13 +265,13 @@ def evaluate_and_update(json_path):
         scores[model_name] = score_table
         rationales[model_name] = rationale_map.get(vote, "")
 
-        # # ✅ JSON별 디렉토리 안에 모델별 평가 저장
-        # output_dir = os.path.join(os.path.dirname(json_path), json_basename, model_name)
-        # os.makedirs(output_dir, exist_ok=True)
+        # ✅ JSON별 디렉토리 안에 모델별 평가 저장
+        output_dir = os.path.join(os.path.dirname(json_path), json_basename, model_name)
+        os.makedirs(output_dir, exist_ok=True)
 
-        # eval_path = os.path.join(output_dir, "eval.md")
-        # with open(eval_path, "w", encoding="utf-8") as f:
-        #     f.write(md_result)
+        eval_path = os.path.join(output_dir, "eval.md")
+        with open(eval_path, "w", encoding="utf-8") as f:
+            f.write(md_result)
 
     update_llm_mapping_json(json_path, votes, scores, rationales)
 
@@ -288,7 +291,7 @@ def is_valid_response_json(path):
         valid_keys = [k for k in ["llm_a", "llm_b", "llm_c"] if k in responses and responses[k].strip()]
         return len(valid_keys) >= 2  # 최소 2개 이상 응답 있어야 비교 가능
     except Exception as e:
-        print(f"❌ Invalid JSON: {path} — {e}")
+        print(f"Invalid JSON: {path} — {e}")
         return False
 
 
@@ -299,7 +302,14 @@ def main():
     json_paths = sorted(glob.glob(pattern))
     print(f"Found {len(json_paths)} candidate JSONs")
 
-    for path in json_paths:
+    for path in tqdm(json_paths, desc="Evaluating json file"):
+
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        if "votes" in data:
+            print(f"skipping {path} as it has 'votes' key")
+            continue
         if not is_valid_response_json(path): # check if the merged llm responses have more than two llm responses e.g llm_a and llm_B
             print(f"Skipping invalid or incomplete file: {path}")
             continue
@@ -308,6 +318,6 @@ def main():
             evaluate_and_update(path)
         except Exception as e:
             print(f"Failed on {path}: {e}")
-        break
+        # break
 if __name__ == "__main__":
     main()
